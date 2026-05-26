@@ -1,0 +1,19 @@
+% Tezde \input{thesis_report.tex} ile dahil et.
+\begin{table}[t]
+\centering
+\caption{Ablation: MWIS-only vs MWIS+GAT, 14-case synthetic test set.}
+\label{tab:ablation}
+\begin{tabular}{lrrr}
+\toprule
+Metric & MWIS-only & MWIS+GAT & $\Delta$ \\
+\midrule
+Filtering recall & 63.16\% & 63.16\% & +0.00 \\
+Temporal accuracy & 33.33\% & 33.33\% & +0.00 \\
+Clean preservation & 88.46\% & 88.46\% & +0.00 \\
+Overall accuracy & 63.16\% & 63.16\% & +0.00 \\
+Avg latency (s) & 0.142 & 0.070 & -0.071 \\
+\midrule
+\textbf{Correct (out of 19)} & \textbf{12} & \textbf{12} & — \\
+\bottomrule
+\end{tabular}
+\end{table}

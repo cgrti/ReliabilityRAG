@@ -1,0 +1,72 @@
+[
+  {
+    "spec": {
+      "question": "[STUB] Akbank'ın karbon emisyon azaltma hedefleri nelerdir?",
+      "company": "Akbank",
+      "year": null
+    },
+    "answer": "[⚠️ STUB ÖRNEK — sahte içerik. Gerçek cevap için `python demo_cache.py` koş.]\n\nAkbank, sürdürülebilirlik raporlarında karbon nötr olma hedefini 2050 yılı olarak belirlemiştir (kaynak: 2023 raporu). Ara hedefler arasında 2030'a kadar Scope 1 ve Scope 2 emisyonlarda %42 azaltım yer almaktadır. KOBİ'lere yönelik enerji verimliliği finansman programları 2021'de başlatılmıştır.",
+    "retrieved_chunks": 20,
+    "filtered_chunks": 19,
+    "removed_chunks": 1,
+    "contradiction_edges": 1,
+    "timings": {
+      "retrieval": 0.21,
+      "isolated_answering": 0.0,
+      "nli_graph_filter": 2.61,
+      "final_generation": 87.34
+    },
+    "total_time": 90.16,
+    "chunks_detail": [
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.9123,
+        "text_preview": "Akbank olarak iklim değişikliği ile mücadelede 2050 net sıfır karbon hedefimiz doğrultusunda Scope 1 ve Scope 2 emisyonlarımızı 2030'a kadar %42 azaltmayı taahhüt ediyoruz. Bu çerçevede tüm operasyonel binalarımızda yenilenebilir enerji kullanımına geçiş planlanmıştır"
+      },
+      {
+        "company": "Akbank",
+        "year": 2021,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8745,
+        "text_preview": "KOBİ müşterilerimize yönelik düşük karbon ekonomisine geçiş için özel finansman ürünleri geliştirilmiştir. 2021 yılında açılan enerji verimliliği kredisi 1.2 milyar TL kullandırılmıştır"
+      }
+    ],
+    "computed_at": "STUB (no GPU used)",
+    "wall_seconds": 90.16
+  },
+  {
+    "spec": {
+      "question": "[STUB] Kadın istihdamı ve fırsat eşitliği politikaları",
+      "company": null,
+      "year": null
+    },
+    "answer": "[⚠️ STUB ÖRNEK — sahte içerik. Gerçek cevap için `python demo_cache.py` koş.]\n\nTürk şirketleri kadın istihdamı konusunda farklı politikalar izlemektedir. Garanti BBVA 2023'te kadın yönetici oranını %38'e çıkarmıştır. Akbank fırsat eşitliği eğitimini tüm çalışanlara zorunlu kılmıştır.",
+    "retrieved_chunks": 20,
+    "filtered_chunks": 18,
+    "removed_chunks": 2,
+    "contradiction_edges": 3,
+    "timings": {
+      "retrieval": 0.18,
+      "isolated_answering": 0.0,
+      "nli_graph_filter": 2.94,
+      "final_generation": 102.5
+    },
+    "total_time": 105.62,
+    "chunks_detail": [
+      {
+        "company": "GarantiBBVA",
+        "year": 2023,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8521,
+        "text_preview": "Kadın yönetici oranımız 2023 yılında %38'e ulaşmıştır..."
+      }
+    ],
+    "computed_at": "STUB (no GPU used)",
+    "wall_seconds": 105.62
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "n_queries": 1,
+    "total_claims": 3,
+    "total_supported": 2,
+    "mean_faithfulness": 0.6667,
+    "judge_model": "microsoft/Phi-3.5-mini-instruct (4-bit)"
+  },
+  "per_query": [
+    {
+      "question": "[STUB] Akbank'ın karbon emisyon azaltma hedefleri nelerdir?",
+      "n_claims": 3,
+      "n_supported": 2,
+      "faithfulness": 0.6666666666666666,
+      "claim_results": [
+        {
+          "claim": "Akbank, süreklendiği 20 maggio 2003 sonrasıra bu yılda carbone uygunluktur (- Sahte not: Rakibeye göre 20 mai 2019 tarihinde bulunduk.)",
+          "supported": false
+        },
+        {
+          "claim": "Bu ara hedefe geçtiği 30 eylül 2060 itibai olduğunda scope1 ve scope2 emission dalgalarına %42 düşmeyecektiler (- Sahte Not: Rahat amacı burada dahil edilen genel ayrıntı seferberilmesine ilişkinin ortaya çıkan planlamana dayandı)",
+          "supported": true
+        },
+        {
+          "claim": "Enerji vergisinek finanse etmenin istenen zamanı 2 degiriydi(- Sahte Note: Burada 'demoscen',",
+          "supported": true
+        }
+      ]
+    }
+  ]
+}

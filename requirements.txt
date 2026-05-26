@@ -1,0 +1,24 @@
+# ReliabilityRAG - Core Dependencies
+# Install: pip install -r requirements.txt
+#
+# CUDA notu: torch'u kendi CUDA sürümüne göre kur (https://pytorch.org).
+# RTX 2060/5080 için örn: pip install torch --index-url https://download.pytorch.org/whl/cu121
+
+# Embedding & LLM
+torch
+transformers
+sentence-transformers
+accelerate            # device_map="auto"
+bitsandbytes          # 4-bit quantization (Phi-3.5-mini nf4)
+
+# Numerik & Graf
+numpy
+networkx
+
+# Arayuz & Gorsellestirme
+gradio                # app.py, cached_demo.py
+plotly                # discourse_graph.py
+
+# Rapor & Yardimci
+reportlab             # _make_weekly_pdf.py
+tqdm

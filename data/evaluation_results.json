@@ -1,0 +1,236 @@
+{
+  "results": {
+    "total_tests": 9,
+    "correct_tests": 0,
+    "total_contradictory": 9,
+    "detected_contradictory": 0,
+    "total_clean": 14,
+    "kept_clean": 11,
+    "false_positives": 3,
+    "false_negatives": 9,
+    "by_dimension": {
+      "temporal": {
+        "total": 3,
+        "correct": 0
+      },
+      "scope": {
+        "total": 3,
+        "correct": 0
+      },
+      "interdepartmental": {
+        "total": 3,
+        "correct": 0
+      }
+    },
+    "latencies": [
+      0.6314408779144287,
+      0.4210977554321289,
+      0.20932793617248535,
+      0.46546101570129395,
+      0.031132936477661133,
+      0.03277420997619629,
+      0.03399157524108887,
+      0.03410482406616211,
+      0.03058171272277832
+    ],
+    "details": [
+      {
+        "test_id": "6a9920bc-786d-4264-870f-39185d2ae8ba",
+        "dimension": "temporal",
+        "question": "Şirketin karbon emisyon azaltma hedefi nedir?",
+        "expected_kept": [
+          1,
+          2
+        ],
+        "actual_kept": [
+          0,
+          1,
+          2
+        ],
+        "expected_removed": [
+          0
+        ],
+        "actual_removed": [],
+        "is_correct": false,
+        "latency": 0.6314408779144287,
+        "contradiction_edges": 0
+      },
+      {
+        "test_id": "f8c7367d-4dd2-4367-8f9b-49179c6cdc73",
+        "dimension": "temporal",
+        "question": "Şirketin toplam çalışan sayısı kaçtır?",
+        "expected_kept": [
+          1,
+          2
+        ],
+        "actual_kept": [
+          0,
+          1,
+          2
+        ],
+        "expected_removed": [
+          0
+        ],
+        "actual_removed": [],
+        "is_correct": false,
+        "latency": 0.4210977554321289,
+        "contradiction_edges": 0
+      },
+      {
+        "test_id": "353d4571-42cb-48d3-bbeb-f43935df9a71",
+        "dimension": "temporal",
+        "question": "Şirketin gelir büyüme hedefi nedir?",
+        "expected_kept": [
+          1
+        ],
+        "actual_kept": [
+          0,
+          1
+        ],
+        "expected_removed": [
+          0
+        ],
+        "actual_removed": [],
+        "is_correct": false,
+        "latency": 0.20932793617248535,
+        "contradiction_edges": 0
+      },
+      {
+        "test_id": "572f32e0-1e7a-483e-b391-7c6510a2c9f5",
+        "dimension": "scope",
+        "question": "Şirketin toplam sera gazı emisyonu ne kadardır?",
+        "expected_kept": [
+          1,
+          2
+        ],
+        "actual_kept": [
+          0,
+          1
+        ],
+        "expected_removed": [
+          0
+        ],
+        "actual_removed": [
+          2
+        ],
+        "is_correct": false,
+        "latency": 0.46546101570129395,
+        "contradiction_edges": 1
+      },
+      {
+        "test_id": "beddcafe-c72f-4015-84fa-086e56a44c88",
+        "dimension": "scope",
+        "question": "Şirketin atık yönetimi performansı nasıl?",
+        "expected_kept": [
+          1,
+          2
+        ],
+        "actual_kept": [
+          0,
+          1,
+          2
+        ],
+        "expected_removed": [
+          0
+        ],
+        "actual_removed": [],
+        "is_correct": false,
+        "latency": 0.031132936477661133,
+        "contradiction_edges": 0
+      },
+      {
+        "test_id": "a29e8334-23e5-467c-a051-513cc2ea1119",
+        "dimension": "scope",
+        "question": "Şirketin su tüketimi ne kadar azaldı?",
+        "expected_kept": [
+          1
+        ],
+        "actual_kept": [
+          0,
+          1
+        ],
+        "expected_removed": [
+          0
+        ],
+        "actual_removed": [],
+        "is_correct": false,
+        "latency": 0.03277420997619629,
+        "contradiction_edges": 0
+      },
+      {
+        "test_id": "37ecbe12-e2c7-499d-9799-f6c64bfa7277",
+        "dimension": "interdepartmental",
+        "question": "Şirketin 2023 yılı karlılık durumu nasıl?",
+        "expected_kept": [
+          1,
+          2
+        ],
+        "actual_kept": [
+          0,
+          2
+        ],
+        "expected_removed": [
+          0
+        ],
+        "actual_removed": [
+          1
+        ],
+        "is_correct": false,
+        "latency": 0.03399157524108887,
+        "contradiction_edges": 1
+      },
+      {
+        "test_id": "3e1ffd8b-b565-404f-883e-041b69c6a065",
+        "dimension": "interdepartmental",
+        "question": "Şirketin yenilenebilir enerji yatırımı ne kadar?",
+        "expected_kept": [
+          1
+        ],
+        "actual_kept": [
+          0
+        ],
+        "expected_removed": [
+          0
+        ],
+        "actual_removed": [
+          1
+        ],
+        "is_correct": false,
+        "latency": 0.03410482406616211,
+        "contradiction_edges": 1
+      },
+      {
+        "test_id": "ae7cc60b-00bc-4219-a73b-85cee674c835",
+        "dimension": "interdepartmental",
+        "question": "Çalışan memnuniyeti durumu nedir?",
+        "expected_kept": [
+          1
+        ],
+        "actual_kept": [
+          0,
+          1
+        ],
+        "expected_removed": [
+          0
+        ],
+        "actual_removed": [],
+        "is_correct": false,
+        "latency": 0.03058171272277832,
+        "contradiction_edges": 0
+      }
+    ]
+  },
+  "metrics": {
+    "filtering_success": 0.0,
+    "temporal_accuracy": 0.0,
+    "clean_preservation": 78.57142857142857,
+    "avg_latency": 0.20999031596713597,
+    "max_latency": 0.6314408779144287,
+    "overall_accuracy": 0.0,
+    "by_dimension": {
+      "temporal": 0.0,
+      "scope": 0.0,
+      "interdepartmental": 0.0
+    }
+  }
+}
