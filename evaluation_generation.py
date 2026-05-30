@@ -212,9 +212,14 @@ def evaluate_test(rag: ReliabilityRAG, test: dict, mode: str = "oracle") -> Test
         ]
 
     expected_companies = {c["company"] for c in fed_raw}
+    # expected_years: chunk metadata year (rapor yılı) PLUS years mentioned in
+    # the text (hedef/goal years like "2030 yılına kadar"). Without text-years,
+    # the LLM gets penalized for faithfully repeating goal years that appear
+    # in the source — that's a false-negative we don't want.
     expected_years = {c["year"] for c in fed_raw}
     expected_numbers = set()
     for c in fed_raw:
+        expected_years |= extract_years(c["text"])
         expected_numbers |= extract_numbers(c["text"])
 
     # Detected in LLM output
