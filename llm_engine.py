@@ -103,6 +103,24 @@ class TransformersEngine(LLMEngine):
         inputs = self.tokenizer(input_text, return_tensors="pt").to(self.model.device)
         return inputs
 
+    def _get_terminators(self):
+        """
+        Stop-token list for model.generate(). Llama-3 family (incl. Turkish-Llama)
+        REQUIRES <|eot_id|> (128009) as a terminator: their tokenizer.eos_token_id
+        is <|end_of_text|> (document-end, 128001), not <|eot_id|> (turn-end).
+        Without this the model emits <|eot_id|> at turn-end, generation continues
+        past it, and skip_special_tokens decode strips <|...|> tags but leaks the
+        role-header words ("assistant"/"user"/"system") as plain text → the
+        fake multi-turn hallucination observed on Turkish-Llama-8b 2026-05-30.
+        Safe for Qwen too: its tokenizer doesn't have <|eot_id|> so the lookup
+        returns unk and we skip it.
+        """
+        terms = [self.tokenizer.eos_token_id]
+        eot = self.tokenizer.convert_tokens_to_ids("<|eot_id|>")
+        if eot is not None and eot != self.tokenizer.unk_token_id:
+            terms.append(eot)
+        return terms
+
     def generate(self, prompt: str, max_tokens: int = 512) -> str:
         import torch
 
@@ -122,6 +140,7 @@ class TransformersEngine(LLMEngine):
                 # without hurting fluency for Turkish outputs.
                 repetition_penalty=1.15,
                 no_repeat_ngram_size=4,
+                eos_token_id=self._get_terminators(),
                 pad_token_id=self.tokenizer.eos_token_id,
             )
 
@@ -156,6 +175,7 @@ class TransformersEngine(LLMEngine):
             # Match generate(): prevent 40-min runaway loops.
             repetition_penalty=1.15,
             no_repeat_ngram_size=4,
+            eos_token_id=self._get_terminators(),
             pad_token_id=self.tokenizer.eos_token_id,
         )
 
