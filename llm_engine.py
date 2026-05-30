@@ -65,6 +65,14 @@ class TransformersEngine(LLMEngine):
                 device_map="auto",
                 torch_dtype=torch.float16,
             )
+        elif dtype == "8bit":
+            quantization_config = BitsAndBytesConfig(load_in_8bit=True)
+            self.model = AutoModelForCausalLM.from_pretrained(
+                model_name,
+                quantization_config=quantization_config,
+                device_map="auto",
+                torch_dtype=torch.float16,
+            )
         elif dtype == "fp16":
             self.model = AutoModelForCausalLM.from_pretrained(
                 model_name,
@@ -105,7 +113,7 @@ class TransformersEngine(LLMEngine):
             output = self.model.generate(
                 **inputs,
                 max_new_tokens=max_tokens,
-                temperature=0.3,
+                temperature=0.1,
                 do_sample=True,
                 top_p=0.9,
                 # Repetition guard: smoke test 2026-04-18 showed a 42-min
@@ -142,7 +150,7 @@ class TransformersEngine(LLMEngine):
             **inputs,
             streamer=streamer,
             max_new_tokens=max_tokens,
-            temperature=0.3,
+            temperature=0.1,
             do_sample=True,
             top_p=0.9,
             # Match generate(): prevent 40-min runaway loops.
@@ -178,7 +186,7 @@ class OllamaEngine(LLMEngine):
                 "model": self.model,
                 "prompt": prompt,
                 "stream": False,
-                "options": {"num_predict": max_tokens, "temperature": 0.3},
+                "options": {"num_predict": max_tokens, "temperature": 0.1},
             },
             timeout=120,
         )
@@ -204,7 +212,7 @@ class APIEngine(LLMEngine):
                 "model": self.model,
                 "messages": [{"role": "user", "content": prompt}],
                 "max_tokens": max_tokens,
-                "temperature": 0.3,
+                "temperature": 0.1,
             },
             timeout=60,
         )
@@ -234,6 +242,7 @@ Kurallar:
 - Yıl bilgisini vererek hangi döneme ait olduğunu açıkça söyle
 - Sayısal verileri doğru aktar
 - Emin olmadığın bilgileri tahmin olarak belirt
+- Şirket adlarını ve YILLARI kaynaklarda yazıldığı gibi BİREBİR aktar; asla değiştirme veya uydurma
 
 Kaynaklar:
 {sources}
