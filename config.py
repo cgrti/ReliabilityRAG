@@ -89,7 +89,7 @@ GPU_PROFILES = {
     },
     # RTX 5080 16GB, RTX 4080 16GB — Akvaryum PC
     "large": {
-        "llm_model": "Qwen/Qwen2.5-7B-Instruct",
+        "llm_model": "ytu-ce-cosmos/Turkish-Llama-8b-Instruct-v0.1",
         "llm_dtype": "4bit",
         "nli_model": "MoritzLaurer/mDeBERTa-v3-large-mnli-xnli",
         "nli_batch_size": 128,
