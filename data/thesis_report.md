@@ -208,6 +208,66 @@ yılına kadar %50") expected_years setine dahil değildi; LLM doğru aktarsa
 bile false-negative oluyordu. v1.1 fix'i (text-extracted years dahil) sonrası
 year_accuracy'nin daha yükseğe çıkması bekleniyor (re-run pending).
 
+### Qualitative Failure Catalog (NEW 2026-05-30)
+
+Üretilen 12 demo cache query'sinden çıkarılan 4 sistematik failure pattern.
+Bu örnekler `numerical_fidelity=0.54` rakamının **somut yüzleridir** — niceliksel metrik kalitatif kanıtlarla desteklenir.
+
+#### Pattern 1: Entity Name Corruption (Tokenizer × Quantization)
+
+**Frekans:** 12 query'den 2'sinde gözlemlendi (Tüpraş, Vakıf GYO).
+
+**Verbatim örnek (Tüpraş query'sinden):**
+> *"Yenilenebilir enerjinin fosil yakıta göre daha az karbon salımı olduğu göz önüne alındığında, **Tüpraşa'nın** yenileneilebilir enerjiye yaptığı yatırımlarda fosil yakılara kıyasla daha düşük karbon emisyonuna yol açacağı sonucunu çıkarabiliriz. **Tüprag'ın** 2022'deki raporu (...) Tüprag'ın 2023'teki raporu (...) **Tüpragas'ın** yenilenesilebilir enerjiye yatırmaya başladığı kadar (...) **Tüprüğün** yenilenebelirene enerjiye yansıyan (...)"*
+
+Tek bir cevapta **4 farklı yazım** (Tüpraşa / Tüprag / Tüpragas / Tüprüğün). Vakıf GYO query'sinde benzer şekilde **5+ varyant** (VakıfGYo / Vakıfgyo / Vakıfgry / VakıfGypo / VakıfGyro).
+
+**Kök neden:** Llama-3 BPE tokenizer Türkçe agglutinative ekleri çok parçaya bölüyor (örn. `Tüpraş`+`ın`+`yenileneilebilir` → 7+ subword). nf4 quantization weight precision kaybı ile birleşince model subword'leri yeniden birleştirirken farklı sonuçlar üretiyor. Bu **tokenizer × quantization etkileşimi**dir; sadece prompt engineering ile çözülmez.
+
+#### Pattern 2: Arithmetic Hallucination
+
+**Frekans:** Sayısal aggregation isteyen 1 query'de gözlemlendi (Garanti Scope).
+
+**Verbatim örnek:**
+> *"Bu iki veri noktasından yola çıkarak, GarantiBBVA'nın Scope I emisyonlarının (karbon nötrlük dahil) **39 m + 34.800 = 73.800 ton CO2-e düzeyinde** olduğu sonucunu çıkarabiliriz."*
+
+Doğru sonuç: `39 milyon + 34.800 = 39.034.800`. Model **6 mertebe** sapma yaptı (73.800 vs 39M+).
+
+**Kök neden:** Transformer-tabanlı LLM'ler aritmetik aggregation'da yapısal olarak zayıftır (token-by-token autoregressive üretim, sembolik hesaplama yok). Bu hata özellikle **mertebe (order of magnitude)** karıştırmasıyla ortaya çıkıyor — milyon ile bin'in birbirine karıştırılması. Aritmetik gerektiren query'lerde external calculator tool-use entegrasyonu gerekli; salt LLM güvenilmez.
+
+#### Pattern 3: Cross-Company Entity Drift
+
+**Frekans:** Multi-company retrieval'da 1 query'de gözlemlendi (Türk Telekom).
+
+**Verbatim örnek:**
+> *"Son olarak, **Anadolu Hayat Emeklilik'in 2024 tarihli "Strateji Raporu"nda, Türk Telekon'un dijital dönüşumüne ilişkin** olarak, müşterilerin taleplerinin ve beklentilerinin sürekli takip edilmesi ve teknolojininkinden yararlanmak için yenilikçi çözüm arayışında bulunulması öngörülmektedir."*
+
+Sorgu Türk Telekom hakkında; retrieval Anadolu Hayat'tan da chunk getirmiş; LLM **Anadolu Hayat'ın Türk Telekom hakkında konuşmasını** üretmiş — şirket sahipliğini karıştırmış. Bu **entity-claim attribution** hatası.
+
+**Kök neden:** Retrieval birden fazla şirketin chunks'ını getirdiğinde, LLM "kim ne söyledi" izleğini kaybediyor; prompt'taki kaynak header'ları (`Kaynak X [Şirket Yıl]`) yeterince enforce edilmiyor. Entity-aware prompting veya post-hoc verification gerekli.
+
+#### Pattern 4: Placeholder Leakage
+
+**Frekans:** 1 query'de gözlemlendi (Garanti aktif/kredi).
+
+**Verbatim örnek:**
+> *"2020'den bu yana aktif büyümeye devam eden banka, 2023'teki aktif büyümesinin 2020'ye kıyasla **%X arttığını** gösteriyor."*
+
+`%X` template artefact'i olarak çıktıda kaldı — LLM hesaplamadığı bir yüzdeyi placeholder ile temsil etti ama hesaplamayı tamamlamadı.
+
+**Kök neden:** LLM kaynaklarda yeterli veri olmadığında "hesaplayamıyorum" yerine **placeholder'ı yazıyor** — bir tür instruction-following failure. Prompt'a *"eğer veri yoksa 'belirtilmemiştir' de, asla placeholder kullanma"* kuralı eklenmeli.
+
+### Failure pattern ⇄ metric eşleştirmesi
+
+| Pattern | Numerical Fidelity etkisi | Entity Recall/Purity etkisi |
+|---|---|---|
+| Pattern 1 (Tüpraş) | dolaylı (entity'siz number anlamsız) | DİREKT (recall düşer) |
+| Pattern 2 (Math 39M+34.8K) | DİREKT (73.8K source'ta yok) | yok |
+| Pattern 3 (Cross-co drift) | dolaylı | DİREKT (purity'ye etki) |
+| Pattern 4 (%X) | DİREKT (placeholder source'ta yok) | yok |
+
+Patterns 2 ve 4 doğrudan `numerical_fidelity=0.54`'ün arkasındaki üretici. Pattern 1 ve 3 entity metriklerini etkiler (synthetic test'te placeholder isim limit nedeniyle bu yansımıyor — real-world eval'de yansıyacak, Section 6 Caveat 1).
+
 
 ## 7. Production Stack
 
