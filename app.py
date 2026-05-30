@@ -252,18 +252,31 @@ EXAMPLES = [
 ]
 
 
+def _plot_to_html(fig, height: int = 600) -> str:
+    """
+    Convert Plotly figure to embeddable HTML string. Bypasses gr.Plot widget
+    which has rendering issues on Gradio 6.11 + Plotly 5.24 (2026-05-31 bug:
+    Plot container renders at 0px even with autosize/CSS fixes; standalone
+    HTML from fig.to_html() works perfectly). gr.HTML is the bulletproof path.
+    """
+    return fig.to_html(
+        include_plotlyjs="cdn",
+        full_html=False,
+        default_height=height,
+        default_width="100%",
+    )
+
+
 def run_discourse(company_sel, topic, k):
-    """Wraps build_discourse_figure for Gradio — reuses already-loaded NLI+searcher."""
+    """Wraps build_discourse_figure for Gradio — reuses already-loaded NLI+searcher.
+    Returns HTML string (not Plot figure) due to Gradio 6.11 gr.Plot bug."""
     if not company_sel or company_sel == ALL:
-        import plotly.graph_objects as go
-        fig = go.Figure()
-        fig.add_annotation(
-            text="Lütfen bir şirket seçin.",
-            xref="paper", yref="paper", x=0.5, y=0.5,
-            showarrow=False, font=dict(size=14),
+        return (
+            "<div style='padding:40px;text-align:center;color:#888'>"
+            "Lütfen bir şirket seçin.</div>",
+            "_(Şirket seçilmedi)_",
+            [],
         )
-        fig.update_layout(template="plotly_white", height=560)
-        return fig, "_(Şirket seçilmedi)_", []
     if not topic or not topic.strip():
         topic = "sürdürülebilirlik performansı"
     try:
@@ -280,13 +293,14 @@ def run_discourse(company_sel, topic, k):
             ", ".join(f"`{s}`={n}" for s, n in stats.get("sections", {}).items()) +
             f"\n\n_En çelişkili 15 çift aşağıda; tam liste {stats['edges']} edge._"
         )
-        return fig, info, stats.get("edge_rows", [])
+        return _plot_to_html(fig), info, stats.get("edge_rows", [])
     except Exception as e:
-        import plotly.graph_objects as go
-        fig = go.Figure()
-        fig.add_annotation(text=f"Hata: {e}", xref="paper", yref="paper",
-                           x=0.5, y=0.5, showarrow=False)
-        return fig, f"❌ {e}", []
+        return (
+            f"<div style='padding:40px;text-align:center;color:#c00'>"
+            f"<b>Hata:</b> {e}</div>",
+            f"❌ {e}",
+            [],
+        )
 
 
 with gr.Blocks(title="ReliabilityRAG") as app:
@@ -353,23 +367,16 @@ with gr.Blocks(title="ReliabilityRAG") as app:
 
         # ────────────────────────────────────────────────────────────────
         with gr.Tab("📈 Söylem Timeline"):
-            # Plot rendering fix (2026-05-31): Gradio 6.11 + Plotly 5.24 bazen
-            # gr.Plot container'ı 0px yükseklikle render ediyor — CSS ile
-            # min-height forcing + autosize (discourse_graph.py'de) çözer.
-            gr.HTML(
-                '<style>'
-                '#discourse-plot { min-height: 560px !important; }'
-                '#discourse-plot .js-plotly-plot, '
-                '#discourse-plot .plot-container, '
-                '#discourse-plot .plotly { min-height: 560px !important; width: 100% !important; }'
-                '</style>'
-            )
             gr.Markdown(
                 "### Şirketin yıllar içindeki söylem değişimi\n"
                 "Bir şirket seç + bir konu yaz → o konudaki chunk'ları yıllar boyunca "
                 "**benzerlik × yıl** ekseninde göster. Kırmızı kesik çizgi = NLI'nin "
                 "tespit ettiği çelişki edge'i (yıllar arası tutarsız iddialar). "
-                "_(Saliha Hoca, 2026-05-10)_"
+                "_(Saliha Hoca, 2026-05-10)_\n\n"
+                "**Hızlı örnekler:** `Akbank` + *karbon emisyon azaltma hedefi* · "
+                "`GarantiBBVA` + *kadın çalışan oranı* · "
+                "`NuhCimento` + *yenilenebilir enerji yatırımı* · "
+                "`AdanaCimento` + *karbon emisyonu*"
             )
             with gr.Row():
                 with gr.Column(scale=1):
@@ -385,25 +392,18 @@ with gr.Blocks(title="ReliabilityRAG") as app:
                     )
                     disc_k = gr.Slider(10, 60, value=30, step=5, label="Top-K (chunk sayısı)")
                     disc_btn = gr.Button("📈 Çizgeyi Üret", variant="primary", size="lg")
-                    # Examples defansif filter: Dataset.svelte:228 hatası
-                    # company string'i _companies içinde yoksa Dropdown
-                    # validation fail eder → tüm Examples render hatası.
-                    _disc_example_pool = [
-                        ["Akbank",       "karbon emisyon azaltma hedefi",    30],
-                        ["GarantiBBVA",  "kadın çalışan oranı",              30],
-                        ["NuhCimento",   "yenilenebilir enerji yatırımı",    30],
-                        ["Akbank",       "iş sağlığı güvenliği kaza",        25],
-                        ["AdanaCimento", "karbon emisyonu",                  20],
-                    ]
-                    _disc_examples_safe = [
-                        ex for ex in _disc_example_pool if ex[0] in _companies
-                    ] or [["", "karbon emisyon", 30]]  # fallback if no match
-                    gr.Examples(
-                        examples=_disc_examples_safe,
-                        inputs=[disc_company, disc_topic, disc_k],
-                    )
+                    # NOTE: gr.Examples removed 2026-05-31 — Gradio 6.11 Dataset.svelte:228
+                    # rendering bug with string columns. Examples documented in markdown above
+                    # for users to type manually. Doesn't affect core feature functionality.
                 with gr.Column(scale=3):
-                    disc_plot = gr.Plot(label="Söylem Timeline", elem_id="discourse-plot")
+                    # Using gr.HTML instead of gr.Plot due to Gradio 6.11 + Plotly 5.24
+                    # rendering bug (Plot container 0px height). HTML embed bypasses
+                    # the widget — standalone fig.to_html() verified working.
+                    disc_plot = gr.HTML(
+                        value="<div style='padding:40px;text-align:center;color:#888;"
+                              "min-height:560px'>📈 Çizgeyi üretmek için butona tıkla.</div>",
+                        label="Söylem Timeline",
+                    )
                     disc_info = gr.Markdown()
 
             with gr.Accordion("⚡ En Çelişkili Çiftler (NLI tabanlı, top 15)", open=True):
