@@ -377,6 +377,77 @@ Sorgu Türk Telekom hakkında; retrieval Anadolu Hayat'tan da chunk getirmiş; L
 
 Patterns 2 ve 4 doğrudan `numerical_fidelity=0.54`'ün arkasındaki üretici. Pattern 1 ve 3 entity metriklerini etkiler (synthetic test'te placeholder isim limit nedeniyle bu yansımıyor — real-world eval'de yansıyacak, Section 6 Caveat 1).
 
+### Prompt v2 Validation: 12-Query A/B Test (2026-05-30)
+
+Yukarıdaki 4 failure pattern'ı ele almak üzere `FINAL_ANSWER_PROMPT v2`
+geliştirildi. Yeni kurallar: (a) tek tutarlı entity yazımı, (b) `Kaynak X`
+header'ından claim attribution, (c) sayılarda no-arithmetic-aggregation,
+(d) placeholder yerine "belirtilmemiştir". Aynı 12 demo query v1 ve v2
+prompt'larıyla çalıştırıldı (controlled A/B, n=12 paired).
+
+| Pattern | v1 davranışı | v2 davranışı | Verdict |
+|---|---|---|---|
+| **#4 Placeholder %X** | `"%X arttığını"` leaked | placeholder yok | ✅ **TAM ÇÖZÜLDÜ** |
+| **#1b Vakıf GYO entity** | 10 varyant / 13 mention | 6 varyant / 6 mention | ✅ **KISMEN** (-40% varyant, -54% mention) |
+| **#1 Tüpraş entity** | 5 varyant / 8 mention | 7 varyant / 8 mention | ❌ **ÇÖZÜLMEDİ** (farklı varyantlar) |
+| **#2 Math 39M+34K=73K** | "39 m + 34.800 = 73.800" | "39 m + 34000 = 40340" | ❌ **ÇÖZÜLMEDİ** (farklı yanlış sonuç) |
+| **#3 Cross-co drift** | Anadolu Hayat → TT atfı | Anadolu Hayat → TT atfı (kelime farkı) | ❌ **ÇÖZÜLMEDİ** |
+
+**Aggregate timing:** 210.9s → 174.4s (**-17.3%**) — v2'nin strikt
+kuralları daha kısa ve odaklı cevap üretiyor.
+
+### Round 2: Yeni 5 Query'nin Confirmation (2026-05-30)
+
+A/B sonuçlarının systematicity'sini test için 5 yeni query (Yapı Kredi
+governance, Anadolu Efes water+recycling, TSKB sustainable finance,
+Banking sector ESG methodology, Borusan İSG) v2 prompt ile çalıştırıldı:
+
+- **Pattern 1 tekrar etti**: TSKB cevabında 7+ varyant
+  (`TSKB / TSKBK / TSKK / TSKBB / TSKKK / TSKKB / TSKBC / TSKBP`),
+  Borusan cevabında 6 varyant (`BorusaHolding / Borusaholding /
+  Borusahanholding / Borusholdings / Boruşan / borusaholding`).
+- **Pattern 3 tekrar etti**: "Türk bankacılık sektöründe ESG risk değerlendirme"
+  query'sinde cevap `TÜPRAŞ'ın Risk Kataloğu'nda` ifadesini içerdi —
+  rafineri şirketi banking sektör sorusunda göründü.
+- **Yeni pattern (capability-level)**: Borusan İSG query'sinde sayısal
+  fabrication — "100.000 personelin çalıştığı 12 fabrikada 10.000 saatlik
+  iş süresi" (Borusan Holding gerçekte ~10K çalışan, oran hesabı `10K saat /
+  100K personel = 6 dk/kişi` mantıksız).
+
+5 query verdict: 0 strong, 2 acceptable, 3 problem. **Failure pattern'lar
+query-specific değil, sistematik.**
+
+### A/B Validation Conclusions (Tezsel framing)
+
+A/B + Round 2 sonuçları LLM-layer failure'ların net bir tipolojisini
+ortaya koyar:
+
+| Failure tipi | Prompt-fix'lenebilir? | Underlying neden |
+|---|---|---|
+| **Instruction-level** (placeholder leakage) | ✅ EVET | Direkt instruction-following — prompt kuralı yeterli |
+| **Soft pattern** (Vakıf GYO partial) | ⚠️ KISMEN | Model attention steered ediliyor ama enforced edilemiyor |
+| **Tokenizer artifact** (Tüpraş, TSKB, Borusan) | ❌ HAYIR | BPE subword corruption instruction level'ın altında |
+| **Capability gap** (aritmetik, attribution) | ❌ HAYIR | Model yapısal kapasite eksikliği |
+
+Bu tipoloji **LLM-layer reliability iki düzeyli intervention gerektirir**
+tezsel iddiasını destekliyor:
+
+1. **Instruction-following failure'lar** (Pattern 4) prompt engineering ile
+   tam çözülebilir; A/B testi targeted pattern için %100 eliminasyon
+   gösterdi.
+
+2. **Tokenizer-level ve capability-level failure'lar** (Patterns 1, 2, 3)
+   prompt'la çözülemez; **model-level intervention** gerekir:
+   - Alternatif tokenizer (Turkish-aware BPE) veya morpheme-level encoding
+   - Tool-use entegrasyonu (aritmetik için external calculator API)
+   - Türkçe entity-rich domain üzerinde fine-tuning
+   - Entity-aware attention mechanisms (claim attribution için)
+
+Bu sonuç **mevcut kurumsal NLP literatürünün önemli bir noktasıyla uyumlu**:
+prompt engineering production reliability için necessary fakat sufficient
+değil. Reliability iddiası taşıyan multi-document RAG sistemleri bu iki
+düzeyi (prompt + model) birlikte ele almalıdır.
+
 """
 
 
