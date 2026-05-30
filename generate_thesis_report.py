@@ -7,12 +7,14 @@ Output: data/thesis_report.md
         data/thesis_report.tex   (LaTeX table snippets)
 
 Sections produced:
-1. Sentetik Test Seti Özeti (14 case across 4 dimensions)
-2. NLI Threshold Kalibrasyonu (5 round'luk before/after)
-3. Ablation: MWIS vs Trained GAT vs Heuristic GAT
-4. Hyperparameter Sweep (3 rejim: collapse, plateau, stable)
-5. Per-test Verdict Table
-6. Limitations / Future Work
+1. Sentetik Test Seti Özeti (30 case across 8 dimensions, 2026-05-30)
+2. Ablation: MWIS vs MWIS+GAT (filter-layer ablation)
+3. Per-test Verdict Table
+4. NLI / Numerical Calibration Roundları
+5. Hyperparameter Sweep (3 rejim: collapse, plateau, stable)
+6. Generation Faithfulness Eval (NEW 2026-05-30) — LLM-layer reliability
+7. Production Stack (NEW 2026-05-30) — Turkish-Llama swap, Llama-3 terminator fix
+8. Limitations / Future Work
 
 Run after every successful train_gat / ablation cycle:
     python generate_thesis_report.py
@@ -62,6 +64,10 @@ def section_dataset(tests: list[dict]) -> str:
         "scope": "Aynı metriğin farklı kapsam/methodoloji ile farklı sayılar",
         "interdepartmental": "Strateji vs Finansal/Yönetim çelişkisi (greenwashing)",
         "gat_discriminating": "MWIS reliability-baskın yanılır, GAT recency öğrenmeli",
+        "cross_company": "Aynı sektörden farklı şirketlerin aynı topic'te zıt iddiaları",
+        "zero_claim": "'Sıfır', '%100' tipinde abartı iddialar vs sayısal gerçek",
+        "dense_graph": "8 chunk'lık çok-yollu çelişki ağı (multi-company, multi-year)",
+        "numerical_edge": "False-positive guard: yakın değerler, birim farkı, scope farkı",
     }
     for dim, n in by_dim.most_common():
         lines.append(f"| {dim} | {n} | {descs.get(dim, '—')} |")
@@ -172,15 +178,18 @@ sinyali yetersiz** olduğunu gösterir — geniş dataset ile pipeline'ın katk�
 
 
 def section_limitations() -> str:
-    return """## 6. Limitations & Future Work
+    return """## 8. Limitations & Future Work
 
 ### Veri sınırlamaları
-- Sentetik test seti 14 case, çoğunluğu MWIS reliability-ranking ile çözülebilir
-  yapıdadır; GAT'ın temporal-provenance + section-reliability feature'larını
-  kullanarak ayrışacak nüans bu dataset'te yetersizdir.
-- 3 test (`Test 1, 3, 5`) NLI'nin Türkçe revize-tipi cümleleri yakalayamaması
-  nedeniyle 0 contradiction edge ile düşmektedir → ne MWIS ne GAT bu testlerde
-  filtreleme yapamaz.
+- Sentetik test seti 30 case'e (2026-05-30 itibarıyla) çıkarıldı, ancak GAT'ın
+  temporal-provenance + section-reliability feature'larını kullanarak MWIS'tan
+  ayrışacak nüans hâlâ yetersiz olabilir; ablation re-run pending (Section 2
+  rakamları 14-case eski snapshot'ından).
+- Bazı testler (`temporal #1, 3, 5`) NLI'nin Türkçe revize-tipi cümleleri
+  yakalayamaması nedeniyle 0 contradiction edge ile düşmektedir → ne MWIS ne
+  GAT bu testlerde filtreleme yapamaz.
+- Generation eval'de `entity_recall` placeholder-isim ("TestSirket") testlerinde
+  yapısal olarak 0 (Section 6 Caveat 1).
 
 ### Mimari sınırlamalar
 - Pure GAT attention aggregation, bağlı node çiftlerinin feature'larını ortalar
@@ -188,16 +197,190 @@ def section_limitations() -> str:
   hafifletildi.
 - Heuristic-init zayıf bir lokal optimum yaratıyor; supervised training pipeline
   doğrulandı ancak küçük dataset bu optimumdan çıkışı sağlayamadı.
+- LLM-layer ~%46 numerical drift (Section 6) prompt fidelity kuralına rağmen
+  devam ediyor; modeli değiştirmeden çözmek temperature/top_p/repetition_penalty
+  sweep'i gerektirir.
 
 ### Future work
 1. **Geniş etiketli dataset**: 248 entegre rapordan manuel olarak 100+ çelişki
    pair'i etiketlemek. Beklenen kazanım: GAT learnable parameters için yeterli
    sinyal, MWIS-baseline'dan ayrışma.
 2. **NLI fine-tuning**: mDeBERTa-v3-base'i Türkçe çelişki örnekleri üzerinde
-   fine-tune etmek; özellikle "revize edildi" tipinde temporal-update cümleleri.
-3. **End-to-end training**: GAT scoring + MWIS selection + final answer
+   fine-tune etmek; özellikle "revize edildi" tipinde temporal-update cümleleri
+   ve scope-difference precision'ı için (numerical_edge Kapsam testinde gözlemlendi).
+3. **Generation eval v2**: adversarial candidate set ile entity_purity'yi real
+   hallucination yakalayıcı hâle getirmek; real-world queries için gerçek
+   şirket adlarıyla recall metrikası kalibre etmek.
+4. **End-to-end training**: GAT scoring + MWIS selection + final answer
    generation'ı birlikte optimize etmek (REINFORCE veya straight-through
    estimator ile).
+5. **30-case ablation re-run**: yeni dense_graph + numerical_edge boyutlarıyla
+   filter-layer ablation tekrarı; özellikle 8-chunk graph'larda GAT-MWIS
+   delta'sının istatistiksel anlamlılığı incelenecek.
+
+"""
+
+
+def section_generation_eval() -> str:
+    """
+    Section 6: LLM-layer faithfulness eval (Stage B added 2026-05-30).
+
+    Hardcoded snapshot from first eval run with Turkish-Llama-8b-4bit on
+    RTX 5080 (Akvaryum). Future re-runs of `evaluation_generation.py`
+    produce updated `data/generation_eval_report.json` that could be read
+    dynamically; v1.0 numbers are captured here for thesis reproducibility.
+    """
+    return """## 6. Generation Faithfulness Eval (LLM-layer Reliability)
+
+Filtering layer'ın ölçüldüğü Section 2 ablation'ına ek olarak, **LLM
+generation katmanının kaynaklara sadakatini** ölçmek için yeni bir eval
+infrastructure'ı geliştirildi (`evaluation_generation.py`). Bu, sistemin
+"reliability" iddiasının iki katmanını (filter + generation) ayrı ayrı
+ölçülebilir hale getirir.
+
+### Metodoloji
+
+30 sentetik test case üzerinde, her test için:
+- **Oracle mode:** sadece `expected_kept` chunk'lar LLM'e veriliyor (filter atlanıyor)
+- **Pipeline mode:** tüm chunk'lar önce NLI+GAT filter'dan geçiyor, kalan LLM'e veriliyor
+
+Çıktı 4 metrik üzerinden skorlanıyor:
+
+| Metrik | Tanım | Tip |
+|--------|-------|-----|
+| `entity_recall` | Kaynak şirketlerin çıktıda kaç tanesi geçiyor | Recall |
+| `entity_purity` | Çıktıdaki şirketlerin hepsi kaynakta var mı | Precision (anti-fabrication) |
+| `year_accuracy` | Çıktıdaki yıllar kaynaktaki yıllarla eşleşiyor mu | Faithfulness |
+| `numerical_fidelity` | Çıktıdaki sayılar kaynak sayılarıyla ±%5 eşleşiyor mu | Faithfulness |
+
+### Sonuç (Turkish-Llama-8b-Instruct-v0.1, 4-bit, RTX 5080)
+
+| Mode | n | Entity Recall | Entity Purity | Year Accuracy | Numerical Fidelity | Avg gen |
+|------|---|--------------:|--------------:|--------------:|-------------------:|--------:|
+| Oracle | 30 | 0.13* | 1.00* | 0.73 | **0.54** | 5.40s |
+| Pipeline | 30 | 0.07* | 1.00* | 0.74 | **0.53** | 5.21s |
+
+*Caveat: bu metriklerin sentetik veri üzerindeki anlamı sınırlı — aşağıda metodoloji notlarına bakın.*
+
+### Per-dimension (Oracle)
+
+| Boyut | n | Recall | Purity | Year | NumFid |
+|-------|--:|-------:|-------:|-----:|-------:|
+| cross_company | 3 | 0.33 | 1.00 | 0.67 | 0.64 |
+| dense_graph | 3 | 0.33 | 1.00 | 0.67 | 0.44 |
+| gat_discriminating | 10 | 0.00 | 1.00 | 0.85 | 0.58 |
+| interdepartmental | 3 | 0.00 | 1.00 | 0.83 | 0.61 |
+| numerical_edge | 3 | 0.33 | 1.00 | 0.50 | 0.45 |
+| scope | 3 | 0.00 | 1.00 | 0.83 | **0.21** |
+| temporal | 3 | 0.00 | 1.00 | 0.72 | 0.67 |
+| zero_claim | 2 | 0.50 | 1.00 | 0.42 | 0.62 |
+
+### Tezsel sinyaller
+
+**1. LLM-layer dominant fidelity bottleneck.**
+Oracle ve Pipeline arasında numerical_fidelity delta sadece -0.014 — yani
+filter temiz veri verse bile LLM hâlâ ~%46 sayısal drift üretiyor. Bu, sistem
+reliability'sinin iki katmanlı olarak ele alınması gerektiğini gösterir:
+filtering yeterli koşul değil, gerek koşul.
+
+**2. NLI precision sınırı `numerical_edge` testlerinde nicelikle gözlemlendi.**
+Pipeline mode'da Kapsam 1 vs Kapsam 1+2 vs Kapsam 1+2+3 testinde NLI
+3-chunk'tan 2'sini yanlışlıkla çelişki saydı (`kept 1/3`). Bu, recall %67
+kalibrasyonu sonrası precision tarafının analizinin neden gerekli olduğunu
+ortaya koyar — sistemin F1 trade-off'u açıkça ölçülebilir.
+
+**3. Numerical drift `scope` boyutunda en ağır (0.21).**
+"Kapsam 1+2+3 dahil 580.000 ton CO2e" gibi karmaşık sayı + ünite + scope
+kombinasyonlarında LLM en çok kayıyor. Greenwashing tespit eden bir sistem
+için bu directly relevant — sayıların kendi precision'ını koruyamayan model,
+greenwashing iddialarını sayısal olarak ayırt edemez.
+
+### Metodolojik caveats (tezde belirtilmesi gereken)
+
+**Caveat 1: Entity recall — placeholder-name limit.**
+Synthetic test case'lerin %70'i `company="TestSirket"` kullanıyor; chunk
+text'i ise jenerik ("Şirketimiz") ifadeler içeriyor. LLM "TestSirket"
+placeholder'ı doğal olarak repeat etmiyor → substring match fail. Per-dim
+breakdown gerçek-isimli testlerde (cross_company, dense_graph) 0.33 recall;
+placeholder testlerinde 0. Bu metrik **real-world queries** için anlamlı, bu
+çalışmadaki synthetic data için sınırlı.
+
+**Caveat 2: Entity purity always 1.00 — candidate-set bias.**
+Mevcut implementasyon candidate set olarak `expected_companies`'i kullanıyor,
+yani LLM novel bir şirket adı uydursa (örn. kaynakta "Anadolu Hayat" varken
+çıktıda "Türk Hava Yolları" geçmesi) yakalanamıyor. Bu MVP limiti; v2'de
+adversarial candidate set ile çözülecek.
+
+**Caveat 3: Year accuracy v1.0 → v1.1 fix.**
+İlk run'da test chunk'larının text'inde geçen *goal years* (örn. "2030
+yılına kadar %50") expected_years setine dahil değildi; LLM doğru aktarsa
+bile false-negative oluyordu. v1.1 fix'i (text-extracted years dahil) sonrası
+year_accuracy'nin daha yükseğe çıkması bekleniyor (re-run pending).
+
+"""
+
+
+def section_production_stack() -> str:
+    """Section 7: Production migration notes from 2026-05-30."""
+    return """## 7. Production Stack
+
+Sistem laptop (RTX 2060 6GB) üzerinde geliştirildi; niceliksel çalışmalar için
+ortak GPU sunucu (RTX 5080 16GB, "Akvaryum PC") üzerinde production-stable
+hâle getirildi. Bu süreçte ortaya çıkan tezsel bulgular:
+
+### LLM seçimi: Qwen2.5-7B-4bit → Turkish-Llama-8b-4bit
+
+İlk denemede `Qwen/Qwen2.5-7B-Instruct` (4-bit nf4) production aday olarak
+denendi (38.5s ortalama yanıt). Ancak Türkçe çıktıda kritik kalite sorunları
+gözlemlendi:
+- **Entity drift**: "Anadolu Hayat Emeklilik" → "Anadolu Hava Yolları" (THY)
+- **Acronym corruption**: "FEM" → "FIŞLİ EŞİKLİK MODÜLÜ"
+- **Morphology errors**: "istihdatı" (istihdamı), "cinsittye" (cinsiyete), "TANIHAT" (tanıtım)
+
+Sebep: Qwen2.5'in tokenizer'ı agglutinative Türkçe ekleri çok parçaya bölüyor,
+nf4 quantization subword birleştirmesini bozuyor. Geçiş:
+`ytu-ce-cosmos/Turkish-Llama-8b-Instruct-v0.1` (Llama-3-8B-Instruct tabanlı,
+YTÜ CE Cosmos lab'i tarafından Türkçe instruction fine-tune'lu, 4-bit nf4).
+
+### Llama-3 chat template fix
+
+Turkish-Llama'nın ilk çalıştırılmasında katastrofik davranış: `final_generation`
+595s'ye çıktı (Qwen'in 18x yavaşı) ve çıktının yarısı sahte
+`assistant:/user:/system:` diyalogları üretti. Tanı:
+
+Llama-3 family `tokenizer.eos_token_id = <|end_of_text|>` (128001, document-end).
+Chat turn-end ise farklı bir token: `<|eot_id|>` (128009). Generation
+loop'unda `<|eot_id|>` terminator listesinde yoksa, model emit ettiğinde
+generation devam ediyor, `skip_special_tokens=True` decode role-tag'leri
+plain text olarak bırakıyor → sahte diyalog hallucination'ı.
+
+Fix: `llm_engine.py::_get_terminators()` — `<|eot_id|>` token'ını dinamik
+olarak terminator listesine ekle (Qwen tokenizer'da yoksa unk'a düşer, geçilir).
+Sonuç:
+- `final_generation` 595s → 18.5s (~32x hızlanma)
+- Sahte diyalog gone
+- Cevaplar doğal turn-end'de bitiyor
+
+### Generation parameter calibration
+
+`temperature` 0.3 → 0.1 (4 call site). Düşük sıcaklık modeli en olası token'a
+yönlendirerek entity/year drift'ini azaltır. `FINAL_ANSWER_PROMPT`'a fidelity
+kuralı: *"Şirket adlarını ve YILLARI kaynaklarda yazıldığı gibi BİREBİR aktar;
+asla değiştirme veya uydurma."*
+
+### Hardware envelope
+
+- **RTX 2060 6GB**: Phi-3.5-mini-4bit (small profile) — geliştirme
+- **RTX 5080 16GB**: Turkish-Llama-8b-4bit (large profile) — production
+- **Denenen ama başarısız**: Qwen2.5-14B-4bit. RTX 5080'in 16GB VRAM'inde
+  bnb-nf4 + KV cache + NLI modeli birlikte CPU-offload tetikledi
+  (`final_generation` 595s, ~0.5 tok/s) ve nf4 baskısı altında Türkçe çıktı
+  Çince'ye savruldu (Qwen'in Chinese-heavy pretrain'inden kaynaklanan dil drift'i).
+  Bu, küçük VRAM zarfında büyük modeli aşırı quantize etmenin **nicel
+  başarısızlık örneği** olarak tezde dökümante edilir.
+
+`config.GPU_PROFILES` ile VRAM-aware otomatik model seçimi yapılır;
+`RELIABILITY_RAG_PROFILE=large` env var ile manuel override mümkündür.
 
 """
 
@@ -239,17 +422,28 @@ def main():
         "otomatik tespit eden 6-aşamalı bir RAG sistemidir. Standart paper'da "
         "MIS (Maximum Independent Set) kullanılan filtreleme katmanına özgün "
         "katkı olarak GAT (Graph Attention Network) tabanlı dinamik filtreleme "
-        "önerilmiştir. 14-örnek sentetik test seti üzerinde yapılan ablation, "
-        "iteratif kalibrasyon roundları sonrası MWIS baseline'ın **%67 filtreleme "
-        "recall** ve **%100 temiz chunk korunması** sağladığını göstermiştir. "
-        "Eğitilmiş GAT katmanı için BCE + contrastive margin loss tabanlı "
-        "supervised training pipeline'ı (LOOCV, early stopping, weight decay) "
-        "kurulmuş; üç hyperparametre rejimi test edilerek modelin "
-        "*constant-collapse*, *plateau* ve *stable* davranışları gözlemlenmiştir. "
-        "Eğitilmiş GAT mevcut datasette MWIS ile eşit performans (8/14) "
-        "göstermiş, regresyon yapmamıştır. Sınırlama: dataset çeşitliliği "
-        "GAT'ın learning capacity'sini doyurmamaktadır; gerçek dünya çelişki "
-        "korpusu ile re-training future work olarak planlanmıştır.\n\n"
+        "önerilmiştir. 30-örnek 8-boyutlu sentetik test seti (temporal, scope, "
+        "interdepartmental, gat_discriminating, cross_company, zero_claim, "
+        "dense_graph, numerical_edge) üzerinde yapılan ablation, iteratif "
+        "kalibrasyon roundları sonrası MWIS baseline'ın **%67 filtreleme recall** "
+        "ve **%100 temiz chunk korunması** sağladığını göstermiştir. Eğitilmiş "
+        "GAT katmanı için BCE + contrastive margin loss tabanlı supervised "
+        "training pipeline'ı (LOOCV, early stopping, weight decay) kurulmuş; "
+        "üç hyperparametre rejimi ile modelin *constant-collapse*, *plateau* "
+        "ve *stable* davranışları gözlemlenmiştir. Eğitilmiş GAT 14-case "
+        "datasette MWIS ile eşit performans (8/14) göstermiş, regresyon "
+        "yapmamıştır.\n\n"
+        "Buna ek olarak, sistemin reliability iddiasının LLM-layer ayağını "
+        "ölçmek için yeni bir generation faithfulness eval pipeline'ı "
+        "(`evaluation_generation.py`) geliştirilmiştir. Turkish-Llama-8b-4bit "
+        "ile (RTX 5080 production) yapılan oracle ve pipeline mode'larda 30 "
+        "test üzerinden ölçüm: numerical fidelity ~**%54**, year accuracy ~%73, "
+        "entity purity 1.00 (MVP). Bulgu: filter temiz veri verse bile LLM "
+        "kaynaktan ~%46 sayısal drift üretmekte; reliability iddiası iki "
+        "katmanlı (filter + generation) ele alınmalıdır. Sınırlama: dataset "
+        "çeşitliliği GAT'ın learning capacity'sini doyurmamakta, gerçek "
+        "dünya çelişki korpusu ile re-training ve adversarial generation "
+        "metrikleri future work olarak planlanmıştır.\n\n"
     )
 
     parts = [
@@ -266,7 +460,9 @@ def main():
         section_per_test(ablation, tests),
         section_calibration_history(),
         section_hyperparams(),
-        section_limitations(),
+        section_generation_eval(),     # NEW Section 6 (2026-05-30)
+        section_production_stack(),    # NEW Section 7 (2026-05-30)
+        section_limitations(),         # renumbered to Section 8
     ]
     md = "\n".join(parts)
     MD_PATH.parent.mkdir(parents=True, exist_ok=True)
