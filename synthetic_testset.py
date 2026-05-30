@@ -470,6 +470,146 @@ def generate_gat_discriminating_tests() -> list[TestCase]:
         description="2018 finansal (450GWh) eski. 2024 cevre+strateji yeni (290GWh). MWIS rel=0.9'u tercih edebilir. GAT recency'yi öğrenmeli.",
     ))
 
+    # GAT-6: Kadın istihdamı — eski finansal (yüksek rel) vs yeni sosyal (düşük rel)
+    tests.append(TestCase(
+        test_id=str(uuid.uuid4()),
+        dimension="gat_discriminating",
+        question="Şirketin kadın çalışan oranı nedir?",
+        chunks=[
+            TestChunk(
+                text="2019 finansal raporumuzda kadın çalışan oranımız %18 olarak raporlanmış olup, bağımsız denetim sürecinden geçmiştir.",
+                company="TestSirket", year=2019, section_type="finansal",
+                reliability_weight=0.9, is_contradictory=True,
+                contradiction_type="temporal",
+            ),
+            TestChunk(
+                text="2024 yılı insan kaynakları raporumuza göre kadın çalışan oranımız %42'ye yükselmiştir. Çeşitlilik politikamızın somut sonucudur.",
+                company="TestSirket", year=2024, section_type="sosyal",
+                reliability_weight=0.5, is_contradictory=False,
+                contradiction_type="none",
+            ),
+        ],
+        expected_kept=[1],
+        expected_removed=[0],
+        description="2019 finansal (rel=0.9) %18 ESKI vs 2024 sosyal (rel=0.5) %42 YENI. "
+                    "Reliability farkı 0.4, 5 yıl recency farkı. MWIS reliability-baskın → eski seçer (yanlış). "
+                    "GAT recency feature'ı ile 2024'ü tercih etmeli.",
+    ))
+
+    # GAT-7: Dijital dönüşüm budget — yönetim (orta-rel) vs strateji (düşük-rel), büyük ölçek farkı
+    tests.append(TestCase(
+        test_id=str(uuid.uuid4()),
+        dimension="gat_discriminating",
+        question="Şirketin dijital dönüşüm yatırımı ne kadar?",
+        chunks=[
+            TestChunk(
+                text="2018 yönetim kurulu kararıyla dijital dönüşüm bütçesi yıllık 8 milyon TL olarak onaylanmıştır.",
+                company="TestSirket", year=2018, section_type="yonetim",
+                reliability_weight=0.7, is_contradictory=True,
+                contradiction_type="temporal",
+            ),
+            TestChunk(
+                text="2024 stratejik plan dokümanımızda dijital dönüşüm yatırımımız 95 milyon TL'ye çıkarılmış olup, ana iş kollarımızın dijitalleştirilmesini hedeflemektedir.",
+                company="TestSirket", year=2024, section_type="strateji",
+                reliability_weight=0.4, is_contradictory=False,
+                contradiction_type="none",
+            ),
+        ],
+        expected_kept=[1],
+        expected_removed=[0],
+        description="2018 yönetim (rel=0.7) 8M vs 2024 strateji (rel=0.4) 95M. "
+                    "11.8x büyüme — eski rakam güncel olamaz. MWIS yönetim'i tercih edebilir; "
+                    "GAT temporal-aware kararla 2024'ü seçmeli.",
+    ))
+
+    # GAT-8: Emisyon yoğunluğu — eski finansal (yüksek rel) vs yeni cevre (orta rel), 6 yıl fark
+    tests.append(TestCase(
+        test_id=str(uuid.uuid4()),
+        dimension="gat_discriminating",
+        question="Şirketin birim üretim başına karbon emisyon yoğunluğu nedir?",
+        chunks=[
+            TestChunk(
+                text="2017 yılı denetimli finansal raporumuza göre birim üretim başına karbon emisyonumuz 0.85 ton CO2e/ton ürün olarak hesaplanmıştır.",
+                company="TestSirket", year=2017, section_type="finansal",
+                reliability_weight=0.9, is_contradictory=True,
+                contradiction_type="temporal",
+            ),
+            TestChunk(
+                text="2023 sürdürülebilirlik raporumuzda emisyon yoğunluğumuz 0.42 ton CO2e/ton ürün'e düşürülmüştür. Enerji verimliliği projelerinin somut sonucudur.",
+                company="TestSirket", year=2023, section_type="cevre",
+                reliability_weight=0.6, is_contradictory=False,
+                contradiction_type="none",
+            ),
+        ],
+        expected_kept=[1],
+        expected_removed=[0],
+        description="2017 finansal (rel=0.9) 0.85 vs 2023 cevre (rel=0.6) 0.42. "
+                    "2.0x ratio + 6 yıl fark. MWIS reliability-baskın → eski seçer.",
+    ))
+
+    # GAT-9: 4-chunk dense temporal evolution
+    tests.append(TestCase(
+        test_id=str(uuid.uuid4()),
+        dimension="gat_discriminating",
+        question="Şirketin güncel yenilenebilir enerji oranı nedir?",
+        chunks=[
+            TestChunk(
+                text="2017 finansal raporumuzda yenilenebilir enerji oranımız %8 olarak belirtilmiş, sermaye yatırım planına dahil edilmiştir.",
+                company="TestSirket", year=2017, section_type="finansal",
+                reliability_weight=0.9, is_contradictory=True,
+                contradiction_type="temporal",
+            ),
+            TestChunk(
+                text="2020 yönetim kurulu raporumuzda yenilenebilir enerji oranı %22'ye yükseltilmiştir.",
+                company="TestSirket", year=2020, section_type="yonetim",
+                reliability_weight=0.7, is_contradictory=True,
+                contradiction_type="temporal",
+            ),
+            TestChunk(
+                text="2024 yılı çevre raporumuza göre yenilenebilir enerji oranımız %55'e ulaşmıştır.",
+                company="TestSirket", year=2024, section_type="cevre",
+                reliability_weight=0.6, is_contradictory=False,
+                contradiction_type="none",
+            ),
+            TestChunk(
+                text="2024 stratejik plan dokümanımızda yenilenebilir enerji payımız %55 olarak raporlanmıştır.",
+                company="TestSirket", year=2024, section_type="strateji",
+                reliability_weight=0.4, is_contradictory=False,
+                contradiction_type="none",
+            ),
+        ],
+        expected_kept=[2, 3],
+        expected_removed=[0, 1],
+        description="4 chunk, 3 yıl: 2017 (rel=0.9, %8), 2020 (rel=0.7, %22), 2024 cevre (rel=0.6, %55), 2024 strateji (rel=0.4, %55). "
+                    "Sadece son ikisi tutarlı ve güncel. MWIS yüksek-rel eski'leri tercih edebilir; "
+                    "GAT temporal kümeleme ile 2024'leri seçmeli.",
+    ))
+
+    # GAT-10: Same-reliability tier — pure recency (regression guard, kolay test)
+    tests.append(TestCase(
+        test_id=str(uuid.uuid4()),
+        dimension="gat_discriminating",
+        question="Şirketin son denetimli net karı ne kadar?",
+        chunks=[
+            TestChunk(
+                text="2020 yılsonu denetim raporumuza göre net karımız 480 milyon TL olarak gerçekleşmiştir.",
+                company="TestSirket", year=2020, section_type="finansal",
+                reliability_weight=0.9, is_contradictory=True,
+                contradiction_type="temporal",
+            ),
+            TestChunk(
+                text="2023 yılsonu denetim raporumuza göre net karımız 1.350 milyon TL olarak gerçekleşmiştir.",
+                company="TestSirket", year=2023, section_type="finansal",
+                reliability_weight=0.9, is_contradictory=False,
+                contradiction_type="none",
+            ),
+        ],
+        expected_kept=[1],
+        expected_removed=[0],
+        description="Aynı reliability (rel=0.9), 3 yıl fark. Pure recency belirleyici. "
+                    "MWIS recency formülü ile zaten doğru bekleniyor — GAT da regresyon yapmamalı.",
+    ))
+
     return tests
 
 
@@ -628,15 +768,324 @@ def generate_zero_claim_tests() -> list[TestCase]:
     return tests
 
 
+def generate_dense_graph_tests() -> list[TestCase]:
+    """
+    Dimension 7: Dense Contradiction Graphs (NEW 2026-05-30).
+
+    8 chunk'lık çok-yollu çelişki ağları. GAT'ın attention mechanism'inin
+    çoklu kontekst sinyallerini birleştirme yeteneğini test eder. Pure MWIS
+    bu kadar yoğun çelişki yapılarında alt-optimal subset seçebilir; GAT'ın
+    learned weighting'i daha tutarlı sonuçlar vermeli.
+
+    Bu testler ablation istatistiksel gücünü artırmak için kritik:
+    küçük graf'larda MWIS≈GAT, büyük graf'larda fark açılmalı.
+    """
+    tests = []
+
+    # DG-1: Karbon emisyon yoğunluğu — 8 chunk, 3 şirket, 4 yıl
+    tests.append(TestCase(
+        test_id=str(uuid.uuid4()),
+        dimension="dense_graph",
+        question="Çimento sektöründe karbon emisyon yoğunluğu (ton CO2e/ton ürün) hangi düzeydedir?",
+        chunks=[
+            TestChunk(
+                text="2019 yılı çevre raporumuzda emisyon yoğunluğumuz 0.78 ton CO2e/ton olarak raporlanmıştır.",
+                company="CimA", year=2019, section_type="cevre",
+                reliability_weight=0.6, is_contradictory=True,
+                contradiction_type="temporal",
+            ),
+            TestChunk(
+                text="2024 bağımsız denetim raporumuza göre emisyon yoğunluğumuz 0.52 ton CO2e/ton'a düşürülmüştür.",
+                company="CimA", year=2024, section_type="finansal",
+                reliability_weight=0.9, is_contradictory=False,
+                contradiction_type="none",
+            ),
+            TestChunk(
+                text="2024 stratejik plan dokümanımızda emisyon yoğunluğumuz 0.30 ton CO2e/ton olarak öne çıkartılmaktadır.",
+                company="CimA", year=2024, section_type="strateji",
+                reliability_weight=0.4, is_contradictory=True,
+                contradiction_type="interdepartmental",
+            ),
+            TestChunk(
+                text="2023 yılı çevre raporumuzda emisyon yoğunluğumuz 0.58 ton CO2e/ton olarak gerçekleşmiştir.",
+                company="CimB", year=2023, section_type="cevre",
+                reliability_weight=0.6, is_contradictory=False,
+                contradiction_type="none",
+            ),
+            TestChunk(
+                text="2024 yönetim raporumuzda emisyon yoğunluğumuz 0.55 ton CO2e/ton'a iyileştirilmiştir.",
+                company="CimB", year=2024, section_type="yonetim",
+                reliability_weight=0.7, is_contradictory=False,
+                contradiction_type="none",
+            ),
+            TestChunk(
+                text="2018 yıl raporumuzda emisyon yoğunluğumuz 0.95 ton CO2e/ton düzeyinde idi.",
+                company="CimB", year=2018, section_type="yonetim",
+                reliability_weight=0.7, is_contradictory=True,
+                contradiction_type="temporal",
+            ),
+            TestChunk(
+                text="2024 sürdürülebilirlik raporumuzda emisyon yoğunluğumuz 0.61 ton CO2e/ton olarak ölçülmüştür.",
+                company="CimC", year=2024, section_type="cevre",
+                reliability_weight=0.6, is_contradictory=False,
+                contradiction_type="none",
+            ),
+            TestChunk(
+                text="Karbon ayak izinde sektör lideri konumdayız; emisyon yoğunluğumuz sektör ortalamasının çok altında kalmaktadır.",
+                company="CimC", year=2024, section_type="strateji",
+                reliability_weight=0.4, is_contradictory=True,
+                contradiction_type="interdepartmental",
+            ),
+        ],
+        expected_kept=[1, 3, 4, 6],
+        expected_removed=[0, 2, 5, 7],
+        description="8 chunk: 3 şirket × birden çok yıl. Tutarlı (2023-2024 cevre/finansal/yonetim 0.52-0.61 arası), "
+                    "eski (2018-2019: 0.78-0.95) elenmeli, strateji abartıları (0.30, vague liderlik) elenmeli. "
+                    "Dense graph: ≥5 çelişki edge. MWIS subset-optimal seçemeyebilir.",
+    ))
+
+    # DG-2: Çalışan sayısı temporal evolution + 1 outlier
+    tests.append(TestCase(
+        test_id=str(uuid.uuid4()),
+        dimension="dense_graph",
+        question="Şirketin güncel çalışan sayısı nedir?",
+        chunks=[
+            TestChunk(
+                text="2019 yıl sonunda toplam çalışan sayımız 14.200 olarak raporlanmıştır.",
+                company="TestSirket", year=2019, section_type="sosyal",
+                reliability_weight=0.5, is_contradictory=True,
+                contradiction_type="temporal",
+            ),
+            TestChunk(
+                text="2020 yılı insan kaynakları raporumuza göre çalışan sayımız 13.500 düzeyindedir.",
+                company="TestSirket", year=2020, section_type="sosyal",
+                reliability_weight=0.5, is_contradictory=True,
+                contradiction_type="temporal",
+            ),
+            TestChunk(
+                text="2021 itibarıyla çalışan sayımız 12.800 olarak gerçekleşmiştir.",
+                company="TestSirket", year=2021, section_type="yonetim",
+                reliability_weight=0.7, is_contradictory=True,
+                contradiction_type="temporal",
+            ),
+            TestChunk(
+                text="2022 yılı finansal denetim raporumuzda 11.450 aktif çalışanımız bulunmaktadır.",
+                company="TestSirket", year=2022, section_type="finansal",
+                reliability_weight=0.9, is_contradictory=True,
+                contradiction_type="temporal",
+            ),
+            TestChunk(
+                text="2023 yılı sosyal sorumluluk raporumuza göre çalışan sayımız 10.800'e düşmüştür.",
+                company="TestSirket", year=2023, section_type="sosyal",
+                reliability_weight=0.5, is_contradictory=True,
+                contradiction_type="temporal",
+            ),
+            TestChunk(
+                text="2024 yılsonu denetimli finansal raporumuza göre çalışan sayımız 10.250 düzeyindedir.",
+                company="TestSirket", year=2024, section_type="finansal",
+                reliability_weight=0.9, is_contradictory=False,
+                contradiction_type="none",
+            ),
+            TestChunk(
+                text="2024 yılı insan kaynakları raporumuza göre 10.200 çalışanımız mevcuttur.",
+                company="TestSirket", year=2024, section_type="sosyal",
+                reliability_weight=0.5, is_contradictory=False,
+                contradiction_type="none",
+            ),
+            TestChunk(
+                text="Stratejik vizyonumuza göre çalışan sayımız 25.000'e ulaşmıştır; sektörde lider istihdam sağlayıcı konumdayız.",
+                company="TestSirket", year=2024, section_type="strateji",
+                reliability_weight=0.4, is_contradictory=True,
+                contradiction_type="interdepartmental",
+            ),
+        ],
+        expected_kept=[5, 6],
+        expected_removed=[0, 1, 2, 3, 4, 7],
+        description="8 chunk: 5 yıllık azalan temporal seri (14.2K→10.2K) + 2024'te 1 outlier (25K abartı). "
+                    "Sorgu 'güncel' istiyor → sadece 2024 chunk'ları doğru (5,6). "
+                    "MWIS 2022 finansal (rel=0.9) eski chunk'ı tercih ederek hata yapabilir; "
+                    "GAT temporal + interdepartmental filtreyi birleştirip 2024 finansal+sosyal'ı seçmeli.",
+    ))
+
+    # DG-3: Sürdürülebilirlik yatırımı — 8 chunk, 4 şirket
+    tests.append(TestCase(
+        test_id=str(uuid.uuid4()),
+        dimension="dense_graph",
+        question="Şirketlerin 2024 yılı sürdürülebilirlik yatırımı ne kadar?",
+        chunks=[
+            TestChunk(
+                text="2024 finansal raporumuzda sürdürülebilirlik yatırımımız 145 milyon TL olarak doğrulanmıştır.",
+                company="SektorA", year=2024, section_type="finansal",
+                reliability_weight=0.9, is_contradictory=False,
+                contradiction_type="none",
+            ),
+            TestChunk(
+                text="Sürdürülebilirlik yatırımı kapsamında devasa kaynaklar ayırdık; sektörde en büyük yatırımcıyız.",
+                company="SektorA", year=2024, section_type="strateji",
+                reliability_weight=0.4, is_contradictory=True,
+                contradiction_type="interdepartmental",
+            ),
+            TestChunk(
+                text="2024 yılı bağımsız denetim raporumuza göre sürdürülebilirlik yatırımımız 88 milyon TL düzeyindedir.",
+                company="SektorB", year=2024, section_type="finansal",
+                reliability_weight=0.9, is_contradictory=False,
+                contradiction_type="none",
+            ),
+            TestChunk(
+                text="2022 finansal raporumuzda 2024 yılı sürdürülebilirlik yatırım projeksiyonumuz 220 milyon TL idi.",
+                company="SektorB", year=2022, section_type="finansal",
+                reliability_weight=0.9, is_contradictory=True,
+                contradiction_type="temporal",
+            ),
+            TestChunk(
+                text="2024 yılı çevre raporumuzda sürdürülebilirlik yatırımımız 62 milyon TL olarak hesaplanmıştır.",
+                company="SektorC", year=2024, section_type="cevre",
+                reliability_weight=0.6, is_contradictory=False,
+                contradiction_type="none",
+            ),
+            TestChunk(
+                text="Sürdürülebilirlik vizyonumuz sınırsız; her yıl daha fazla yatırım yapıyoruz.",
+                company="SektorC", year=2024, section_type="strateji",
+                reliability_weight=0.4, is_contradictory=True,
+                contradiction_type="interdepartmental",
+            ),
+            TestChunk(
+                text="2024 yönetim kurulu raporumuzda sürdürülebilirlik harcamamız 71 milyon TL olarak onaylanmıştır.",
+                company="SektorD", year=2024, section_type="yonetim",
+                reliability_weight=0.7, is_contradictory=False,
+                contradiction_type="none",
+            ),
+            TestChunk(
+                text="2024 finansal raporumuzda sürdürülebilirlik yatırımımız 73 milyon TL olarak doğrulanmıştır.",
+                company="SektorD", year=2024, section_type="finansal",
+                reliability_weight=0.9, is_contradictory=False,
+                contradiction_type="none",
+            ),
+        ],
+        expected_kept=[0, 2, 4, 6, 7],
+        expected_removed=[1, 3, 5],
+        description="8 chunk, 4 şirket. Her şirketin sayısal doğrulanmış değeri var; "
+                    "abartı strateji iddiaları (1, 5) ve eski projeksiyon (3) elenmeli. "
+                    "SektorD'de 71M (yonetim) vs 73M (finansal) yakın değerler — çelişki SAYILMAMALI (numerical_edge tetiklemeli).",
+    ))
+
+    return tests
+
+
+def generate_numerical_edge_tests() -> list[TestCase]:
+    """
+    Dimension 8: Numerical False-Positive Guards (NEW 2026-05-30).
+
+    Sistemin sayısal çelişki tespitinin PRECISION'ını test eden NEGATIF
+    testler. Bu chunk'lar arasında gerçek çelişki YOKTUR; sistem çelişki
+    olarak işaretlerse FALSE POSITIVE üretmiş olur.
+
+    extract_numbers + numerical_conflict_score'un yakın değerleri, farklı
+    birimleri, farklı scope'ları çelişki sanmamasını test eder. Recall %67'yi
+    geçtikten sonra precision tarafını da ölçmemiz lazım — F1 için.
+    """
+    tests = []
+
+    # NE-1: Aynı metrik ufak fark (rounding/methodology tolerance)
+    tests.append(TestCase(
+        test_id=str(uuid.uuid4()),
+        dimension="numerical_edge",
+        question="Şirketin yıllık enerji tüketimi ne kadar?",
+        chunks=[
+            TestChunk(
+                text="2024 yılı çevre raporumuza göre toplam enerji tüketimimiz 285.5 GWh olarak ölçülmüştür.",
+                company="TestSirket", year=2024, section_type="cevre",
+                reliability_weight=0.6, is_contradictory=False,
+                contradiction_type="none",
+            ),
+            TestChunk(
+                text="2024 yılsonu denetim raporumuzda enerji tüketimimiz 290 GWh olarak yuvarlanmış değerle raporlanmıştır.",
+                company="TestSirket", year=2024, section_type="finansal",
+                reliability_weight=0.9, is_contradictory=False,
+                contradiction_type="none",
+            ),
+        ],
+        expected_kept=[0, 1],
+        expected_removed=[],
+        description="285.5 vs 290 GWh — %1.6 fark, methodology rounding. Çelişki DEĞİL. "
+                    "Sistem her ikisini de tutmalı; numerical_conflict_score'un MIN-ratio mantığı "
+                    "(ratio 1.016) bu tolerance içinde kalmalı, false-positive üretmemeli.",
+    ))
+
+    # NE-2: Farklı birim aynı değer — currency/scale ambiguity
+    tests.append(TestCase(
+        test_id=str(uuid.uuid4()),
+        dimension="numerical_edge",
+        question="Şirketin 2024 yılı toplam yatırım miktarı?",
+        chunks=[
+            TestChunk(
+                text="2024 yılı yatırım harcamalarımız 8.2 milyar TL düzeyinde gerçekleşmiştir.",
+                company="TestSirket", year=2024, section_type="finansal",
+                reliability_weight=0.9, is_contradictory=False,
+                contradiction_type="none",
+            ),
+            TestChunk(
+                text="2024 yatırımlarımız 8.200 milyon TL'ye ulaşmıştır.",
+                company="TestSirket", year=2024, section_type="finansal",
+                reliability_weight=0.9, is_contradictory=False,
+                contradiction_type="none",
+            ),
+        ],
+        expected_kept=[0, 1],
+        expected_removed=[],
+        description="8.2 milyar TL = 8.200 milyon TL — aynı miktar, farklı birim. "
+                    "Naif numerical_conflict (8.2 vs 8200 = 1000x ratio) tetikleyebilir; "
+                    "NLI semantic match olur ya da birim normalization gerek. "
+                    "Bu test bilinen bir gap: ileride birim normalization eklenirse fail→pass.",
+    ))
+
+    # NE-3: Farklı scope, farklı sayı — scope farkı, çelişki değil
+    tests.append(TestCase(
+        test_id=str(uuid.uuid4()),
+        dimension="numerical_edge",
+        question="Şirketin sera gazı emisyonu ne kadardır?",
+        chunks=[
+            TestChunk(
+                text="Kapsam 1 (doğrudan) emisyonlarımız 2024 yılında 95 ton CO2e olarak ölçülmüştür.",
+                company="TestSirket", year=2024, section_type="cevre",
+                reliability_weight=0.6, is_contradictory=False,
+                contradiction_type="none",
+            ),
+            TestChunk(
+                text="Kapsam 1+2 toplam emisyonumuz 2024 yılında 240 ton CO2e düzeyindedir.",
+                company="TestSirket", year=2024, section_type="cevre",
+                reliability_weight=0.6, is_contradictory=False,
+                contradiction_type="none",
+            ),
+            TestChunk(
+                text="Kapsam 1+2+3 dahil toplam emisyonumuz 2024'te 1.150 ton CO2e olarak hesaplanmıştır; bağımsız doğrulamadan geçmiştir.",
+                company="TestSirket", year=2024, section_type="finansal",
+                reliability_weight=0.9, is_contradictory=False,
+                contradiction_type="none",
+            ),
+        ],
+        expected_kept=[0, 1, 2],
+        expected_removed=[],
+        description="95 / 240 / 1150 ton — büyük sayısal farklar VAR ama scope farklı (Kapsam 1, 1+2, 1+2+3). "
+                    "Bunlar aynı metric değil. Hiçbiri çelişki olarak işaretlenmemeli. "
+                    "NLI semantik olarak 'Kapsam' kelimesini tanıyıp farkı görmeli; "
+                    "tetiklerse contradiction graph false-edge üretiyor demektir.",
+    ))
+
+    return tests
+
+
 def generate_full_testset() -> list[TestCase]:
-    """Generate all test cases across 6 dimensions (was 4 before 2026-05-12)."""
+    """Generate all test cases across 8 dimensions (was 6 before 2026-05-30)."""
     tests = []
     tests.extend(generate_temporal_tests())
     tests.extend(generate_scope_tests())
     tests.extend(generate_interdepartmental_tests())
     tests.extend(generate_gat_discriminating_tests())
-    tests.extend(generate_cross_company_tests())     # NEW
-    tests.extend(generate_zero_claim_tests())        # NEW
+    tests.extend(generate_cross_company_tests())
+    tests.extend(generate_zero_claim_tests())
+    tests.extend(generate_dense_graph_tests())       # NEW 2026-05-30
+    tests.extend(generate_numerical_edge_tests())    # NEW 2026-05-30
     return tests
 
 
@@ -681,6 +1130,15 @@ def print_testset_summary(tests: list[TestCase]):
 
 
 if __name__ == "__main__":
+    # Windows cp1254 console can't encode Turkish punctuation (→, —, etc.)
+    # used in test descriptions. Reconfigure stdout to UTF-8 with replace
+    # fallback so detail print loop doesn't crash on Windows.
+    import sys
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except AttributeError:
+        pass  # Python < 3.7
+
     tests = generate_full_testset()
     print_testset_summary(tests)
     save_testset(tests)

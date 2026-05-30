@@ -1,6 +1,6 @@
 [
   {
-    "test_id": "b817fed3-5e39-4246-94c1-32d25c4bd421",
+    "test_id": "547c6154-11cf-447e-89a9-3e3dbef5310b",
     "dimension": "temporal",
     "question": "Şirketin karbon emisyon azaltma hedefi nedir?",
     "description": "2021'de %50 hedefi → 2023'te %35'e revize. Sistem en güncel hedefi (2023-2024: %35) tercih etmeli.",
@@ -42,7 +42,7 @@
     ]
   },
   {
-    "test_id": "2ce88c2d-2c6c-4fac-b5a9-d70bffe503ef",
+    "test_id": "6ab70961-56d1-4396-a755-bc30c1cb2dcd",
     "dimension": "temporal",
     "question": "Şirketin toplam çalışan sayısı kaçtır?",
     "description": "Çalışan sayısı 12500→8200→8450 değişimi. Eski veri (2022) elenmeli.",
@@ -84,7 +84,7 @@
     ]
   },
   {
-    "test_id": "9a40dfa1-ff18-42d8-9cd3-9a3954fe62b1",
+    "test_id": "beabf226-69f1-413a-a15e-5f9e20ce3ace",
     "dimension": "temporal",
     "question": "Şirketin gelir büyüme hedefi nedir?",
     "description": "Gelir hedefi %25→%12 revize. Eski strateji (2020) elenmeli, güncel finansal (2023) kalmalı.",
@@ -116,7 +116,7 @@
     ]
   },
   {
-    "test_id": "43c40e27-3fb4-4388-b07d-69c704376077",
+    "test_id": "34e44505-5852-44c6-8166-e2306590f2ca",
     "dimension": "scope",
     "question": "Şirketin toplam sera gazı emisyonu ne kadardır?",
     "description": "150K (sadece Kapsam 1) vs 580K (Kapsam 1+2+3). Dar kapsamlı veri elenmeli.",
@@ -158,7 +158,7 @@
     ]
   },
   {
-    "test_id": "99c10c5d-0c0a-4581-8824-2252491367ce",
+    "test_id": "69eab622-a2ef-42b5-8faf-c1af96db33cd",
     "dimension": "scope",
     "question": "Şirketin atık yönetimi performansı nasıl?",
     "description": "Greenwashing: 'Sıfır atık' iddiası vs 45K ton tehlikeli atık gerçeği. Pazarlama söylemi elenmeli.",
@@ -200,7 +200,7 @@
     ]
   },
   {
-    "test_id": "1a4950b7-8322-45d6-b1ce-4735a8b4b31e",
+    "test_id": "051506f9-5288-4052-820e-d469d890d44e",
     "dimension": "scope",
     "question": "Şirketin su tüketimi ne kadar azaldı?",
     "description": "%60 azalma (tek tesis) vs %12 azalma (tüm operasyonlar). Abartılı iddia elenmeli.",
@@ -232,7 +232,7 @@
     ]
   },
   {
-    "test_id": "8aa18d37-3cde-42f9-84db-3ea4392a0ec2",
+    "test_id": "f4839e98-ee07-44da-a6ed-47a8640e0cbc",
     "dimension": "interdepartmental",
     "question": "Şirketin 2023 yılı karlılık durumu nasıl?",
     "description": "Strateji: 'karlılık arttı' vs Finansal: 245M TL zarar. Pazarlama söylemi elenmeli.",
@@ -274,7 +274,7 @@
     ]
   },
   {
-    "test_id": "35ef896e-ae1d-4d34-b254-a36671de053f",
+    "test_id": "414c107e-dd57-4c26-b9c8-d73fb05afdc8",
     "dimension": "interdepartmental",
     "question": "Şirketin yenilenebilir enerji yatırımı ne kadar?",
     "description": "'Devasa yatırım, lider konum' vs 'toplam %3, %94 fosil yakıt'. Greenwashing elenmeli.",
@@ -306,7 +306,7 @@
     ]
   },
   {
-    "test_id": "59da6e68-5f1d-4ccc-baf7-58520d7a36b2",
+    "test_id": "78cad502-676c-42a8-83f0-9f6df0dcbab2",
     "dimension": "interdepartmental",
     "question": "Çalışan memnuniyeti durumu nedir?",
     "description": "%92 memnuniyet vs %38 devir hızı, 45 dava. Anket sonucu vs gerçek veriler çelişiyor.",
@@ -338,7 +338,7 @@
     ]
   },
   {
-    "test_id": "fc75f7a1-6b55-4c67-81f4-3f271bc01952",
+    "test_id": "85da5267-0ab9-4db7-a713-f0ab5cdf6138",
     "dimension": "gat_discriminating",
     "question": "Şirketin 2030 yenilenebilir enerji oranı hedefi nedir?",
     "description": "ESKI finansal (rel=0.9, 2018) vs YENI cevre (rel=0.6, 2024). Pure MWIS reliability-baskın → idx 0 seçer (yanlış). GAT temporal feature'larla idx 1'i tercih etmeli.",
@@ -370,7 +370,7 @@
     ]
   },
   {
-    "test_id": "edf9e6e7-6acf-41df-bd9a-1deee8b4e5a4",
+    "test_id": "f8cf3394-356f-4d92-8cdd-712328e8201a",
     "dimension": "gat_discriminating",
     "question": "Şirketin biyoçeşitlilik koruma politikası nedir?",
     "description": "2019 yönetim (rel=0.7) vs 2024 cevre (rel=0.6). MWIS yönetim'i seçebilir (rel daha yüksek). GAT recency'yi ağır basmalı.",
@@ -402,7 +402,7 @@
     ]
   },
   {
-    "test_id": "4c79b3fb-714a-4674-8c31-3e21f297fe8f",
+    "test_id": "2a878fc0-17c8-424d-b664-a789cd48c8f3",
     "dimension": "gat_discriminating",
     "question": "Şirketin 2024 yılı net karı ne kadardır?",
     "description": "2022 projeksiyonu (850M) vs 2024 gerçeği (1250M). Aynı reliability, sadece recency belirleyici. MWIS recency formülü ile zaten doğru. GAT da aynı kararı vermeli.",
@@ -434,7 +434,7 @@
     ]
   },
   {
-    "test_id": "580d9417-4d45-491d-aac5-13420a634617",
+    "test_id": "288b623a-6991-45f3-bbab-6fe70ed99971",
     "dimension": "gat_discriminating",
     "question": "Şirketin atık geri dönüşüm oranı nedir?",
     "description": "2017 yönetim hedef (%25) vs 2024 cevre denetim (%78). 7 yıl fark, hedef çok eski. GAT recency'yi reliability'ye tercih etmeli.",
@@ -466,7 +466,7 @@
     ]
   },
   {
-    "test_id": "dd43e012-1067-45b5-9065-80fc4e67fcfc",
+    "test_id": "9d431e14-2e43-4433-b1bb-8f36592f76b3",
     "dimension": "gat_discriminating",
     "question": "Şirketin yıllık enerji tüketimi ne kadar?",
     "description": "2018 finansal (450GWh) eski. 2024 cevre+strateji yeni (290GWh). MWIS rel=0.9'u tercih edebilir. GAT recency'yi öğrenmeli.",
@@ -508,7 +508,187 @@
     ]
   },
   {
-    "test_id": "0d76a210-c310-426e-83bb-5dab40a7db06",
+    "test_id": "a701d336-0daf-4dcb-a503-faf1d7d63c0e",
+    "dimension": "gat_discriminating",
+    "question": "Şirketin kadın çalışan oranı nedir?",
+    "description": "2019 finansal (rel=0.9) %18 ESKI vs 2024 sosyal (rel=0.5) %42 YENI. Reliability farkı 0.4, 5 yıl recency farkı. MWIS reliability-baskın → eski seçer (yanlış). GAT recency feature'ı ile 2024'ü tercih etmeli.",
+    "expected_kept": [
+      1
+    ],
+    "expected_removed": [
+      0
+    ],
+    "chunks": [
+      {
+        "text": "2019 finansal raporumuzda kadın çalışan oranımız %18 olarak raporlanmış olup, bağımsız denetim sürecinden geçmiştir.",
+        "company": "TestSirket",
+        "year": 2019,
+        "section_type": "finansal",
+        "reliability_weight": 0.9,
+        "is_contradictory": true,
+        "contradiction_type": "temporal"
+      },
+      {
+        "text": "2024 yılı insan kaynakları raporumuza göre kadın çalışan oranımız %42'ye yükselmiştir. Çeşitlilik politikamızın somut sonucudur.",
+        "company": "TestSirket",
+        "year": 2024,
+        "section_type": "sosyal",
+        "reliability_weight": 0.5,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      }
+    ]
+  },
+  {
+    "test_id": "6fa82cb9-877b-495c-bdf4-609d7c542505",
+    "dimension": "gat_discriminating",
+    "question": "Şirketin dijital dönüşüm yatırımı ne kadar?",
+    "description": "2018 yönetim (rel=0.7) 8M vs 2024 strateji (rel=0.4) 95M. 11.8x büyüme — eski rakam güncel olamaz. MWIS yönetim'i tercih edebilir; GAT temporal-aware kararla 2024'ü seçmeli.",
+    "expected_kept": [
+      1
+    ],
+    "expected_removed": [
+      0
+    ],
+    "chunks": [
+      {
+        "text": "2018 yönetim kurulu kararıyla dijital dönüşüm bütçesi yıllık 8 milyon TL olarak onaylanmıştır.",
+        "company": "TestSirket",
+        "year": 2018,
+        "section_type": "yonetim",
+        "reliability_weight": 0.7,
+        "is_contradictory": true,
+        "contradiction_type": "temporal"
+      },
+      {
+        "text": "2024 stratejik plan dokümanımızda dijital dönüşüm yatırımımız 95 milyon TL'ye çıkarılmış olup, ana iş kollarımızın dijitalleştirilmesini hedeflemektedir.",
+        "company": "TestSirket",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability_weight": 0.4,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      }
+    ]
+  },
+  {
+    "test_id": "baa0af3e-84cd-42d5-8cba-ce53a6c9d159",
+    "dimension": "gat_discriminating",
+    "question": "Şirketin birim üretim başına karbon emisyon yoğunluğu nedir?",
+    "description": "2017 finansal (rel=0.9) 0.85 vs 2023 cevre (rel=0.6) 0.42. 2.0x ratio + 6 yıl fark. MWIS reliability-baskın → eski seçer.",
+    "expected_kept": [
+      1
+    ],
+    "expected_removed": [
+      0
+    ],
+    "chunks": [
+      {
+        "text": "2017 yılı denetimli finansal raporumuza göre birim üretim başına karbon emisyonumuz 0.85 ton CO2e/ton ürün olarak hesaplanmıştır.",
+        "company": "TestSirket",
+        "year": 2017,
+        "section_type": "finansal",
+        "reliability_weight": 0.9,
+        "is_contradictory": true,
+        "contradiction_type": "temporal"
+      },
+      {
+        "text": "2023 sürdürülebilirlik raporumuzda emisyon yoğunluğumuz 0.42 ton CO2e/ton ürün'e düşürülmüştür. Enerji verimliliği projelerinin somut sonucudur.",
+        "company": "TestSirket",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability_weight": 0.6,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      }
+    ]
+  },
+  {
+    "test_id": "030fef26-820f-47c2-8ff3-58436b806719",
+    "dimension": "gat_discriminating",
+    "question": "Şirketin güncel yenilenebilir enerji oranı nedir?",
+    "description": "4 chunk, 3 yıl: 2017 (rel=0.9, %8), 2020 (rel=0.7, %22), 2024 cevre (rel=0.6, %55), 2024 strateji (rel=0.4, %55). Sadece son ikisi tutarlı ve güncel. MWIS yüksek-rel eski'leri tercih edebilir; GAT temporal kümeleme ile 2024'leri seçmeli.",
+    "expected_kept": [
+      2,
+      3
+    ],
+    "expected_removed": [
+      0,
+      1
+    ],
+    "chunks": [
+      {
+        "text": "2017 finansal raporumuzda yenilenebilir enerji oranımız %8 olarak belirtilmiş, sermaye yatırım planına dahil edilmiştir.",
+        "company": "TestSirket",
+        "year": 2017,
+        "section_type": "finansal",
+        "reliability_weight": 0.9,
+        "is_contradictory": true,
+        "contradiction_type": "temporal"
+      },
+      {
+        "text": "2020 yönetim kurulu raporumuzda yenilenebilir enerji oranı %22'ye yükseltilmiştir.",
+        "company": "TestSirket",
+        "year": 2020,
+        "section_type": "yonetim",
+        "reliability_weight": 0.7,
+        "is_contradictory": true,
+        "contradiction_type": "temporal"
+      },
+      {
+        "text": "2024 yılı çevre raporumuza göre yenilenebilir enerji oranımız %55'e ulaşmıştır.",
+        "company": "TestSirket",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability_weight": 0.6,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      },
+      {
+        "text": "2024 stratejik plan dokümanımızda yenilenebilir enerji payımız %55 olarak raporlanmıştır.",
+        "company": "TestSirket",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability_weight": 0.4,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      }
+    ]
+  },
+  {
+    "test_id": "444d8d34-3e61-42bc-b7e0-c39f9ef0f02f",
+    "dimension": "gat_discriminating",
+    "question": "Şirketin son denetimli net karı ne kadar?",
+    "description": "Aynı reliability (rel=0.9), 3 yıl fark. Pure recency belirleyici. MWIS recency formülü ile zaten doğru bekleniyor — GAT da regresyon yapmamalı.",
+    "expected_kept": [
+      1
+    ],
+    "expected_removed": [
+      0
+    ],
+    "chunks": [
+      {
+        "text": "2020 yılsonu denetim raporumuza göre net karımız 480 milyon TL olarak gerçekleşmiştir.",
+        "company": "TestSirket",
+        "year": 2020,
+        "section_type": "finansal",
+        "reliability_weight": 0.9,
+        "is_contradictory": true,
+        "contradiction_type": "temporal"
+      },
+      {
+        "text": "2023 yılsonu denetim raporumuza göre net karımız 1.350 milyon TL olarak gerçekleşmiştir.",
+        "company": "TestSirket",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability_weight": 0.9,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      }
+    ]
+  },
+  {
+    "test_id": "2b4da9b8-e7d9-41b1-a348-63b05e78ad7c",
     "dimension": "cross_company",
     "question": "2023 yılı bankacılık sektörü karbon yoğunluğu hangi düzeyde?",
     "description": "BankaA denetimli rakam vs BankaB pazarlama söylemi. Reliability+section_type ile GAT denetimliyi tercih etmeli.",
@@ -540,7 +720,7 @@
     ]
   },
   {
-    "test_id": "f1f46265-d2ba-464e-894c-a86a732709ed",
+    "test_id": "86f61284-80b8-4b92-bb60-b623b17211c1",
     "dimension": "cross_company",
     "question": "Çimento sektöründe alternatif yakıt kullanım oranı nedir?",
     "description": "%35 denetimli (cevre) vs %78 stratejik iddia (strateji). 2.22x ratio + reliability farkı.",
@@ -572,7 +752,7 @@
     ]
   },
   {
-    "test_id": "f4c21151-a45b-4d24-8d63-6d10df97d0ba",
+    "test_id": "816970ea-c814-439f-ab9e-cfc83fd87c34",
     "dimension": "cross_company",
     "question": "2024 perakende sektörü kadın yönetici oranı?",
     "description": "İki sayısal değer (%42, %38) tutarlı, üçüncü vague strateji iddiası outlier.",
@@ -614,7 +794,7 @@
     ]
   },
   {
-    "test_id": "5327749a-9c9c-44b7-9031-5a2ca9afaebe",
+    "test_id": "7487aa51-ff4c-48a5-baee-e00d6d19d32d",
     "dimension": "zero_claim",
     "question": "Tesislerimizdeki tehlikeli atık miktarı?",
     "description": "'Sıfır' iddiası vs 45 ton gerçek. NLI semantic ya da Türkçe sıfır-kelime tanıması gerek.",
@@ -646,7 +826,7 @@
     ]
   },
   {
-    "test_id": "b5ccac42-43c2-42ba-bbc2-75a41fe04fd0",
+    "test_id": "5e387ed2-7537-405f-ad8b-e14f7bf713d6",
     "dimension": "zero_claim",
     "question": "Enerji ihtiyacının yenilenebilir karşılanma oranı?",
     "description": "'%100 yeşil' iddiası vs %18 gerçek. Pazarlama vs denetimli veri çelişkisi.",
@@ -669,6 +849,385 @@
       {
         "text": "2024 yılı denetimli enerji bilançomuzda yenilenebilir enerji payı %18 olarak hesaplanmıştır. Geri kalan %82'lik kısım fosil yakıt ağırlıklıdır.",
         "company": "TestY",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability_weight": 0.9,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      }
+    ]
+  },
+  {
+    "test_id": "10c54720-6f81-4fdc-bdda-adecd55942c5",
+    "dimension": "dense_graph",
+    "question": "Çimento sektöründe karbon emisyon yoğunluğu (ton CO2e/ton ürün) hangi düzeydedir?",
+    "description": "8 chunk: 3 şirket × birden çok yıl. Tutarlı (2023-2024 cevre/finansal/yonetim 0.52-0.61 arası), eski (2018-2019: 0.78-0.95) elenmeli, strateji abartıları (0.30, vague liderlik) elenmeli. Dense graph: ≥5 çelişki edge. MWIS subset-optimal seçemeyebilir.",
+    "expected_kept": [
+      1,
+      3,
+      4,
+      6
+    ],
+    "expected_removed": [
+      0,
+      2,
+      5,
+      7
+    ],
+    "chunks": [
+      {
+        "text": "2019 yılı çevre raporumuzda emisyon yoğunluğumuz 0.78 ton CO2e/ton olarak raporlanmıştır.",
+        "company": "CimA",
+        "year": 2019,
+        "section_type": "cevre",
+        "reliability_weight": 0.6,
+        "is_contradictory": true,
+        "contradiction_type": "temporal"
+      },
+      {
+        "text": "2024 bağımsız denetim raporumuza göre emisyon yoğunluğumuz 0.52 ton CO2e/ton'a düşürülmüştür.",
+        "company": "CimA",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability_weight": 0.9,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      },
+      {
+        "text": "2024 stratejik plan dokümanımızda emisyon yoğunluğumuz 0.30 ton CO2e/ton olarak öne çıkartılmaktadır.",
+        "company": "CimA",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability_weight": 0.4,
+        "is_contradictory": true,
+        "contradiction_type": "interdepartmental"
+      },
+      {
+        "text": "2023 yılı çevre raporumuzda emisyon yoğunluğumuz 0.58 ton CO2e/ton olarak gerçekleşmiştir.",
+        "company": "CimB",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability_weight": 0.6,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      },
+      {
+        "text": "2024 yönetim raporumuzda emisyon yoğunluğumuz 0.55 ton CO2e/ton'a iyileştirilmiştir.",
+        "company": "CimB",
+        "year": 2024,
+        "section_type": "yonetim",
+        "reliability_weight": 0.7,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      },
+      {
+        "text": "2018 yıl raporumuzda emisyon yoğunluğumuz 0.95 ton CO2e/ton düzeyinde idi.",
+        "company": "CimB",
+        "year": 2018,
+        "section_type": "yonetim",
+        "reliability_weight": 0.7,
+        "is_contradictory": true,
+        "contradiction_type": "temporal"
+      },
+      {
+        "text": "2024 sürdürülebilirlik raporumuzda emisyon yoğunluğumuz 0.61 ton CO2e/ton olarak ölçülmüştür.",
+        "company": "CimC",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability_weight": 0.6,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      },
+      {
+        "text": "Karbon ayak izinde sektör lideri konumdayız; emisyon yoğunluğumuz sektör ortalamasının çok altında kalmaktadır.",
+        "company": "CimC",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability_weight": 0.4,
+        "is_contradictory": true,
+        "contradiction_type": "interdepartmental"
+      }
+    ]
+  },
+  {
+    "test_id": "eb815777-4622-4168-bb10-70b07be48878",
+    "dimension": "dense_graph",
+    "question": "Şirketin güncel çalışan sayısı nedir?",
+    "description": "8 chunk: 5 yıllık azalan temporal seri (14.2K→10.2K) + 2024'te 1 outlier (25K abartı). Sorgu 'güncel' istiyor → sadece 2024 chunk'ları doğru (5,6). MWIS 2022 finansal (rel=0.9) eski chunk'ı tercih ederek hata yapabilir; GAT temporal + interdepartmental filtreyi birleştirip 2024 finansal+sosyal'ı seçmeli.",
+    "expected_kept": [
+      5,
+      6
+    ],
+    "expected_removed": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "chunks": [
+      {
+        "text": "2019 yıl sonunda toplam çalışan sayımız 14.200 olarak raporlanmıştır.",
+        "company": "TestSirket",
+        "year": 2019,
+        "section_type": "sosyal",
+        "reliability_weight": 0.5,
+        "is_contradictory": true,
+        "contradiction_type": "temporal"
+      },
+      {
+        "text": "2020 yılı insan kaynakları raporumuza göre çalışan sayımız 13.500 düzeyindedir.",
+        "company": "TestSirket",
+        "year": 2020,
+        "section_type": "sosyal",
+        "reliability_weight": 0.5,
+        "is_contradictory": true,
+        "contradiction_type": "temporal"
+      },
+      {
+        "text": "2021 itibarıyla çalışan sayımız 12.800 olarak gerçekleşmiştir.",
+        "company": "TestSirket",
+        "year": 2021,
+        "section_type": "yonetim",
+        "reliability_weight": 0.7,
+        "is_contradictory": true,
+        "contradiction_type": "temporal"
+      },
+      {
+        "text": "2022 yılı finansal denetim raporumuzda 11.450 aktif çalışanımız bulunmaktadır.",
+        "company": "TestSirket",
+        "year": 2022,
+        "section_type": "finansal",
+        "reliability_weight": 0.9,
+        "is_contradictory": true,
+        "contradiction_type": "temporal"
+      },
+      {
+        "text": "2023 yılı sosyal sorumluluk raporumuza göre çalışan sayımız 10.800'e düşmüştür.",
+        "company": "TestSirket",
+        "year": 2023,
+        "section_type": "sosyal",
+        "reliability_weight": 0.5,
+        "is_contradictory": true,
+        "contradiction_type": "temporal"
+      },
+      {
+        "text": "2024 yılsonu denetimli finansal raporumuza göre çalışan sayımız 10.250 düzeyindedir.",
+        "company": "TestSirket",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability_weight": 0.9,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      },
+      {
+        "text": "2024 yılı insan kaynakları raporumuza göre 10.200 çalışanımız mevcuttur.",
+        "company": "TestSirket",
+        "year": 2024,
+        "section_type": "sosyal",
+        "reliability_weight": 0.5,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      },
+      {
+        "text": "Stratejik vizyonumuza göre çalışan sayımız 25.000'e ulaşmıştır; sektörde lider istihdam sağlayıcı konumdayız.",
+        "company": "TestSirket",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability_weight": 0.4,
+        "is_contradictory": true,
+        "contradiction_type": "interdepartmental"
+      }
+    ]
+  },
+  {
+    "test_id": "73ab7406-2b3e-46fd-a7e2-ef9fcb736a51",
+    "dimension": "dense_graph",
+    "question": "Şirketlerin 2024 yılı sürdürülebilirlik yatırımı ne kadar?",
+    "description": "8 chunk, 4 şirket. Her şirketin sayısal doğrulanmış değeri var; abartı strateji iddiaları (1, 5) ve eski projeksiyon (3) elenmeli. SektorD'de 71M (yonetim) vs 73M (finansal) yakın değerler — çelişki SAYILMAMALI (numerical_edge tetiklemeli).",
+    "expected_kept": [
+      0,
+      2,
+      4,
+      6,
+      7
+    ],
+    "expected_removed": [
+      1,
+      3,
+      5
+    ],
+    "chunks": [
+      {
+        "text": "2024 finansal raporumuzda sürdürülebilirlik yatırımımız 145 milyon TL olarak doğrulanmıştır.",
+        "company": "SektorA",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability_weight": 0.9,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      },
+      {
+        "text": "Sürdürülebilirlik yatırımı kapsamında devasa kaynaklar ayırdık; sektörde en büyük yatırımcıyız.",
+        "company": "SektorA",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability_weight": 0.4,
+        "is_contradictory": true,
+        "contradiction_type": "interdepartmental"
+      },
+      {
+        "text": "2024 yılı bağımsız denetim raporumuza göre sürdürülebilirlik yatırımımız 88 milyon TL düzeyindedir.",
+        "company": "SektorB",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability_weight": 0.9,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      },
+      {
+        "text": "2022 finansal raporumuzda 2024 yılı sürdürülebilirlik yatırım projeksiyonumuz 220 milyon TL idi.",
+        "company": "SektorB",
+        "year": 2022,
+        "section_type": "finansal",
+        "reliability_weight": 0.9,
+        "is_contradictory": true,
+        "contradiction_type": "temporal"
+      },
+      {
+        "text": "2024 yılı çevre raporumuzda sürdürülebilirlik yatırımımız 62 milyon TL olarak hesaplanmıştır.",
+        "company": "SektorC",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability_weight": 0.6,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      },
+      {
+        "text": "Sürdürülebilirlik vizyonumuz sınırsız; her yıl daha fazla yatırım yapıyoruz.",
+        "company": "SektorC",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability_weight": 0.4,
+        "is_contradictory": true,
+        "contradiction_type": "interdepartmental"
+      },
+      {
+        "text": "2024 yönetim kurulu raporumuzda sürdürülebilirlik harcamamız 71 milyon TL olarak onaylanmıştır.",
+        "company": "SektorD",
+        "year": 2024,
+        "section_type": "yonetim",
+        "reliability_weight": 0.7,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      },
+      {
+        "text": "2024 finansal raporumuzda sürdürülebilirlik yatırımımız 73 milyon TL olarak doğrulanmıştır.",
+        "company": "SektorD",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability_weight": 0.9,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      }
+    ]
+  },
+  {
+    "test_id": "2d63a79d-49b4-4fa1-a989-5944dfbace22",
+    "dimension": "numerical_edge",
+    "question": "Şirketin yıllık enerji tüketimi ne kadar?",
+    "description": "285.5 vs 290 GWh — %1.6 fark, methodology rounding. Çelişki DEĞİL. Sistem her ikisini de tutmalı; numerical_conflict_score'un MIN-ratio mantığı (ratio 1.016) bu tolerance içinde kalmalı, false-positive üretmemeli.",
+    "expected_kept": [
+      0,
+      1
+    ],
+    "expected_removed": [],
+    "chunks": [
+      {
+        "text": "2024 yılı çevre raporumuza göre toplam enerji tüketimimiz 285.5 GWh olarak ölçülmüştür.",
+        "company": "TestSirket",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability_weight": 0.6,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      },
+      {
+        "text": "2024 yılsonu denetim raporumuzda enerji tüketimimiz 290 GWh olarak yuvarlanmış değerle raporlanmıştır.",
+        "company": "TestSirket",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability_weight": 0.9,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      }
+    ]
+  },
+  {
+    "test_id": "3e89d21b-e2ff-4fdb-ba2c-df9fedf332b9",
+    "dimension": "numerical_edge",
+    "question": "Şirketin 2024 yılı toplam yatırım miktarı?",
+    "description": "8.2 milyar TL = 8.200 milyon TL — aynı miktar, farklı birim. Naif numerical_conflict (8.2 vs 8200 = 1000x ratio) tetikleyebilir; NLI semantic match olur ya da birim normalization gerek. Bu test bilinen bir gap: ileride birim normalization eklenirse fail→pass.",
+    "expected_kept": [
+      0,
+      1
+    ],
+    "expected_removed": [],
+    "chunks": [
+      {
+        "text": "2024 yılı yatırım harcamalarımız 8.2 milyar TL düzeyinde gerçekleşmiştir.",
+        "company": "TestSirket",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability_weight": 0.9,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      },
+      {
+        "text": "2024 yatırımlarımız 8.200 milyon TL'ye ulaşmıştır.",
+        "company": "TestSirket",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability_weight": 0.9,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      }
+    ]
+  },
+  {
+    "test_id": "1c8ff3da-b840-4728-8e9f-d7c3b1065a4a",
+    "dimension": "numerical_edge",
+    "question": "Şirketin sera gazı emisyonu ne kadardır?",
+    "description": "95 / 240 / 1150 ton — büyük sayısal farklar VAR ama scope farklı (Kapsam 1, 1+2, 1+2+3). Bunlar aynı metric değil. Hiçbiri çelişki olarak işaretlenmemeli. NLI semantik olarak 'Kapsam' kelimesini tanıyıp farkı görmeli; tetiklerse contradiction graph false-edge üretiyor demektir.",
+    "expected_kept": [
+      0,
+      1,
+      2
+    ],
+    "expected_removed": [],
+    "chunks": [
+      {
+        "text": "Kapsam 1 (doğrudan) emisyonlarımız 2024 yılında 95 ton CO2e olarak ölçülmüştür.",
+        "company": "TestSirket",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability_weight": 0.6,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      },
+      {
+        "text": "Kapsam 1+2 toplam emisyonumuz 2024 yılında 240 ton CO2e düzeyindedir.",
+        "company": "TestSirket",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability_weight": 0.6,
+        "is_contradictory": false,
+        "contradiction_type": "none"
+      },
+      {
+        "text": "Kapsam 1+2+3 dahil toplam emisyonumuz 2024'te 1.150 ton CO2e olarak hesaplanmıştır; bağımsız doğrulamadan geçmiştir.",
+        "company": "TestSirket",
         "year": 2024,
         "section_type": "finansal",
         "reliability_weight": 0.9,
