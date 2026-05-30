@@ -105,6 +105,38 @@ DEMO_QUERIES = [
         "company": None, "year": None,
         "showcase": "Broad cross-sector thematic synthesis",
     },
+    # ─ Round 2 (added 2026-05-30) — 5 additional queries for richer demo cache ─
+    # All companies below were confirmed in the corpus via prior demo_cache outputs.
+    # 13. Single-co governance (Yapı Kredi appeared in bankacılık query)
+    {
+        "question": "Yapı Kredi'nin kurumsal yönetim komiteleri ve denetim mekanizmaları nelerdir?",
+        "company": None, "year": None,
+        "showcase": "Single-company governance — organizational structure synthesis",
+    },
+    # 14. Single-co env + temporal (Anadolu Efes appeared in cross-sector query)
+    {
+        "question": "Anadolu Efes'in su tüketimi ve geri dönüşüm uygulamaları nasıl ilerlemiştir?",
+        "company": None, "year": None,
+        "showcase": "Environmental performance with temporal evolution",
+    },
+    # 15. Financial product (TSKB appeared in bankacılık query)
+    {
+        "question": "TSKB'nin sürdürülebilir finansman ürünleri ve yeşil tahvil yatırımları nelerdir?",
+        "company": None, "year": None,
+        "showcase": "Financial product portfolio — sustainability-linked instruments",
+    },
+    # 16. Sector ESG cross-cut
+    {
+        "question": "Türk bankacılık sektöründe ESG risk değerlendirme yaklaşımları arasındaki farklar nelerdir?",
+        "company": None, "year": None,
+        "showcase": "Sector-wide ESG methodology comparison",
+    },
+    # 17. Single-co social numerical (Borusan appeared in kadın istihdamı query)
+    {
+        "question": "Borusan Holding'in iş sağlığı ve güvenliği performansı ve kaza oranları nasıl gelişmiştir?",
+        "company": None, "year": None,
+        "showcase": "İSG numerical reporting with temporal angle",
+    },
 ]
 
 
