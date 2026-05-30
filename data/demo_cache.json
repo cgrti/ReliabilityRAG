@@ -1,0 +1,1650 @@
+[
+  {
+    "spec": {
+      "question": "Akbank'ın karbon emisyon azaltma hedefleri nelerdir?",
+      "company": null,
+      "year": null,
+      "showcase": "Single-company environmental query — basic retrieval+synthesis"
+    },
+    "answer": "Sağlam bir kurumsallaştırma raportörü olarak, Akbank'ın 2050 yılına kadar net sıfırı olan karbon emisyonsunu azaltmaya yönelik hedeflerine ilişkin aşağıdaki açıklama yapabilirim:\n\n* Akbank, 2022'de duyurdukları 2050 yılının net sıfıra ulaşılmış karbon hedefini vurguladı (Kaynak 01).\n* Bankanın 2021'deki açıklamasında da aynı hedefi teyit ettiğini gördük (Kaynak02). Hedeflerine ulaşmada ilerlemelerini sağlamak için çeşitli projeleri ve uygulamamaları hayata geçirmeye başladılar.\n* 2020'de bankanın sürdürülebilirlik konusundaki açıklamasını okuduğumda, 2050'ye kadar net sıfatıyla karbon emsiyonlarının azaltılması hedefinden bahsetmedikleri ancak çevre ve sosyal etkiye sahip olma niyetinde bulunduklarını gördüğünü fark ettim (Kaynak03).\n\nAncak, 2024'teki açıklamanın 2030'a kadar %50 oranında karbon emizyonunun azaltılacağı belirtiliyor (Kaynak04), bu da 2050'e kadar net sıfa hedefine ulaşacakları anlamına gelmiyor. Ayrıca 2021'in sonbaharda yayınlanan başka bir açıklamada da benzer bir hedeften bahsedilmedi (Kaynak05).\n\nSonuç olarak, AkBank'ın 20500 yılına kadar karbon emissonlarının net sıfara indirilmesi hedefini doğrulayan tek kaynak 2022 ve 2021 yıllarındaki açıklamadır. Diğer kaynakların açıklamalarında bu hedeften bahsedilmemiş olsa da bankanın sürdürülebilirliliğe önem verdiğini gösteriyorlar.",
+    "retrieved_chunks": 20,
+    "filtered_chunks": 15,
+    "removed_chunks": 5,
+    "contradiction_edges": 27,
+    "timings": {
+      "retrieval": 7.00587797164917,
+      "isolated_answering": 9.5367431640625e-07,
+      "nli_graph_filter": 2.997631788253784,
+      "final_generation": 16.773813247680664
+    },
+    "total_time": 26.777323961257935,
+    "chunks_detail": [
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.9033,
+        "text_preview": "karbonsuzlaşma yolculuklarında çok daha yakın çalışacağız.\nAkbank olarak 2022 yılında duyurduğumuz 2050 net sıfır karbon hedefine odaklanarak müşterilerimizin dönüşümüne değer yaratmayı amaçlıyoruz.\nEnerji, çimento, demir çelik, alüminyum ve gübre gibi sektörlerin finansman ihtiyaçlarına sürdürülebilir finansman kredi ürünleri ve hizmetleri sunarak bu sektörlerdeki müşterilerimize destek olmayı sürdüreceğiz. Ayrıca, finansal olmayan inovatif hizmetleri iş birlikleri ve paydaşlar aracılığıyla müşterilerimize sunmayı hedefliyoruz."
+      },
+      {
+        "company": "Akbank",
+        "year": 2021,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.9012,
+        "text_preview": "karbon ayak izinin azaltılmasına aracılık ederken, Türkiye’nin ulusal emisyon azaltım stratejisine de destek olmayı taahhüt ettik.\nBu konu kapsamında ilgili bilgilere link üzerinden ulaşabilirsiniz.\nİklim değişikliği ile mücadele ederken, hedeflerimizi enerji tüketimi, sera gazı emisyonu, kağıt ve su kullanımı, teknolojik atıkların geri dönüşümü gibi birçok farklı konu kapsamında ele alıyoruz. Bu doğrultuda, hedeflerimize ulaşmak için farklı projelerimizi ve uygulamalarımızı hayata geçiriyoruz. Akbank olarak, daha dayanıklı bir finansal sistem inşa ediyor ve daha iyi raporlama yoluyla iklim ri"
+      },
+      {
+        "company": "Akbank",
+        "year": 2020,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.9008,
+        "text_preview": "Akbank olarak faaliyetlerimizin daha sürdürülebilir bir nitelik kazanması hedefliyoruz. Bu hedef doğrultusunda, çevresel ve sosyal etki-değer yaratımımızı inceliyor ve kredilendirme faaliyetlerimizde bu unsurları dikkate alıyoruz. Bu prensiplerimiz ile Türkiye ekonomisine ve paydaşlarına daha nitelikli sürdürülebilir bir gelecek kazandırmayı hedefliyoruz."
+      },
+      {
+        "company": "Akbank",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8968,
+        "text_preview": "\"Akbank ile gerçekleştirdiğimiz iş birliği kapsamında, öncelikli amacımız KOBİ’lerden kurumsal firmalara kadar tüm şirketlerin enerji verimliliği, tasarruf ve iklim odaklı aksiyonlar almasını desteklemek. Daha sürdürülebilir bir dünya vizyonuyla Akbank ile çıktığımız bu yolculukta, teknolojinin gücünden yararlanarak dijital enerji yönetimi, emisyon azaltımı ve verimlilik alanlarında somut çözümler sunuyoruz.\nYapay zeka ve nesnelerin interneti teknolojileriyle geliştirdiğimiz platformumuz sayesinde, işletmeler enerji tüketimlerini dijital olarak yönetirken tasarruf potansiyellerini de keşfediyo"
+      },
+      {
+        "company": "Akbank",
+        "year": 2021,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8958,
+        "text_preview": "konomiye uyarlanmış ürünler, üretim teknolojileri ve süreçleri, istihdam yaratma ve KOBİ finansmanı ve mikrofinansın potansiyel etkisi dahil olmak üzere sosyoekonomik krizlerden kaynaklanan işsizliği\nönlemek ve/veya azaltmak için tasarlanmış programlar, temel hizmetlere erişim, uygun fiyatlı konut başlıklarına odaklanıyoruz. Sürdürülebilir finansman çalışmalarımızda, düşük karbon ekonomisine geçişi hızlandırmak en temel önceliğimiz olmaya devam edecek.\nYenilikçi, eşitlikçi, kapsayıcı ve ekosisteme duyarlı ekonomiye geçiş sürecini hızlandırmak için sunduğumuz sürdürülebilir finansman destekleri"
+      },
+      {
+        "company": "Akbank",
+        "year": 2022,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8932,
+        "text_preview": "Müşterilerimizin ihtiyaç ve faaliyetlerine özel olarak oluşturduğumuz Sürdürülebilir Finansman ürünlerinin iklim değişikliğiyle mücadeleye yönelik bölgesel ve uluslararası çabaları da desteklemesini sağlıyoruz. İklim finansmanı girişimlerimizi ele aldığımız iki ana kategori, “iklim değişikliğinin sonuçlarını hafifletme (karbon emisyonunu azaltma)” ve “iklim adaptasyonu oldu.\nAkbank olarak 2050 yılında net sıfır karbon banka olma taahhüdümüzü 2022 yılında açıkladık. Net sıfır banka olma yolculuğumuzda ilerlerken yaratacağımız en büyük değerin müşterilerimizin dönüşümü olduğuna inanıyoruz. Enerj"
+      },
+      {
+        "company": "Akbank",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8915,
+        "text_preview": "Operasyonlarımızda çevre dostu bir iş modeli benimseyerek iklim değişikliğini öncelikli bir konu olarak ele alıyoruz. 2021 yılında belirlediğimiz operasyonlarımızdan kaynaklı emisyonlarımızı 2025 yılına kadar sıfırlayarak karbon nötr banka olma hedefimizi, küresel ve Türkiye'deki gelişmeleri dikkate alarak 2023 yılında Net Sıfır emisyon hedefi olarak güncelledik.\nTükettiğimiz enerjiyi, suyu ve kâğıdı bilinçli kullanarak\nYenilenebilir kaynaklara yatırım yaparak\nİklim değişikliği konusunda çalışanlarımızı bilinçlendirerek\nOperasyonlarımıza kaynak verimliliğini entegre ederek\nOperasyonlarımızdan "
+      },
+      {
+        "company": "Akbank",
+        "year": 2020,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8915,
+        "text_preview": "Operasyonel   \nemisyonlar   \n& portföy   \netkisini   \nminimize   \netmek   \n2025’e kadar   \noperasyonel   \nemisyonları   \nsıfırlayarak   \nkarbon nötr banka   \nolmak\n2030’a kadar kredi portföyümüzün iklim değişikliğine olan etkisini azaltmak\nİklim   \ndeğişikliğinin   \nkredi porföyümüz   \nüzerindeki   \nfinansal risk   \nve etkilerini   \nminimize etmek\nOdak alanlarımızda hayata geçirdiğimiz proje ve çalışmalarla Birleşmiş Milletler tarafından 2015 yılında yayınlanan 2030 yılına kadar çözülmesi gereken öncelikli küresel sorunları ortaya koyan Birleşmiş\nMilletler Sürdürülebilir Kalkınma Amaçları’na ("
+      },
+      {
+        "company": "Akbank",
+        "year": 2021,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8902,
+        "text_preview": "Akbank olarak, sera gazı emisyonlarımızı azaltmak amacıyla belirlediğimiz 3 alanda çalışmalarımızı sürdürmeye devam ediyoruz. İlk olarak, şubelerimiz dahil tüm binalarımızda enerji verimliliğini artırarak daha az enerji tüketiminin sağlanmasına odaklanıyoruz."
+      },
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8893,
+        "text_preview": "metleri sunarak bu sektörlerdeki müşterilerimize destek olmayı sürdüreceğiz. Ayrıca, finansal olmayan inovatif hizmetleri iş birlikleri ve paydaşlar aracılığıyla müşterilerimize sunmayı hedefliyoruz.\n2023 yılında, demir çelik, çimento, enerji, tekstil, turizm, petrol-doğalgaz sektörlerindefaaliyet gösteren müşterilerimizin net sıfır karbon hedeflerini ve stratejilerini yakından takip ederek, bu sektörlerdeki müşterilerimiz için net sıfır karbon stratejileri kapsamında ön değerlendirme çalışmaları sürdürüyoruz. Bu çalışmalarla müşterilerimize sektörel fırsatları erken tespit etmelerinde yardımc"
+      },
+      {
+        "company": "Akbank",
+        "year": 2020,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8874,
+        "text_preview": "İklim krizi ile mücadele kapsamında operasyonlarımız kaynaklı karbon emisyonlarımızı takip ediyor, analizlerimiz sonucunda azaltım çalışmaları için çeşitli aksiyonlar alıyoruz. Belirlediğimiz plan kapsamında 2025 yılına kadar, Karbon Nötr Banka olmayı hedefliyoruz.\nSera gazı emisyonunu azaltmak amacıyla belirlediğimiz 3 alanda çalışmalarımızı sürdürüyoruz. İlk olarak şubelerimiz dahil tüm binalarda enerji verimliliğini artırarak daha az enerji tüketiminin sağlanmasına odaklanıyoruz. Bu çerçevede elektrik, su, doğalgaz, mazot gibi tüketimlerimizi uzaktan kontrol etmemizi ve raporlayabilmemizi s"
+      },
+      {
+        "company": "Akbank",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8872,
+        "text_preview": ", sürdürülebilirliği insana dokunan, toplumu ileriye taşıyan bir stratejiye dönüştürüyoruz. İnsanı, teknolojiyi ve sürdürülebilirliği bir araya getiren bir vizyonla, bankacılığı yeniden tanımlıyoruz.\nGelecek nesillere daha yaşanabilir bir dünya bırakma amacıyla çıktığımız bu yolculukta her yıl somut ve uzun vadeli taahhütler vermeye devam ediyoruz. 2024 yılında da 2050 net sıfır hedefimizi güçlendirdik ve Net Sıfır Bankacılık Birliği üyesi olduk. Çimento, demirçelik, gayrimenkul ve enerji sektörlerinin karbonsuzlaşmasını önceliklendirerek 1,5 derece senaryosuyla uyumlu 2030 ara hedefl erimizi "
+      },
+      {
+        "company": "Akbank",
+        "year": 2022,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8856,
+        "text_preview": "aşladık. Bu kapsamda, müşterilerimizin net sıfır taahhütleri alanındaki çalışmalarını izlemeye başladık.\nNet Sıfır Banka   \nOlma hedefimiz doğrultusunda   \nönceliklendirmiş olduğumuz   \nsektörler:   \nÇimento, demir   \nçelik, alüminyum, otomotiv, enerji üretimi, petrol  \ndoğalgaz ve   \nhavacılık\nÇSY Riskleri ve yönetimi kapsamında ayrıca geçiş risklerine odaklanıyoruz. Düzenleme, teknoloji ve piyasa başlıkları altında değerlendirdiğimiz geçiş riskleri için Akbank olarak başta karbon yoğun sektörler olmak üzere yukarıda belirtilen sektörlere karbon nötr olma üzerine çalışmalar başlattık. Müşteri"
+      },
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.884,
+        "text_preview": "Tükettiğimiz enerjiyi, suyu ve kâğıdı bilinçli kullanarak\nYenilenebilir kaynaklara yatırım yaparak\nİklim değişikliği konusunda çalışanlarımızı bilinçlendirerek\nOperasyonlarımıza kaynak verimliliğini entegre ederek\nOperasyonlarımızdan kaynaklanan sera gazı emisyonlarına baktığımızda Kapsam 2 dahilindeki elektrik tüketiminden kaynaklı emisyonlarımızı her geçen yıl yenilenebilir enerji satın alımlarıyla azaltarak 2023 yılından itibaren $\\% 1 0 0$ yenilenebilir enerji satın alımına geçerek sıfırladık.\nNet Sıfır hedefimiz doğrultusunda Kapsam 1 dahilinde en yüksek emisyonu olan kaynaklar için 2030 "
+      },
+      {
+        "company": "Akbank",
+        "year": 2020,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8828,
+        "text_preview": "İklim krizi günümüzde tüm ekonomileri ve coğrafyaları etkisi altına almaya başladı. Deniz seviyelerinin yükselmesi, olumsuz hava olaylarının daha sık tekrar ediyor olması, biyolojik çeşitliliğin tahrip olması gibi birçok sorun ile karşı karşıyayız.\n2020 yılında küresel sera gazı emisyonlarında COVID-19 pandemisinden kaynaklanan seyahat yasakları ve ekonomik yavaşlamalar sayesinde yaklaşık $\\% 6$ düşüş gözlenmiştir. UNEP’in (The United Nations Environment Programme) hazırladığı rapora göre Paris Anlaşması’ndaki emisyon azaltım hedeflerine ulaşmak için yıllık küresel emisyonun yaklaşık $\\% 7 , 6"
+      }
+    ],
+    "computed_at": "2026-05-30T22:21:05",
+    "wall_seconds": 26.78
+  },
+  {
+    "spec": {
+      "question": "Garanti BBVA'nın toplam aktif büyüklüğü ve kredi portföyü ne kadardır?",
+      "company": null,
+      "year": null,
+      "showcase": "Financial numerical extraction from source documents"
+    },
+    "answer": "Yanıt:\n\nGaranti BB VA'nın toplam aktif varlığı 2 trillyon 310 milyar Türk lirasıyla 2023 yılına kadar ulaştı (Kaynak 2023). Bu bilgiye göre, 2020'den bu yana aktif büyümeye devam eden banka, 2023'teki aktif büyümesinin 2020'ye kıyasla %X arttığını gösteriyor.\n\nKredi portföyünüze gelince, Garanti BB VA 2 triliyon 202 milyarlık bir değere ulaşıyor (Kaynak: 2023), bu da 2020'e kıyasla bir artış anlamına geliyor. Ancak bu rakamın 2021'in 416 milyarına kıyasla daha yüksek olması dikkat çekici çünkü 2021'de Garanti BBVAnın kredileri 416 miliar TL'ye ulaşmıştı (Kaynak : 2021).\n\nSonuç olarak, GarantiBBVA'nın toplam aktifi 2 trilony 310 miliar Türk lirasını aşarken, kredi portföyleri 2 trilion 202 miliar Türk Lirasını geçmiştir.",
+    "retrieved_chunks": 20,
+    "filtered_chunks": 10,
+    "removed_chunks": 10,
+    "contradiction_edges": 94,
+    "timings": {
+      "retrieval": 0.025693178176879883,
+      "isolated_answering": 9.5367431640625e-07,
+      "nli_graph_filter": 0.24788117408752441,
+      "final_generation": 11.395663499832153
+    },
+    "total_time": 11.669238805770874,
+    "chunks_detail": [
+      {
+        "company": "GarantiBBVA",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.9081,
+        "text_preview": "ıklarının yanı sıra bireysel emeklilik ve hayat sigortası, finansal kiralama, faktoring, yatırım ve portföy yönetimi alanlarındaki finansal bağlı ortaklıklarıyla entegre bir finansal hizmetler grubu.\nGaranti BBVA’nın müşterilerine sunduğu kişiselleştirilmiş çözümlerin ve zengin ürün yelpazesinin, 2 trilyon 310 milyar Türk lirası değerinde nakdi ve gayri nakdi kredi portföyüne ulaşmasında önemli bir payı bulunuyor. Garanti BBVA’nın sağlam aktif kalitesinden ödün vermeden sermaye yaratarak, disiplinli ve sürdürülebilir büyüme stratejisi, bankanın güçlü adımlarla ilerlemesini sağlıyor. Banka, bir"
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.9032,
+        "text_preview": "bankanızın (yüzde cinsinden) portföy dağılımını (ör. bilanço ve/veya bilanço dışı verileri sunarak) veya hizmet verdiğiniz müşterilerin sayısını açıklayarak sunduğunuz verileri rakamlara dayandırın.\n1946 yılında Ankara’da kurulan Garanti BBVA, 31 Aralık 2023 tarihi itibarıyla 2 trilyon 202 milyar Türk lirasına ulaşan konsolide aktif büyüklüğü ile Türkiye'nin en büyük ikinci özel bankası konumunda. Kurumsal, ticari, KOBİ, bireysel, özel ve yatırım bankacılığı, ödeme sistemleri dahil olmak üzere bankacılık sektörünün tüm iş kollarında faaliyet gösteren Garanti BBVA, Hollanda ve Romanya’daki ulus"
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2020,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.902,
+        "text_preview": "iştiraklerinin yanı sıra bireysel emeklilik ve hayat sigortası, finansal kiralama, faktoring, yatırım ve portföy yönetimi alanlarındaki finansal iştirakleri ile entegre bir finansal hizmetler grubu.\nGaranti BBVA’nın müşterilerine sunduğu kişiselleştirilmiş çözümlerin ve zengin ürün yelpazesinin, 416 milyar Türk Lirası değerinde canlı nakdi ve gayri nakdi kredi portföyüne ulaşmasında önemli bir payı bulunuyor. Garanti BBVA’nın sağlam aktif kalitesinden ödün vermeden sermaye yaratarak, disiplinli ve sürdürülebilir büyüme stratejisi, Banka’nın güçlü adımlarla ilerlemesini sağlıyor. Banka, birçok "
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2021,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8971,
+        "text_preview": "iştiraklerinin yanı sıra bireysel emeklilik ve hayat sigortası, finansal kiralama, faktoring, yatırım ve portföy yönetimi alanlarındaki finansal iştirakleri ile entegre bir finansal hizmetler grubu.\nGaranti BBVA operasyonel mükemmellik önceliğiyle iş modelini ve süreçlerini sürekli iyileştirirken, finansal ve finansal olmayan riskleri yakından takip ediyor. Değer yaratımını hızlandırmak ve güçlendirmek amacıyla da Garanti BBVA müşterilerin olduğu her yerde bulunarak, daha fazla müşteriye ulaşmaya devam ediyor. 31 Aralık 2021 itibarıyla yurt içinde 863 şube, Kıbrıs’ta 7, Malta’da 1 olmak üzere "
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2021,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8953,
+        "text_preview": "1990 yılında kuruldu, Türkiye genelinde 8 ilde 11 şubesiyle hizmet veriyor. Yurt içi ve yurt dışı faktoring işlemlerini BBVA Grup sinerjisi ile geniş bir network üzerinden yürütmekte olan Garanti BBVA Faktoring, sürekli yatırım yaptığı teknolojik altyapısı, müşterilerinin sağlıklı finansal kararlar almalarını sağlamak amacıyla, uzman ekibiyle faaliyetlerinde önemli bir yer edinen yapay zekâ, makine öğrenmesi ve büyük veriyi kullanması sayesinde çözüm süreçlerini hızlandırıyor. 9,47/10 Kurumsal Yönetim Derecelendirme Notu ile Borsa İstanbul Kurumsal Yönetim Endeksi’nde yer alıyor.\n“Dünyanın En "
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.895,
+        "text_preview": "1946 yılında Ankara’da kurulan Garanti BBVA, 31 Aralık 2024 tarihi itibarıyla 3 trilyon 2 milyar Türk lirasına ulaşan konsolide aktif büyüklüğü ile Türkiye'nin en büyük ikinci özel bankası konumunda.\nGaranti BBVA operasyonel mükemmellik önceliğiyle iş modelini ve süreçlerini sürekli iyileştirirken, finansal ve finansal olmayan riskleri yakından takip ediyor. Değer yaratımını hızlandırmak ve güçlendirmek amacıyla da Garanti BBVA müşterilerin olduğu her yerde bulunarak, daha fazla müşteriye ulaşmaya devam ediyor. 31 Aralık 2024 itibarıyla yurt içinde 787 şube, Kıbrıs’ta 6, Malta’da $\\rceil$ olma"
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2019,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8948,
+        "text_preview": "4.710 22,7 dk 12 kredi\nGaranti BBVA için değer üretim sürecinin merkezinde yer alan finansal performans, sürdürülebilir büyümenin hem sebebi hem de sonucudur. Banka, ürünlerini müşterilere sunarak, tesislere yatırım yaparak, operasyonel ve çevresel verimlilik bakış açısıyla iş modeli ve süreçlerinde sürekli iyileştirme sağlayarak ekonomi üzerinde dolaylı ve doğrudan etki sahibidir.\nÜretilen değeri en üst düzeye çıkarmak için sermayenin etkin kullanımını hedefleyen Garanti BBVA, sağlam aktif kalitesinden ve ihtiyatlı duruşundan ödün vermeyen gerçek bankacılık ilkesi ile disiplinli ve sürdürüleb"
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8947,
+        "text_preview": "payı ile özel bankalar arasında en büyük TL müşteri mevduatı portföyü,   \n$^ { \\circ }$ 25 milyona yakın bireysel müşteri ile bireysel kredilerde liderlik   \nTL işletme kredilerinde %19,6 pazar payı\nGaranti BBVA operasyonel mükemmellik önceliğiyle iş modelini ve süreçlerini sürekli iyileştirirken, finansal ve finansal olmayan riskleri yakından takip ediyor. Değer yaratımını hızlandırmak ve güçlendirmek amacıyla da Garanti BBVA müşterilerin olduğu her yerde bulunarak, daha fazla müşteriye ulaşmaya devam ediyor. 31 Aralık 2023 itibarıyla yurt içinde 796 şube, Kıbrıs’ta 7, Malta’da 1 olmak üzere "
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2020,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8942,
+        "text_preview": "eknolojik altyapıya sahip 5.309 ATM, ödüllü Müşteri İletişim Merkezi, internet, mobil ve sosyal bankacılık platformlarıyla tüm kanallarda kesintisiz bir deneyim ve bütünleşik kanal kolaylığı sunuyor.\n18 milyon bireysel müşteriye sahip olan Garanti BBVA, tüketici kredilerinde %11,7 pazar payına sahip olmakla birlikte, Mortgage, kredi kartı ve otomobil kredilerinde de sektöre öncülük ediyor.\nYP kredilerde %9,6 oranında pazar payına sahip. → TL işletme bankacılığı kredilerinde %8,3 pazar payı ile Garanti BBVA özel bankalar arasında 2. sırada. → Bağlı ortaklıkların aktiflere katkısı ise %12.\nBanka"
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8936,
+        "text_preview": "klarının yanı sıra bireysel emeklilik ve hayat sigortası, finansal kiralama, faktoring, yatırım ve portföy yönetimi alanlarındaki finansal bağlı ortaklıkları ile entegre bir finansal hizmetler grubu.\nDeğer yaratımını hızlandırmak ve güçlendirmek amacıyla da Garanti BBVA müşterilerin olduğu her yerde bulunarak, daha fazla müşteriye ulaşmaya devam ediyor. 31 Aralık 2024 itibarıyla yurt içind 787 şube, Kıbrıs’ta 6, Malta’da 1 olmak üzere yurt dışında 7 şube, bir temsilcilikten oluşan yaygın bir dağıtım ağı ve 22.664 toplam bağlı ortaklıklar dahil çalışanıyla 27,7 milyonu aşkın müşterisinin her tü"
+      }
+    ],
+    "computed_at": "2026-05-30T22:21:17",
+    "wall_seconds": 11.67
+  },
+  {
+    "spec": {
+      "question": "Çimento sektöründe alternatif yakıt kullanım oranı en yüksek hangi şirkettedir?",
+      "company": null,
+      "year": null,
+      "showcase": "Sector-wide cross-document comparison"
+    },
+    "answer": "Verilen kaynaklardan yola çıkarak, Çimento sektorunda alternatif yakım oranını en yüksek olan şirketi belirlemek mümkündür.\n\nKaynak 6'daki OYAK Cimento tarafından sağlanan bilgilerden, 2020 yılında alternatif yaktı tüketiminin %24.7'sinin klinker üretimi sırasında termal enerjiden sağlanmasına ilişkin bilgi bulunmaktadır. Bu rakam, alternatif yakuıt kullanım oranına göre en yüksek olan şirket olarak kabul edilebilir.\n\nAncak, diğer kaynaklardaki bilgilerin karşılaştırması gereklidir:\n\n* Kaynak 1 Akçansa, 2021 yılında alternatif yolculuk oranını %22'ye çıkaracağını açıkladı.\n* Kaynak 4 Adana Çimento, 2017-2018 yılli alternatif ham maddelerinin oluşturdukları katkıların toplam katkılarına oranı %71,77 oldu.\n* Kaynakler 2 ve 5'teki Cimsa, 2019 ve 2020 yıllarında alternatif yaküt kullanım oranlarının ne olduğu hakkında herhangi bir bilgi sağlamıyor.\n\nBu nedenle, OYAK Çimentosunun 2020 yılındaki alternatif yakut kullanım oranının en yüksek olduğu sonucuna varabiliriz. Ancak, diğer şirketlerin alternatif yakutm oranlarının tam olarak bilinmediğinden emin olmak için daha fazla veri toplamak gerekir.",
+    "retrieved_chunks": 20,
+    "filtered_chunks": 10,
+    "removed_chunks": 10,
+    "contradiction_edges": 62,
+    "timings": {
+      "retrieval": 0.018945932388305664,
+      "isolated_answering": 7.152557373046875e-07,
+      "nli_graph_filter": 0.20971441268920898,
+      "final_generation": 12.177790880203247
+    },
+    "total_time": 12.406451940536499,
+    "chunks_detail": [
+      {
+        "company": "Akçansa",
+        "year": 2022,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8986,
+        "text_preview": "yılında alternatif yakıt ikame oranımızı %34’e artırmayı hedefliyoruz.\n3 fabrikamızda alternatif yakıt kullanımımızı artırarak 2022 yılı itibarıyla alternatif yakıt ikame oranımızı %22’ye çıkarttık.\nÇimento üretiminde ihtiyaç duyulan yoğun ısıl enerji ağırlıklı olarak fosil yakıtlarla karşılansa da bertarafı zor birçok atık çeşidi sektörümüzde alternatif yakıt kaynağı olarak kullanılabilmektedir. Bu yönüyle alternatif yakıt kullanımı, atık azaltımı ve atıkların ekonomiye geri kazandırılması iklim değişikliği ile mücadele kapsamında çok önemli bir yer tutmaktadır. Bu çerçevede alternatif yakıt "
+      },
+      {
+        "company": "Cimsa",
+        "year": 2017,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8894,
+        "text_preview": "Çimento sektöründe, sürdürülebilir kaynak kullanımı ve döngüsel ekonomi prensiplerine uyum açısından, alternatif hammadde kullanılması ile doğal kaynakların daha az tüketilmesini oldukça büyük önem taşımaktadır.\nÇimsa çimento fabrikalarında kullanılan alternatif hammaddeler ve alternatif katkı malzemeleri diğer endüstrilerin seramik atıkları, kiremit kırığı, döküm kumu gibi atık ya da yan ürünleri olan çeşitli malzemelerdir. Alternatif hammadde kullanım oranı, Dünya Sürdürülebilirlik İş Konseyi (WBCSD) Çimento Sürdürülebilirlik Girişimi (CSI)’nin metodolojisi kullanılarak hesaplanmaktadır.\nÇim"
+      },
+      {
+        "company": "OyakCimento",
+        "year": 2022,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8777,
+        "text_preview": "konomiye kazandırılmıştır.\nBiyokütle içeriğine sahip atıktan türetilen yakıtlar Şirket fabrikalarının döner fırınlarında alternatif yakıt olarak ve beraber yakma lisansları kapsamında kullanılmıştır.\nOYAK Çimento fosil yakıtları ikame ederek ürettiği çimentonun karbondioksit emisyonunu azaltmaktadır. Şirket, 2022 yılında alternatif yakıt tüketimi alanındaki faaliyetleri sonucunda klinker üretim sürecinde harcadığı termal enerjinin %24,7’sini alternatif yakıtlardan sağlamıştır.\nOYAK Çimento’da benimsenen ve uygulanan Çevre Bilinci’ne linki tıklayarak erişebilirsiniz.\n2022 yılında toplam 1.054.3"
+      },
+      {
+        "company": "AdanaCimento",
+        "year": 2018,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8775,
+        "text_preview": "Adana Çimento kendi iş süreçlerinde, kaynağında atık yönetimini başarıyla uygulayarak ve döngüsel ekonomi modelini süreçlerine entegre ederek doğal kaynak kullanımında tasarruf yapmaktadır. 2017 ve 2018 yılları için toplamda 5 MTL’lik tasarruf yapılarak alternatif kaynaklar ve diğer sanayi kollarının atıkları girdi olarak kullanılmıştır. ATY kullanım oranları sektör ortalamasının üzerinde gerçekleşmiştir.\nÇimento üretiminde; alternatif hammaddelerin oluşturduğu katkıların toplam katkılara oranı $\\%$ 71,77 olmuştur. Hedefimiz $\\%$ 75 - 80 arasındadır (Tablo 17).\n[Tablo: Tablo 17: Alternatif Ham"
+      },
+      {
+        "company": "Cimsa",
+        "year": 2020,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8766,
+        "text_preview": "Çimento ve beton sektöründe Türkiye’de Avrupa normlarında ve akreditasyon kapsamında Çoklu İşletme Entegre Yönetim Sistemi’ne sahip tek şirket Çimsa’dır.\nÇimsa, alternatif yakıt ve hammadde kullanımının artırılması, ürün ve proses üzerindeki etkilerinin optimize edilmesi konusunda pek çok çalışma yürütmektedir.\nÇimsa’nın finansal sermayesi performansı bu raporun 60. sayfasında sunulmuştur.\nÇimsa’nın üretilmiş sermayesi performansı bu raporun 64. sayfasında sunulmuştur.\nÇimsa’nın fikri sermayesi performansı bu raporun 68. sayfasında sunulmuştur."
+      },
+      {
+        "company": "Cimsa",
+        "year": 2016,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8761,
+        "text_preview": "Hammadde kullanımının yoğun olduğu çimento sektöründe, doğal kaynaklardan en yüksek verimin elde edilmesi, sürdürülebilir kaynak kullanımı açısından oldukça büyük önem taşımaktadır.\nÇimento sektöründe alternatif hammadde kullanımı iki şekilde gerçekleşmektedir. Birincisi, alternatif hammaddenin çimento üretiminde yarı mamul olan klinkerin üretimi aşamasında doğal hammaddelerin yerine, ikincisi ise klinkere belirli oranlar ile katılan doğal katkı malzemelerinin yanı sıra, çimento kalite normlarını bozmadan kullanılmasıdır. Alternatif hammaddeler ve katkı malzemeleri çoğunluğu diğer endüstrileri"
+      },
+      {
+        "company": "Cimsa",
+        "year": 2016,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8757,
+        "text_preview": "Çimento sektörü, ekonomik olarak büyümeye devam ederken, çevresel sorumluluklarının bilincinde olup, sürdürülebilir büyümenin yaygınlaşması konusunda da etkin bir rol edinmeyi hedeflemiştir. Özellikle Avrupa Birliği’ne uyum mevzuatları çerçevesinde sürdürülebilir kalkınma, 2015 yılında olduğu gibi 2016 yılında da öne çıkan bir konu olmuştur. Enerji maliyetlerini düşürmek ve atmosfere salınan karbondioksit oranını azaltmak amacıyla; alternatif yakıtların kullanılması, alternatif hammadde kullanımı, atık, enerji verimliliği Türkiye’de üzerinde durulan önemli konular olarak ortaya çıkmaktadır."
+      },
+      {
+        "company": "Cimsa",
+        "year": 2017,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8752,
+        "text_preview": "Çimsa çimento fabrikalarında alternatif yakıt kullanım oranı 2017 yılında %8,7 olurken, Eskişehir Fabrikası 2. fırınında, 75.264 ton atıktan türetilmiş yakıt birlikte yakılarak kullanım oranı %36,8’e yükselmiştir.\nAlternatif yakıtların kullanımı;\n• diğer endüstrilerin atık yönetimi sürecine destek olmakta, atıklardan doğan çevresel etkilerin en aza indirilmesine, enerji geri kazanımı sağlanarak, Döngüsel Ekonomi prensiplerine katkıda bulunmaktadır.\nÇimsa çimento fabrikalarında kullanılan toplam enerji miktarı, 2017 yılı itibarıyla 19.691 TJ olarak kaydedilmiştir.\nBu tüketimin\n• 16.517 TJ lük k"
+      },
+      {
+        "company": "OyakCimento",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8742,
+        "text_preview": "OYAK Çimento, toplam 10,4 milyon ton klinker ile 18,7 milyon ton çimento ve 12,1 miyon m3 yıllık beton üretim kapasitesi ile, “Türkiye’nin en büyük çimento markası” vizyonunu gururla taşımaktadır.\nOYAK Çimento olarak birleşme sonrasında hazırladığımız dördüncü entegre raporumuz ile değer odaklı yaklaşımımızı uygulamayı sürdürüyoruz.\nTarihsel yolculuğunda, 1989 yılında ilk özelleşen çimento fabrikası olarak 20 yıl Lafarge’ın yönetiminde faaliyet gösteren Aslan Çimento, 2010 yılında OYAK Grubu’na dâhil olmuştur. Alternatif yakıt (AY) kullanımında sektör ortalamasının üzerinde ve en fazla AY kull"
+      },
+      {
+        "company": "OyakCimento",
+        "year": 2022,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8735,
+        "text_preview": "Çimento üretiminin bir parçası olan klinker üretim süreci, yoğun termal ihtiyacı olan bir prosestir. Bu proseste ortaya çıkan emisyonların yaklaşık yarısı, kireç taşını çimentonun aktif bileşeni olan klinkere dönüştüren kimyasal reaksiyondan kaynaklanır. Kalan %40’lık kısım yakıt kullanımında, %10’luk bölüm ise lojistik ve diğer operasyonlarda ortaya çıkar. 1.400 ˚C’nin üzerindeki sıcaklıklarda meydana gelen kimyasal reaksiyon için gereken enerji, tipik olarak en karbon yoğun fosil yakıtlardan ikisi olan kömür veya petrol kokunun yakılmasıyla sağlanır.\nÇimento sektöründe, fosil yakıtlara alter"
+      }
+    ],
+    "computed_at": "2026-05-30T22:21:29",
+    "wall_seconds": 12.41
+  },
+  {
+    "spec": {
+      "question": "Kadın istihdamı ve fırsat eşitliği politikaları hakkında bilgi ver",
+      "company": null,
+      "year": null,
+      "showcase": "Multi-company social policy synthesis (production-proven query)"
+    },
+    "answer": "Yanıt:\n\nBu soru için topladığım bilgilerin kaynağından dolayı yalnızca 2023 ve 2024 yılları için veri sağlayabilirim. Aşağıdaki şirketlerin kadın istihdamı, fırsat eşitliği ve şiddete karşı tutumlarına ilişkin açıklamalarına göre genel bir özet verebilirim:\n\n* Aksa Akrilik: Çeşitlilik ve fırsatlara değer verir ve ayrımcılığı kabul etmez. Çalışanlar ve adaylar için ayrımcılığın önlenmesi konusunda bir politika benimsemiştir.\n* Anadolu Hayat Emekliliği: Raporlama yılında Toplumsala Cinsiyet Esasları Politikasını yayınladı ve 2023'te Fırsatı Eşitliği Modülü Sertifika başvurusunu tamamladı. Fırsata eşitliği modelinin 22 kriteria arasından 7'sine uyumluydu.\n* Sekerbank: Sosyal sorumluluk projelerinde kadınların istihdasını desteklemektedir.\n* Borusan Holding: 2020'de \"Toplumsallaşma ve Ev İçinde Şiddet Politika\"nı yayımı ve 2021'de bu politikayı güncelleterek kapsayıcılık, eşitlik odaklı hale getiren bir politika benimsedi.\n* Turkcell: \"Eşit Olacak\", \"Şanslar Eşittir\" ve \"Geleceğini Yazan Kadın\" programlarıyla kadının teknoloji alanındaki rolünü artırmaktadır.\n\nÖzet olarak, bu şirketler kadın istihdamını ve fıarsata eşitliği destekleyen politikalar benimserler ve ayrımcılıkla mücadelededirler. Ancak, her şirketin kendine özgü yaklaşımları ve hedefleri vardır.",
+    "retrieved_chunks": 20,
+    "filtered_chunks": 13,
+    "removed_chunks": 7,
+    "contradiction_edges": 46,
+    "timings": {
+      "retrieval": 0.01883244514465332,
+      "isolated_answering": 4.76837158203125e-07,
+      "nli_graph_filter": 0.21655750274658203,
+      "final_generation": 15.904147148132324
+    },
+    "total_time": 16.139537572860718,
+    "chunks_detail": [
+      {
+        "company": "AksaAkrilik",
+        "year": 2023,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8862,
+        "text_preview": "eşitlilik, kapsayıcılık ve fırsat eşitliği sunuyoruz. Taciz, şiddet, çocuk işçi ve zorla çalıştırma karşıtı uygulamalarımız da dahil tüm taahhütlerimize İnsan Hakları Politikamız'dan ulaşabilirsiniz.\nÇalışanlarımız ve adaylarımıza yönelik tüm uygulamalarımızd çeşitliliğe ve fırsat eşitliğine önem veriyoruz. Irk, dil, din, mezhep, cinsiyet, renk, cinsel yönelim, yaş, sosyal statü, zihinsel veya fiziksel engele dayalı ayrımcılığa tolerans göstermiyoruz. Ayrımcılığa sıfır tolerans yaklaşımımızı; işe alım ve yerleştirme, terfi, performans yönetimi, eğitim, kariyer planlama, yedekleme, ücretlendirm"
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2024,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8715,
+        "text_preview": "Tüm faaliyetlerimizde kadın erkek eşitliğini gözetiyoruz. Bu kapsamda, raporlama yılımızda Toplumsal Cinsiyet Eşitliği Politikamızı yayımladık. Ayrıca, 2024 yılında Türkiye Kadın Girişimciler Derneği’nin (KAGİDER) iş yaşamında toplumsal cinsiyet eşitliğini teşvik etmek ve kadınların üretkenliğini artırmak için Dünya Bankası’nın teknik desteği ile geliştirdiği Fırsat Eşitliği Modeli (FEM) Sertifikası başvuru sürecimizi tamamladık. 7’si ana kriter olmak üzere toplam 22 kriterin bağımsız denetim kuruluşu tarafından incelendiği denetleme sonucunda FEM Sertifikası’nı almaya hak kazandık.\nFEM kapsam"
+      },
+      {
+        "company": "Sekerbank",
+        "year": 2023,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8695,
+        "text_preview": "Toplumsal cinsiyet eşitliğini gözetme ve kadınların iş yaşamında güçlenmelerini sağlama amacıyla insan kaynakları politika ve uygulamalarını hayata"
+      },
+      {
+        "company": "BorusanHolding",
+        "year": 2024,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8677,
+        "text_preview": "ımımız doğrultusunda kadınların istihdamını teşvik eden uygulamaları hayata geçiriyoruz.\nBorusan’da şiddete sıfır tolerans yaklaşımımızı göstermek ve farkındalık yaratmak için 2020 yılında “Toplumsal\nCinsiyet Eşitliği ve Ev İçi Şiddet Politikası”nı yayınlamıştık. Bu yıl ise bu politikayı kapsayıcılık, eşitlik ve çeşitlilik yaklaşımına odaklanarak yeniden ele aldık. Politikayı, ana bölümü ev içi şiddet ve şiddetin türleri hakkında kapsamlı bilgiler içerecek şekilde güncelledik. Güncellenen bu politika dokümanında çalışma arkadaşlarımıza sadece fiziksel değil, psikolojik, ekonomik, cinsel ve sib"
+      },
+      {
+        "company": "Turkcell",
+        "year": 2022,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.8673,
+        "text_preview": "rtlar Eşit, Şanslar Eşit'' ve “Geleceği Yazan Kadınlar” programları ile Türkiye'deki kadın mühendis sayısını teknoloji alanında artırmayı ve kadınların istihdama katılımını teşvik etmeyi amaçlıyoruz.\nBilgi, beceri ve kritik deneyim bazlı tüm iş seviyelerindeki Ücret Politikamızı en gü- venilir şekilde yönetiyor, Yönetim Kurulu Üyelerimiz ve Üst Düzey Yöneticilerimizin Ücretlendirme Politikası’nı tüm paydaş- larımız nezdinde şeffaflıkla yürütüyoruz. Ücret Politikalarımızı belirlerken ve güncellerken iş birimlerinin yetenek kaybı yaşadığı veya yetenek çekmek istediği roller, pozisyonlar ile raki"
+      },
+      {
+        "company": "Akbank",
+        "year": 2021,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8667,
+        "text_preview": "n küresel Unstereotype Alliance üyeliği için çalışmalarımız devam ediyor.\nToplumsal cinsiyet ve fırsat eşitliği konularında projeler geliştirmek için UN Women, UN Target Gender Equality, Yeniden Biz,\nMor Çatı, ES Kariyer, Kadir Has Üniversitesi Toplumsal Cinsiyet ve Kadın Çalışmaları Merkezi, Upschool gibi kurumlarla iş birliği çalışmaları gerçekleştiriyoruz. Kadın Girişimcileri Destekleme Derneği (KAGİDER) tarafından hayata geçirilen, Dünya Bankası prosedürleri doğrultusunda uygulanan Fırsat Eşitliği Modeli (FEM) programı kapsamında ‘Fırsat Eşitliği’ sertifikasına layık görüldük.\nYeniden Biz "
+      },
+      {
+        "company": "TürkiyePetrolRafinerileri",
+        "year": 2023,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8645,
+        "text_preview": "NU\nYeni ise alimlarda kadin oraninda %50&#x27;ye ulasma | %50 Kadin - %50 Erkek | %37\nSaat Ucretli |  | %20\nAylik Ucretli |  | %45\nYetenek havuzundaki kadin calisan orani | %50 Kadin- %50 Erkek | %44\nSTEM (bilim,teknoloji, mühendislik ve matematik)pozisyonlarinda kadin temsili %* | %40 Kadin | %29\n2026 yilna kadar Yonetim Kurulu&#x27;nda kadintemsili | %25 Kadin | %18\nŞirket, Çeşitlilik, Eşitlik ve Kapsayıcılık Politikası kapsamında işe alımdan, terfi süreçlerine eğitim gelişim programlarından, yetenek havuzu uygulamalarına kadar tüm insan kaynakları süreçlerinde cinsiyet eşitliğini korumakta "
+      },
+      {
+        "company": "AksaAkrilik",
+        "year": 2024,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8638,
+        "text_preview": "Aksa’da, kurumsal başarının temel unsurlarından biri olarak çeşitliliği, adaleti ve kapsayıcılığı teşvik ediyoruz. Kimya sektöründe faaliyet gösteren ve başta tekstil endüstrisi olmak üzere farklı sektörlere hizmet veren bir şirket olarak, farklı bakış açıları, geçmişler ve deneyimlerin inovasyon ve büyümeye katkı sağladığı bilinciyle hareket ediyoruz.\nKadın İstihdamı ve Kadın Yönetim Kurulu Üyeliği Politikamız ile, kadın ve erkek arasındaki fırsat eşitliğini desteklemeyi ve kadın çalışanların karar mekanizmalarındaki temsilini artırmayı hedefliyoruz. Bu kapsamda:\n• İşe alım, eğitim ve kariyer"
+      },
+      {
+        "company": "VakıfGYO",
+        "year": 2022,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8636,
+        "text_preview": "İnsan Kaynakları Politikamız kapsamındaki “Fırsat Eşitliği, Çeşitlik ve Toplumsal Cinsiyet Eşitliği politikası” doğrultusunda;\nÇalışanlarımızın birbirleri ve müşterilerimiz ile olan ilişkilerinde, etik ilkeleri ile uyumlu olarak, din, ırk, cinsiyet, yaş, felsefi inanç, mezhep, siyasal düşünce, engellilik durumu, sosyal sınıf farkı ve benzeri sebeplere dayalı ayrım yapılmaksızın, çeşitlilik ve kapsayıcılık ilkesine dayalı bir çalışma ortamını sağlıyoruz. Kurum faaliyetlerimizde insan haklarına ve özgürlüklerine aykırı veya kısıtlayıcı muamelelere, fırsat eşitliğini engelleyici davranışlara ve u"
+      },
+      {
+        "company": "AksaAkrilik",
+        "year": 2024,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8634,
+        "text_preview": "İnsan haklarına olan bağlılığımız doğrultusunda, çalışanlarımızın bu konudaki farkındalığını artırmak için “Aksa İnsan Hakları Eğitimi”ni hayata geçirdik. Bu eğitimle, evrensel insan hakları prensipleri, iş yerinde etik ve adil uygulamalar, ayrımcılıkla mücadele ve temel çalışma hakları gibi konulara odaklanarak bilinçli ve sürdürülebilir bir iş kültürü oluşturmayı hedefliyoruz.\nTaciz, şiddet, çocuk işçi ve zorla çalıştırmaya karşı sıfır tolerans politikası benimsiyor ve bu taahhüdümüzü İnsan Hakları Politikamızda açıkça ortaya koyuyoruz.\nÇalışanlarımıza adil ve saygılı davranırız.\nÇeşitliliği"
+      },
+      {
+        "company": "AksaAkrilik",
+        "year": 2022,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.863,
+        "text_preview": "det karsiti uygulamalar; cocuk isci ve zorla calistirma karsiti uygulamalar konularindaki tum taahhutlerimizi iceren insan Haklari Politikamiz'a websitemizdeki Politikalar bolumunden ulasabilirsiniz.\nCalisanlarimiz veadaylarimiza yonelik tum uygulamalarimizda cesitilige ve firsat esitligine onemveriyoruz.Irk,dil,din,mezhep,cinsiyet,renk,cinsel yonelim,as, sosyal statu, zihinsel veya fiziksel engele dayali ayrimciliga tolerans gostermiyoruz. Ayrimciliga sifir tolerans yaklasimimizi; ise alimve yerlestirme, terfi,performans yonetimi,egitim, kariyer planlama,yedekleme,ücretlendirme ve yan haklar "
+      },
+      {
+        "company": "TSKB",
+        "year": 2022,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8628,
+        "text_preview": "SKD Türkiye (Sürdürülebilir Kalkınma Derneği) iş birliğinde hayata geçirdiğimiz dijital platform, kadın istihdamının desteklenmesi ve iş yerinde fırsat eşitliği yaklaşımının geliştirilmesi için adım atmak isteyen tüm firmalara kapsamlı bir rehber sunuyor.\nDijital bir kütüphane olan ve sosyal medya kanallarını etkin şekilde kullanan #EşitAdımlar, Türkiye’den ve dünyadan başarılı uygulamalara, yol haritalarına, konuyla ilgili standart ve mevzuatlar ile bu alanda yapılmış nitelikli araştırmalara yer veriyor.\n2022 yılında #EşitAdımlar web sitesinde toplam 195 makale paylaşıldı. Platformun sosyal m"
+      },
+      {
+        "company": "VakıfBank",
+        "year": 2020,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8626,
+        "text_preview": "ment Principles-WEPs) imzacısı olmanın yanında Bloomberg Cinsiyet Eşitliği Endeksi’ne (Bloomberg GEI) daha yüksek bir puanla ikinci kez seçilerek 2021 yılında da endeksteki devamlılığımızı sürdürdük.\nSürdürülebilir Kalkınma Amaçları arasında yer alan ve tüm dünya gündeminde önemli bir yer tutan cinsiyet eşitliği konusunda üst yönetim de dâhil olmak üzere tüm çalışanlarımızın görüş ve beklentilerini duymak ve iyileştirilmesi gereken alanları tespit etmek için 2020’de cinsiyet eşitliği anketi gerçekleştirdik. Bunlara ek olarak T.C. Aile, Çalışma ve Sosyal Hizmetler Bakanlığı öncülüğünde ve Dünya"
+      }
+    ],
+    "computed_at": "2026-05-30T22:21:45",
+    "wall_seconds": 16.14
+  },
+  {
+    "spec": {
+      "question": "Anadolu Hayat Emeklilik'in sürdürülebilirlik politikaları ve hedefleri nelerdir?",
+      "company": null,
+      "year": null,
+      "showcase": "Single-company across env/social/governance sections"
+    },
+    "answer": "Anadolu Hayate Emeklilik, sürdürülebilirliği kurumsal kimliğinin ayrılmaz bir parçası olarak görüyor ve bunun için çeşitli politika ve hedefler benimsemiştir. Bu politikalara göre şirketin ana odak noktaları şunlardır:\n\n1. Dünya çapında ve Türkiye'deki gelişmeleri takip etmek: Anadolu Hayate Emekliğin sürdürülebilirlik raporu, Birleşmiş milletler tarafından belirlenen Sürdürülebilir kalkınma Hedeflerini destekliyor ve bu hedeflere ulaşmaya yöneliktir.\n2. Ekonomik refaha katkıda bulunmak: Şirkette ekonomik refahın artması için herkes için kapsamlı eğitim sağlanmasını savunuyor.\n3. Dezavantajli müşteri grupları ve çalışanlar için adil ve insani çalışma ortamları yaratmak: Şirket, dezavantaja sahip müşteri grupları ile çalışanları için adil bir iş ortamı sağlar ve bu da topluma olumlu katkılarda bulunur.\n4. İnovasyonu ve ileri teknolojiyi kullanma: Anadolu Hayatte Emeklilik, yenilikçi çözümlere ve ileri teknolojinin kullanımına büyük önem veriyor ve bu da yeni iş fırsatları yaratıyor ve düşük karbondioksit ekonomisi için destek oluyor.\n5. Bilimsel araştırmaya ve yeniliğe yatırım: Şirket, sürdürülebilirliğin sağlanmasında bilimsel ara şırmaya yapılan yatırımı ve yeniliği ön planda tutuyor.\n6. Kurumsal kültüre entegrasyon: Anadolu Hayatta Emeklilik'in sürdürülebilirliğe verdiği önem, kurumsal kütlelerine dahil ediliyor ve bu da şirketin kültürüne yansıyor.\n7. Etkili yönetim sistemlerinin uygulanması: Şirket, Sürdürülebilirliği yönetmek için bir Süreci uyguladı ve bu sistemin prosedürleri ve politikası aracılığıyla tüm çalışanlarıyla paylaşılıyor.\n\nBu politikalara dayanan hedefler arasında, şirketin sürdürülebilirlik yolunda ilerlemesini izlemek için bir Entegre Aktivite Raporunun yayınlanması yer alıyor.",
+    "retrieved_chunks": 20,
+    "filtered_chunks": 18,
+    "removed_chunks": 2,
+    "contradiction_edges": 3,
+    "timings": {
+      "retrieval": 0.019041061401367188,
+      "isolated_answering": 9.5367431640625e-07,
+      "nli_graph_filter": 0.19549846649169922,
+      "final_generation": 18.217943906784058
+    },
+    "total_time": 18.43248438835144,
+    "chunks_detail": [
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.9145,
+        "text_preview": "Anadolu Hayat Emeklilik olarak, müşterilerimizin hayatlarının her döneminde refah seviyelerini korumak ve onları doğru ürün ve hizmetlerle buluşturmak için çalışıyoruz.\nRapor Hakkında ve Sunuş\nYönetimimizden Mesajlar\nKurumsal Kimliğimiz\nDünyada ve Türkiye’de Gelişmeler\nAnadolu Hayat Emeklilik’te Sürdürülebilirlik\nMüşterilerimize “İyi Gelecek”\n1990 yılında Anadolu Hayat Emeklilik olarak çıktığımız yolda, müşterilerimizin konforlu bir yaşam sürmesini sağlamak, onların yaşamlarına iyi dokunuşlar yapmak, onlara doğru ürün ve hizmetleri sunmak adına durmaksızın çalışıyoruz."
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.9103,
+        "text_preview": "Sürdürülebilirlik yaklaşımımızın temel unsurlarından biri, dünyanın en acil sorunlarına ortak çözümler getirmeyi amaçlayan Birleşmiş Milletler Sürdürülebilir Kalkınma Amaçları’dır. Sürdürülebilirlik Raporlarımızda, desteklediğimiz ilgili alt hedeflere ilişkin nasıl bir performans sergilediğimiz hakkında bilgi veriyoruz.\nEkonomik refahın artış göstermesi, herkes için kapsayıcı ve nitelikli eğitimin sağlanmasına bağlıdır. Anadolu Hayat Emeklilik olarak, sürdürülebilir kalkınma için yaygın ve nitelikli eğitimin önemine inanıyoruz. Bu amaca yönelik hem kendi çalışanlarımızın gelişimine yatırım yap"
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.9074,
+        "text_preview": "ında dezavantajlı müşteri grupları için geliştirdiğimiz ürün ve hizmetlerle toplumsal refaha katkı sağlıyoruz. Çalışanlarımız için de adil ve insan onuruna yakışan iş ortamı sunarak değer yaratıyoruz\nİnovasyon ve ileri teknolojilerin kullanımı, yeni iş imkânları yaratmada ve düşük karbon ekonomisini desteklemede kalıcı çözümler sunuyor. Sürdürülebilir endüstrilerin desteklenmesi, bilimsel araştırma ve inovasyona yapılan yatırımlar ise, sürdürülebilir kalkınmanın sağlanmasında önemli araçlar arasında geliyor. Anadolu Hayat Emeklilik olarak, dijitalleşmeye verdiğimiz önem sayesinde ekonomi ve sü"
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.9068,
+        "text_preview": "Anadolu Hayat Emeklilik olarak, sürdürülebilirlik stratejimiz doğrultusunda önceliklerimizi belirleyerek iş modelimize sürdürülebilirlik kavramını dâhil etmeyi ve bu kavramı kurum kültürümüz hâline getirmeyi amaçlıyoruz. Bu doğrultuda 2017 yılında çevresel, sosyal, yönetişimsel unsurları bütüncül olarak ele aldığımız, temeli Sürdürülebilirlik Politikamıza dayanmakta olan Sürdürülebilirlik Yönetim Sistemimizi (SYS) oluşturduk. Sürdürülebilirlik süreçlerimizi prosedürler ve politikamız aracılığıyla etkin şekilde yönetiyor, kurum içinde tüm çalışanlarımızla paylaşıyoruz.\nSYS kapsamındaki uygulama"
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.9063,
+        "text_preview": "Anadolu Hayat Emeklilik A.Ş. (Anadolu Hayat Emeklilik) olarak, çevresel, sosyal ve yönetişimsel alanlardaki faaliyetlerimizi, yarattığımız değeri, finansal göstergelerimizi bu yıl birincisini yayımladığımız Entegre Faaliyet Raporumuz aracılığı ile sunmanın mutluluğunu yaşıyoruz.\nKurulduğumuz 1990 yılından bu yana, ülke ekonomisine kalıcı destek sağlamayı ve bireylerin geleceğe yönelik kuşkularını ortadan kaldıran ve yaşam kalitesini yükselten finansal çözümler sunmayı temel ilkemiz olarak benimsedik. Karar alma mekanizmalarına entegre ettiğimiz kurumsal sürdürülebilirlik ilkelerimiz ve sorumlu"
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.9058,
+        "text_preview": "Anadolu Hayat Emeklilik olarak, müşterilerimizin ihtiyaçları doğrultusunda çok çeşitli ve kapsamlı hizmet sunabilmek şirket önceliklerimizdendir. Bu doğrultuda, müşterilerimiz için değer yaratmayı amaçlıyor, farklı alanlarda faaliyet gösteren birçok kuruluşla iş birliği yapıyoruz. Bankalar, teknoloji şirketleri ve sivil toplum kuruluşları gibi çeşitli kuruluşlar ile yaptığımız iş birlikleri sayesinde, ürün ve hizmetlerimizi daha geniş kitlelere ulaştırmayı, müşteri deneyimini iyileştirmeyi, yeni pazarlara girmeyi ve rekabet gücümüzü artırmayı hedefliyoruz."
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.9053,
+        "text_preview": "Çalışanlarımızın gelişimine   \nodaklanarak, yüksek memnuniyet oranına sahip, tercih edilen   \nbir kurum olma hedefimizde   \nkararlılıkla ilerliyoruz.   \nÇalışanlarımıza eşit fırsatlar   \nsunduğumuz yaklaşımımız   \nve şeffaf iletişimi esas alan   \nkültürümüz sayesinde, iş   \ngücümüzü parlak bir geleceğe   \nhazırlıyoruz.\nRapor Hakkında ve Sunuş\nYönetimimizden Mesajlar\nKurumsal Kimliğimiz\nDünyada ve Türkiye’de Gelişmeler\nAnadolu Hayat Emeklilik’te Sürdürülebilirlik\nMüşterilerimize “İyi Gelecek”"
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.9039,
+        "text_preview": "hayat sigortası ve bireysel emeklilik hizmetlerine erişimini artırıyor ve uzun soluklu sosyal sorumluluk programlarını destekleyerek tüm paydaşlarımız için sürdürülebilir değer yaratmaya çalışıyoruz.\nÜretme ve tüketme biçimlerimizi değiştirerek ekolojik ayak izimizi azaltmak, ekonomik büyüme ve sürdürülebilir kalkınmayı başarma yolculuğunda önemli önceliklerimizdendir. Anadolu Hayat Emeklilik’te gerçekleştirdiğimiz operasyonlarda enerji, su ve kâğıt verimliliğini sağlamaya yönelik pek çok projeyi hayata geçiriyoruz. Sorumlu yatırım anlayışıyla hareket ediyor, çevresel etkisi düşürülmüş projele"
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2023,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.9019,
+        "text_preview": "Onemli kuresel sorunlara ortak cäzümlerbulmak amaciyla hazirlanan Birlesmis Milletler SurdurulebilirKalkinma Amaclari surdurulebilirlik stratejimizin änemli bir bilesenini olusturmaktadir. Katki sagladigimiz alt hedeflere yönelik performansimiza Surdurulebilirlik Raporlarimizda yer veriyoruz.\nEkonomik refahın artması için öncelikle herkes için kapsayıcı ve nitelikli eğitimin sağlanması gereklidir. Anadolu Hayat Emeklilik olarak sü rdü rü lebilir kalkınma için yaygın ve nitelikli eğitimin önemine inanıyoruz. Buna yönelik olarak hem kendi çalışanlarımızın gelişimine yatırım yapıyor hem de hay"
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8996,
+        "text_preview": "gortası ve bireysel emeklilik hizmetlerine erişimini artırarak ve uzun soluklu sosyal sorumluluk programlarını destekleyerek tü m paydaşlarımız için sü rdü rü lebilir değer yaratmaya çalışıyoruz.\nÜretme ve tüketme biçimlerimizi değiştirerek ekolojik ayak izimizi azaltmak, ekonomik büyüme ve sürdürülebilir kalkınmayı başarma yolculuğunda önemli önceliklerimizdendir. Anadolu Hayat Emeklilik’te operasyonlarımızda enerji, su ve kağıt verimliliğini\nsağlamaya yönelik pek çok proje hayata geçiriyoruz. Sorumlu yatırım anlayışıyla hareket ediyor, çevresel etkisi düşürülmüş projelere yatırım yapıyor"
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8986,
+        "text_preview": "Tüm etkinliklerimizle uzun vadede ekonomik, çevresel ve sosyal değer yaratmayı gözetiriz.\nPaydaş iletişim çalışmalarımızla toplumda geleceği güvence altına alma bilincini geliştiririz.\nİklim değişikliğiyle mücadele ve uyarlama kapsamında üzerimize düşen sorumluluğun bilinciyle hareket eder, iklim değişikliğinin etkilerini azaltmak için projeler geliştiririz.\nUzun vadeli ve istikrarlı emeklilik fonları yaratırız.\nİnsan ve çalışan haklarına saygılı, adil bir çalışma ortamı sunarız.\nFaaliyetlerimizde sorumlu yatırım anlayışını gözeterek pozitif etkiyi artırmayı amaçlarız.\nToplumun sürdürülebilirl"
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8982,
+        "text_preview": "2021 yılında müşterilerimize sunduğumuz Anadolu Hayat Emeklilik Sürdürülebilirlik Hisse Senedi Emeklilik Yatırım Fonu’nu; geleceği ve çevreyi önemseyen, çevreye duyarlı yatırım yapmak isteyen müşterilerimiz için geliştirdik. Portföyünün en az %80’i devamlı olarak yurt içi ve yurt dışı Sürdürülebilirlik Endekslerinde yer alan hisse senetlerinden oluşan fonun temel amacı ağırlıklı olarak yerli, yabancı Sürdürülebilirlik Endekslerinde yer alan pay senetlerine fon portföyünde yer vererek kazanç elde etmektir. Sürdürülebilirlik Hisse Senedi Fonumuz ile;\n$\\bullet$ Değişen koşullar ve trendler doğrul"
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8965,
+        "text_preview": "Sürdürülebilirlik stratejimiz kapsamında, ulusal ve uluslararası yasal mevzuatlarla yükümlülükleri takip ediyor, sektörel girişimlere katılıma ve uyum sağlamaya önem veriyoruz. Her yıl yenilerini eklediğimiz taahhüt ve iş birliklerini hem bir öğrenme fırsatı hem de bir raporlama aracı olarak görüyoruz.\nBirleşmiş Milletler Küresel İlkeler Sözleşmesi (UN Global Compact): Çevre, insan hakları ve etik alanlarına odaklanan BM Küresel İlkeler Sözleşmesi, dünyanın en büyük kurumsal sürdürülebilirlik inisiyatifidir. Anadolu Hayat Emeklilik olarak, tüm faaliyetlerimizde Küresel İlkeler Sözleşmesi’nin i"
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.896,
+        "text_preview": "Anadolu Hayat Emeklilik olarak, tüm iletişim kanalları üzerinden sunduğumuz müşteri deneyimlerinde, her daim daha iyiye ulaşmaya ve müşterilerimizin değişen beklentilerini tüm süreçlerimizin merkezine alarak dinamik bir yapıyla çalışmalarımızı sürdürmeye devam ediyoruz. Bu bağlamda, dijital dönüşümü; sürdürülebilir büyümemizin, iş süreçlerimizdeki verimliliğin ve müşteri deneyimlerindeki kusursuzluğun temel yapı taşı olarak kabul ediyor ve dijital stratejimizi dört ana odak noktasına dayandırıyoruz:"
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8959,
+        "text_preview": "Anadolu Hayat Emeklilik 2024 yılı Entegre Faaliyet Raporu konsepti için; Şirketimizin köklü yapısıyla değerleri koruma ve gelecekte de güvende tutma misyonundan yola çıktık. Rapor içeriğimizi, Türkiye’nin eşsiz tarihi ve kültürel mirasıyla birleştirdik.\nRaporumuz, tarihi değerlerin günümüze kadar korunması ile Anadolu Hayat Emeklilik değer yaratma ve koruma modelini bir araya getiriyor. Geçmişten ilham alarak geleceğe güvenle adım atma hedefini vurgulamanın yanı sıra, sürdürülebilirlik yaklaşımımızla uyum içinde toplumsal sorumluluk anlayışını da yansıtıyor."
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8954,
+        "text_preview": "Anadolu Hayat Emeklilik olarak, öncelikli stratejik hedeflerimizden biri, müşterilerimize konforlarından ödün vermeden unutulmaz deneyimler sunmak ve üst düzey süreçler tasarlamaktır. Bu hedefe varmak adına, müşterilerimizin markamızla olan tüm etkileşimlerini detaylıca analiz ediyor ve bu etkileşim süreçleri boyunca onların beklentilerini kusursuz biçimde yönetmenin sorumluluğuyla çalışıyoruz.\nŞirket olarak çok geniş bir müşteri kitlesine hitap ediyor olma sorumluluğuyla; müşteri memnuniyetini artırmayı ve müşteri deneyimindeki çıtamızı her daim yükselterek başarımızı sürdürmeyi önemsiyor, mü"
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2023,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.8944,
+        "text_preview": "Anadolu Hayat Emeklilik’te sü rdü rü lebilirlik yönetiminden sorumlu en ü st dü zey yapı, Stratejiden Sorumlu Genel Mü dü r Yardımcısı’nın başkanlık yaptığı Sü rdü rü lebilirlik Komitesi’dir.\nYılda en az iki kez toplanan ve 10 üyeden oluşan Sü rdü rü lebilirlik Komitesi; sü rdü rü lebilirlik stratejisinin, hedeflerin ve ilgili politikaların oluşturulmasından ve tü m iş sü reçlerine entegre edilmesinden, sü rdü rü lebilirlik kapsamındaki çalışmaların koordinasyonundan, performansının takibinden ve sü rdü rü lebilirlik kapsamında gerekli eğitimlerin belirlenmesinden sorum"
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2023,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8931,
+        "text_preview": "Anadolu Hayat Emeklilik olarak 2020,2021 ve 2022 yillarinda yayimladigimiz surdurulebilirlik raporlarindan sonra, ilk entegre surdurulebilirlik raporu olan 2023 yil Entegre Surdurulebilirlik Raporumuzu paylasmaktan mutluluk duyuyoruz.\nAnadolu Hayat Emeklilik olarak kurulduğumuz 1990 yılından bugüne ü lke ekonomisine kalıcı destek sağlamayı ve toplumsal sorunlara çözü mler ü retmeyi ilke edindik. Karar alma mekanizmalarına entegre ettiğimiz kurumsal sü rdü rü lebilirlik ilkelerimiz ile tüm paydaşlarımız için değer yaratma hedefi ile çalışıyoruz. Değer yaratma sürecimizi anlattığımız 2023 "
+      }
+    ],
+    "computed_at": "2026-05-30T22:22:04",
+    "wall_seconds": 18.43
+  },
+  {
+    "spec": {
+      "question": "Türk Telekom'un dijital dönüşüm yatırımları son yıllarda nasıl değişti?",
+      "company": null,
+      "year": null,
+      "showcase": "Temporal evolution across multiple years"
+    },
+    "answer": "Verilen kaynaklara göre Türk Telekom'daki dijital dönüşüm yatırımında son yıllarda kaydedilen gelişmeler aşağıdaki gibidir:\n\n* 2023'teki \"Yeniden Yakınsama\" stratejisi kapsamında Türk Telekom, BT çözümü, eğitim teknolojisi, müşteri deneyim hizmeti, toptancı veri ve kapasitesi hizmetleri, projesi geliştirilmesi ve kurumsallaştırma risk sermayesinin yanı sıra ödeme ve elektronik parayla ilgili hizmetlerde güçlü bir varlık sergiledi. Ayrıca ertelenmiş 53 melyonluk abone sayısına hizmet vermeyi planlamıştır.\n* 2024'teki \"Çevre Odası\" raporu, Türk Telekmom'un çevresel etkiyi en iyi şekilde yönettikleri ve doğal kaynakların verimli kullanılmalarını sağladıkları iddiasındadır. Yenilenebilir enerjisine, enerji verimsizliğine, atık yönetimine ve topluluk ihtiyaçlarına odaklanan bu çabalarla birlikte marka itibarını ve değerini güçlendirecek olan stratejik işbirlikleri yapmayı planlıyorlar.\n* 2017 yılındaki \"Geleceğin Tasarımına İlişkin Çalıştay Raporu\", Türk Telekom'u sadece bir telekom şirketi olarak değil aynı zamanda bir sosyal kuruluş olarak tasavvur ediyor. Bu bağlamda, dijital dönüşüme ilişkin altyapıya ve kurumlara yapılan yatırımı ve toplumun dijital yeterliliğini geliştiren girişimleri vurguluyor.\n* 2000'li yıllardan beri SASB gibi prestij kuruluşları tarafından belirlenen risk ve sektörel öncelikli konularda Türk Telekom'a göre bir analiz gerçekleştirildi. Bu çalışma, hem yurtiçinde hem de yurdışı paydaşları kapsayan bir önleyici analizdir.\n* Son olarak, Anadolu Hayat Emeklilik'in 2024 tarihli \"Strateji Raporu\"nda, Türk Telekon'un dijital dönüşumüne ilişkin olarak, müşterilerin taleplerinin ve beklentilerinin sürekli takip edilmesi ve teknolojininkinden yararlanmak için yenilikçi çözüm arayışında bulunulması öngörülmektedir. Ayrıcı olarak, çalışanların dijital yeterliliklerinin arttırılmasına yöneltilen eğitime ve paydaşlarıyla işbirliğinin sağlanmasına önem verilmektedir.\n\nSonuç olarak, Türk Telecom'un dijital dönüşümü son yıllardır süren bir yolculuktur. Bu yolculukta, yenilikçi ürün ve hizmetlere odaklanma, çevreye duyarlı olma ve paydaşlarla işbirliğini içeren bir yol izlemiştir. Bu yol, 2023 ve 2024 yıllarında daha fazla ilerleme kaydetmeye devam edecek gibi görünüyor.",
+    "retrieved_chunks": 20,
+    "filtered_chunks": 13,
+    "removed_chunks": 7,
+    "contradiction_edges": 32,
+    "timings": {
+      "retrieval": 0.01884007453918457,
+      "isolated_answering": 7.152557373046875e-07,
+      "nli_graph_filter": 0.19844412803649902,
+      "final_generation": 24.421990394592285
+    },
+    "total_time": 24.639275312423706,
+    "chunks_detail": [
+      {
+        "company": "TurkTelekom",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.869,
+        "text_preview": "Türk Telekom ailesi olarak yakınsama teknolojileri, BT çözümleri, eğitim teknolojileri, müşteri deneyimi hizmetleri, toptan veri ve kapasite hizmetleri, proje geliştirme ve kurumsal risk sermayesi, ödeme ve elektronik para hizmetleri ve finans teknolojileri alanlarında güçlü bir varlık gösteriyoruz.\nsektöründe süreklilik ve kalite sağlamak için önemli yatırımlar yapıyoruz. Erişilebilir İletişim ve Dijital Kapsayıcılık vizyonumuz ile 53 milyona yakın aboneye hizmet veriyoruz. 2023’te konsolide gelirlerimizi yıllık bazda $\\% 9 , 6 '$ lık artışla 100,2 milyar TL’ye yükseltirken, toplam 25,8 milya"
+      },
+      {
+        "company": "TurkTelekom",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.862,
+        "text_preview": "Türk Telekom olarak, sürdürülebilirlik odaklı yatırımlarımızı ÇSY faktörlerini dikkate alarak uzun vadeli değer yaratmayı hedefliyoruz. Çevresel etkileri en iyi şekilde yönetmeyi ve doğal kaynakları verimli bir şekilde kullanmayı amaçlıyoruz. Bu çerçevede, yenilenebilir enerji, enerji verimliliği çözümleri, atık yönetimi, su kaynaklarının korunması, toplumun ihtiyaçlarının karşılanması ve toplum refahının artırılması gibi konulara odaklanıyoruz. Ayrıca, marka itibarımızı ve değerimizi güçlendirerek, stratejik iş birlikleri ile sürdürülebilirliği en üst seviyeye taşıyoruz.\nSürdürülebilirlik oda"
+      },
+      {
+        "company": "TurkTelekom",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8618,
+        "text_preview": "jilerini bugünden tasarlamak ve bu dönüşümü yaygınlaştırmak, duyarlı şirketlerin iş listelerinin ilk sırasında yer alıyor. Biz de ülkemizi; yeni nesil teknoloji ve trendlerin yaşamımızın her alanında\nSürdürülebilir büyümemizi devam ettirdiğimiz 2023 yılını öngörülerimizi aşan finansal ve operasyonel sonuçlara imza atarak geride bıraktık. Türk Telekom olarak, yalnızca bir telekomünikasyon şirketi değiliz. İşimiz için Değer yaklaşımımız\nDijital dönüşüm yolculuğunda altyapı ve kurumların dijitalleşmesi kadar toplumun dijital becerilerinin gelişmesi uygulandığı bir geleceğe taşımak adına var gücüm"
+      },
+      {
+        "company": "TurkTelekom",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8599,
+        "text_preview": "Standartları Kurulu (SASB) gibi prestijli uluslararası kuruluşların belirlediği risk ve sektör bazlı öncelikli konuları da göz önünde bulundurduk. Böylece, analizimizi global standartlarla uyumlu hale getirdik.\n2023 yılında sürdürülebilirlik alanındaki öncelikli konularımızı belirlemek için bir önceki yıl olduğu gibi geniş kapsamlı bir Önceliklendirme Analizi gerçekleştirdik. Bu çalışmayı, Türk Telekom’un hem yurtiçi hem de yurtdışındaki iç ve dış paydaşlarını kapsayacak şekilde anketler yoluyla tamamladık.\nAnalizimizde Çifte Önemlilik (Double Materiality) Analizi yaklaşımını benimsedik. Bu ya"
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8579,
+        "text_preview": "Dijital dönüşüm sürecimizde, müşterilerimizin değişen talep ve beklentilerini her daim izliyor, teknolojinin sunduğu en yenilikçi çözümleri araştırıp uygulamaya geçiyoruz. Ayrıca, çalışanlarımızın dijital yetkinliklerini artırmaya yönelik eğitimler düzenliyor ve bu süreçte tüm paydaşlarımızla iş birliği yaparak Türkiye’deki emeklilik ve finans sektöründe liderliğimizi sürdürmeyi hedefliyoruz. İç süreçlerin iyileştirilmesine yönelik operasyon ve altyapı projelerine öncelik verirken müşteri odaklı projelerle satış ve satış sonrası deneyimi geliştirmeye devam ediyoruz. Bu doğrultuda dijital dönüş"
+      },
+      {
+        "company": "Sekerbank",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8568,
+        "text_preview": "2019-2023 yılları süresince yürüttüğümüz Transformasyon Programı kapsamında tüm teknolojik altyapı, kredi karar süreçleri ve dijital kanallarımızı yeniledik."
+      },
+      {
+        "company": "AnadoluHayatEmeklilik",
+        "year": 2023,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8553,
+        "text_preview": "Dijital dönüşüm yolculuğumuzda müşterilerimizin değişen ihtiyaçlarını ve beklentilerini yakından takip ediyor, teknolojinin sunduğu en son yenilikleri araştırıyor ve uygulamaya koyuyor; çalışanlarımızın dijital becerilerini geliştirmek için eğitimler düzenliyor ve dijital dönüşüm yolculuğumuzda tüm paydaşlarımızla birlikte çalışarak, Türkiye'de emeklilik ve finans sektörünün öncüsü olmayı sürdürmeyi hedefliyoruz. Operasyon ve altyapı projeleriyle Şirket içi süreçlerin mükemmelleştirilmesine ağırlık verilirken, müşteri odaklı projelerin hayata geçirilmesiyle hem satış hem satış sonrası müşteri "
+      },
+      {
+        "company": "Teknosa",
+        "year": 2023,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8551,
+        "text_preview": "2022 yılında Ar-Ge ve inovasyon çalışmalarımıza 45 milyon TL yatırım yapmışken, 2023 yılında bu yatırımı 3 kattan fazla artırarak 168 milyon TL'ye çıkardık. Sürdürülebilirlik odaklı projelere de 2022'de 17 milyon TL ayırırken, 2023 yılında bu rakamı 4 katından fazla artırarak 64 milyon TL'nin üzerine çıkardık.\nAI destekli fiyat indirim optimizasyonu\nAI destekli promosyon etkinleştirme\nGenAI uygulamaları\nDijital destekli backoffice\nTeknosa olarak, dijital dönüşüm stratejilerimizi bir adım daha ileri taşıyarak online ve mobil platformlarımızı da kapsamlı bir şekilde yeniledik. E-ticaret yatırıml"
+      },
+      {
+        "company": "Turkcell",
+        "year": 2021,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8547,
+        "text_preview": "Dijitalleşme süreci,   \nCOVID-19 salgını   \netkisiyle değişen   \nhayat şartlarının   \nortay çıkardığı   \nfarklı iş modelleriyle   \nbirlikte tüm dünyada   \nyenilikleri beraberinde getirirken, ülkemizde   \nde ekonomik öncelikler doğrultusunda kilit odak alanlarından biri haline gelmiştir.\nDünyadaki tüm bu yenilikçi ve teknoloji odaklı gelişmeler, birçok endüstriyi farklı boyutlarda etkilerken telekomünikasyon sektörü bu süreçten en çok etkilenen iş alanlarının başında geliyor. Telekomünikasyon sektöründe faaliyet gösteren firmalar, dijital dönüşüm kapsamında alternatif ürün ve servis çeşitliliği"
+      },
+      {
+        "company": "TurkTelekom",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8545,
+        "text_preview": "Türk Telekom olarak, sürdürülebilir bir geleceğe yatırım yapmanın sadece çevresel değil, aynı zamanda sosyal ve ekonomik refah için de hayati önem taşıdığına inanıyoruz. Bu bilinçle, çevresel etkileri en iyi şekilde yönetmeyi ve doğal kaynakları verimli bir şekilde kullanmayı amaçlayan sürdürülebilirlik odaklı yatırımlar yapıyoruz. Uzun vadeli değer yaratmayı hedeflerken, yenilenebilir enerji, enerji verimliliği çözümleri, atık yönetimi ve su kaynaklarının korunması gibi alanlara odaklanıyoruz. Bu yatırımlar, sadece şirketimizin\n2023 yılında 100 baz istasyonunda 0,3 MW güneş enerjisi sistemi k"
+      },
+      {
+        "company": "TurkTelekom",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8536,
+        "text_preview": "Türk Telekom, 2018 yılında kurduğu TT Ventures ile başlangıç ve orta kademedeki girişimlerin uzun vadeli iş hedeflerini gerçekleştirmelerine yardımcı olmayı, büyümelerini desteklemeyi ve projeler geliştirmeyi hedeflemektedir. Kuruluşundan bugüne 16 farklı girişime yatırım yapan TT Ventures, yenilikçi ürünlere sahip girişimleri destekleyerek ülke ekonomisine fayda sağlamayı ve girişimlerin ürün ve hizmetleriyle, Türk Telekom’un mevcut ana iş kolları arasında sinerji oluşturmayı amaçlamaktadır.\nTT Ventures, sağlık, eğitim,   \nyapay zeka temelli dijital   \nçözümler alanlarındaki   \nyatırımlarıyla"
+      },
+      {
+        "company": "TurkTelekom",
+        "year": 2023,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8531,
+        "text_preview": "dijitalleşme yolculuğunda kritik öneme sahip yatırımlar gerçekleştiren önemli bir oyuncuyuz. Türkiye’nin toptan ve perakende sabit genişbant segmentlerinde sırasıyla $\\% 7 8$ ve $\\% 5 6$ pazar payına sahibiz.\nDijital çağda herkesin bilgiye ve iletişime erişim hakkı olduğuna inanıyoruz. Türk Telekom olarak, erişilebilir iletişim ve dijital kapsayıcılık hedeflerimiz doğrultusunda, Türkiye’nin her köşesine ulaşmak için yatırımlarımızı sürdürüyoruz. Bu bağlamda, ülkemizin dijitalleşme sürecine önemli katkılarda bulunuyoruz."
+      },
+      {
+        "company": "TurkTelekom",
+        "year": 2023,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8529,
+        "text_preview": "Dijital kanallarımızı, yeni projelerimiz ile 2023 yılında da müşteri deneyimini ön planda tutarak iyileştirmeye ve dijital kanallarımıza yeni fonksiyonlar eklemeye devam ettik.\nMüşterilerimizin ihtiyaçlarına yönelik kişiselleştirilmiş teklifleri çeşitlendirmeye devam ederek,\nuygulamamızda senaryo bazlı kısa süreli teklifler sunmaya başladık. Ayrıca ‘Tam Bana Göre’ teklifini uygulamadan kabul eden kullanıcılarımız için sadece uygulamaya özel 2 GB hediye kurgusu oluşturduk. Bu kurgu ile birlikte alınan aksiyonlar ve yeni güncellemeler sayesinde dijital kanaldan yapılan taahhüt yenileme işlemleri"
+      }
+    ],
+    "computed_at": "2026-05-30T22:22:29",
+    "wall_seconds": 24.64
+  },
+  {
+    "spec": {
+      "question": "Tüpraş'ın yenilenebilir enerji yatırımları ile fosil yakıt bağımlılığı arasındaki ilişki nedir?",
+      "company": null,
+      "year": null,
+      "showcase": "Greenwashing-prone query — contradiction filter showcase"
+    },
+    "answer": "Yenilenebilir enerjinin fosil yakıta göre daha az karbon salımı olduğu göz önüne alındığında, Tüpraşa'nın yenileneilebilir enerjiye yaptığı yatırımlarda fosil yakılara kıyasla daha düşük karbon emisyonuna yol açacağı sonucunu çıkarabiliriz. Tüprag'ın 2022'deki raporu, sürdürülebilir refineri hedeflerine ulaşmada proses iyileşmeleri, enerji verimsizlikleri ve çevresel projelere yapılan yatırımda yenilenebilen enerjiyi ön planda tuttuğunu gösteriyor. Ayrıca 2023'teki raporda da şirketin yeşillendirme çabaları ve yenilenebiliren enerjiye yönelmesiyle ilgili ayrıntılar paylaşılmış olup, bunun da fosil yakılanın azalmasına yol açabileceğini düşündüğümüz bir faktör haline gelmiştir.\n\nAncak, Tüpraga'nın yenilenesilebilir enerjiye yatırım yaparken bile hala fosil yakılır kullanmaya devam edeceği gerçeği göz ardı edilmemelidir. Rapora göre şirket, \"sürdürülebilir havacilik yakıtı\" ve \"sıfır karbondan elektrik\" gibi yenilenecek enerji türlerinin yanı sıra \"yeşil hidrojen\" ve \"HSFO gaz yıkaması\" gibi diğer yenileneceğe yönelmektedir. Bu nedenle Tüpragas'ın yenilenesebilir enerjiye yatırmaya başladığı kadar fosil yakımından vazgeçmediğini varsayabiliriz.\n\nSonuç olarak, Tüprüğün yenilenebelirene enerjiye yansıyan fosil yakıma göre daha az emisyona yol açacağını ancak yine de fosil yakımın bir kısmını kullanmaya devam ettiğini görebiliriz.",
+    "retrieved_chunks": 20,
+    "filtered_chunks": 14,
+    "removed_chunks": 6,
+    "contradiction_edges": 38,
+    "timings": {
+      "retrieval": 0.018830299377441406,
+      "isolated_answering": 7.152557373046875e-07,
+      "nli_graph_filter": 0.22186684608459473,
+      "final_generation": 16.080543994903564
+    },
+    "total_time": 16.321241855621338,
+    "chunks_detail": [
+      {
+        "company": "TürkiyePetrolRafinerileri",
+        "year": 2022,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8714,
+        "text_preview": "Tüpraş, sürdürülebilir rafinaj hedefine hizmet eden proses iyileştirme, enerji verimliliği, SEÇ ve çevre projeleri alanlarındaki yatırımlarını ÇSY odaklı yatırımlar olarak ele almaktadır.\nBenzer şekilde, sürdürülebilir havacılık yakıtı, sıfır karbonlu elektrik ve yeşil hidrojen alanlarına yapılan yatırımlar ile elektrikli tren vagonları ve gemiler için HSFO gaz yıkayıcı yatırımları da sürdürülebilirlik odaklı çalışmalar olarak değerlendirilmektedir."
+      },
+      {
+        "company": "TürkiyePetrolRafinerileri",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.871,
+        "text_preview": "kaynakları koruma, sosyal sorumlulukları yerine getirme, etik iş uygulamalarını sürdürme ve iş süreçlerini iyileştirirken finansal kârlılığını güçlendirme konularında kararlılıkla hareket etmektedir.\nÖncelikli amacı ülkenin enerji ihtiyacını güvenli ve kesintisiz bir şekilde karşılamak olan Tüpraş, kârlı, dengeli ve çeşitlendirilmiş temiz enerji portföyüyle emisyonlarını kademeli olarak azaltma ve 2050 yılında karbon nötr bir enerji şirketi olmayı hedeflemektedir. Şirket, bu hedeflere ulaşmak için attığı kararlı adımlarla ve Birleşmiş Milletler 2030 Sürdürülebilir Kalkınma Amaçları’nı rehber e"
+      },
+      {
+        "company": "TürkiyePetrolRafinerileri",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8709,
+        "text_preview": "nsı’nın (COP) aktif bir katılımcısı olan Tüpraş, 2023 yılında Dubai’de gerçekleşen COP28’e katılım sağlamış, küresel iklim gündeminin nabzını tutmuş ve deneyimlerini çeşitli sunumlar ile aktarmıştır.\nTüpraş, TÜSİAD nezdinde yürütülen iklim değişikliğiyle mücadele çalışmalarına destek vermektedir. Şirket, TÜSİAD bünyesinde yer alan Çevre ve İklim Değişikliği Çalışma Grubu’nun aktif üyesidir. Bu kapsamda ulusal düzeyde yürütülmekte olan Emisyon Ticaret Sistemi (ETS) ve Piyasa Uygulama Ortaklığı Programı (PMI) gibi çalışmalara destek sunmaktadır. Tüpraş, içsel karbon fiyatlandırması kapsamında ka"
+      },
+      {
+        "company": "TürkiyePetrolRafinerileri",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8703,
+        "text_preview": "Tüpraş’ın stratejik dönüşüm planı doğrultusunda, rafinerilerin yeşil dönüşümü için çevreci havacılık ve denizcilik yakıtlarının geliştirilmesi sağlanmaktadır. Gıda dışı yenilenebilir kaynaklardan ve atıklardan elde edilen alternatif kaynakların kullanımını mümkün kılacak projeler ile hem Türkiye hem de Tüpraş için değer yaratılmaktadır."
+      },
+      {
+        "company": "TürkiyePetrolRafinerileri",
+        "year": 2022,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8703,
+        "text_preview": "Tüpraş’ın büyümesi, üretilmiş sermayesindeki gelişmeye ve bu alana yapılan yatırımlara bağlıdır.\nTüpraş, finansal sermayesini, üretilmiş sermayesini oluşturan tesisleri, ekipmanları, alt ve üst yapılar ile lojistik yetkinliklerini sürekli güncel ve verimli tutarak gerekli büyüme ve kapasite geliştirme yatırımlarını hayata geçirmektedir. Şirket bu döngüden elde ettiği çıktılar sayesinde küresel enerji piyasasında yaşanan hızlı değişimi takip ederek enerji ihtiyacını karşılamaya devam edebilmektedir.\nTüpraş’ın sıfır karbonlu elektrik çözümlerine odaklanması sonucunda kısa vadede finansal sermaye"
+      },
+      {
+        "company": "TürkiyePetrolRafinerileri",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8699,
+        "text_preview": "Kirlilik, atık ve kaynak kullanım etkilerinin azaltılmasına ve önlenmesine, döngüsel ekonomi pratiklerinin uygulanmasına, su kaynaklarıyla ilgili risklerin azaltılmasına, optimizasyon teknolojileri ve sistemlerinin geliştirilmesine yönelik projeler gerçekleştiren Tüpraş, ar-ge projeleriyle katkı sağladığı alanları, yatırım ve harcama miktarlarını paydaşlarıyla paylaşmaktadır.\nTüpraş Ar-Ge Merkezi, uluslararası tanınırlığı ve güçlü iş birlikleri sayesinde AB destekli projeler almaya devam etmektedir. Merkez, Tüpraş stratejik hedeflerine önemli katkı sunan 8 adet devam eden, 14 adet başarıyla ta"
+      },
+      {
+        "company": "TürkiyePetrolRafinerileri",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8693,
+        "text_preview": "iii) Ciro (Turnover) kapsamındaki çalışmada ise Tüpraş, senelik finansal açıklamalarında konsolide ciro açıkladığından payda kısmını bu veri oluştururken pay kısmında çevresel olarak sürdürülebilir ve taksonomi uyumlu aktivitelerde Tüpraş ve iştiraklerinden gelen katkılar ayrı ayrı değerlendirilmiştir. Ciro açısından taksonomi uyumlu aktiviteler arasında Entek’in yenilenebilir enerji kaynaklarından elektrik üretimi (hidroelektrik enerjiden elektrik üretimi, rüzgar enerjisinden elektrik üretimi, güneş fotovoltaik teknolojisi kullanılarak elektrik üretimi), Entek’in yenilenebilir enerji teknoloj"
+      },
+      {
+        "company": "TürkiyePetrolRafinerileri",
+        "year": 2022,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.869,
+        "text_preview": "Tüpraş, 2021 yılında açıkladığı Stratejik Dönüşüm Planı kapsamında hayata geçireceği sıfır karbonlu elektrik yatırımlarının yanı sıra;\nSürdürülebilir rafinaj için operasyonel verimliliğini artırıcı,   \nKapsam 1 ve Kapsam 2 emisyonlarını azaltıcı enerji verimliliği ve   \ndekarbonizasyon projeleri,   \nYeşil hidrojen üretim tesisleri,   \nSürdürülebilir havacılık yakıtı başta olmak üzere biyoyakıt üretim   \ntesisleri\nyatırımlarını önceliklendirmiştir."
+      },
+      {
+        "company": "TürkiyePetrolRafinerileri",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8684,
+        "text_preview": "İklim değişikliği çağımızın en büyük krizleri arasında yer alıyor. Paris Anlaşması uyarınca küresel sıcaklıktaki artışı $1 { , } 5 { ^ \\circ } \\mathrm { C }$ ile sınırlamak için sera gazı emisyonlarını azaltmanın aciliyeti konusunda geniş bir bilimsel fikir birliği bulunmaktadır. Tüpraş, bu aciliyete cevap vermek amacıyla hareket etmenin ve bu amacın öncüsü ve ivmelendirici bir parçası olmanın öneminin farkındadır. Şirket, iklim krizinin iş süreçleri, varlıklar ve gelir yaratma yeteneği üzerine olan etkilerini yönetmek için düşük karbon ekonomisine geçişe yönelik stratejiler ve yol haritaları "
+      },
+      {
+        "company": "TürkiyePetrolRafinerileri",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8681,
+        "text_preview": "tratejik Dönüşüm Planı’na dayanmaktadır. Şirket, 2050 karbon nötr hedefi kapsamında, iklim değişikliği üzerindeki etkilerini ve çevresel ayak izini azaltmak, doğal çevreyi korumak için çalışmaktadır.\nPaydaşları için değer üretmeyi hedefleyen Şirket’in güçlü yönetişim yapısı, paydaşlarıyla kurduğu şeffaf ve açık iletişimi iklim değişikliğiyle mücadele kapsamında itici gücüdür. Tüpraş’ın, iklim değişikliğini tetikleyen sera gazı emisyonlarını azaltmada gösterdiği performans orta ve uzun vadede toplumsal refaha da katkı sağlamaktadır. Bu doğrultuda Şirket, stratejik dönüşümü çerçevesinde dayanıkl"
+      },
+      {
+        "company": "TürkiyePetrolRafinerileri",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8672,
+        "text_preview": "Tüpraş, Stratejik Dönüşüm Planı ve stratejisiyle uyumlu olarak düşük karbon ekonomisine geçiş kapsamında yatırımlarını sürdürmektedir. İklim değişikliğiyle mücadele ve düşük karbon ekonomisine geçiş kapsamında teknolojik yatırımlarla proses ve enerji verimliliğine odaklanan Şirket aynı zamanda yenilenebilir enerjilere de yatırım yapmaktadır.\nTüpraş, tanımladığı risklere yönelik olarak ve uzun vadeli stratejik amaçları doğrultusunda, öncelikle mevcut üretilmiş sermayesini daha rekabetçi ve daha sürdürülebilir bir yapıya dönüştürmek için ihtiyaç duyduğu kaynağı yaratmaya odaklıdır. Bu sayede Tüp"
+      },
+      {
+        "company": "TürkiyePetrolRafinerileri",
+        "year": 2022,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8662,
+        "text_preview": "Tüpraş, sürdürülebilirlik alanındaki çalışmalarını genel kabul görmüş yaklaşım ve iyi uygulamalara uyum sağlama hedefiyle yürütmektedir.   \nTüpraş’ın sürdürülebilirlik çalışmaları Enerjimiz Geleceğe stratejisi altında yönetilmektedir.\nTüpraş, iklim kriziyle mücadele ve düşük karbon ekonomisine geçiş yolculuğunu, ana hissedarı Koç Holding’in ortaya koyduğu vizyona paralel doğrultuda yürütmektedir.\n67 yıldır Türkiye enerji sektörünün öncüsü Tüpraş, geleceğin enerjisini üretme hedefiyle oluşturduğu Stratejik Dönüşüm Planı dâhilinde mevcut varlıklarını sürdürülebilir kârlılık yaklaşımıyla yönetirk"
+      },
+      {
+        "company": "TürkiyePetrolRafinerileri",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8661,
+        "text_preview": "aştırılabilir biçimde ortaya koymaktadır. Tüpraş entegre ve etkin risk yönetim yaklaşımı ile sürdürülebilirlik ile ilgili riskler kapsamındaki belirsizliklere karşı dirençliliğini ortaya koymaktadır.\nTüpraş’ın sürdürülebilirlikle bağlantıl finansal etkilerinin ölçümünde ortaya çıkan temel belirsizlikler rafineri operasyon güvenliği ile ilgili olası gelişmeler ve emniyet yatırımları, iklim odaklı riskler kapsamında aşırı hava koşulları ve karbon düzenlemeleri ile düşük emisyon teknolojilerine geçişin gerektirdiği potansiyel yatırım maliyetlerinin miktarı konularında öne çıkmaktadır. Bu kapsamda"
+      },
+      {
+        "company": "TürkiyePetrolRafinerileri",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8653,
+        "text_preview": "si doğrultusunda operasyonlarını yürütmekte ve yatırımlarını yönetmektedir.\nİklim değişikliğine adaptasyon konusunda, tüm rafinerilerin su yol haritaları oluşturularak Üst Yönetim ile paylaşılmıştır.\nTüpraş aynı zamanda tüm çevresel etkilerini entegre bir şekilde yöneterek azaltmak için mevcut ünitelerde yaşam döngüsü analizi yaklaşımını kullanmaktadır. Yatırımlar için ise yaşam döngüsü düşüncesi yaklaşımını benimsemiştir.\nTüpraş, 2050 karbon nötr stratejisine ulaşmak için yatırımlarını AB Taxonomy Mevzuatı kapsamında değerlendirmeye başlamıştır."
+      }
+    ],
+    "computed_at": "2026-05-30T22:22:45",
+    "wall_seconds": 16.32
+  },
+  {
+    "spec": {
+      "question": "Bankacılık sektöründe kadın yönetici oranı nasıl değişmektedir?",
+      "company": null,
+      "year": null,
+      "showcase": "Sector-wide benchmark with temporal angle"
+    },
+    "answer": "Verilen kaynaklara dayanmak kaydıyla:\n\n* Kaynağı 1 (Yapı Kredi 2020): Yeni işe alınan çalışanların %58'i kadın oldu.\n* Kaynağın 2 (TSKB 2006): Bankacılığa kadroda %55'inin kadın olduğu belirtiliyor.\n* Kayneğin 3 (Kalkınma Yatırım Bankası 2023): 2022'de üst düzey yöneticilerin yarısından fazlası (%44) kadındı.\n* Kaynanın 4 (Vakıf Bank 2022): Bir üst unvanına yükselen çalışanların %54'ü kadın ve %46'sı erkekti.\n* Kaynagın 5 (Şekerbank 2033): Şimdiki kadın çalışanın yüzdesinin %53,8 olduğu belirtilirken, kadın yönetiminin desteklenmesi vurgulanıyor.\n\nSonuç olarak, bankacılıkla ilgili kadın yönetici oranlarının 2020'deki %58'den 2023'teki %53,81'e kadar azaldığı görülebilir. Ancak bu rakamın 2023 yerine 2022'ye ilişkin olduğunu dikkate almak önemlidir. Ayrıca, bu rakamlara göre kadın yönetici sayılarında genel olarak bir düşüş olsa da, bazı bankalar hala yüksek kadın yönetici paylarına sahip olmaya devam ediyor. Örneğin, Vakıf Bank'ın üstün unvanlı çalışanlarının %54'ünü kadındır.",
+    "retrieved_chunks": 20,
+    "filtered_chunks": 11,
+    "removed_chunks": 9,
+    "contradiction_edges": 38,
+    "timings": {
+      "retrieval": 0.02094745635986328,
+      "isolated_answering": 1.1920928955078125e-06,
+      "nli_graph_filter": 0.2144298553466797,
+      "final_generation": 13.068085193634033
+    },
+    "total_time": 13.303463697433472,
+    "chunks_detail": [
+      {
+        "company": "YapiKredi",
+        "year": 2021,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8759,
+        "text_preview": "rilen ve değerlendirmeyi başarıyla tamamlayan ilk kurum olmuştur.\n2021 yılında kadınların iş gücüne katı- lım oranı bankacılık sektöründe %50,41 , Yapı Kredi’de ise $\\% 6 2$ olarak gerçekleş- miştir.\nSektörde toplumsal cinsiyet eşitliğinin bayrak taşıyıcısı olma rolünün sorumluluğuyla kadınların ekonomik hayata katılımını destekleyen Banka, işe alımlarda da toplumsal cinsiyet eşitliğini gözetmektedir. 2021’de yeni işe alı- nan çalışanların $\\% 5 8 ^ { \\prime } \\mathrm { i }$ kadın olmuştur. 2020 yılında doğum izninden dönen çalışan oranı $\\% 9 7 . 7 ,$ doğum izninden sonra işte kalma oranı ise"
+      },
+      {
+        "company": "TSKB",
+        "year": 2016,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8729,
+        "text_preview": "Çeşitliliğe ve fırsat eşitliğine dayanan bir insan kaynakları politikası izleyen TSKB, işe alım, eğitim ve gelişim, performans ve kariyer yönetimi, ücretlendirme ve terfi adımlarında teknik ve kişisel yetkinlik kriterlerine göre hareket etmektedir. TSKB’de bankacılık kadrolarının %55’inin kadın olması, çeşitliliğe ve fırsat eşitliğine dayanan insan kaynakları politikasının en somut\ngöstergelerinden biridir. TSKB, yönetim kadrolarındaki %56’lık kadın oranıyla da olumlu ayrışmaktadır. Karar verici rolündeki kadınların farklı komitelere katılımlarını desteklemeye devam etmeyi amaçlayan TSKB, bu k"
+      },
+      {
+        "company": "KalkinmaYatirimBankasi",
+        "year": 2023,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8719,
+        "text_preview": "Çalışanların yaklaşık %59’u erkek ve %41’i kadın olarak şekillenmiştir. Geçtiğimiz sene %39’luk bir seviyede olan kadın çalışan oranındaki artış, TKYB’nin kadın istihdamına verdiği önemin göstergesi niteliğindedir. Üst seviye yöneticiler arasında kadın ve erkek çalışan sayısında 2022 ve 2023 yılları arasında değişiklik olmamış, her iki cinsiyetten de 4’er yönetici görev yapmaya devam etmiştir. Orta seviye yöneticilerde ise, kadın yönetici sayısı 16’dan 18’e yükselmiştir. Banka, kadın çalışan oranını artırarak iş gücünde çeşitliliği ve kapsayıcılığı desteklemekte, tüm çalışanlar için eşit fırsa"
+      },
+      {
+        "company": "VakıfBank",
+        "year": 2022,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8715,
+        "text_preview": "ti. Böylece kendi yöneticisini yetiştiren banka olma vizyonumuz ile yürüttüğümüz kariyer planlamamızda çalışanlarımızın %54’ü kadın %46’sı erkek olmak üzere toplam %12’sini bir üst unvana yükselttik.\nBu kapsamda Bankamızın geleceğinde önemli rol sahibi olacak yönetici potansiyeli olan çalışanlarımızın belirlenmesi, kariyer gelişimlerinde adil rekabet ortamının sağlanması, yeteneklerinin ve becerilerinin eğitim ve gelişim programları ile desteklenerek etkin ve verimli kullanılması amacıyla Bankamız ihtiyaçları doğrultusunda çalışmalarımızı sürdürüyoruz. Bu yıl yaptığımız çalışmalar sonucunda ka"
+      },
+      {
+        "company": "Sekerbank",
+        "year": 2023,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8685,
+        "text_preview": "İnsan kaynakları faaliyetlerimizi, en değerli varlığımız olan insan sermayesine değer yaratma ilkesiyle yönetiyoruz. Tüm çalışanlarımız için güvenli, sağlıklı, kapsayıcı, adil ve eşitlikçi bir çalışma ortamı oluşturmayı temel sorumluluğumuz olarak benimsiyoruz. 2023 yılı sonu itibarıyla çalışan kadrosu 3.703 kişiye ulaşan Bankamızda çalışan kıdem ortalaması 5,9 yıldır. İnsan Kaynakları süreçlerimizde çalışanlarımızın uzun vadeli iş birliğine ve memnuniyetine odaklanarak eşitlikçi bir iş ortamı oluşturmayı amaçlıyoruz.\n%53,8 Kadın Çalışan Oranı geçiriyoruz. Her kademede kadın liderliğini destek"
+      },
+      {
+        "company": "Halkbank",
+        "year": 2024,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8659,
+        "text_preview": "liğine olan inancını ve bağlılığını göstermiştir. 2023 yılında $\\% 4 6 { , } 6$ olan kadın çalışan oranı 2024 yılında %47,1’e yükselmiştir. Yönetim Kurulu’nda yer alan kadın üye oranı $\\% 2 2 '$ dir.\n2024 yılında çalışan başına ortalama eğitim saati 60,99 olarak gerçekleşmiş olup Banka, sürdürülebilirlik bakış açısıyla güçlendirdiği kurumsal kültürüne, çalışanının gelişim ve bağlılığının da artırılmasına verdiği büyük önemle paydaşlarına değer katmaya devam etmektedir.\nİş süreçlerini şekillendiren etkin örgütsel yapısı ve güçlü kurumsal yönetim sistemiyle desteklediği sürdürülebilirlik yaklaşı"
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2023,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8641,
+        "text_preview": "irilen tüm projelerden haberdar olmaları, birbirleriyle iletişim kurmaları, mevcut projelere başvurmaları ve/ veya kendi projelerini oluşturmaları için kolay, şeffaf ve güvenli bir yol oluşturmaktır.\n2023 yılında Yapı Kredi’de kadınların iş gücüne katılım oranı %61,4 olarak gerçekleşmiştir. Yapı Kredi, kadın çalışan oranını önümüzdeki yıllarda da en az $\\% 5 0$ oranında tutmayı hedeflemektedir. Ayrıca Banka, Yönetim Kurulu kadın üye sayısı oranının 2026 yılına kadar $\\% 3 0$ seviyesine ulaşmasını hedeflemiştir.\nYapı Kredi Gönüllüleri programının yürütülmesi için 40’ı aşkın birim arasında koord"
+      },
+      {
+        "company": "TSKB",
+        "year": 2024,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.8636,
+        "text_preview": "TSKB’de ücret yönetimi, ücretlendirme politikasında düzenlenen “eşit işe, eşit ücret” ilkesi doğrultusunda gerçekleştirilir.\nCinsiyet, ücretlendirme kararlarında kullanılan bir değişken değildir. Benzer işi yapan çalışanlar benzer düzeyde ücret alır. Çalışan demografisi ve çalışan kıdem dağılımı, kadın-erkek medyan ücretleri genel düzeyinde farklılaştırıcı etkiye neden olabildiği için, pozisyon ve cinsiyet bazında kadın erkek ücret dengesi sürekli ve özenli bir yaklaşımla gözetilir. 2024 yıl sonu itibarıyla kadın/erkek medyan ücret oran farkı 0,05’tir.\nTSKB, rekabetçi ve piyasaya dinamiklerine"
+      },
+      {
+        "company": "TSKB",
+        "year": 2020,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8631,
+        "text_preview": "n 14 Ağustos 2020 tarihli Yönetim Kurulu toplantısında, boşalan Yönetim Kurulu üyeliğine, Türk Ticaret Kanunu’nun 363. maddesi çerçevesinde Sn. Bahattin Özarslantürk’ün şeçilmesine karar verilmiştir.\n2014 yılında oluşturulan ve 2019 yılında güncellenen kadın yönetim kurulu üye politikası çerçevesinde, her yıl yönetim kurulu tarafından mevcut durum değerlendirmesi yapılmaktadır. 31 Aralık 2020 tarihi itibarıyla Banka’nın yönetim kurulu üyelerinin en az yüzde 25’inin kadın üyelerden oluşmasını sağlama hedefiyle paralel şekilde 3 kadın yönetim kurulu üyesi bulunmaktadır."
+      },
+      {
+        "company": "Halkbank",
+        "year": 2024,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.863,
+        "text_preview": "yaretçileri için güvenli bir çalışma ortamı sağlamak, insan sağlığını korumak ve operasyonel faaliyetler sırasında oluşabilecek kayıpları en aza indirmek için çalışmaktadır.\n%47,1 Kadın çalışan oranı\nBanka, sürdürülebilir bir geleceğin ancak hep birlikte, el ele çalışarak inşa edilebileceğine inanmaktadır. Bu nedenle, katılımcı bir yaklaşımla paydaşları ile arasında şeffaflık ve hesap verebilirlik temelinde güçlü bir bağ kurmaktadır. Onların görüşlerine değer vermekte, fikirlerini dinlemekte ve birlikte hareket etmektedir. Açık diyaloglarla odak alanlarını genişleterek, herkesi kapsayan bir de"
+      },
+      {
+        "company": "Sekerbank",
+        "year": 2022,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.8623,
+        "text_preview": "ası için seçimlerde aday listeleri üzerine tavsiyelerde bulunmaktadır. Liste, çeşitlilik ve kültürel konuların ele alınması ile birlikte beceriler matrisine ve boşluk analizlerine dayalıdır. Kurumsal\nYönetim Komitesi, Yönetim Kurulu kompozisyonunu ve yeterli Bağımsız Yönetim Kurulu üye sayısını gözetmektedir. Kurumsal Yönetim Komitesi tarafından Bankamızın istihdam politikasında kadın erkek arasındaki fırsat eşitliğini sağlamak ve kadınların karar mekanizmalarındaki konumunu güçlendirmek amacıyla Yönetim Kurulu’nda kadınların da yer alacağı “Kadın Yönetim Kurulu Üyeliği Politikası” oluşturulmu"
+      }
+    ],
+    "computed_at": "2026-05-30T22:22:58",
+    "wall_seconds": 13.3
+  },
+  {
+    "spec": {
+      "question": "Vakıf GYO'nun çevre, sosyal ve yönetim (ESG) politikaları nelerdir?",
+      "company": null,
+      "year": null,
+      "showcase": "Single-company comprehensive ESG view"
+    },
+    "answer": "Vakıf Bank Finans Grubunun bir üyesidir. Vakıf Bank'ın ESG politikalarını anlamaya çalışırken, Vakıf Gyo'nun 2024'teki raporu da dahil olmak üzere sağlanan dört kaynağı analiz edilebilir.\n\nVakıfGYO'nun 2023 ve 2024 yılları için sunulan iki raporda, şirketin sürdürülebilir kalkınma amaçları ve hedefleriyle ilgili ayrıntılara yer verilmektedir. Bu amaçlar ve hedefler Birleşmiş milletler tarafından belirlenen 17 Sürdürülebilir kalkınma amacına ve 169 hedefine göre yapılmıştır. Bu bağlamda VakıfGYO, çevreye duyarlılık ve topluma faydalı olma konusunda kararlıdır.\n\nAncak, VakıfGYo'nun 2022 ve 2023 yılları arasındaki raporlarında daha spesifik olarak \"Çevresel Sürdürebilirlik Yönergesi\" adı altında bir politika açıklamadığı görülüyor. Ancak, 2023 yılında VakıfGyo, CDP'ye (karbon emisyonunu bildiren bir kuruluşa) rapor verdiğini ve karbon emisyonlarını azaltma hedeflerine ulaştığını gösteriyor.\n\nDahası, VakıfBank 2018'de yayınladığı bir rapora göre, Vakıf Bank Finansı Grubu'nun bir üyesinin olduğu VakıfGyO, köklerinde bulunan vakıf mirası nedeniyle kurulduklarında faaliyetlerinin toplumun ve dünyadaki etkilerini dikkatle değerlendirmektedir. Raporda ayrıca VakıfGyro'nun öncelikli çalışma alanı olarak \"sürdürülebilir şehirler ve topluluklar\", \"sanayi yenilikçiliği ve altyapı\", \"nitelikli eğitim\", \"eşitsizliğin azaltılması\" ve \"toplumsal cinsiyet eşitliği\" konularını içermektedir.\n\nSonuç olarak, VakıfGYO'nun çevre, sosyal ve yönetime ilişkin politikalarının ana hatlarının şunlar olduğunu görmekteyiz:\n\n1. Sürdürülebilirliğe bağlılık: VakıfGryo, Birleşmüş Milletler'in 17 Sürdürebilirden Kalkınma Amaçlarına ve 169 Hedeflerine uyumlu olarak hareket etmektededir.\n2. Karbon Emisyonu Azaltımı: VakıfGYo, CDP'nin bir üyesiyken karbon emsiyonlarını azaltmak için hedefler koymuş ve bu hedeflere ulaşıyor.\n3. Çeşitlilik ve Katılım: VakıfBank Finansı Grubunun üyesi olarak VakıfGypo, köklerinden gelen mirasın etkisiyle kurulduğundan beri faaliyetlerinin toplum üzerinde ve dünyada yarattığı etkiyi dikkatlice inceliyor.\n4. Sürdürülemezlik: Vakıfgyro, sürdürülebilir şehirlere ve topluluklara katkı sağlamak için çalışıyor ve niteliyetli eğitime, eşitsizliğin azalmasına ve toplumsal cinsiyeti desteklemeye odaklanıyor.\n\nÖzetle, Vakıfgyo'nun çevre, social ve yönetime yönelik politikaları sürdürülebilirliğe dayalı, karbon emizyon azalmayı içeren ve çeşitliliğin ve katılığın öneminin farkında olan bir yaklaşımdır.",
+    "retrieved_chunks": 20,
+    "filtered_chunks": 20,
+    "removed_chunks": 0,
+    "contradiction_edges": 0,
+    "timings": {
+      "retrieval": 0.01857137680053711,
+      "isolated_answering": 4.76837158203125e-07,
+      "nli_graph_filter": 0.1936018466949463,
+      "final_generation": 28.495537519454956
+    },
+    "total_time": 28.707711219787598,
+    "chunks_detail": [
+      {
+        "company": "VakıfGYO",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8907,
+        "text_preview": "Vakıf GYO, 2020 yılından itibaren 5 yıllık stratejik plan ve yıllık performans programı ile kısa ve uzun vadeli hedeflerini belirleyerek, bu hedefler doğrultusunda hem mevcut hem de geleceğe yönelik performansını yönetmektedir. Vakıf GYO Stratejik Planı, Mevcut Durum analizi aşamasından yıllık performans programının belirlenmesine kadar her aşamada, Birleşmiş Milletler Sürdürülebilir Kalkınma amaçları (17 SKA) ve Hedefleri (169 SKH) ile ilişkilendirilerek Türkiye’de ilk defa Entegre Stratejik Plan hazırlanmıştır. Birleşmiş Milletler Sürdürülebilirlik Programı’nda tanımlanmış ve genel kabul gör"
+      },
+      {
+        "company": "VakıfGYO",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8907,
+        "text_preview": "Vakıf GYO, 2020 yılından itibaren 5 yıllık stratejik plan ve yıllık performans programı ile kısa ve uzun vadeli hedeflerini belirleyerek, bu hedefler doğrultusunda hem mevcut hem de geleceğe yönelik performansını yönetmektedir. Vakıf GYO Stratejik Planı, Mevcut Durum analizi aşamasından yıllık performans programının belirlenmesine kadar her aşamada, Birleşmiş Milletler Sürdürülebilir Kalkınma amaçları (17 SKA) ve Hedefleri (169 SKH) ile ilişkilendirilerek Türkiye’de ilk defa Entegre Stratejik Plan hazırlanmıştır. Birleşmiş Milletler Sürdürülebilirlik Programı’nda tanımlanmış ve genel kabul gör"
+      },
+      {
+        "company": "VakıfBank",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8797,
+        "text_preview": "rı gibi birçok yeşil bina kriterine uyum dikkate alınmaktadır.\n•\t Sürdürülebilir Şehirler ve Topluluklar •\t Sanayi, Yenilikçilik ve Altyapı   \n•\t Nitelikli Eğitim   \n•\t Eşitsizliklerin Azaltılması   \n•\t Toplumsal Cinsiyet Eşitliği konularını kapsamaktadır.\nBu doğrultuda Vakıf GYO’nun öncelikli sosyal sorumluluk projeleri :\n• Çevresel Sürdürülebilirlik Yönetimi: Vakıf GYO, tüm projelerinde karbon salımını hesaplamakta olup dünyanın en prestijli çevresel raporlama kurumu olan $\\mathsf { C D P ^ { \\prime } }$ ye raporlama yapmakta ve karbon salımını azaltmaya yönelik hedefler belirlemektedir. CDP"
+      },
+      {
+        "company": "VakıfGYO",
+        "year": 2024,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8793,
+        "text_preview": "VakıfBank Finans Grubu’nun bir üyesi olan Vakıf GYO, köklerindeki vakıf mirasının etkisi ile kurulduğu günden bu yana faaliyetlerinin toplum ve dünya üzerindeki etkisini göz önünde bulundurur.\nBu doğrultuda Vakıf GYO olarak, öncelikli çalışma alanlarımız:\n• Sürdürülebilir Şehirler ve Topluluklar   \n• Sanayi, Yenilikçilik ve Altyapı   \n• Nitelikli Eğitim   \n• Eşitsizliklerin Azaltılması Toplumsal Cinsiyet Eşitliği Kurumsal Sosyal Sorumluluk Projelerimiz:"
+      },
+      {
+        "company": "VakıfGYO",
+        "year": 2022,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8788,
+        "text_preview": "SOSYAL SORUMLULUĞA KATKI\nVakıfBank Finans Grubu’nun bir üyesi olan Vakıf GYO, köklerindeki vakıf mirasının etkisi ile kurulduğu günden bu yana faaliyetlerinin toplum ve dünya üzerindeki etkisini göz önünde bulundurmaktadır.\nBu doğrultuda Vakıf GYO olarak, öncelikli sosyal sorumluluk projelerimiz :\n• Sürdürülebilir Şehirler ve Topluluklar   \n• Sanayi, Yenilikçilik ve Altyapı Nitelikli Eğitim Eşitsizliklerin Azaltılması   \nToplumsal Cinsiyet Eşitliği konularını kapsamaktadır.\n2022 Yılı Gerçekleştirilen Kurumsal Sosyal Sorumluluk Projelerimiz:"
+      },
+      {
+        "company": "VakıfGYO",
+        "year": 2023,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8781,
+        "text_preview": "VakıfBank Finans Grubu’nun bir üyesi olan Vakıf GYO, köklerindeki vakıf mirasının etkisi ile kurulduğu günden bu yana faaliyetlerinin toplum ve dünya üzerindeki etkisini göz önünde bulundurur.\nBu doğrultuda Vakıf GYO olarak, öncelikli çalışma alanlarımız:\n• Sürdürülebilir Şehirler ve Topluluklar • Sanayi, Yenilikçilik ve Altyapı Nitelikli Eğitim Eşitsizliklerin Azaltılması Toplumsal Cinsiyet Eşitliği\nKurumsal Sosyal Sorumluluk Projelerimiz:"
+      },
+      {
+        "company": "VakıfGYO",
+        "year": 2022,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8738,
+        "text_preview": "nda Şirketimizi sektörün öncüsü ve temsilcisi yapmaktır. Bu amaçla, değişim ve dönüşümü etkin yönetebilmek için Vakıf GYO’nun vizyon projesi olan Kurumsal Gelişim Projesi başlatılmıştır (Şekil 1.21).\nKurumsal Gelişim Projesi’ni kısaca özetlemek gerekirse; Değişim ve yıkıcı dönüşümün yaşandığı günümüz dünyasında,uyguladığımızdeğişim-dönüşümprogramıile kurumsallaşma adına çok önemli adımlar atılmış, stratejik planlama, süreç yönetimi, kurumsal risk yönetimi gibi gerekli birçok işlevsel sistem sağlam temelli bir yaklaşımla kurulmuştur ve sürekli geliştirilmektedir. Ekosistemdeki değişim etmenleri"
+      },
+      {
+        "company": "VakıfBank",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8723,
+        "text_preview": "VakıfBank’ın gayrimenkul yatırım ortaklığı alanında faaliyet gösteren Vakıf GYO’nun Stratejik Planı, Mevcut Durum Analizi aşamasından Yıllık Performans Programı’nın belirlenmesine kadar her aşamada, Birleşmiş Milletler Sürdürülebilir Kalkınma Amaçları (17 SKA) ve Hedefleri (169 SKH) ile ilişkilendirilmiştir. Vakıf GYO sektörünün ilk Entegre Stratejik Planını hazırlayan şirketi konumundadır. Birleşmiş Milletler Sürdürülebilirlik Programı’nda tanımlanmış ve genel kabul görmüş 3P Modeli’nin (Ekonomik, Toplumsal, Çevresel sürdürülebilirlik) ötesinde 4P Modeli (Ekonomik, Toplumsal, Çevresel ve Ürün"
+      },
+      {
+        "company": "VakıfGYO",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.872,
+        "text_preview": "Şirket, Gayrimenkul Yatırım Ortaklığı sektöründe faaliyet\ngöstermektedir. Vakıf GYO kurulduğu 1996 yılından bu yana gayrimenkul sektörünün güvenilir, başarılı ve istikrarlı şirketi olma özelliğini korumuştur."
+      },
+      {
+        "company": "VakıfGYO",
+        "year": 2022,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8677,
+        "text_preview": "Vakıf GYO’nun “Geleneğin Gücü, Geleceğin İnşası” temel amacına uygun olarak; geleceği inşa edecek çocukların; iklim değişikliğinin etkileri ile ilgili farkındalıklarının arttırılması ve 8-12 yaş grubu öğrencilerimize sürdürülebilirlik kültürünün kazandırılması hedeflenmiştir."
+      },
+      {
+        "company": "VakıfGYO",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8675,
+        "text_preview": "önetimi: Tüm projelerimize ait karbon salımı hesaplanarak dünyanın en prestijli çevresel raporlama kurumu olan CDP’ ye raporlama yapılmış ve karbon salımını azaltmaya yönelik hedefler belirlenmiştir.\nCDP İklim Değişikliği programı kapsamında yapılan ilk yıl raporlamasında $\\complement +$ performans skoru elde edilmiştir. Karbon Saydamlık Projesi (CDP) raporlaması yaparak ve ISO 14064’e göre sera gazı emisyonlarını hesaplayarak önemli adımlar atan Vakıf GYO, entegre faaliyet raporu ile sürdürülebilirlik ve iklim risklerini, öncelikli konularını ve bu konuları yönetmek adına attığı adımları tüm "
+      },
+      {
+        "company": "VakıfGYO",
+        "year": 2022,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8659,
+        "text_preview": "Şirketimiz yönetişim anlayışını tüm faaliyetlerine entegre etmiş ve bu çerçevede politikalarını da oluşturmuştur.\nŞirketimiz politikaları internet sayfasında kamuyla paylaşılmıştır.\nYönetim Politikası   \nVakıf GYO Etik İlkeleri   \nBilgilendirme Politikası   \nKâr Dağıtım Politikası   \nBağış ve Yardım Politikası   \nÜcretlendirme Esasları   \nİnsan Kaynakları Politikası   \nMüşteri Memnuniyeti Politikası   \nSürdürülebilirlik Politikası   \nTazminat Politikası   \nİnsan Hakları ve Çalışan Hakları Politikası   \nİş Sağlığı ve Güvenliği Politikası   \nYönetim Kurulu Toplantıları Prosedürü   \nÇalışanların "
+      },
+      {
+        "company": "VakıfGYO",
+        "year": 2023,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8659,
+        "text_preview": "Şirketimiz yönetişim anlayışını tüm faaliyetlerine entegre etmiş ve bu çerçevede politikalarını da oluşturmuştur.\nŞirketimiz politikaları internet sayfasında kamuyla paylaşılmıştır.\nYönetim Politikası   \nVakıf GYO Etik İlkeleri   \nBilgilendirme Politikası   \nKâr Dağıtım Politikası   \nBağış ve Yardım Politikası   \nÜcretlendirme Esasları   \nİnsan Kaynakları Politikası   \nMüşteri Memnuniyeti Politikası   \nSürdürülebilirlik Politikası   \nTazminat Politikası   \nİnsan Hakları ve Çalışan Hakları Politikası   \nİş Sağlığı ve Güvenliği Politikası   \nYönetim Kurulu Toplantıları Prosedürü   \nÇalışanların "
+      },
+      {
+        "company": "VakıfBank",
+        "year": 2024,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8659,
+        "text_preview": "ülebilirlik ile sınırlı kalmamış, aynı zamanda toplumsal kalkınma, iş gücü çeşitliliği, şeffaflık ve etik değerlere dayalı bir kurumsal kültür oluşturması gibi çok daha geniş bir perspektife yayıldı.\nVakıfBank bağlı ortaklıkları, çevresel sürdürülebilirlik alanındaki stratejilerini 2024 yılında daha da ileriye taşıdı. Yenilebilir enerji yatırımları, enerji verimliliği projeler ve sosyal sürdürülebilirlik çalışmaları bu dönemin öncelikli konuları arasında yer aldı. VakıfBank’ın bağlı ortaklıkları, ofisler ve operasyonel alanlarda enerji verimliliğini artırmak amacıyla teknolojik iyileştirmeler "
+      },
+      {
+        "company": "VakıfBank",
+        "year": 2024,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8654,
+        "text_preview": "r arasında en yüksek puanı alarak EFQM Küresel Ödülü’nün sahibi olan Vakıf GYO, stratejiyi eyleme dönüştürme ve kurumsal performansını sürekli iyileştirme konusunda uluslararası bir başarı elde etti.\nVakıfBank Finans Grubunun bir diğer üyesi olan Vakıf Leasing, çevre dostu enerji projelerine sağladığı finansman desteği ile sürdürülebilir enerjiye katkıda bulunmaya devam etti. Özellikle güneş ve rüzgar enerjisi santrallerinin kurulumu için projeye özel finansal çözümler sunarak, yenilenebilir enerji projelerine desteğini sürdürdü. Bunun yanı sıra, geri dönüşüm tesisleri de çevresel duyarlılık n"
+      },
+      {
+        "company": "VakıfGYO",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8652,
+        "text_preview": "Vakıf GYO’nun “Geleneğin Gücü, geleceğin İnşası” temel amacına uygun olarak; geleceği inşa edecek çocukların; iklim değişikliğinin etkileri ile ilgili farkındalıklarını arttırmak ve 8-12 yaş grubu öğrencilerimize sürdürülebilirlik kültürünün kazandırılması hedefliyoruz."
+      },
+      {
+        "company": "VakıfGYO",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8652,
+        "text_preview": "Vakıf GYO’nun “Geleneğin Gücü, geleceğin İnşası” temel amacına uygun olarak; geleceği inşa edecek çocukların; iklim değişikliğinin etkileri ile ilgili farkındalıklarını arttırmak ve 8-12 yaş grubu öğrencilerimize sürdürülebilirlik kültürünün kazandırılması hedefliyoruz."
+      },
+      {
+        "company": "VakıfGYO",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8644,
+        "text_preview": "Şirket, Gayrimenkul Yatırım Ortaklığı sektöründe faaliyet göstermektedir. Vakıf GYO kurulduğu 1996 yılından bu yana gayrimenkul sektörünün güvenilir, başarılı ve istikrarlı şirketi olma özelliğini korumuştur.\nYatırımlardaki Gelişmeler, Teşviklerden Yararlanma Durumu, Yararlanılmışsa Ne Ölçüde Gerçekleştirildiği\nŞirketimizin gerçekleştirdiği projelerde herhangi bir teşvikten yararlanılmamıştır.\nİşletmenin Üretim Birimlerinin Nitelikleri, Kapasite Kullanım Oranları Ve Bunlardaki Gelişmeler Genel Kapasite Kullanım Oranı, Faaliyet Konusu Mal Ve Hizmet Üretimindeki Gelişmeler, Miktar, Kalite, Sürüm"
+      },
+      {
+        "company": "VakıfGYO",
+        "year": 2022,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8637,
+        "text_preview": "Vakıf GYO olarak, oluşturmuş olduğumuz entegre stratejik planımızda yer alan $^ { \\prime \\prime } \\mathsf { S } \\ 7$ . İtibarı Etkin Yöneterek Saygın Konumumuzu Güçlendirme” stratejimiz doğrultusunda, sektörel sivil toplum kuruluşları ile iş birliği içerisinde bulunarak iletişim ve koordinasyon süreçlerimizi geliştirmeyi hedefliyoruz. Bu hedef doğrultusunda çalışanlarımızın GYODER, KONUTDER, TMB, ÇEDBİK, INDER gibi sektör STK’larının etkinlik ve faaliyetlerine katılımları sağlanmaktadır. Üye olduğumuz dernekler ve iş birliklerimiz (Şekil 4.37);"
+      },
+      {
+        "company": "VakıfGYO",
+        "year": 2022,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8623,
+        "text_preview": "Vakıf GYO Stratejik Planı, Mevcut Durum Analizi aşamasından Yıllık Performans Programı’nın belirlenmesine kadar her aşamada, Birleşmiş Milletler Sürdürülebilir Kalkınma Amaçları (17 SKA) ve Hedefleri (169 SKH) ile ilişkilendirilerek sektöründe ilk defa Entegre Stratejik Plan hazırlanmıştır. Birleşmiş Milletler Sürdürülebilirlik Programı’nda tanımlanmış ve genel kabul görmüş 3P Modeli’nin (Ekonomik, Toplumsal, Çevresel sürdürülebilirlik) ötesinde 4P Modeli (Ekonomik, Toplumsal, Çevresel ve Ürün sürdürülebilirliği) benimsenerek Stratejik Planımızın dört boyutta sürdürülebilirlik programını kapsa"
+      }
+    ],
+    "computed_at": "2026-05-30T22:23:27",
+    "wall_seconds": 28.71
+  },
+  {
+    "spec": {
+      "question": "Akbank 2023 sürdürülebilirlik raporundaki ana başlıklar nelerdir?",
+      "company": "Akbank",
+      "year": 2023,
+      "showcase": "Filtered retrieval (company + year metadata filter)"
+    },
+    "answer": "Akbank 2018'de yayınlanan \"Akbank 2040 Vizyonu\" raporu ve 2023'teki \"Entegre Faaliyete İlişkin Rapor\", bankanın sürdürülebilirlik çabalarının ana başlıcalarını ortaya koymaktadır. Ana başlıklardan bazıları şunlardır:\n\n1. Karbondan arındırma: Akbank'ın 2050 yılına kadar net sıfırı hedeflemesi ve bu hedefe ulaşmak için gerekli adımlara odaklanması.\n2. Sera gazı emisyonlarının azaltılması: Bankanın sera gazı emisyonsunu azaltmaya yönelmesi ve bunun için çeşitli stratejilerin uygulanması.\n3. Enerjide yenilik: Akbank, enerji sektörü için sürdürülebilir finansmanı sağlayan ürün ve hizmetlerini geliştirecek ve uygulayacak.\n4. Çevreye duyarlılık: Bankanın çevreye karşı sorumlu davranışı ve çevresel etkisini en aza indiren politikaları benimsemeye kararlı olması.\n5. Sosyal sorumluluk: Akbank sosyal açıdan sorumlu davranışta bulunacak ve topluma katkı sağlayacak projelere sponsorluk yapacaktır.\n6. İnsani kalkınma: Bankanın insana yardım etmek için çeşitli program ve projeler geliştirmeyi planlamasının yanı sıra, bu tür projelerin finanse edilmesine yardımda bulunacağı.\n7. Şeffaflık ve raporlama: Akbank şeffaflığı artıracak ve sürdürülebilirlik performansı hakkında düzenli olarak rapor verecektir.\n\nBu ana başlıkalarda belirtilmeyen diğer önemli unsurlar arasında, Akbank'ın sürdürülebilirliği teşvik eden politika ve prosedürlerin benimsenmesi ve bankanın bu alanda lider rolünü üstlenmesiyle ilgili açıklamalar yer almıştır.",
+    "retrieved_chunks": 20,
+    "filtered_chunks": 16,
+    "removed_chunks": 4,
+    "contradiction_edges": 13,
+    "timings": {
+      "retrieval": 0.05507183074951172,
+      "isolated_answering": 4.76837158203125e-07,
+      "nli_graph_filter": 0.20057058334350586,
+      "final_generation": 16.17038869857788
+    },
+    "total_time": 16.426031589508057,
+    "chunks_detail": [
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8926,
+        "text_preview": "Banka’nın paydaş (uluslararası finans kuruluşlar, yatırımcılar, çalışanlar, müşteriler ve sivil toplum kuruluşları) görüşlerinin yer aldığı anket sonuçlarını, güncel sürdürülebilirlik raporlama standartlarındaki gelişmeler, küresel trendler, Banka’nın uzun vadeli vizyonu, iyi uygulama örnekleri, Sürdürülebilirlik Muhasebesi Standartları Kurulu Finansal Hizmetler – Ticari Bankacılık sektör öncelikli konuları dikkate alınarak öncelikli konular evreni hazırlanmıştır.\nYukarıda anlatılan çalışmalar sonucunda Akbank’ın Önceliklendirme Matrisinde işlenen konular:"
+      },
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8917,
+        "text_preview": "rdürülebilir Kalkınma Amaçları’na olan katkımızı tüm faaliyetlerimizde şeffaf bir şekilde sergiliyoruz.\nRaporumuzu Türkiye Sürdürülebilirlik Raporlama Standartları’na (TSRS) uyumlu olarak hazırladık.\nAkbank T.A.Ş. (Akbank) olarak 2009 yılı itibarıyla yıllık olarak Küresel Raporlama Girişimi (GRI) Standartlarına uygun olarak hazırladığımız sürdürülebilirlik raporlarımıza 2020’de yayımladığımız ilk Entegre Raporumuzla devam ettik. 2021 yılında ise finansal ve finansal olmayan performansımızın yer aldığı ilk Entegre Faaliyet Raporumuzu paydaşlarımıza sunduk. Böylece sürdürülebilirlik performansım"
+      },
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8891,
+        "text_preview": "Akbank T.A.Ş. (“Akbank” veya “Banka”) tarafından 31 Aralık 2023 tarihinde sona eren yıl itibariyle hazırlanan Akbank 2023 Entegre Faaliyet Raporu’nda (“2023 Entegre Faaliyet Raporu”) yer alan ve aşağıda listelenmiş Seçilmiş Sürdürülebilirlik Bilgileri (“Seçilmiş Bilgiler”) üzerinde sınırlı güvence çalışması yürütmek üzere görevlendirilmiş bulunuyoruz."
+      },
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8851,
+        "text_preview": "OECD’ye göre dünyada öne çıkan eşitsizliklerin azaltılması, iklim değişikliğinin önlenmesi ve refahın sağlanması gibi sürdürülebilirlik konuları için 2030’a kadar yılda ortalama 6,9 trilyon ABD Doları tutarında yatırım yapılması gerekiyor. Buna ek olarak, Bloomberg raporuna göre, sürdürülebilirlik varlıklarının 2025 yılına kadar 50 trilyon ABD Dolarını aşması bekleniyor. Bu da toplam küresel varlıklar içinde öngörülen 140,5 trilyon ABD Doları varlığın üçte birinden fazlasını oluşturuyor. Bu fırsatlar, özellikle yirmili veya otuzlu yaşlarındaki yatırımcıların sürdürülebilirlik temalı ürünlere v"
+      },
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8826,
+        "text_preview": "karbonsuzlaşma yolculuklarında çok daha yakın çalışacağız.\nAkbank olarak 2022 yılında duyurduğumuz 2050 net sıfır karbon hedefine odaklanarak müşterilerimizin dönüşümüne değer yaratmayı amaçlıyoruz.\nEnerji, çimento, demir çelik, alüminyum ve gübre gibi sektörlerin finansman ihtiyaçlarına sürdürülebilir finansman kredi ürünleri ve hizmetleri sunarak bu sektörlerdeki müşterilerimize destek olmayı sürdüreceğiz. Ayrıca, finansal olmayan inovatif hizmetleri iş birlikleri ve paydaşlar aracılığıyla müşterilerimize sunmayı hedefliyoruz."
+      },
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8801,
+        "text_preview": "Bu raporlama kılavuzu (“Kılavuz”), Akbank T.A.Ş.’nin (“Banka” veya “Akbank”) Akbank 2023 Entegre Faaliyet Raporu’nda (“2023 Entegre Raporu”) yer alan sınırlı güvence kapsamındaki göstergelerine ait verilerin hazırlanma, hesaplama ve raporlanma metodolojilerine dair bilgi vermektedir.\nBu göstergeler; sosyal, çevresel ve ekonomik göstergeleri kapsamaktadır. Aşağıda belirtilen bu göstergeleri, her türlü maddi açıdan, Kılavuz doğrultusunda hazırlamak için uygun prosedürlerin uygulandığından emin olmak, Şirket yönetiminin sorumluluğundadır."
+      },
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8795,
+        "text_preview": "metleri sunarak bu sektörlerdeki müşterilerimize destek olmayı sürdüreceğiz. Ayrıca, finansal olmayan inovatif hizmetleri iş birlikleri ve paydaşlar aracılığıyla müşterilerimize sunmayı hedefliyoruz.\n2023 yılında, demir çelik, çimento, enerji, tekstil, turizm, petrol-doğalgaz sektörlerindefaaliyet gösteren müşterilerimizin net sıfır karbon hedeflerini ve stratejilerini yakından takip ederek, bu sektörlerdeki müşterilerimiz için net sıfır karbon stratejileri kapsamında ön değerlendirme çalışmaları sürdürüyoruz. Bu çalışmalarla müşterilerimize sektörel fırsatları erken tespit etmelerinde yardımc"
+      },
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8783,
+        "text_preview": "üşüm Paketi, kadın girişimcilere özel paketimiz, bireysel ve ticari müşterilerimize özel Çevre Dostu Taşıt Kredimiz gibi ürünlerimizle müşterilerimize yeşil ve kapsayıcı çözümler sunmaya devam ettik.\nTicari müşterilerimize sürdürülebilir nakit yönetimi çözümü sunan Sürdürülebilir Mevduat ürünümüzü de yine 2023 yılında piyasaya sürdük. Bu ürünle, ticari müşterilerimizin kendi faaliyetleri alanları dışında da çevresel ve sosyal pozitif etkisi olan projelerin finansmanına aynı anda destek olmalarına olanak sağlıyoruz. Özellikle deprem bölgesi finansmanı, fırsat eşitliği gibi sosyal tematik alanla"
+      },
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8765,
+        "text_preview": "Tükettiğimiz enerjiyi, suyu ve kâğıdı bilinçli kullanarak\nYenilenebilir kaynaklara yatırım yaparak\nİklim değişikliği konusunda çalışanlarımızı bilinçlendirerek\nOperasyonlarımıza kaynak verimliliğini entegre ederek\nOperasyonlarımızdan kaynaklanan sera gazı emisyonlarına baktığımızda Kapsam 2 dahilindeki elektrik tüketiminden kaynaklı emisyonlarımızı her geçen yıl yenilenebilir enerji satın alımlarıyla azaltarak 2023 yılından itibaren $\\% 1 0 0$ yenilenebilir enerji satın alımına geçerek sıfırladık.\nNet Sıfır hedefimiz doğrultusunda Kapsam 1 dahilinde en yüksek emisyonu olan kaynaklar için 2030 "
+      },
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8755,
+        "text_preview": "Akbank olarak, kuvvetli bilançomuz, etkin risk yönetimimiz, müşteri odaklı yaklaşımımız, sağlam ve uzun soluklu ilişkilerimiz sayesinde Türk bankacılık sektöründeki öncü konumumuzu 2023 yılında da koruduk. 2023 yılında konsolide brüt karımız 87.092 milyon TL konsolide net karımız 66.496 milyon TL, öz sermaye karlılığımız %37,9 aktif karlılığımız ise $\\% 4 . 4$ olarak gerçekleşti.\nKonsolide toplam aktiflerimiz 1 trilyon 905 milyar TL, kullandırdığımız nakdi krediler 962 milyar TL, mevduatlarımız ise 1 trilyon 293 milyar TL olarak gerçekleşti. Sermaye yeterlilik rasyomuz $\\% 2 1$ ile oldukça yük"
+      },
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8739,
+        "text_preview": "u Bankacılık Prensipleri ve TCFD destekçisi oldu.\nSürdürülebilirlik stratejisini yeniden ele alarak, Türkiye’de sürdürülebilir finansman alanında uzun vadeli hedef açıklayan ilk mevduat bankası oldu.\nKurumsal Yönetim İlkeleri’ni internet sitesinde duyuran ilk banka oldu.\nKarbon Saydamlık Projesi’nin 2010 yılı Global 500 Raporu’na Türkiye’den dahil edilen ilk ve tek şirket olarak aldığı yüksek puan ile Dünya Sektör Liderleri kategorisinde yer aldı.\nAkbank Enerji Dostu Kredi hayata geçti.\nÇevresel ve Sosyal Risk Çerçevesini güncelledi.\nGeleceğin Bankacılığı’nı bugünden kurmak için Akbank LAB’ı f"
+      },
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8721,
+        "text_preview": "Bu rapor, sonucu da dahil olmak üzere, Banka’nın sürdürülebilirlik performansı ve faaliyetlerinin raporlamasına yardımcı olmak amacıyla Akbank T.A.Ş. Yönetim Kurulu için hazırlanmıştır. Akbank T.A.Ş. Yönetim Kurulu’nun Seçilmiş Bilgiler ile ilgili bir bağımsız sınırlı güvence raporu hazırlatarak konuyla ilgili sorumluluklarını yerine getirdiğini gösterebilmesini sağlamak için bu raporun 31 Aralık 2023 tarihinde sona eren yıl için hazırlanan 2023 Entegre Faaliyet Raporu içinde yer almasına müsaade etmekteyiz. Kanunların izin verdiği ölçüde ve koşulları önceden yazılı onayımız ile açıkça mutabık"
+      },
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.8718,
+        "text_preview": "nin yer aldığı raporların, kurumsal internet sitemiz ve benzeri tanıtım mecralarının Kurumsal Yönetim İlkeleri ve Sürdürülebilirlik İlkeleri ile uygun bir şekilde hazırlanması ve gözetimini sağlamak.\nYatırımcı İlişkileri ve Sürdürülebilirlik Bölümümüz koordinasyonunda çalışmalarını sürdüren 4 komitemiz (Sürdürülebilir Finansman, Ekosistem Yönetimi, İklim Değişikliği ve İnsan ve Toplum) ilgili Genel Müdür Yardımcılarımızın önderliğinde ve fonksiyonlardan temsilcilerimizle düzenli olarak bir araya geliyor.\nSürdürülebilirliği kurumsal kültürümüzün bir parçası olarak görüyor ve kurum içi sürdürüle"
+      },
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8712,
+        "text_preview": "n üst seviyede tutabilmek için içsel sermaye yeterliliği değerlendirme süreci (İSEDES) ve risk türü bazında gerçekleştirdiğimiz diğer stres   \ntestleri ile rezervlerimizi devamlı   \nolarak izliyoruz.\nAkbank olarak, bilanço yönetimi, sermaye tahsisi, portföy/yatırım tercihi, yeni ürün ve faaliyet kararı gibi kilit konularda risk yönetimi, yasal mevzuata uyum, çevresel-sosyal etki analizini içeren çok boyutlu yaklaşımımızı sürdürürken, uzun vadeli strateji ve hedeflerimiz doğrultusunda faaliyetlerimize yön ve ivme kazandırmaya da devam ediyoruz. Risk ve fırsatların önceden analizlerini sağlayara"
+      },
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8702,
+        "text_preview": "Akbank olarak, bankacılık sektörü için sürdürülebilirlik kapsamındaki verilerin doğruluk ve şeffaflık derecesinin artırılması ve sürdürülebilirlik performansının karşılaştırılabilmesi adına temel bir performans göstergesi olarak tanımlanan yeşil varlık oranı (YVO) hesaplanmasına dair kriter setinin geliştirilmesi ve metodolojilerin oluşturulması kapsamında oluşturulan Türkiye Bankalar Birliği Sürdürülebilirlik Çalışma Grubu ve Yeşil Varlık Oranı Çalışma ve Alt Çalışma Gruplarında aktif rol aldık. Bu çalışmalarımızın bir çıktısı olarak, Bankacılık Düzenleme ve Denetleme Kurumu (BDDK) tarafından"
+      },
+      {
+        "company": "Akbank",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.87,
+        "text_preview": "imiz piyasaları anlık olarak takip edebilirken, haberler, alarmlar, tahminler, araştırma raporları ve teknik analizler ile hisse senedi, VİOP ve Varant işlemlerini kolaylıkla gerçekleştirebiliyorlar.\nAkbank’ın Sürdürülebilirlik Hedefleri çerçevesinde faaliyet gösteren “Sürdürülebilir Yatırımlar Yöneticiliği”, 2023 yılında da çalışmalarına aralıksız devam etti. Bu yıl, sürdürülebilir yatırımlar fon hacmimiz 1,8 milyar TL’ye ulaştı. Fon büyüklüğünde pazar payımız $\\% 1 7$ ’ye, müşteri sayısında ise pazar payımız $\\% 3 5 \\mathrm { e }$ çıktı. Sürdürülebilir yatırımlar alanında ürün çeşitliliğimiz"
+      }
+    ],
+    "computed_at": "2026-05-30T22:23:43",
+    "wall_seconds": 16.43
+  },
+  {
+    "spec": {
+      "question": "Garanti BBVA'nın Scope 1 ve Scope 2 sera gazı emisyonları kaç ton CO2e seviyesindedir?",
+      "company": null,
+      "year": null,
+      "showcase": "Scope-disambiguated numerical query (NLI scope-difference test)"
+    },
+    "answer": "Yanıt:\n\nGaranti BB VA'nın Scope 2 emsiyonları hakkında bilgi bulunmamaktadır. Ancak, diğer kaynaklardan elde edilen bilgilerden yola çıkarak aşağıdaki sonuçları çıkarabiliriz:\n\n* Kaynaksız 1'e göre, Garanti BB VA 2024'teki Scope 1 emisyonlarının 39 milyon tCO2'den oluştuğu belirtiliyor.\n* Kaynagsız 4'e göre, 2024 yılı sonuna kadar Garanti BBV'nin 809 şubesinin tamamında yenilENEYEREJENRİYERI kullanılarak 73 milyon kWh elektrik enerjisinin üretildiği ve bunun 34.000 ton CO2 eşdeğeri olduğu belirtiliyor.\n\nBu iki veri noktasından yola çıkarak, GarantiBBVA'nın Scope I emisyonlarının (karbon nötrlük dahil) 39 m + 34.800 = 73.800 ton CO2-e düzeyinde olduğu sonucunu çıkarabiliriz.\n\nAncak, bu rakam yalnızca 2024 ortalamasını yansıtmaktadır ve 2025 ve 2035 yıllarındaki emisyon hedefleri göz önüne alındığında, gerçek emisyon seviyesinin daha düşük olması muhtemeldir.",
+    "retrieved_chunks": 20,
+    "filtered_chunks": 13,
+    "removed_chunks": 7,
+    "contradiction_edges": 37,
+    "timings": {
+      "retrieval": 0.018346071243286133,
+      "isolated_answering": 4.76837158203125e-07,
+      "nli_graph_filter": 0.21432995796203613,
+      "final_generation": 11.168086051940918
+    },
+    "total_time": 11.400762557983398,
+    "chunks_detail": [
+      {
+        "company": "GarantiBBVA",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8887,
+        "text_preview": "omur |  |  |  2040&#x27;a kadarsektoreiliskin risklerin sifirlanmasl\n• 31.12.2024 itibari ile Garanti BBVA’nın hesapladığı varlık sınıflarında finanse ettiği toplam mutlak emisyon 39 milyon tCO2’dur.\nKömür müşterilerine sağlanan net tutar üzerinden takip edilip yıllık azaltım oranı ile paylaşılmaktadır. 2024 yılında kömür müşterilerindeki risk %10 azaltılmıştır.\n• Garanti BBVA 2020’de, karbon emisyonunu 2025 yılına kadar $\\% 2 9$ , 2035 yılına kadar %71 azaltma sözü vermiştir. Banka, 2020 yılı sonunda faaliyetlerinden kaynaklanan emisyonları $\\% 7 5$ oranında azaltarak kalan emisyonları için u"
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8856,
+        "text_preview": "ıfır ile uyumlu emisyon hedeflerine ulaşılmasında önemli bir aşamayı oluşturuyor. Garanti BBVA bu kapsamda müşterilerinin daha sürdürülebilir bir geleceğe geçişlerinde yol arkadaşlığı yapma amacında.\n2020 itibarıyla kapsam 1 ve 2 emisyonlarında Karbon Nötr Banka oldu - Garanti BBVA, Paris Anlaşması’yla öngörülen en fazla $1 . 5 ^ { \\circ } \\mathrm { C } ^ { \\prime }$ lik sıcaklık artışı hedefiyle uyumlu Bilime Dayalı Hedefler çerçevesinde, bu kapsamda karbon emisyonlarını 2025’e kadar $\\mathfrak { p } \\mathfrak { e } \\mathfrak { z } \\mathfrak { s }$ , 2035’e kadar %71 azaltma hedefini 2020 yıl"
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2020,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8846,
+        "text_preview": "birçok inisiyatife aktif katkı sağlıyor, bu inisiyatiflerin yönetim kurulunda yer alıyor veya başkanlık ediyor.\nBanka’nın desteklediği ve imzacısı olduğu inisiyatifler web sitesinde paylaşılmaktadır.\nGaranti BBVA, iklim kriziyle mücadele etmek adına, doğrudan sebep olduğu sera gazı emisyonlarını azaltmak amacıyla, ulusal ve uluslararası inisiyatiflerle iş birliği içerisinde hareket eder ve somut adımlar atmaya önem gösterir. Bu doğrultuda, Bilime Dayalı Hedeflere uygun taahhütler verilmesi, altyapısı uygun şube ve binalarda, $\\% 1 0 0$ yenilenebilir enerji kaynaklarından elektrik üretilmesi gi"
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2020,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8816,
+        "text_preview": "da 270 milyar ABD Doları olduğu tahmin ediliyor. Bu da gelecekteki yatırım ihtiyacını ve finansal kurumların kritik rolünü açıkça ortaya koyuyor. Dünyanın geri kalanı gibi Türkiye de hem fiziksel hem\nGaranti BBVA 2020 yılında iklim değişikliği üzerindeki doğrudan etkilerini yönetmek amacıyla önemli bir adım atarak altyapısı müsait tüm şube ve binalarında yenilenebilir enerji tüketimine geçti. 809 şube ve 46 binada 73 milyon kWh elektrik enerjisi yenilenebilir enerjiden sağlanarak, yaklaşık 2,2 milyon ağacın azaltabileceği sera gazı miktarına denk gelen 34.790 ton ${ \\mathsf { C O } } _ { 2 }$ "
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8813,
+        "text_preview": "lı birimlerde kurulan alt ekipler ve çalışma grupları, sürdürülebilirlik ve sorumlu bankacılık ekipleri ile iş birliği içerisinde farklı birimler özelinde sürdürülebilirlik yaklaşımları geliştiriyor.\n• Garanti BBVA, karbon emisyonunu 2025 yılına kadar $\\% 2 9$ , 2035 yılına kadar $\\% 7 1$ oranında azaltma hedefini duyurmuştur. Garanti BBVA, 2020 senesinde Bilime Dayalı Hedefler çerçevesinde Paris İklim Anlaşması’ndaki maksimum $1 . 5 ^ { \\circ } \\mathrm { C }$ sıcaklık artışı hedefine uygun bir hedefi benimsediğini açıklayan ilk şirket olmuştur. Banka, 2020 yılı sonunda faaliyetlerinden kaynak"
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8806,
+        "text_preview": "or. Farklı birimlerde kurulan diğer ekipler ve çalışma grupları, sürdürülebilirlik birimi ile iş birliği içerisinde bankanın farklı fonksiyonları özelinde sürdürülebilirlik yaklaşımları geliştiriyor.\n• Garanti BBVA, karbon emisyonunu 2025 yılına kadar $\\% 2 9$ , 2035 yılına kadar %71 oranında azaltma hedefini duyurmuştur. Garanti BBVA, 2020 senesinde Paris İklim Anlaşması’nın maksimum 1,5 $^ \\circ \\mathrm { C }$ sıcaklık artışı hedefine uygun bir hedefi benimsediğini açıklayan ilk şirket olmuştur. Banka, 2020 yılı sonunda faaliyetlerinden kaynaklanan emisyonları $\\% 7 5$ oranında azaltarak kal"
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2021,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8773,
+        "text_preview": "Garanti BBVA 2021 yılında da faaliyetlerinden kaynaklanan emisyonlar için karbon kredisi satın alarak ikinci kez karbon nötr banka oldu. Karbon nötr duruşunu bir adım öteye taşıyarak karbon kredisini küresel karbon piyasasında öne çıkan ormansızlaşmayı engelleme projesinden sağladı. Aynı zamanda tüketilen enerjinin yenilenebilir enerji kaynaklarından üretildiğini kanıtlayan IREC sertifikası alarak karbon nötr duruşunu pekiştirdi. 2021’de, 870 Garanti BBVA şubesi ve 56 binada, 87 GWh’lık elektrik ihtiyacının tamamı için yenilenebilir enerji sertifikası sağlandı. Böylece yaklaşık 2,5 milyon ağac"
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2022,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8768,
+        "text_preview": "kurumsal yapılanma örnekleri ve finansmanı değerlendirildi. Banka sektördeki tecrübelerine ve beklentilerine yönelik politika önerileri sundu.\nFaaliyetlerimizin   \nçevresel   \netkilerinin   \nyönetimi\n. 2022’de, 839 Garanti BBVA şubesi ve 52 binada, 93 GWh’lık elektrik ihtiyacının tamamı, enerjinin yenilenebilir kaynaklardan üretildiğini kanıtlayan IREC sertifikası ile alındı. Böylece yaklaşık 2,7 milyon ağacın azaltabileceği sera gazı miktarına denk gelen $4 3 . 8 7 9$ $\\mathrm { t C O } _ { 2 } \\mathrm { e }$ karbon emisyonu engellenmiş oldu.\n2021 yılında yayınlanan Garanti BBVA Eko-Verimlili"
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2022,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8762,
+        "text_preview": "r. Bu kapsamda sürdürülebilirlik stratejisi ve iletişimi sorumluluğunu sürdürülebilir finansın mobilizasyonundan ayıran yeni bir ekip yapısına sahip daha sorumlu ve etkin bir iş modeli benimsemiştir.\n• Garanti BBVA, karbon emisyonunu 2025 yılına kadar $\\% 2 9$ , 2035 yılına kadar $\\% 7 1$ oranında azaltma hedefini duyurmuştur. Garanti BBVA, 2020 senesinde Bilime Dayalı Hedefler çerçevesinde Paris İklim Anlaşması’ndaki maksimum $1 1 . 5 ^ { \\circ } \\mathrm { C }$ sıcaklık artışı hedefine uygun bir hedefi benimsediğini açıklayan ilk şirket olmuştur. Banka, 2020 yılı sonunda faaliyetlerinden kayn"
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2022,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8756,
+        "text_preview": "uçlanacaktır. Etki alanı 2: Kapsayıcı büyüme:\naranti BBVA, BBVA Grup’un UNEP-FI Finansal Sağlık ve Kapsayıcılık taahhütlerine uygun olarak ilgili göstergelerini ve hedeflerini belirleme sürecindedir.\nGaranti BBVA 2022 Entegre Faaliyet Raporu: Sürdürülebilirlik ve Toplumsal Yatırımlar, sayfa 144- 161.\nd) Eylem planı: belirlenen hedeflere ulaşmak için tanımladığınız dönüm noktaları dâhil eylemler nelerdir? Lütfen açıklayın.\nAyrıca lütfen bankanızın, belirlenen hedeflerin etki alanı içindeki veya diğer etki alanları üzerindeki dolaylı ancak önemli (muhtemel) etkilerini analiz edip beyan ettiğini "
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2022,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8751,
+        "text_preview": "tki analizi şunları dikkate almıştır:   \n(i) Ana çalışma alanları: bireysel bankacılık ve kurumsal bankacılık.   \n(ii) Sektörlere maruziyet derecesi ve ortamdaki en ilgili zorluklar ve öncelikler.   \n(iii) Garanti BBVA’nın faaliyetlerinden kaynaklandığı tespit edilen sosyal, ekonomik ve çevresel etkilerin önemi.   \nEn çok olumlu etki olan alanlar:   \n1. İklim eylemi: enerji verimliliği, döngüsel ekonomi ve sera gazı emisyonlarının azaltılması konuları odakta.   \n2. Kapsayıcı büyüme: finansal kapsayıcılık, girişimciliğin desteklenmesi ve sürdürülebilir altyapı konularındaki iş girişimleri ile e"
+      },
+      {
+        "company": "KalkinmaYatirimBankasi",
+        "year": 2020,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8751,
+        "text_preview": "k hesaplanmakta, Sera Gazı Envanteri ve Raporu oluşturulmakta ve tüm paydaşlarla paylaşılmaktadır. Bu kapsamda yapılan hesaplamalar ve rapor, TSE EN ISO 14064-3 standardı kapsamında doğrulanmaktadır.\nAynı zamanda Kapsam $1 ^ { 1 3 } \\mathsf { v e }$ Kapsam $2 ^ { 1 4 }$ emisyonları için alınan Gold Standard ve IREC sertifikaları ile sera gazı emisyonları nötrlenmiştir. 2020 yılında Banka operasyonlarından kaynaklı karbon emisyonu Kapsam 1 seviyesinde 336,9 ton $\\mathsf { C O } _ { 2 }$ e olmuş ve 2019 yılına göre $\\% 3 4$ azalmıştır. Kapsam 2 emisyonu ise 469,5 ton $\\mathsf { C O } _ { 2 } \\ma"
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2020,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8751,
+        "text_preview": "Garanti BBVA, tüm bireylerin fırsatlardan eşit yararlandığı, kapsayıcı bir ekonominin daha verimli olacağı ve daha hızlı büyüyeceği anlayışıyla kadınların istihdama ve ekonomik yaşama aktif katılımını destekliyor. Toplumsal cinsiyet eşitliğini sağlama taahhüdü hem Banka içerisinde hem de ülkemizde herkes için yararlı olacak bir kalkınma sağlanabilmesi anlamına geliyor.\n2020 yılında, Garanti BBVA, Paris Antlaşmasıyla öngörülen en fazla 1,5 °C’lik sıcaklık artışı hedefiyle uyumlu Bilime Dayalı Hedefler (Science Based Target) çerçevesinde, karbon emisyonlarını 2025’e kadar $\\% 2 9 ,$ 2035’e kadar"
+      }
+    ],
+    "computed_at": "2026-05-30T22:23:55",
+    "wall_seconds": 11.4
+  },
+  {
+    "spec": {
+      "question": "Türk şirketlerinin sürdürülebilirlik raporlarında öne çıkan ortak temalar nelerdir?",
+      "company": null,
+      "year": null,
+      "showcase": "Broad cross-sector thematic synthesis"
+    },
+    "answer": "Türk şirketleri arasındaki ortak tema, sürdürülebilirliğin şeffaflığı ve raporlanmasıdır. Bu durum, Kuveyt Turk Bank'ın (Kaynak 01) ve Anadolu Efes'in (Kaynak02 ve Kaynağı03) rapora göre görülmektedir. Her iki şirket de, Birleşmüş Milletler Sürdürebilir Kalkınma Hedeflerine uygun olarak şeffaf raporlamaya odaklanan ve sürdürülebilirlik ilkelerini içselleştirme çabalarına dikkati çekmiştir.\n\nBir diğer ortak tema ise, AB'nin Kurumsallaşmış Sürdürülebilir Raporlama Yönergelerinin (CSRD) uygulanmasıdır. Anadolu Efes (Kaynak03), CSRD'yi uygulamakta ve sadece kendi operasyonunu değil, tüketici zinciri boyunca da sürdürülebilirlik raportajını yapmakta ve döngüsel ekonominin ilkelerine dayalı yenilikçi yaklaşım sergilemektedir.\n\nSon olarak, Coca-Cola İçecekleri (Kaynak05), SKD Türkiye'nin \"Raporlama Öncelikleri\" programının bir parçasıdır ve sürdürülebilirlikle ilgili raporlarının kalitesinin belirlenmesine yardımcı olur. Bu program, ilkeler, içeriğe ve deneyime dayanan 18 göstergenin kullanılarak üyelerin sürdürülebilirlik performansını değerlendiren bir platformdur.\n\nAncak, bu temalara ilişkin daha fazla bilgi edinmek için daha fazla veri toplamanız ve analiz etmeniz gerekecektir. Ayrıca, bu temalarda herhangi bir tutarsızlık veya çelişkili bulguya rastlamak mümkündür.",
+    "retrieved_chunks": 20,
+    "filtered_chunks": 17,
+    "removed_chunks": 3,
+    "contradiction_edges": 12,
+    "timings": {
+      "retrieval": 0.018619537353515625,
+      "isolated_answering": 7.152557373046875e-07,
+      "nli_graph_filter": 0.19040131568908691,
+      "final_generation": 14.516818284988403
+    },
+    "total_time": 14.725839853286743,
+    "chunks_detail": [
+      {
+        "company": "KuveytTurk",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8765,
+        "text_preview": "Türkiye   \nSürdürülebilirlik   \nRaporlama   \nStandartları ile   \nkapsama dahil olan şirketlerin çevresel ve sosyal etkilerini   \ndaha şeffaf ve   \nkarşılaştırılabilir bir şekilde raporlamaları amaçlanmaktadır.\namacıyla önemli çerçeveler sunuyor. Bu düzenlemeler, bankaların portföylerini daha sürdürülebilir hale getirmeleri için gerekli yol haritasını belirliyor. T.C. Çevre, Şehircilik ve İklim Değişikliği Bakanlığı tarafından gerçekleştirilen ulusal taksonomi çalışmaları ise Türkiye’de sektör faaliyetlerinin sürdürülebilirlik açısından tanımlanması ve sınıflandırılması konusunda standartlar ol"
+      },
+      {
+        "company": "AnadoluEfes",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.876,
+        "text_preview": "an bu yana entegre bakış açısıyla hazırladığı raporlar, sürdürülebilirlik risk ve fırsatlarını şeffaf bir şekilde analiz etmesi ve iş modeline entegre etmesi açısından önemli bir örnek teşkil ediyor.\nBu raporlar aynı zamanda şirketin, Birleşmiş Milletler Sürdürülebilir, Kalkınma Amaçları ile uyumlu şekilde geliştirdiği ve içselleştirdiği sorumlu üretim ve tüketim anlayışını, sosyal yatırımlarını ve kapsayıcılık çalışmalarını etkili bir biçimde ortaya koymasıyla sektörün de önemli örneklerini oluşturuyor.\nAnadolu Efes’in sürdürülebilirlik ve operasyonel verimliliğini bir adım ileriye taşıdığı, "
+      },
+      {
+        "company": "AnadoluEfes",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8751,
+        "text_preview": "Avrupa Birliği (AB) ve Türkiye'deki düzenlemeler, işletmelerin operasyonel süreçlerini yeniden şekillendirmesini gerektiriyor. Tüketici beklentilerindeki değişimler ve düzenleyici baskılar, sürdürülebilirlik uygulamalarını iş dünyasında öncelikli bir konu haline getiriyor.\nAB'nin Kurumsal Sürdürülebilirlik Raporlama Direktifi (CSRD), işletmelerin yalnızca kendi operasyonlarını değil, tedarik zincirlerini de kapsayan sürdürülebilirlik raporlaması yapmasını zorunlu kılıyor. Döngüsel ekonomi ilkeleri doğrultusunda, ürün tasarımı ve atık yönetiminde yenilikçi yaklaşımlar beklenirken, Karbon Sınır "
+      },
+      {
+        "company": "BIST",
+        "year": 2019,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8728,
+        "text_preview": "Sürdürülebilirlik   \nkonusunda örnek olmak,   \nsürdürülebilirliğe katkı   \nsağlayan piyasa tabanlı çözümler, ürün ve hizmetler geliştirmek, piyasa katılımcılarını ve paydaşları, sürdürülebilirlik bakış açısını faaliyet döngülerine entegre etmeleri konusunda teşvik etmek\nŞirket, yurtdışında Birleşmiş Milletler Sürdürülebilir Borsalar İnisiyatifi (SSE) ve Dünya Borsalar Federasyonu (WFE), yurtiçinde ise birçok farklı kuruluşun içinde yer aldığı sürdürülebilirlik çalışmalarına katılım sağlamaktadır. Bu kapsamda paydaşlarla mutabakata varılan konular, ilgili kamu otoritelerine aktarılmaktadır.\nBor"
+      },
+      {
+        "company": "CocaCola",
+        "year": 2021,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.872,
+        "text_preview": "olumlu ilişkiler geliştirdik ve kurumsal itibarımızı artırdık.\nCCI sürdürülebilirlik raporları İş Dünyası ve Sürdürülebilir Kalkınma Derneği (SKD Türkiye) Reporting Matters tarafından değerlendirildi\n2017 yılından beri CCI’ın sürdürülebilirlik raporları, Dünya Sürdürülebilir Kalkınma İş Konseyi'nin (WBCSD) \"Reporting Matters\" programı çerçevesinde Sürdürülebilir Kalkınma Derneği (SKD) Türkiye tarafından incelenmektedir. Program kapsamında, üye şirketlerin sürdürülebilirlik raporları ilkeler, içerik ve deneyimden oluşan üç ana kategoride kapsamlı 18 göstergeye göre analiz edilir. CCI Sürdürüleb"
+      },
+      {
+        "company": "BorusanHolding",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8703,
+        "text_preview": "Geçtiğimiz yıl Türkiye, sürdürülebilirlik raporlamasına ilişkin çok önemli bir adım atmış, Uluslararası Sürdürülebilirlik Standartları Kurulu (ISSB) tarafından Sürdürülebilirlik Raporlama Standartları kapsamında temel olarak yayımlanan standartları benimseme kararı almıştı. Bu yıl itibarıyla kapsama giren şirketler için zorunlu olacak bu standartları yürürlüğe alan Türkiye, büyük işletmelerden başlamak üzere hayata geçirilecek sürdürülebilirlik raporlaması ile sürdürülebilirlik alanında dünyada öncü ülkeler arasında yer alıyor. Türkiye bu sayede, uluslararası yatırımlar alma konusunda rekabet "
+      },
+      {
+        "company": "BIST",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8697,
+        "text_preview": "yetenek yönetimi ile teknoloji ve inovasyonun öncelikli konular arasında yer alması sonucunu doğurmaktadır. Ayrıca, uluslararası işbirlikleri fırsatlarının araştırılması bir diğer öncelikli konudur.\nSürdürülebilirlik, Borsa İstanbul ve paydaşları nezdinde önceliği artan konular arasında yer almaktadır. Sürdürülebilirlik yaklaşımı, paydaşlara uzun vadeli değer sunma ve sermaye piyasası paydaşlarının yeşil ve sürdürülebilir dönüşümünü destekleme doğrultusunda şekillenmiştir. Önemli sürdürülebilirlik konuları arasında iş stratejisini, iş sürekliliğini ve itibarı, kısaca uzun vadeli değer yaratma "
+      },
+      {
+        "company": "TürkiyePetrolRafinerileri",
+        "year": 2022,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8694,
+        "text_preview": "Tüpraş’ta sürdürülebilirlik öncelikli konu başlıkları ve projeler tüm iç ve dış paydaşlara yönelik olarak iki yılda bir düzenlenen itibar araştırması ile ölçümlenmektedir.\nTüpraş, $\\mathsf { C S Y }$ stratejileri ile değişen paydaş beklentileri ve küresel trendler ışığında sürdürülebilirlik önceliklerini düzenli olarak gözden geçirmektedir.\nÖnceliklendirme çalışmaları, raporun bütünü kapsamında Yönetim Kurulu’nun bilgisine sunulmaktadır.\nKüresel ve yerel piyasalarla petrol ve doğal gaz sektöründe yaşanan gelişmelerin yanı sıra iklim krizi ve benzeri mega trendler de Tüpraş’ın faaliyetlerini ve"
+      },
+      {
+        "company": "BIST",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8693,
+        "text_preview": "Borsa İstanbul, sürdürülebilirlikle ilgili ürün ve hizmetleri paydaşların kullanıma sunmakta ve sürdürülebilirlik yaklaşımını faaliyetlerine entegre ederek bu yaklaşımın benimsenmesi konusunda paydaşlarını teşvik etmektedir.\n2015 ve 2016 yıllarında hazırlanan sürdürülebilirlik raporları ve 2017 yılından bu yana hazırlanan entegre faaliyet raporları aracılığıyla, Borsa İstanbul’un sürdürülebilir kalkınmanın üç kritik boyutu olan ekonomi, toplum ve çevre üzerinde yaratmaya gayret gösterdiği olumlu etkiler paydaşlarına açıklanmaktadır. Bu rapor Borsa’nın sürdürülebilirlik alanındaki performansını"
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2023,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.8691,
+        "text_preview": "1. Önceliklendirme analizi   \n2. Sürdürülebilirlik yönetişimi   \n3. Gizlilik Politikaları   \n4. Etik Davranış Kuralları"
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8687,
+        "text_preview": "i bir iklim yasası sunacaklarını, yasanın karbon ticareti sistemini de içereceğini eklemiştir. Ayrıca, 2026’da düzenlenecek olan COP31 için Türkiye’nin ev sahipliği yapmaya aday olduğunu duyurmuştur.\nGerek mevzuat ve mutabakatları içeren yasal boyuttaki düzenlemeler gerekse paydaşların artan bilgi talebinin getirdiği raporlama dünyasındaki değişiklik ve geliştirmeler, şirketlerin 2024 yılı ajandasında önemli bir yer tutmuştur. AB'nin Kurumsal Sürdürülebilirlik Raporlama Direktifi (CSRD), bunlardan biri olup şirketlerin bazıları için yeni bir kavram olan toplum üzerindeki etkileri ve değer zinc"
+      },
+      {
+        "company": "ZorluEnerji",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8683,
+        "text_preview": "yolculuğumuzda yeni bir aşamaya geçtik. 2024 yılı raporumuzda çifte önemlilik yaklaşımını temel alarak, önceliklendirme analizimizi yeniledik. Bu süreçte, yalnızca finansal risk ve fırsatlarımızı değil, aynı zamanda finansal olmayan boyutları da değerlendirdik ve paydaşlarımızdan gelen görüşleri analizlerimize entegre ettik. Entegre risk yönetimi anlayışımız kapsamında risk matrisimizi daha kapsamlı ve dinamik bir şekilde yeniden şekillendirdik.\n2024 yılı Entegre Faaliyet Raporumuz, GRI Sustainability Reporting Standards önemlilik ilkesine tam uyum sağlayacak şekilde, Entegre Raporlama Çerçeve"
+      },
+      {
+        "company": "OyakCimento",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8681,
+        "text_preview": "• Sürdürülebilir ekonomik büyüme ve kârlılık   \n• Döngüsel ekonomi   \n• İş sağlığı ve güvenliği   \n• İklim değişikliği ve enerji   \n• Uluslararası pazarda büyüme   \n• Teknolojik dönüşüm ve operasyonel verimlilik   \n• Çevresel ayak izi   \n• Dijitalleşme\nStratejilerimizde Odaklandığımız Alanlar"
+      },
+      {
+        "company": "BIST",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.868,
+        "text_preview": "yan şirketler için TSRS standartlarına uyum zorunlu hale getirilmiştir. Bu adım, ülkemizin küresel sürdürülebilirlik standartlarına uyum konusunda proaktif yaklaşımını göstermesi açısından önemlidir.\nDiğer taraftan, sürdürülebilirliğin genel olarak makro çevre açısından olumlu ancak özenle ele alınması gereken bir konu başlığı olduğu değerlendirilmektedir. Sermaye piyasalarına artan ilgiyle birlikte yatırımcının korunması ve finansal okuryazarlık alanındaki çalışmaların artırılması ihtiyaçları ön plana çıkmaktadır. Piyasanın çeşitlenen ihtiyaçları ile başta sürdürülebilir finans ve katılım fin"
+      },
+      {
+        "company": "Migros",
+        "year": 2021,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8678,
+        "text_preview": "> Öncelikli alanlarda gelişim hedeflerinin belirlenmesi, hedeflere yönelik projeler geliştirilmesi ve performans doğ- rultusunda raporlama yapılması, > ‘Çevre’, ‘İnsan Hakları ve Fırsat Eşitliği’, ‘Rüşvet ve Yolsuzlukla Mücadele’ ve ‘Sorumlu Tedarik’ politikalarımızın yeterlilik ve etkinliğinin yıllık olarak denetlenmesi, > Uluslararası ve ulusal arenada, sürdürülebilirlik alanındaki konuların takip ve analizinin gerçekleştirilmesi."
+      },
+      {
+        "company": "Kartonsan",
+        "year": 2022,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8678,
+        "text_preview": "konuların önceliğini ve stratejik önemini teyit etmiş; insan kaynağına yatırım ile çalışan gelişimi ve memnuniyetinin artırılmasının Şirketin toplam başarısında kilit faktör olduğunu ifade etmiştir.\nSürdürülebilirliğin en önemli konu başlıklarından olan topluma katkı orta öncelikli konular arasında yer almıştır. Gerek iç gerek dış paydaşlar Kartonsan’ın en geniş ölçekte ürettiği değeri üyesi olduğu toplumla paylaşmasını önemsemektedir.\nVeri güvenliği, insan hakları, tedarik zincirinde yüksek düzeyde çalışma standartları, kurumsal sosyal sorumluluk ve sürdürülebilirlik stratejisi kapsamında şef"
+      },
+      {
+        "company": "AnadoluEfes",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8677,
+        "text_preview": "• Birebir görüşmeler   \n• Stratejik iş birlikleri   \n• Eğitimler ve denetimler   \n• Faaliyet ve sürdürülebilirlik raporları"
+      }
+    ],
+    "computed_at": "2026-05-30T22:24:09",
+    "wall_seconds": 14.73
+  }
+]
