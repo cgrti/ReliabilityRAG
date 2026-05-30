@@ -255,44 +255,59 @@ EXAMPLES = [
 
 def _build_chart_link_card(fig, company_sel: str, topic: str, stats: dict) -> str:
     """
-    Save Plotly figure to disk and return an HTML 'open in new tab' card.
+    Save Plotly figure to disk, AUTO-OPEN in new browser tab via webbrowser
+    module (server-side trigger), and return an HTML status card.
 
-    Rationale (2026-05-31): Gradio 6.11 + Plotly 5.24 has multiple rendering
-    bugs that we exhausted: gr.Plot widget renders 0px height (autosize/CSS/
-    elem_id fixes failed); gr.HTML inline embed strips Plotly's <script> tags
-    for XSS protection so plotly.js never loads. The standalone HTML from
-    fig.to_html(include_plotlyjs='cdn') works perfectly in a real browser tab.
-    Pragmatic workaround: save to disk, link user to open in new tab.
+    Rationale (2026-05-31, Round 4): Multi-tier Gradio 6.11 + Chrome security
+    incompatibility chain:
+      Round 1 (gr.Plot autosize+CSS): silent 0px container — failed
+      Round 2 (gr.HTML inline embed):  Gradio strips <script> tags — failed
+      Round 3 (gr.HTML file:// link):  Chrome blocks file:// from http:// — failed
+      Round 4 (webbrowser.open):       server-side opens local browser — WORKS
+        ✓ Works because Akvaryum runs Gradio + Chrome on same machine
+        ✓ Default browser auto-opens the saved HTML file directly
+        ✓ Standalone HTML proven to render perfectly in a real tab
+
+    For non-local deployments (remote Gradio share=True), this falls back to
+    showing the file path so user can transfer/serve separately.
     """
     from discourse_graph import _slugify
     slug = _slugify(f"{company_sel}_{topic}")[:60] or "discourse"
     html_path = PROJECT_ROOT / "data" / f"discourse_live_{slug}.html"
     fig.write_html(str(html_path), include_plotlyjs="cdn")
-    # Absolute file:// URL works for user-initiated clicks even from http://localhost
-    abs_url = "file:///" + str(html_path.resolve()).replace("\\", "/")
+
+    # Server-side: open default browser to the saved HTML (works on local
+    # Gradio deployments like Akvaryum where server == user's machine).
+    auto_opened = False
+    try:
+        import webbrowser
+        auto_opened = webbrowser.open_new_tab(str(html_path))
+    except Exception:
+        pass
+
+    status_line = (
+        "✓ Chart yeni sekmede açıldı"
+        if auto_opened
+        else "⚠ Otomatik açılamadı — dosyayı manuel aç"
+    )
     return f"""
 <div style='padding:32px;text-align:center;background:#1a1a1a;border-radius:8px;
-            min-height:240px;display:flex;flex-direction:column;justify-content:center;
+            min-height:200px;display:flex;flex-direction:column;justify-content:center;
             border:1px solid #333'>
   <div style='font-size:42px;margin-bottom:8px'>📊</div>
   <h3 style='color:#eee;margin:0 0 8px 0'>Çizge Hazır — {company_sel}</h3>
-  <p style='color:#aaa;margin:0 0 20px 0;font-size:14px'>
+  <p style='color:#aaa;margin:0 0 16px 0;font-size:14px'>
     {stats['retrieved']} chunk · <b style='color:#ff6b6b'>{stats['edges']} çelişki edge'i</b>
     · yıl aralığı {stats.get('year_range', '?')}
   </p>
-  <p style='margin:0 0 20px 0'>
-    <a href='{abs_url}' target='_blank'
-       style='display:inline-block;background:#5C42E5;color:white;
-              padding:14px 32px;text-decoration:none;border-radius:6px;
-              font-size:15px;font-weight:600;
-              box-shadow:0 2px 8px rgba(92,66,229,0.4)'>
-      🚀 Interaktif Timeline'ı Yeni Sekmede Aç
-    </a>
+  <p style='color:#5C42E5;margin:0 0 20px 0;font-size:16px;font-weight:600'>
+    {status_line}
   </p>
-  <p style='color:#666;font-size:11px;margin:0'>
-    Inline embed Gradio 6.11 + Plotly 5.24 uyumsuzluğu nedeniyle devre dışı;
-    standalone HTML tam interaktivite ile yeni sekmede açılır.
-    <br>Dosya: <code style='color:#888'>data/discourse_live_{slug}.html</code>
+  <p style='color:#888;font-size:12px;margin:0;line-height:1.6'>
+    Dosya: <code style='color:#aaa;background:#222;padding:2px 6px;border-radius:3px'>
+    data/discourse_live_{slug}.html</code><br>
+    Tekrar açmak için: dosyayı çift tıkla veya browser'da
+    <code style='color:#aaa'>Ctrl+O</code> ile aç.
   </p>
 </div>
 """
