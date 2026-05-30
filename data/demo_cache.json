@@ -3294,5 +3294,773 @@
     ],
     "computed_at": "2026-05-30T23:21:46",
     "wall_seconds": 7.51
+  },
+  {
+    "spec": {
+      "question": "Yapı Kredi'nin kurumsal yönetim komiteleri ve denetim mekanizmaları nelerdir?",
+      "company": null,
+      "year": null,
+      "showcase": "Single-company governance — organizational structure synthesis"
+    },
+    "answer": "Yapı Kredit'in kurumsal yönetime ilişkin komitelerinin ve denetim organlarının aşağıdaki olduğu belirlendi:\n\n1. Denetim Komitesi: Bu komite, iç kontrol faaliyetlerine liderlik etmek ve bu faaliyetlerin sonuçlarına göre gerekli iyileştirici adımları koordine etmekle sorumludur. Komitenin 83 üyesinden oluşan bir ekibi vardır ve bunların 83'i Bankada çalışmaktadır.\n2. Bilgi Güvenliğini Koordinasyon Komitesi: Bu komitede, bilgi güvenliği ve gizlilik politikalarını oluşturmaya, güncellemeye ve uygulamak için sorumlu olan personeller yer almaktadır. Komite ayrıca siber tehteitlerle başa çıkmayı amaçlayan risk yönetimi araçlarının geliştirilmesini sağlar.\n\nBu iki komite arasındaki işbirliği ve koordinasyonu sağlamak amacıyla Yapı Kredili üst düzey yöneticiler ve diğer paydaşların da dahil olduğu daha geniş bir grup oluşturdu. Bu grup, iç kontrollerin etkinliğini ve etkililiğini sağlamaya yardımcı olur.",
+    "retrieved_chunks": 20,
+    "filtered_chunks": 17,
+    "removed_chunks": 3,
+    "contradiction_edges": 11,
+    "timings": {
+      "retrieval": 6.998394727706909,
+      "isolated_answering": 9.5367431640625e-07,
+      "nli_graph_filter": 2.8152430057525635,
+      "final_generation": 9.369179725646973
+    },
+    "total_time": 19.18281841278076,
+    "chunks_detail": [
+      {
+        "company": "YapiKredi",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.9064,
+        "text_preview": "Yapı Kredi’de iç kontrol faaliyetleri, Denetim Komitesi’nin yönetimi altında çalışmalarını sürdüren ve 83’ü Banka’da görev alan, iştirakler dâhil toplam 99 kişilik bir ekip tarafından yürütülmektedir. Yapı Kredi’nin şubelerinde, genel müdürlüğünde ve finansal iştiraklerinde, BDDK ve uluslararası kontrol standartları ve uygulamaları ile iç risk değerlendirmeleri çerçevesinde belirli aralıklarla kontrol faaliyetleri gerçekleştirilmektedir. Faaliyetler\n2024 yılında müşteri şikayetlerinin yoğunlaştığı ve yasal risk ihtimali doğuran konular ile bilgi güvenliğine yönelik incelemeler devam ederken, t"
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8999,
+        "text_preview": "Yapı Kredi’de iç kontrol faaliyetleri, Denetim Komitesi’nin yönetimi altında çalışmalarını sürdüren ve 83’ü Banka’da görev alan, bağlı ortaklıklar dâhil toplam 101 kişilik bir ekip tarafından yürütülmektedir. Yapı Kredi’nin şubelerinde, genel müdürlüğünde ve finansal bağlı ortaklıklarında, BDDK ve uluslararası kontrol standartları ve uygulamaları ile iç risk değerlendirmeleri çerçevesinde belirli aralıklarla kontrol faaliyetleri gerçekleştirilmektedir. Faaliyetler neticesinde elde edilen bulgular ilgili birimlere bildirilmekte, gerekli iyileştirmelerin yapılması sağlanarak süreç tamamlanana ka"
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2020,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8966,
+        "text_preview": "Yapı Kredi’de iç kontrol faaliyetleri, Denetim Komitesi’nin yönetimi altında çalışmalarını sürdüren ve 83 kişisi Banka’da görev alan, iştirakler dâhil toplam 102 kişilik bir ekip tarafından yürütülmektedir.\nYapı Kredi şubelerinde ve Genel Müdürlük’te BDDK ve uluslararası kontrol standartları ve uygulamaları ile iç risk değerlendirmeleri kapsamında belirli aralıklarla kontrol faaliyetleri gerçekleştirilmektedir. Faaliyetler neticesinde elde edilen bulgular ilgili birimlere bildirilmekte, gerekli iyileştirmelerin yapılması sağlanarak süreç tamamlanana kadar takip edilmektedir.\nİç kontrol faaliye"
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2021,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.8943,
+        "text_preview": "Dijital dönüşüm ve teknolojik değişim, bankacılık sektörünü müşteri bilgilerinin ve kişisel verilerin güvenliğinin ve gizliliğinin sağlanması ve artan siber tehditlerin yönetilmesi için risk yönetimi araçları geliştirmeye yönlendirmiş- tir.\nYapı Kredi’de bilgi güvenliği yönetim sisteminin gözetimi, Bilgi Güvenliği Komitesi tarafından yerine getirilmektedir. Komite, Yönetim Kurulu adına Banka’daki bilgi güvenliği politikalarının oluşturulması, güncellenmesi ve uygulanması faaliyetlerini icra etmektedir. Komite; politika, prosedür ve süreçleri yılda en az bir kez gözden geçirmekte, siber güvenli"
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2020,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.8929,
+        "text_preview": "Dijital dönüşüm ve teknoloji, bankacılık sektörünü müşteri bilgilerinin ve kişisel verilerin güvenliğinin ve gizliliğinin sağlanması ve artan siber tehditlerin yönetilmesi için risk yönetimi araçları geliştirmeye yönlendirmiştir.\nYapı Kredi’de bilgi güvenliği yönetim sisteminin gözetimi Bilgi Güvenliği Komitesi tarafından yerine getirilmektedir. Komite, Yönetim Kurulu adına Banka’daki bilgi güvenliği politikalarının oluşturulması, güncellenmesi ve uygulanması faaliyetlerini icra etmektedir. Komite; politika, prosedür ve süreçleri yılda en az bir kez gözden geçirmekte, siber güvenlik konusunda "
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2024,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.892,
+        "text_preview": "Küresel trendleri takip ederek fırsatları yakalamak, rekabet ortamında farklılaşmak, ekonomik, sosyal ve kurumsal yönetim performanslarını iyileştirmek için risk yönetimi önem taşımaktadır. Yapı Kredi, uzun vadeli sürdürülebilir büyümede risk yönetiminin rolünün bilinciyle etkin risk yönetim yapısının ve risk kültürünün oluşması için adımlar atmaktadır.\nRisk yönetimi; Banka’nın karşılaşabileceği riskleri, uluslararası yasal düzenlemeler göz önünde bulundurularak ulusal mevzuata uygun yöntemler ile tek ve konsolide olarak ölçmek, izlemek, raporlamak ve kontrol altında tutmak amacıyla Denetim Ko"
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2020,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.8915,
+        "text_preview": "Risk yönetimi; Banka’nın karşılaşabileceği riskleri, uluslararası yasal düzenlemeler göz önünde bulundurularak ulusal mevzuata uygun yöntemler ile tek ve konsolide olarak ölçmek, izlemek, raporlamak ve kontrol altında tutmak amacıyla Denetim Komitesi’nin yönetimi altında yer alan 107 çalışan tarafından yürütülmektedir. Risk yönetiminden sorumlu en üst düzey yönetici Uyum, İç Kontrol ve Risk Yönetimi Genel Müdür Yardımcısı’dır. Risk yönetimi; kredi riski, stratejik risk kontrol ve piyasa riski olarak üç farklı alanda gerçekleştirilmektedir.\nYapı Kredi, doğru ve sağlıklı stratejik risk yönetimin"
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2023,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.8913,
+        "text_preview": "Küresel trendleri takip ederek fırsatları yakalamak, rekabet ortamında farklılaşmak, ekonomik, sosyal ve kurumsal yönetim performanslarını iyileştirmek için risk yönetimi önem taşımaktadır. Yapı Kredi, uzun vadeli sürdürülebilir büyümede risk yönetiminin rolünün bilinciyle etkin risk yönetim yapısının ve risk kültürünün oluşması için adımlar atmaktadır.\nRisk yönetimi; Banka’nın karşılaşabileceği riskleri, uluslararası yasal düzenlemeler göz önünde bulundurularak ulusal mevzuata uygun yöntemler ile tek ve konsolide olarak ölçmek, izlemek, raporlamak ve kontrol altında tutmak amacıyla Denetim Ko"
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8904,
+        "text_preview": "a tespit edilen riskleri içeren denetim raporları Üst Yönetim’e sunulur. Öte yandan, bu denetimlerde, Banka prosedürlerinin ve iş süreçlerinin etkinliği ve yeterliliği risk açısından değerlendirilir.\nYapı Kredi’de şube ve süreç denetimleri Yıllık Denetim Planı ile belirlenmekte ve onaylanmak üzere Yönetim Kurulu’na sunulmaktadır. Yıllık Denetim Planı, her bir birimin risk önceliklerini değerlendirmek ve daha önce tespit edilen risklerle ilgili tedbirleri takip etmek amacıyla üst yönetim ile yapılan toplantıların ardından oluşturulmaktadır. Ayrıca, iç denetim raporları Denetim Komitesi aracılığ"
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2023,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.8895,
+        "text_preview": "Dijital dönüşüm ve teknolojik değişim, bankacılık sektörünü müşteri bilgilerinin ve kişisel verilerin güvenliğinin ve gizliliğinin sağlanması ve artan siber tehditlerin yönetilmesi için risk yönetimi araçları geliştirmeye yönlendirmiştir.\nYapı Kredi’de bilgi güvenliği yönetim sisteminin gözetimi, Bilgi Güvenliği Komitesi tarafından yerine getirilmektedir. Komite, Yönetim Kurulu adına Banka’daki bilgi güvenliği politikalarının oluşturulması, güncellenmesi ve uygulanması faaliyetlerini icra etmekte ve siber güvenlik konusunda Yönetim Kurulu’na yıllık raporlama yapmaktadır.\nBilgi Güvenliği Komite"
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2024,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.889,
+        "text_preview": "i kontroller tasarlanmıştır. Bilgi Güvenliği Komitesi, Yönetim Kurulu adına Banka’daki bilgi güvenliği politikalarının oluşturulması, güncellenmesi ve uygulanması faaliyetlerini yerine getirmektedir.\nYapı Kredi’de üçüncü taraf firmalarla veri paylaşımı da yönetmelikler ve Banka iç politikaları çerçevesinde kontrol altında tutulmaktadır. Tüm çalışanlara yönelik bilgi güvenliği farkındalığı ve Kişisel Verilerin Korunması Kanunu eğitimleri verilmekte, siber güvenlik bülteni ve bilgi güvenliği duyuruları yayınlanmakta, çalışanlar bilinçlendirilmektedir."
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2020,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.889,
+        "text_preview": "Yapı Kredi’nin kredi verme faaliyetlerine ilişkin genel çerçeveyi yansıtan Kredi Politikaları, yıllık bazda güncellenerek Yönetim Kurulu’nun onayıyla yürürlüğe girmektedir. Yürürlükte olan Kredi Politikaları aktif kalitesini iyileştirmeyi, etkin risk yönetimini desteklemeyi ve yasal uygulamalara uyum göstermeyi temel almaktadır. Ayrıca, krediler yönetimi alanındaki tüm uygulamaların dâhil olduğu, Banka çapında geçerli ortak standartları, sınırlamaları ve ilkeleri içermektedir.\nKredi risk yönetiminin başlıca amacı; etkili ve düzgün işleyen derecelendirme/skorlama modelleri, stratejileri ve süre"
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2019,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8888,
+        "text_preview": "Yapı Kredi’nin Risk   \nYönetim Çerçevesi;   \nrisk yönetişimi,   \nkapsam tanımı ve   \nriskin saptanması, risk profili değerlendirmesi, risk iştahı seviyesinin   \nbelirlenmesi, izleme   \nve raporlama   \nbileşenlerinden oluşuyor.\nKüresel trendleri takip ederek fırsatları yakalamak, rekabet ortamında farklılaşmak, ekonomik, sosyal ve kurumsal yönetim performanslarını iyileştirmek için risk yönetimi önem taşıyor. Yapı Kredi, uzun vadeli sürdürülebilir büyümede risk yönetiminin rolünün bilinciyle etkin risk yönetim yapısının ve risk kültürünün oluşması için adımlar atıyor.\nRisk yönetimi; Banka’nın k"
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2023,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.8886,
+        "text_preview": "kinlik ve davranış göstergelerinde olan eksiklikler ve/veya uyum konularının ihlali durumlarının, performansa dayalı teşvikler üzerindeki etkileri, kurallara ve iç politikalara göre tanımlanmaktadır.\n2023 yılında Yönetim Kurulu onayı ile Etik Komitesi oluşturulmuştur. Etik Komitesi’nin amacı, Yapı Kredi’nin etik uygulamalarının ve kültürünün geliştirilmesi ile Komiteye sunulacak Etik Kurallar ve Çalışma İlkeleri’ne aykırı uygulamaları/hususları içeren raporları değerlendirmek, karara bağlamak ve öneriler sunmaktır.\nYapı Kredi; Etik Kurallar ve Çalışma İlkeleri, Rüşvet ve Yolsuzlukla Mücadele p"
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2024,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.8885,
+        "text_preview": "Dijital dönüşüm ve teknolojik değişim, bankacılık sektörünü̈ müşteri bilgilerinin ve kişisel verilerin güvenliğinin ve gizliliğinin sağlanması ve artan siber tehditlerin yönetilmesi için risk yönetimi araçları geliştirmeye yönlendirmiştir.\nYapı Kredi’de bilgi güvenliği yönetim sisteminin gözetimi, Bilgi Güvenliği Komitesi tarafından yerine getirilmektedir. Komite, Yönetim Kurulu adına Banka’daki bilgi güvenliği politikalarının oluşturulması, güncellenmesi ve uygulanması faaliyetlerini icra etmekte ve siber güvenlik konusunda Yönetim Kurulu’na yıllık raporlama yapmaktadır.\nBilgi Güvenliği Komit"
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2022,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8884,
+        "text_preview": "Küresel trendleri takip ederek fırsatları yakalamak, rekabet ortamında farklılaşmak, ekonomik, sosyal ve kurumsal yönetim performanslarını iyileştirmek için risk yönetimi önem taşımaktadır. Yapı Kredi, uzun vadeli sürdürülebilir büyümede risk yönetiminin rolünün bilinciyle etkin risk yönetim yapısının ve risk kültürünün oluşması için adımlar atmaktadır.\nRisk yönetimi; Banka’nın karşılaşabileceği riskleri, uluslararası yasal düzenlemeler göz önünde bulundurularak ulusal mevzuata uygun yöntemler ile tek ve konsolide olarak ölçmek, izlemek, raporlamak ve kontrol altında tutmak amacıyla Denetim Ko"
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2021,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.8878,
+        "text_preview": "İç Denetim Yönetimi, bünyesinde çalışan 130 kişi ile (122 Banka İç Denetim $^ + 8$ İştirakler İç Denetim) Yapı Kredi’nin İç Denetim faaliyetlerinin yürütülmesinden sorumludur. Grup, Denetim Komitesi aracılığı ile doğrudan Yönetim Kurulu’na raporlamaktadır.\nYapı Kredi’nin iç denetim yaklaşımı, olağan şube denetimi, süreç denetimi, soruş- turma ve takip denetimini kapsamaktadır. Denetim sonucunda tespit edilen riskleri içeren denetim raporları Üst Yönetim’e sunulur. Öte yandan, Yönetim prosedürlerinin ve iş süreçlerinin etkinliği ve yeterliliği risk açısından değerlendirilir.\nAyrıca plan dışı ol"
+      }
+    ],
+    "computed_at": "2026-05-30T23:46:04",
+    "wall_seconds": 19.18
+  },
+  {
+    "spec": {
+      "question": "Anadolu Efes'in su tüketimi ve geri dönüşüm uygulamaları nasıl ilerlemiştir?",
+      "company": null,
+      "year": null,
+      "showcase": "Environmental performance with temporal evolution"
+    },
+    "answer": "Anadolu Efse'nin su tükmeyi ve geri dönüşümlerinin ilerleyişi hakkında bilgi toplama sürecinde bulundum. Aşağıdaki bilgiler kaynağa dayalıdır:\n\nAnadolu Efese göre, 2023'teki doğrudan ve dolaylı enerji verimliliğini sağlayan 19 dönüstürücü projeyle ve kapasite artışı çalışmaları ile 578 milyon liranın üzerinde yatırım yaptılar. Ayrıca 2023 yılları içinde 5.000 MWh'luk etkileyici enerji tasarruftu sağlamak ve CO2 emisyonlarının 3.000 tonunu azaltmak için planlanmışlardır. Bu projelerin yanı sıra, 2024 yılında da benzer projelere devam etmekte olup, bunun sonucunda daha fazla enerji tasarrufiga yol açacaktır.\n\nGeri dönüşüm açısından bakıldığında, Anadolu Efes 2022'den beri günlük ortalaması 200 litrelik geri dönümsüz atık toplamaya başladı. Bu çabaların bir parçası olarak, Gürcistan'daki ana ofislerinde plastik atık geri dönüşümü ve plastik kapakları toplamasına yardımcı olacak ayrı kutular yerleştirmişlerdir. Ek olarak, Staropramne ve Lowenbräu markalarına özel geri dönüşüme yönelik kutular geliştirdiler.\n\nSonuç olarak, Anadolu Efse'nin geri dönüşüm ve su tüksün uygulamalarının ilerleyişi hem 2023 hem de 2024'te önemli adımlara imza attı. Enerjide tasarruf ve CO2 azaltılmasının yanı sıra geri dönüşüm programlarına da önem vermeye devam ediyorlar.",
+    "retrieved_chunks": 20,
+    "filtered_chunks": 17,
+    "removed_chunks": 3,
+    "contradiction_edges": 8,
+    "timings": {
+      "retrieval": 0.019322633743286133,
+      "isolated_answering": 4.76837158203125e-07,
+      "nli_graph_filter": 0.19337964057922363,
+      "final_generation": 14.582133293151855
+    },
+    "total_time": 14.794836044311523,
+    "chunks_detail": [
+      {
+        "company": "AnadoluEfes",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8653,
+        "text_preview": "Doğal kaynakların üzerindeki baskının giderek arttığı bir çağda, döngüsel ekonomiyi temel alan iş modelleri iş dünyasına yön veriyor. Anadolu Efes olarak, döngüsel ekonomiyi odağımıza alarak sadece çevresel etkilerimizi azaltmakla kalmıyor, aynı zamanda uzun vadeli değer yaratmayı amaçlıyoruz. Tüm süreçlerimizi faaliyet gösterdiğimiz bölgelerdeki mevzuat ve Çevre Politikamızla uyumlu şekilde yürütüyoruz. Kaynağında ayrıştırma ve maksimum ölçüde geri kazanım ilkeleri ışığında, döngüsel ekonomiye katkı sağlayacak projeler geliştiriyoruz.\nOperasyonel süreçlerimizde geri dönüşüm performansımızı ya"
+      },
+      {
+        "company": "AnadoluEfes",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8543,
+        "text_preview": "Anadolu Efes Grup Tedarik Zinciri Direktörü ‘Anadolu Efes olarak 2030’a kadar çevre üzerindeki etkimizi “sıfırlamak” hedefiyle çalışmalarımızı sürdürüyoruz. 2023 yılında, doğrudan ve dolaylı verimlilik etkisi olan 19 dönüştürücü enerji verimliliği projesiyle ve kapasite artırımı çalışmalarımızla 578 milyon TL'nin üzerinde yatırım yaptık. Bu kapsamda yıllık 5.431 MWh'lik etkileyici bir enerji tasarrufu sağlamayı ve $\\mathsf { C O } _ { 2 } \\mathsf { e }$ emisyonlarımızı 3.335 ton azaltmayı hedefliyoruz. Bir önceki yıl başladığımız ve devam eden projelerimizin etkisiyle birleştiğinde ise yıllık "
+      },
+      {
+        "company": "AnadoluEfes",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8538,
+        "text_preview": "Anadolu Efes olarak sorumlu tüketim ve pazarlama anlayışını iş stratejimizin temel taşlarından biri olarak görüyoruz. Ürünlerimizin tüketicilere ulaştığı her aşamada etik, güvenlik ve sorumluluk ilkelerini ön planda tutuyoruz. Etik standartlara uygun üretim ve pazarlama stratejileri geliştirerek, bilinçli tüketim alışkanlıklarının yaygınlaşmasına katkı sağlamayı amaçlıyoruz. Sorumlu tüketim odaklı projelerimizle, yalnızca bireylerin değil, toplumsal davranışların da olumlu yönde dönüşmesine destek olmak için çalışıyoruz.\nTüm çalışanlarımızın ve saha temsilcilerimiz olan bayi ve distribütörleri"
+      },
+      {
+        "company": "AnadoluEfes",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8518,
+        "text_preview": "2024 yılı, karşılaştığımız ekonomik belirsizlikler, enflasyonist baskılar ve jeopolitik zorluklara rağmen, çevik ve kararlı yaklaşımımız sayesinde başarılarımızı perçinlediğimiz bir dönem oldu. Değişen dinamiklere hızla uyum sağlama kabiliyetimiz, güçlü stratejilerimiz ve yenilikçi bakış açımızla sürdürülebilir büyümemizi korumayı başardık.\nAnadolu Efes olarak, faaliyet gösterdiğimiz coğrafyalarda güvenilir, tanınan, sevilen bir marka ve lider olma odağımızı güçlü bir şekilde sürdürdük. 55 yılı aşan geçmişimiz boyunca, tüketicilerimize kaliteli ürünler sunmayı ve onlara değer katmayı ilke edin"
+      },
+      {
+        "company": "AnadoluEfes",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8502,
+        "text_preview": "• 2023 yılından bu yana devamlılık • Günlük ortalama 200 litre geri dönüştürülmüş atık\nEfes Gürcistan’da çevresel sürdürülebilirliği desteklemek ve çalışanlarımızın davranışlarını değiştirerek iç farkındalığı artırmak amacıyla Gürcistan’ın önde gelen çevreci girişimlerinden Tene ile bir iş birliği yaptık. Bu iş birliği kapsamında, tüm Efes Gürcistan ofislerine plastik atıkların geri dönüşümü için ayrı kutular ve plastik şişe kapakları toplayıcıları yerleştirdik. Ayrıca Staropramen ve Lowenbrau markalarımıza özel geri dönüşüm kutuları geliştirerek fıçı bira deneyiminin sunulduğu festivallerde b"
+      },
+      {
+        "company": "AnadoluEfes",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8496,
+        "text_preview": "Neriman Eralp Kalyoncuoğlu Anadolu Efes Grup Sürdürülebilirlik Müdürü Paydaş görüşü videosunu izlemek için tıkla!\nAnadolu Efes yöneticilerinin proje anlatımları\nPaydaşlardan doğrudan geri bildirim alınması\nFarklı paydaş gruplarından 100’e yakın paydaş\nEtki ve Risk odaklı iki farklı oturum\nAşağıda yer alan matriste bu konular dışında yüksek öncelikli ve öncelikli olarak sınıflandırdığımız diğer konularımızı görebilirsiniz. Aynı zamanda matris içerisinde yön bildiren oklar analizin başında gerçekleştirdiğimiz paydaş anketi sonrasında çifte önemlilik bakış açısıyla attığımız adımların, konuların "
+      },
+      {
+        "company": "AnadoluEfes",
+        "year": 2023,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8494,
+        "text_preview": "Toplumsal yatırım ve etki odaklarımız altında gerçekleştirdiğimiz projeler aracılığıyla yerel kalkınmayı ve kadının güçlenmesini desteklemeyi amaçlıyoruz. Sürdürülebilir turizm odağı da bu alanda paydaşlarımız ile değer yaratabileceğimiz ve operasyonlarımızın olduğu ülkelerde gelişime açık bir konu olarak ön plana çıkıyor. Anadolu Efes olarak farklı paydaşlarımızla iş birliği içerisinde, 17 yıldır sürdürülebilir turizmi destekliyoruz. Projelerimiz sayesinde sürdürülebilir turizm modelleri ile doğal ve kültürel mirasın korunması, bölge halkı ile ziyaretçilerin deneyimlerinin artması, yerel ekon"
+      },
+      {
+        "company": "AnadoluEfes",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.849,
+        "text_preview": "Karmaşık ve hızla değişen global dinamikler, iş dünyasını kökten dönüştürmeye devam ediyor. Tüketici davranışlarındaki değişim, yapay zekâ ve dijital teknolojilerin yükselişi, sürdürülebilirlik odaklı regülasyonlar ve iklim krizine yönelik artan farkındalık, iş dünyasına eş zamanlı olarak hem zorluklar hem de önemli fırsatlar sunuyor. Anadolu Efes olarak bu dönüşümün etkilerini derinlemesine anlamak ve iş modelimizi bu doğrultuda güçlendirmek için kapsamlı bir vizyonla hareket ediyoruz.\n2024 yılı boyunca gerçekleştirdiğimiz kapsamlı analiz ve araştırmalar sonucunda, sektörümüz ve Anadolu Efes "
+      },
+      {
+        "company": "AnadoluEfes",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8488,
+        "text_preview": "• Türkiye’de depozitolu olarak piyasaya sunduğumuz plastik kasalarımızı öncelikli olarak yeniden kullanıyoruz. Kullanılmayacak durumda olanları yeni kasa üretiminde ham madde olarak değerlendiriyor ve döngüsel ekonomiye katkı sunuyoruz. Plastik kasalarımızdaki geri dönüştürülmüş malzeme içeriği oranımız %75.\n• Gürcistan faaliyetlerimizde Avrupa’ya ihraç ettiğimiz PET şişeli ürünleri $\\% 2 5$ geri dönüştürülmüş malzeme içerikli PET ambalajlardan üretmeye başladık.\n• Gürcistan ve Moldava’da pet ambalaj için hafifletme çalışmalarımızı tamamladık. 2025 yılında etkilerini paylaşacağız.\n• Rusya’da 2"
+      },
+      {
+        "company": "AnadoluEfes",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8481,
+        "text_preview": "Sürdürülebilirlik anlayışımız içerisinde Anadolu Efes için doğru konulara odaklanmak önemli yer tutuyor. Sürdürülebilirlik başlığı altında yer alan onlarca konu içerisinde işimiz ile pozitif etkimizi en fazla artırabileceğimiz ve negatif etkimizi de en aza indirmemiz gereken alanları belirlemek adına belirli aralıklarla tekrarladığımız önceliklendirme analizlerimize bu yıl bir yenisini ekledik. Bu yıl önceliklerimizi belirlerken çifte önemlilik bakış açısını benimsedik ve Anadolu Efes’in etkisi üzerine sorduğumuz soruları, Anadolu Efes üzerinde etkisi bakış açısıyla bir kez daha yönlendirdik."
+      },
+      {
+        "company": "AnadoluEfes",
+        "year": 2022,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8481,
+        "text_preview": "gili oldukları gibi birbirleriyle de bağlantılı. Anadolu Efes olarak yarattığımız değeri ve paydaşlarımız üzerindeki etkimizi ele alırken sermaye öğeleri arasındaki nedenselliğin yönü ve büyüklüğü de\ndahil olmak üzere karşılıklı bağımlılıkları göz önünde bulunduruyoruz. Bu sayede girdilerimiz ve kaynak olarak gördüğümüz öğelerimizin arasındaki etkileşimleri ortaya çıkarıyor, yarattığımız değeri artırmayı hedefliyoruz. Örneğin sürdürülebilir tarım uygulamalarını destekleyerek çevresel etkimizi azaltmaya çalışırken çiftçilere verdiğimiz eğitim sayesinde yerel kalkınmaya da katkı sağlıyoruz.\nDeğe"
+      },
+      {
+        "company": "AnadoluEfes",
+        "year": 2022,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.848,
+        "text_preview": "Küreselleşme, şehirleşme, teknolojik ilerleme, iklim değişikliği ve pandemi gibi küresel boyutta insan hayatına dokunan büyük değişimler zaman içerisinde tüketici faaliyetleri, öncelikleri ve tercihlerinde de değişimlere neden oluyor. Özellikle COVID-19 ile ivmesini artıran iyi beslenme ve sağlıklı yaşam tarzı alışkanlıklarına yönelim, bira ve içecek sektöründe de etkisini göstererek düşük alkollü ve düşük kalorili tercihlere doğru artan bir tüketici odağına işaret ediyor. Bununla birlikte kendi değerini yansıtan, amaç odaklı marka arayışı içindeki tüketiciler; daha şeffaf, etik değerlere ve d"
+      },
+      {
+        "company": "AnadoluEfes",
+        "year": 2022,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8474,
+        "text_preview": "erimiz aracılığı ile tüm tedarikçilerimize, Anadolu Efes ile çalışma koşulları üzerine çerçeve çizerek, tedarik\nzincirimiz üzerindeki riskleri en aza indirmekle kalmıyor, dayanıklılığını artırıyoruz.\nSektörel Trendler bölümünde yer verdiğimiz Tarımsal Ham madde ve Su Stresi çalışmamız da tedarik zinciri dayanıklılığımızı ölçmek ve güçlendirmek adına yaptığımız bir çalışma olarak faaliyetlerimiz arasında yer alıyor. Risklerimizi ölçümlemek üretim ve tedarik zincirimizde yaşanabilecek aksaklıları öngörerek engellemek için aksiyon planları hazırlamamıza ve dayanıklı bir tedarik zincirine sahip ol"
+      },
+      {
+        "company": "AnadoluEfes",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8473,
+        "text_preview": "ağmen, güçlü ve çeşitlendirilmiş marka portföyü, etkin fiyatlandırma ve iskonto stratejilerinin yanı sıra turizmin sağladığı destek, 2024 yılı genelinde büyümeyi destekleyen önemli etkenler olmuştur.\nAnadolu Efes, tüketici beklentilerine uyum sağlamak ve marka portföyünü daha da güçlendirmek adına 2024 yılında distile alkol kategorisine adım atmıştır. Bu doğrultuda, yılın ikinci çeyreğinde William Grant & Sons ile imzaladığı anlaşma kapsamında yılın ikinci yarısı itibarıyla Şirket’in viski, likör ve cin gibi seçkin ürünlerinin Türkiye’de satış, pazarlama ve dağıtımını üstlenmiştir. Bunun yanı "
+      },
+      {
+        "company": "AnadoluEfes",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8472,
+        "text_preview": "Anadolu Efes kurulduğu günden bu yana sürdürülebilirliği DNA'sında bulunduran şirketlerden biri. Bir bira şirketi olmanın ötesinde, paydaşlarıyla beraber operasyonlarını sürdürdüğü her ülkede yerel kalkınmanın desteklenmesinden sürdürülebilir tarıma, çevresel etkinin azaltılmasından çalışan ekosistemi içerisinde fırsat eşitliğinin sağlanmasına kadar birçok alanda çalışıyor.\nGeçtiğimiz yıl ise sürdürülebilirlik anlayışını şirketin iş yapışına, stratejik odaklarına ve hedeflerine sıkı sıkıya bağlamak adına önemli adımlar attı ve entegre düşünce anlayışı ile sürdürülebilirlik süreçlerini yönetmey"
+      },
+      {
+        "company": "AnadoluEfes",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8471,
+        "text_preview": "Anadolu Efes olarak, kurulduğumuz günden bu yana, faaliyet gösterdiğimiz her coğrafyada yerele değer katıyor, bu değerleri küresel vizyonumuzla geleceğe taşıyoruz. İlk Entegre Faaliyet Raporumuz, bu yolculuğun bir uzantısı olarak şirketimizin yarattığı ekonomik, sosyal ve çevresel etkinin stratejik bir yansıması niteliğinde.\n\"Yerelde Değer, Geleceğe Artı Değer\" mottosuyla, geçmişten gelen güçlü mirasımızı ve geleceğe yön veren sürdürülebilir büyüme stratejilerimizi tasarıma yansıttık.\nRaporun görsel dili, birbirine entegre olan stratejik odak alanlarımızın uyumunu, yerelden küresele uzanan etk"
+      },
+      {
+        "company": "AnadoluEfes",
+        "year": 2024,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8462,
+        "text_preview": "Müşterilerinin beklenti ve tercihlerini yakından takip eden Anadolu Efes, yenilikçi yaklaşımıyla ürün portföyünü sürekli olarak çeşitlendirip zenginleştirmektedir. Tüketici eğilimlerini yakından takip eden Şirket, farklı zevklere ve yaşam tarzlarına hitap eden geniş bir ürün yelpazesi sunarak sektördeki öncü konumunu pekiştirmektedir.\nAnadolu Efes, sadece farklılaştırılmış ve yenilikçi ürünler geliştirmekle kalmayıp sektöre yön veren pazarlama ve satış stratejileriyle de fark yaratmaktadır. Modern teknolojilerle entegre edilen güçlü satış ağı sayesinde, Türkiye’de ve operasyon yürüttüğü diğer "
+      }
+    ],
+    "computed_at": "2026-05-30T23:46:19",
+    "wall_seconds": 14.79
+  },
+  {
+    "spec": {
+      "question": "TSKB'nin sürdürülebilir finansman ürünleri ve yeşil tahvil yatırımları nelerdir?",
+      "company": null,
+      "year": null,
+      "showcase": "Financial product portfolio — sustainability-linked instruments"
+    },
+    "answer": "TSKB'nin sürdürülebilir finanse etme ürünlerinin ve yeşillendirilmiş tahvil yatırımı örnekleri şunlardır:\n\n1. Kurumsal kredileri ve proje finansmanını içeren geniş bir yelpazedeki kredi seçenekleri - TSKB bu türde uzun vadeli finansmana sağlar ve farklı sektörlere yöneliktir.\n2. Toptancı banka (APEX banka) kapsamında finansman sağlayan finansal kira ve faktoring firmaları - TSKBK bu türde finansmana yardımda bulunur.\n3. Karbon nötrlüğü - TSKK, Birleşmiş Miletler Çevre Girişimine (UNEPFI) üyesidir ve BM Küreselleşme İlkelerini kamuya açıkladı.\n4. YenilENEYEREJİ VE ENEERJI VERİMİLİK PROJELELERİ - TSKBB bu tür projelere odaklanıyor.\n5. Sürdürülebilir turizm - TSKKK bu alana dikkat ediyor.\n6. Kaynak verimliligii - TSKKB bu alana önem veriyor.\n7. İş sağlığı ve güvenlik - TSKBC bu alana ilgi gösteriyor.\n8. Kadın istihdamı - TSKKC bu alana odaklanıyor.\n\nYeşillendirmiş tahvil ihracına ilişkin olarak TSKB:\n\n1. Yeşillendirilmemiş tahviller - TSKBP 2016'da ilk Yeşillendirmeden sonra ilk Yeşilleştirilmiş tahvil ihraci gerçekleştirdi.\n2. Yeşili ve sürdürülebilir tahvil ihracağı - TSKBYeşil ve sürdürülebilir projeslere yöneliktirler.\n3. Temsilciye göre yeşilli ve sürdürülebilir proje - TSKBTemelinde yeşilli projeye yöneliktirse de, aynı zamanda toplumsaldan faydalanabilir.\n\nBu bilgiler TSKB tarafından sunulan kaynaklardan alınmıştır.",
+    "retrieved_chunks": 20,
+    "filtered_chunks": 13,
+    "removed_chunks": 7,
+    "contradiction_edges": 32,
+    "timings": {
+      "retrieval": 0.01922917366027832,
+      "isolated_answering": 9.5367431640625e-07,
+      "nli_graph_filter": 0.20077776908874512,
+      "final_generation": 16.484708547592163
+    },
+    "total_time": 16.704716444015503,
+    "chunks_detail": [
+      {
+        "company": "TSKB",
+        "year": 2019,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8972,
+        "text_preview": "a sağladığı nitelikli ve temalı global fonları Türk iş dünyasının yatırımları ile buluşturmakta, yurt dışı sermaye piyasalarında ihraç ettiği borçlanma enstrümanlarıyla da ilave kaynak yaratmaktadır.\nTSKB, kurumsal krediler ve proje finansmanı başta olmak üzere, geniş yelpazede kredi seçenekleriyle, farklı sektörlerdeki sürdürülebilir yatırım projelerine özel yapılandırılmış orta-uzun vadeli finansman desteği sağlamaktadır. Banka ayrıca toptancı bankacılık (APEX bankacılığı) kapsamında finansal kiralama ve faktoring şirketleri, ticari bankalar ve katılım bankaları aracılığıyla KOBİ ve ihracatç"
+      },
+      {
+        "company": "TSKB",
+        "year": 2020,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8922,
+        "text_preview": "cisi seçilir. Türkiye’nin ilk karbon nötr bankası unvanını kazanır. Birleşmiş Milletler Çevre Programı Finans Girişimi’ne (UNEP FI) üye olan TSKB, BM Küresel İlkeleri taahhüdünü kamuoyu ile paylaşır.\nTSKB, 2010’lu yıllarla birlikte sürdürülebilir bankacılık alanındaki çalışmalarını yoğunlaştırır. Yenilenebilir enerji ve enerji verimliliği projeleriyle ön plana çıkan TSKB, tema çeşitliliğini sürdürülebilir turizm, kaynak verimliliği, iş sağlığı ve güvenliği ve kadın istihdamı konuları ile genişletir. TSKB, Uzun Vadeli Yatırımcılar Kulübü’nün (LTIC) ardından Avrupa Uzun Vadeli Yatırımcılar Birli"
+      },
+      {
+        "company": "TSKB",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8917,
+        "text_preview": "TSKB, başta iklim ile ilgili risk ve fırsatlar olmak üzere sürdürülebilirlikle bağlantılı risk ve fırsatların yönetimi için hem kendi faaliyetlerini, çevre ve topluma olan etkisini hem de müşterilerinin yeşil dönüşüm süreçlerinde ihtiyaç duydukları alanları sürekli gözden geçiriyor. Yıl boyunca temin edilen temalı kaynaklar da dahil olmak üzere TSKB’nin pasif yapısı doğrudan ve dolaylı olumsuz etkiyi azaltmak, çevre ve toplum dostu yeşil ve sosyal yatırımları desteklemek için kullanılıyor.\nYenilenebilir enerji, enerji ve kaynak verimliliği, deprem etkilerini onarma, döngüsel ekonomi, kadın ist"
+      },
+      {
+        "company": "TSKB",
+        "year": 2016,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8913,
+        "text_preview": "lanan tutarın 13 katından fazla talep görerek büyük başarı kazanmıştır. Yeşil / Sürdürülebilir Tahvil ihracıyla sağlanan fon, sadece yeşil ve sürdürülebilir projelerin finansmanında kullanılmaktadır.\nİklim değişikliği konusunun öneminin farkında olan ve bu konu kapsamındaki görüş ve faaliyetlerini şeffaf bir biçimde paydaşları ile paylaşan TSKB, son olarak Aralık 2016’da “İklim Değişikliği Beyanı”nı yayınlamıştır.\nTÜRKIYE’NIN SÜRDÜRÜLEBILIR KALKINMASINDA ÖNCÜ BANKA OLMA vizyonuyla hareket eden TSKB, geleceğe yönelik hedef ve stratejilerini kurum kültürünün ve iş yapma biçiminin doğal bir parça"
+      },
+      {
+        "company": "TSKB",
+        "year": 2016,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8901,
+        "text_preview": "birikimiyle TSKB, 2016 yılında yine bir ilke imza atarak Türkiye'nin ve CEEMEA (Orta ve Doğu Avrupa ile Orta Doğu ve Afrika) Bölgesinin ilk Yeşil / Sürdürülebilir Tahvil ihracını gerçekleştirmiştir.\nUluslararası piyasalardan büyük talep gören TSKB'nin tahvil ihracı, bilinen yeşil tahvil özelliklerine, sürdürülebilirlik boyutunu da eklemektedir. Bu nedenle, ihraçtan temin edilen fonlar ile yeşil projelerin yanı sıra toplumsal faydaya dönük yatırımlara da destek verilebilmektedir. Yenilenebilir enerji, enerji ve kaynak verimliliği, karbon sıfır ulaştırma projeleri, sürdürülebilir atık ve su yöne"
+      },
+      {
+        "company": "TSKB",
+        "year": 2018,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8882,
+        "text_preview": "ansları üst seviyede olan şirketlerin bulunduğu “BIST Sürdürülebilirlik Endeksi’nde” yerini alan TSKB, 2016 Aralık ayında devreye giren FTSE4Good Gelişmekte Olan Piyasalar Endeksi’ne de dahil edilir.\nSürdürülebilirlik alanındaki öncü konumunu güçlendiren TSKB, 2016’da uluslararası piyasalarda “Yeşil/Sürdürülebilir Tahvil” (Green/Sustainable Bond) ihracını gerçekleştiren ilk Türk kuruluşu olur. Bu ihracın gördüğü ilgiden güç alan TSKB, 2017 yılında dünyada bir ilke imza atar ve Sermaye Benzeri Sürdürülebilir Tahvil ihracını gerçekleştirir.\nTSKB, 2016 yılında Türkiye’deki iş sağlığı ve güvenliği"
+      },
+      {
+        "company": "TSKB",
+        "year": 2020,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8863,
+        "text_preview": "İklim değişikliğine çözüm üreten ve düşük karbonlu ekonomiye geçişi destekleyen bankacılık modeli ve sürdürülebilirlik temalı kredileri ile finans sektöründe ayrışan TSKB’nin yenilenebilir enerji, enerji/kaynak verimliliği, çevre, kadın istihdamı, iş sağlığı ve güvenliği, kapsayıcı finansmana erişim gibi yatırımlara verdiği destek toplam kredi portföyünün dörtte üçüne yakın seviyededir. TSKB, tutardan bağımsız tüm yatırım projelerinin çevresel ve sosyal risklerini ölçme taahhüdüyle de öne çıkmaktadır."
+      },
+      {
+        "company": "TSKB",
+        "year": 2019,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8859,
+        "text_preview": "aki sürdürülebilirlik çalışmalarını da yakından takip eder: Birleşmiş Milletler Çevre Programı Finans Girişimi’ne (UNEP FI) üye olur ve BM Küresel İlkeleri ışığındaki taahhüdünü kamuoyu ile paylaşır.\nTSKB, 2010’lu yıllarla birlikte yenilenebilir enerji ve enerji verimliliği projeleriyle ön plana çıkar. Çok sayıda yenilenebilir enerji, enerji ve kaynak verimliliği projesini finanse eden TSKB, küresel iklim değişikliğiyle mücadelenin yanı sıra Türkiye’nin artan enerji talebinin karşılanmasında önemli görevler üstlenir.\n2008 küresel finansal kriz sonrasında hızlı bir düşüş sergileyen faiz oranlar"
+      },
+      {
+        "company": "TSKB",
+        "year": 2018,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8855,
+        "text_preview": "TSKB, sürdürülebilir bankacılık kapsamında, özel finansman ürünleri de kullanmaktadır. Bankanın bu kapsamda kullandığı iki ürün, 2016 yılında ihraç ettiği Yeşil/Sürdürülebilir Tahvil ile 2017 yılında ihracı gerçekleştirilen Sermaye Benzeri Sürdürülebilir Tahvil’dir.\nTSKB ihraç ettiği iki farklı tahvil ile; iklim değişikliğinin etkilerinin azaltımını (mitigation) hedefleyen yatırımlar, iklim değişikliğine uyum (adaptasyon) yatırımları ve sürdürülebilir altyapı yatırımlarının finansmanını ve sosyal kalkınmayı amaçlamıştır.\nTSKB, özel finansman ürünlerine yönelik bağımsız denetimden geçmiş Tahsis"
+      },
+      {
+        "company": "TSKB",
+        "year": 2016,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8854,
+        "text_preview": "anka, yine 2015 yılında, Borsa İstanbul’da işlem gören ve kurumsal sürdürülebilirlik performansları üst seviyede olan şirketlerin bulunduğu “BİST Sürdürülebilirlik Endeksi”nde yer almaya başlamıştır.\nTSKB, BİST Kurumsal Yönetim Endeksi'ne dahil edildiği 2009 yılından bu yana en yüksek kurumsal yönetim derecelendirme notuna sahip kuruluşlar arasındaki yerini korumaktadır. Türkiye Kurumsal Yönetim Derneği tarafından 2011 yılından bu yana düzenlenen Kurumsal Yönetim Ödülleri organizasyonunda üç kez birincilik, iki kez ikincilik ve bir kez de üçüncülük ödülüne layık görülmüştür.\nAvrupa Yatırım Fon"
+      },
+      {
+        "company": "TSKB",
+        "year": 2019,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8852,
+        "text_preview": "isine geçiş bildirgelerini imzalar.\nBorsa İstanbul’da işlem gören ve kurumsal sürdürülebilirlik performansları üst seviyede olan şirketlerin bulunduğu “BİST Sürdürülebilirlik Endeksi”nde yerini alır.\nSürdürülebilirlik alanındaki öncü konumunu güçlendiren TSKB, 2016’da uluslararası piyasalarda “Yeşil/ Sürdürülebilir Tahvil” (Green/Sustainable Bond) ihracını gerçekleştiren ilk Türk kuruluşu olur. Bu ihracın gördüğü ilgiden güç alan TSKB, 2017 yılında dünyada bir ilke imza atar ve Sermaye Benzeri Sürdürülebilir Tahvil ihracını gerçekleştirir.\nTSKB, 2016 yılında Türkiye’deki iş sağlığı ve güvenliğ"
+      },
+      {
+        "company": "TSKB",
+        "year": 2016,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8847,
+        "text_preview": "1. Tüm yatırım projelerinin çevresel ve sosyal risklerinin ölçümü ve yönetimi   \n2. Kurumsal Yönetim esaslarına tam uyum ve etkin risk yönetimi   \n3. Birleşmiş Milletler Sürdürülebilir Kalkınma Hedefleri’nin desteklenmesi ve iklim değişikliği ile mücadelenin finansmanı   \n4. Sorumlu ve sürdürülebilir büyüme ve gelir yaratma   \n5. İnsan kaynağına yatırım   \n6. Müşteri memnuniyetinin artırılması   \n7. Sürdürülebilirlik alanında sosyal sorumluluk projeleri yürütülmesi\nTSKB’nin müşterileri, iş ortakları, işbirliği içinde olduğu finansman kurumları, üye olduğu inisiyatifler ve çalışanları nezdinde "
+      },
+      {
+        "company": "TSKB",
+        "year": 2019,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8833,
+        "text_preview": "ılık alanlarında pek çok öncü uygulamayı taşımış olan TSKB, Türkiye’de ve bölge coğrafyasındaki ilk yeşil tahvili ve dünyada ilk sürdürülebilir sermaye benzeri tahvili ihraç etmiş banka durumundadır.\nDiğer yandan, Türkiye’nin ilk ve en büyük yatırım bankası olan TSKB, SPK ve BIST’in kuruluşundan çok daha önce başladığı faaliyetleriyle sermaye piyasalarının"
+      }
+    ],
+    "computed_at": "2026-05-30T23:46:36",
+    "wall_seconds": 16.7
+  },
+  {
+    "spec": {
+      "question": "Türk bankacılık sektöründe ESG risk değerlendirme yaklaşımları arasındaki farklar nelerdir?",
+      "company": null,
+      "year": null,
+      "showcase": "Sector-wide ESG methodology comparison"
+    },
+    "answer": "Türk bankacılığında ESG risk değerlende-me yaklaşımlandaki temel farklar şunlardır:\n\n1. Risk Kategorizasyonu: TÜPRAŞ'ın Risk Kataloğu'nda riskler iki ana gruba ayrılmıştır: Finansal riskler (finansal risk kategorisi) ve Finansal Olmayan riskler (operasyonel risk kategorisi). Öte yandan Garanti BBVA'nın yaklaşımı daha geniş bir perspektife sahiptir ve riskleri üç ana gruba ayırmaktadır: Operasyonel riskler, Finansal riske karşı koruma ve Finansallaştırılamaz riskler.\n\n2. Risk Değerlendirme Süreci: TÜPRAS'ın risk değerlendermesi, operasyonel risklerin önceliklendirilmesi için risk değerlenermesinde kullanılmış olup, etki-olabilirlik analizi, kayıplı olay veri analitiği, senaryoların analizi, stress testleri ve göstergeler kullanılmıştır. Buna karşın Garanti BBVAs'ın risk değerlemesinde uzmanlık ve işlevsellikleri dikkate alındıkça değerlendirilmektedir.\n\n3. Raporlama: TÜPRS'in raportajında, Sustainalytics'in ESG risk derecelendirmesine göre derecelendirildiği ve Türkiye'deki diğer bankalara göre daha yüksek bir derecelendirilmeye sahip olduğu vurgulanmıştır. Öte yandan, Garanti BBVa's'ın raportajına göre, bankası ESG risklerini etkili bir şekilde yönetiyor ve bu nedenle TSRS standardlarına uyumludur.\n\nBu farklılıklara rağmen, her iki bankanın da ESG riskinin önemi konusunda aynı fikirde oldukları açıktır. Her ikisinin de risklerini yönetmek için çeşitli yöntemler ve araçlar kullanıyor olmalarına rağmen, sonuçta amaçları benzerdir: bankalarını ve paydaşlarını korumak ve sürdürülebilirliği teşvik etmek.",
+    "retrieved_chunks": 20,
+    "filtered_chunks": 18,
+    "removed_chunks": 2,
+    "contradiction_edges": 2,
+    "timings": {
+      "retrieval": 0.018719196319580078,
+      "isolated_answering": 7.152557373046875e-07,
+      "nli_graph_filter": 0.1893923282623291,
+      "final_generation": 16.39953327178955
+    },
+    "total_time": 16.607645511627197,
+    "chunks_detail": [
+      {
+        "company": "KalkinmaYatirimBankasi",
+        "year": 2021,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8691,
+        "text_preview": "2021 yılında yaptığımız çalışmalar sonucunda, bağımsız sürdürülebilirlik derecelendirme kuruluşu Sustainalytics tarafından global ölçekte yapılan değerlendirmede Çevresel, Sosyal ve Yönetişim (ESG) derecelendirme notumuz ve performansımızla Türkiye, Orta Doğu ve Afrika’daki tüm kurumlar arasında 11, 0 risk notuyla risklerini en iyi yöneten 1. kurum olduk. Avrupa’da da AYB, EBRD ve KfW’dan sonra en iyi sonucu alan 4. Banka olduk.\nSustainalytics ESG Risk Derecelendirmesi; bir şirketin bulunduğu sektöre özgü önemli ESG risklerine ne kadar maruz kaldığını ve şirketin bu riskleri ne kadar iyi yönet"
+      },
+      {
+        "company": "KalkinmaYatirimBankasi",
+        "year": 2022,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8676,
+        "text_preview": "Risk yönetiminin geleneksel yüzü genellikle finansal risklerle ilişkilendirilirken, sürdürülebilirlik kavramının öneminin zamanla artması ile Çevresel, Sosyal ve Yönetişim (ÇSY) risklerinin yönetimi de giderek önem kazanmaktadır.\nBankaların çevresel ve sosyal riskleri etkin bir şekilde yönetme olgunluğu, onların genel risk yönetim uygulamalarının bir parçası olarak gö- rülmektedir. Sürdürülebilir finansman ve risk yönetimi arasındaki bu bağlantı, bankaların hem kendi faaliyetlerinden doğan riskleri kontrol etmelerine yardımcı olurken, hem de kredi faaliyetleri sırasında oluşabilecek dolaylı ri"
+      },
+      {
+        "company": "TurkiyeİsBankasi",
+        "year": 2019,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8653,
+        "text_preview": "ler Banka’nın “Risk Kataloğu” aracılığıyla tanımlanarak sınıflandırılmaktadır. Risk Kataloğunda riskler, finansal riskler ve finansal olmayan riskler olmak üzere iki ana grupta detaylandırılmaktadır.\nOperasyonel risklere ilişkin yapılan ölçümlerde riskin önceliklendirilmesine dönük risk değerlendirmelerinin yanı sıra, etki-olasılık analizi, kayıp olay veri analizi, senaryo analizi, stres testleri ve risk göstergeleri kullanılır. Risk Kataloğunda tanımlanan ve yönetim esasları risk politikalarında detaylı bir şekilde açıklanan riskler, asgari yıllık periyotlarda olmak üzere düzenli şekilde gözd"
+      },
+      {
+        "company": "KalkinmaYatirimBankasi",
+        "year": 2021,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8622,
+        "text_preview": "nda önemli adımlar atan Bankamız, yıl içinde Türkiye sermaye piyasalarındaki ürünlerini çeşitlendirdi ve sermaye piyasalarının derinleşmesine katkıda bulunarak ekonomiye yeni enstrümanlar kazandırdı.\n“Dünyada lider ESG derecelendirme kuruluşlarından Sustainalytics tarafından yürütülen değerlendirmede, Türkiye, Orta Doğu ve Afrika’da risklerini en iyi yöneten 1. kurum olarak derecelendirildik. Avrupa’da da AYB, EBRD ve KfW’dan sonra 4. banka olduk.”"
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8617,
+        "text_preview": "uzmanlıklarıyla değerlendiriliyor. Bu süreç, ürün ve faaliyetlerin risk kontrol çerçevesi içerisinde ele alınmasını ve Bankanın sürdürülebilirlik hedeflerine uygun bir şekilde yönetilmesini sağlıyor.\n• ESG Sürdürülebilirlik Raporlama Çalışma Grubu, BBVA aracılığıyla Avrupa Bankacılık Otoritesi (EBA) ve Avrupa Komisyonuna (EC) yapılan raporlamaları ile, Kamu Gözetimi, Muhasebe ve Denetim Standartları Kurumu (KGK) tarafından Türkiye'ye uyarlanan Türkiye Sürdürülebilirlik Raporlaması Standartları'na uyumlu (TSRS) Entegre Faaliyet Raporlaması dahil olmak üzere sürdürülebilirlikle ilişkili verileri"
+      },
+      {
+        "company": "Albaraka",
+        "year": 2023,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.8588,
+        "text_preview": "Bankanın risk iştahı, stratejik hedeflere ulaşmaya yönelik olarak bankanın kabul ettiği risk miktarını ifade etmekle birlikte, hedefler etrafında kabul edilebilir bir değişkenliği de içermektedir. Bankanın risk iştahı ile risk toleransının ortak özelliği, riskin kabulü ile ilgili sınırları çizmeleridir. Ancak risk toleransı daha geniş kapsamlıdır.\nBanka Yönetim kurulunca onaylanan ve her yıl güncellenen “Risk İştahı Politikası\" ile bankanın stratejilerini uygulamak ve hedeflerine ulaşmak için alabileceği risk düzeyleri belirlenmiştir. Bankanın risk iştahı ve risk toleransıyla ilgili olarak ban"
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2018,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8586,
+        "text_preview": "Bankalar özellikle, iş sağlığı ve güvenliği ile çevre ve toplum üzerinde olumsuz sonuçlar doğurabilecek finansman faaliyetleriyle bağlantılı risklerle karşı karşıya. Bu risklerin zamanında ve uygun şekilde üzerine gidilmemesi, itibarın zarar görmesine yol açabiliyor ve bunun sonucunda, meydana gelebilecek diğer güçlüklerin yanı sıra yatırımcı desteği ve müşteri bağlılığı kayıpları yaşanabiliyor.\nGaranti için örneğin iklim değişikliğinin getirdiği riskler gibi bu risklerin proaktif yönetimi sadece başarısı açısından kritik değil; Banka bunu, paydaşlarına karşı en temel görevlerinden biri olarak"
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8583,
+        "text_preview": "önetmek adına ek kriterler sunan standartlara dayanmaktadır.\nDeğerlendirmeye alınacak Etki, Risk ve Fırsat beyanları belirlendikten sonra aşağıdaki kriterlere göre tanımlanmış ve sınıflandırılmıştır:\n• Mevcut/Potansiyel: Mevcut etki, risk ve fırsatlarla birlikte, gelecekte gerçekleşme potansiyeli olan etki, risk ve fırsatlar ayrıştırılmıştır. • Zaman Aralığı: Kısa/Orta/Uzun vade • Değer Zinciri Aşaması: Yukarı Yönlü Akış (Downstream), Kendi Operasyonlarımız ve Aşağı Yönlü Akış (Downstream) olarak sınıflandırma. • ESRS Konuları: Her bir konunun ESRS öncelikli konu standartlarına uygun olarak be"
+      },
+      {
+        "company": "GarantiBBVA",
+        "year": 2018,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8581,
+        "text_preview": "okuyarak, bir dönüşüm yolculuğuna başladı ve devam ediyor. Şubelerimize getirdiğimiz yeni hizmet modelimiz dönüşüm yolculuğumuzda çok önemli bir adımdı. Amacımız, “Çağın olanaklarını herkese sunmak”.\nEtkin risk yönetimiyle, finansal ve finansal olmayan risklerin entegre bir şekilde yönetilmesine büyük önem veriyoruz. Dünyadaki hızlı değişimler, yatırım kararlarında dikkat edilmesi gereken yeni risk faktörlerini beraberinde getiriyor. Yatırımcılar artık finansal performansın yanı sıra küresel ısınmanın, değişen demografik özelliklerin, data gizliliği endişelerinin ve regülasyonların kapsamının "
+      },
+      {
+        "company": "Albaraka",
+        "year": 2022,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.858,
+        "text_preview": "ne karar vermeden önce maruz kalmaya hazır olduğu risk tutarıdır. Bu yönüyle risk toleransı, Banka’nın sunduğu hizmetlerin çeşitliliği ile bağlantılı olarak kabul edilebilir bulduğu risk seviyesidir.\nBanka’nın risk iştahı, stratejik hedeflere ulaşmaya yönelik olarak Banka’nın kabul ettiği risk miktarını ifade etmekle birlikte, hedefler etrafında kabul edilebilir bir değişkenliği de içermektedir. Banka’nın risk iştahı ile risk toleransının ortak özelliği, riskin kabulü ile ilgili sınırları çizmeleridir. Ancak risk toleransı daha geniş kapsamlıdır.\nBanka Yönetim Kurulu tarafından onaylanan ve he"
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2020,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8573,
+        "text_preview": "ürdürülebilirliği açısından risk yönetimini daha önemli hale getirmiştir. Bunun neticesinde, sektörde yapılan yasal düzenlemelere de uygun olarak, bankaların müşteri deneyimini bozmadan daha etkin   \nve verimli çözümlere yönelmesi   \nkaçınılmaz olmuştur.\nGüvenlik kavramının üst düzeyde olduğu Türk bankacılık sektörü; uyguladığı sıkı güvenlik politikaları ve stratejileri, etkin risk yönetimi, inovasyona aktardığı yüksek kaynak oranıyla, müşteri verilerinin korunmasını ve siber güvenliği sağlayacak teknolojik altyapıya sahip konumda bulunmaktadır."
+      },
+      {
+        "company": "Albaraka",
+        "year": 2022,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8571,
+        "text_preview": "ekte değişmesi bekleniyorsa bu değişiklik, sermayeye etki derecesi ile birlikte değerlendirilmektedir. Risk profili oluşturulurken risk tipi, sektör ve/veya coğrafi konum bazında analiz edilmektedir.\nBankanın risk toleransı; belirlenen misyon ve vizyon doğrultusunda kabul edilebilecek en geniş kapsamlı hesaplanmış risk miktarıdır. Diğer bir ifadeyle bankanın herhangi bir önlem almanın gerekliliğine karar vermeden önce maruz kalmaya hazır olduğu risk tutarıdır. Bu yönüyle risk toleransı, bankanın sunduğu hizmetlerin çeşitliliği ile bağlantılı olarak kabul edilebilir bulduğu risk seviyesidir.\nBa"
+      },
+      {
+        "company": "Takasbank",
+        "year": 2021,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8568,
+        "text_preview": "yoluyla sağlanmaktadır.   \n• Bağımsız gözden geçirme süreci, risk yönetimi ve iç kontrol çerçevesinin tüm yönleriyle değerlendirilmesinden oluşmakta ve İç Denetim Birimi tarafından icra edilmektedir.\nBanka faaliyetlerinin yönetilebilir, kontrol edilebilir ve gelir-gider arasındaki dengeyi kuracak şekilde makul düzeyde risk alınarak sürdürülmesi Bankanın genel risk politikasını oluşturmaktadır. Bankanın risk kapasitesi, sermaye yeterliliği politikasına uygun olarak belirlenmektedir. Takasbank risklerini, tabi olunan tüm yasal düzenlemelerde yer alan asgari/ azami sınırların üzerinde/altında ve "
+      },
+      {
+        "company": "Albaraka",
+        "year": 2024,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8567,
+        "text_preview": "ne karar vermeden once maruz kalmaya hazir oldugu risk tutaridir. Bu yonuyle risk toleransi, Banka'nin sundugu hizmetlerin cesitliligi ile baglantili olarak kabul edilebilir buldugu risk seviyesidir.\nBanka'nin risk istahi, stratejik hedeflere ulasmaya yonelik olarak Banka'nin kabul ettigi risk miktarini ifade etmekle birlikte, hedefler etrafinda kabul edilebilir bir degiskenligi de icermektedir. Banka'nin risk istahi ile risk toleransinin ortak ozelligi, riskin kabulu ile ilgili sinirlari cizmeleridir. Ancak risk toleransi daha genis kapsamlidir.\nBanka Yonetim Kurulu tarafindan onaylanan ve he"
+      },
+      {
+        "company": "TurkiyeİsBankasi",
+        "year": 2018,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8566,
+        "text_preview": "Stres Testleri, İtibar Riski, Konsolide Risk ve Bilgi Sistemleri Yönetimi Politikaları gibi Yönetim Kurulu tarafından onaylanan dâhili düzenlemelere uygun olarak risk yönetimi sürecini yürütmektedir.\nFaaliyetler sırasında karşılaşılabilecek riskler Banka’nın “Risk Kataloğu” aracılığıyla tanımlanarak sınıflandırılmaktadır. Risk Kataloğunda finansal riskler ve finansal olmayan riskler tanımlanmıştır. Finansal riskler kredi riski, aktif-pasif yönetimi riski ve iş riskini kapsar. Operasyonel riskler arasında faaliyet ortamı riski, suiistimal ve dolandırıcılık riski, iş ve ürün uygulamaları riski, "
+      },
+      {
+        "company": "Takasbank",
+        "year": 2023,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8566,
+        "text_preview": "arafından alınmaktadır. Bununla birlikte, iş etki analizleri ile faaliyetlerde meydana gelebilecek kesintilerin yaratabileceği muhtemel riskler ile bunların potansiyel etkileri değerlendirilmektedir.\nBanka personelinde ortak bir operasyonel risk kültürünün oluşturulması, risk yönetimi uygulamalarının banka bünyesinde benimsenmesinin sağlanması, birimler arasındaki iletişimin etkinleştirilmesi ve Üst Yönetim tarafından hızlı aksiyon alınabilmesini sağlayacak veri tabanlarının revizyon ve güncelleme ihtiyaçlarının karşılanmasına yönelik olarak özdeğerlendirme çalışmaları yapılmaktadır.\nDestek hi"
+      },
+      {
+        "company": "YapiKredi",
+        "year": 2021,
+        "section_type": "finansal",
+        "reliability": 0.9,
+        "score": 0.8565,
+        "text_preview": "Ülke riski; ekonomik, finansal, sosyal ve siyasi koşullarda meydana gelen belirsizlikler nedeniyle bir ülkedeki borçluların dış yükümlülüklerini yerine getirememeleri veya yerine getirmekten kaçınmaları sonucunda Banka’nın maruz kalabileceği zarar olasılığını ifade etmektedir.\nBanka’da ülke riskinin yönetimi iki farklı açıdan ele alınmaktadır. Birincisi risk yönetimi değerlendirmesindeki risk iştahı limitleri ve onay yetki seviyeleri, diğeri ise finansal kurumlar bakış açı- sındaki ülkelere tahsis edilen ülke kredi limitleri ve ilgili iş akışlarıdır.\nÜlke kredi riski iştahı, Yönetim Kurulu tar"
+      },
+      {
+        "company": "AllianzTurkiye",
+        "year": 2021,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8563,
+        "text_preview": "ığı tespit edildiğinde, işlemi reddeder veya ESG risklerinin azaltılmasını sağlamak için karşı tarafın önlem almasını sağlar.\n2018’den beri kömür kullanarak enerji üreten projeleri finanse etmiyoruz.\nİşimizin doğası gereği, etkin bir risk yönetimi sistemine sahibiz. Risk yönetim süreçlerinde uluslararası risk yönetim prensiplerini kullanıyoruz. Yılda en az dört kez toplanan Risk Komitesi, risk konusunda Allianz Türkiye’deki en yetkili merci. Risk yönetimi yaklaşımımız üç alandan oluşuyor: Risk Yönetimi ve İç Kontrol, İtibar Riskinin Yönetimi ve İş Sürekliliği Yönetimi.\nAllianz Türkiye’de, Alli"
+      }
+    ],
+    "computed_at": "2026-05-30T23:46:52",
+    "wall_seconds": 16.61
+  },
+  {
+    "spec": {
+      "question": "Borusan Holding'in iş sağlığı ve güvenliği performansı ve kaza oranları nasıl gelişmiştir?",
+      "company": null,
+      "year": null,
+      "showcase": "İSG numerical reporting with temporal angle"
+    },
+    "answer": "Borusan Holding'in işyeri sağlığı ve güvenlik performansı ve kazalara göre kaydedilen oranların gelişmesi hakkında bilgi toplamak için Borusan Holding'deki ilgili kaynakları göz önünde bulundurdum:\n\nKaynak 6 [BorusaHolding 2019 | sosyal | reliable = 0.8]: Borusan Grubu olarak 2019 yılında 100.000 personelinin çalıştığı 12 fabrikada 10.000 saatlik iş süresinin ardından 0 iş kazası yaşandı. Bu rakama göre Borusan Holding, işyeri güvenliğinin sağlanmasında önemli adımları atmış görünüyor.\n\nKaynak 7 [Borusaholding 2020 | sosyal | trustworthy = 0,9]: Borusan Holding 2020 yılında 15.000 personeli için 150.000 saatlık iş süresinden sonra 20 iş kazası bildirdi. Bu rakamın Borusan Holding için 0,013 iş kazası oranıyla ilişkili olduğu görülebilir.\n\nKaynak [Borusahanholding 2021|social|trustworthy=0.8], Kaynak [Borusholdings 2021|muhasebe|trustworthy = 0.8]: Boruşan Holding 2021 yılında 18.000 personeline 180.000 saat iş süresi boyunca 25 iş kazası bildiriyor. Bu rakamı Borusan Holding'ın 0,014 iş kazası oranına bağlayabiliriz.\n\nKaynak[borusaholding 2018|sosyal|güvenilirlik=0,7]: Borusan Group'un 2018 yılında 80.000 personelimizin çalıştığı 11 fabrika ve tesiste 90.000 saat geçtikten sonra 30 iş kazası meydana geldi. Bu rakamlar Borusan Holding'i 0,037 iş kazası orana götürebiliyor.\n\nBu bilgiler dikkate alındığında Borusan Holding işyeri güvenlik performansı 2018'den 2021'e kadar arttı. Ancak 2021'de 25 iş kaza bildirilmesi Borusan Holding'nin 0,025 iş kazası ortalamasına ulaştırmıştır. Bu rakamdaki düşüş Borusan Holding tarafından yapılan işyeri koruma önlemlerinin etkisini gösteriyor olabilir.\n\nAncak Borusan Holding'teki işyeri kazalarının tam sayısı ve oranları hakkında daha fazla bilgiye ihtiyaç duymamız gerekebilir. Bu nedenle Borusan Holding ile temasa geçilerek bu konu hakkında daha ayrıntılı bilgi alınmasını tavsiye ederim.",
+    "retrieved_chunks": 20,
+    "filtered_chunks": 16,
+    "removed_chunks": 4,
+    "contradiction_edges": 17,
+    "timings": {
+      "retrieval": 0.018774747848510742,
+      "isolated_answering": 7.152557373046875e-07,
+      "nli_graph_filter": 0.21174144744873047,
+      "final_generation": 21.839754343032837
+    },
+    "total_time": 22.070271253585815,
+    "chunks_detail": [
+      {
+        "company": "BorusanHolding",
+        "year": 2023,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8904,
+        "text_preview": "yaklaşıldığında ikaz   \nsesi çıkarmakta ve olası bir tehlikeye karşı çalışanı uyarmaktadır.   \nTüm bu ve daha fazlası uygulamalar bizleri Borusan Limanı’nda güvende ve mutlu çalışmamız sağlamaktadır.\nBorusan Grubu olarak en büyük önceliğimiz çalışma arkadaşlarımızın iş sağlığı ve güvenliğidir. Türkiye’de iş sağlığı ve güvenliği konusunda yaptığı öncü çalışmalarla paydaşlarına örnek olan ve yarattığı İş Sağlığı ve Güvenliği (İSG) kültürü sayesinde sağlıklı, mutlu ve güvenli çalışma ortamına sahip bir şirketler grubu olma yolunda ilerliyoruz. İSG kapsamında yürütülen tüm faaliyetlerimizi değer z"
+      },
+      {
+        "company": "BorusanHolding",
+        "year": 2021,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8874,
+        "text_preview": "Borusan Grubu olarak çalışanlarımızım sağlık ve güvenliği en büyük önceliğimizdir. İş Sağlığı ve Güvenliği (İSG) yönetimine azami önem veriyor, faaliyetlerimizin takibini büyük bir özenle gerçekleştirirken tüm çalışanlarımız, taşeronlarımız, müşterilerimiz ve tedarikçilerimiz adına güvenli ve sağlıklı bir iş ortamı sağlamayı hedefliyoruz. “İş biter, herkes evine sevdiklerine gider.” söylemimiz ile hareket ediyor, bu doğrultuda risk analizleri, performans ölçümleri, eğitimler, tatbikatlar ve altyapı iyileştirmeleri uygulamalarımızı “Sıfır iş kazası” hedefimiz çerçevesinde geliştiriyoruz. 2021 s"
+      },
+      {
+        "company": "BorusanHolding",
+        "year": 2021,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8841,
+        "text_preview": "Borusan Grubu olarak Türkiye’de kurumsal risk yönetimi yaklaşımını uygulayan ilk gruplardan biriyiz ve tüm grup şirketleri, faaliyet ve proje bazlı risk çalışmalarının yürütülmesine önem veririz. Bu kapsamda Grup şirketlerinin iş süreçleri Holding İç Denetim Departmanımız tarafından denetlenir; risk ve fırsat alanlarını tespit edilerek şirketlere bu konularda gelişim önerileri sunulur.\nİç Denetim Departmanımız gerçekleştirdiği denetimlerde süreç riskleri ve fırsatlarının yanı sıra etik kurallara uyum, çalışan hakları, iş sağlığı ve güvenliği gibi sosyal konuları ve çevresel konuları da değerle"
+      },
+      {
+        "company": "BorusanHolding",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8821,
+        "text_preview": "a birlikte iş sağlığı ve güvenliği kültürünü pekiştirmek için çalışmalarımıza devam ediyoruz. Kaza sıklık ve kaza ağırlık oranlarımızı azaltma hedeflerimizi belirledik ve çok yakından takip ediyoruz.\nİnovasyon ile değer yaratma başlığımızda ise döngüsel ve karbonsuz iş ve hizmet modelleri geliştirmeyi, girişimcilik ekosistemini destekleyerek iş birlikleriyle sosyal ve çevresel fayda sağlamayı amaçlıyoruz.\n200 yıl ve ötesinde bir Grup olma hedefimizle ilerlerken performans sonuçlarımızla da desteklenen başarılı bir faaliyet yılını geride bıraktığımızı söylemekten mutluluk duyuyorum. Bu başarıya"
+      },
+      {
+        "company": "BorusanHolding",
+        "year": 2024,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.8809,
+        "text_preview": "denetim süreçlerimizde hata, hile ve yolsuzluk incelemeleri yer almaktadır. Ayrıca, 2024 yılı denetim planımız dahilinde Denetim Direktörlüğümüz tarafından 2 projede üretim denetimi gerçekleştirildi.\nYıllık denetim planı çerçevesinde, iş sağlığı ve güvenliği, eğitim gibi sosyal konuların yanı sıra, kimyasal malzeme ve atık yönetimi, enerji verimliliği gibi çevresel konulara ilişkin sosyal ve çevresel denetimler de gerçekleştiriyoruz. Bu kapsamda gerçekleşen toplam denetim sayımız 35’tir. Ek olarak, Borusan Holding İç Denetim Birimi tüm Grup Şirketlerinde İş Sağlığı ve Güvenliği denetimleri ger"
+      },
+      {
+        "company": "BorusanHolding",
+        "year": 2022,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8807,
+        "text_preview": "Borusan Grubu için çalışanları- nın sağlık ve güvenliği en büyük önceliktir. İş Sağlığı ve Güvenliği (İSG) yönetimine azami önem verilmekte, faaliyetlerin takibi büyük bir özenle gerçekleştirilirken tüm çalışanlar, taşeronlar, müşteriler ve tedarikçiler adına güvenli ve sağlıklı bir iş ortamı sağlamak hedeflenmektedir. “İş biter, herkes evine sevdiklerine gider.” söylemi ile hareket edilmekte, bu doğrultuda risk analizleri, performans ölçümleri, eğitimler, tatbikatlar ve altyapı iyileştirme uygulamaları “sıfır iş kazası” hedefi çerçevesinde gerçekleştirilmektedir.\nBorusan Grubun temel İSG amaç"
+      },
+      {
+        "company": "BorusanHolding",
+        "year": 2024,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.877,
+        "text_preview": "Grubumuz’da çalışma arkadaşlarımızın sağlığı ve güvenliği operasyonel önceliklerimizin özünü oluşturur. Riskleri en aza indiren ve organizasyonun tüm seviyelerinde güvenlik kültürünü güçlendiren bir çalışma ortamı sağlamaya büyük önem veriyoruz. İş sağlığı ve güvenliği alanındaki faaliyetlerimizi kazaları önlemek, iş gücümüzü korumak ve genel refahı teşvik etmek üzere tasarlıyoruz.\nHer Borusanlının güvenli ve sağlıklı bir ortamda çalışabilmesi için gerekli kaynaklara, eğitime ve desteğe erişebilmesini güvence altına almak için çalışıyoruz. Bu kapsamda, Türkiye’de iş sağlığı ve güvenliği konusu"
+      },
+      {
+        "company": "BorusanHolding",
+        "year": 2024,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.877,
+        "text_preview": "iyileştirmek için kullanırken, kurum başarısının bireysel gelişim ve motivasyonla bağlantılı olduğunu biliyor, çalışma arkadaşlarımızın yetkinliklerini sunduğumuz eğitim fırsatlarıyla destekliyoruz.\nHolding ve Grup Şirketler olarak, ortak değerleri paylaşmanın ve kültürel prensiplerimizi benimseyerek bu doğrultuda kararlar almanın başarımız için ne kadar önemli olduğunun bilincindeyiz. Borusan Grubu olarak, Türkiye ve dünya genelinde faaliyet gösterdiğimiz üretim, makine ve güç sistemleri, otomotiv, lojistik ve enerji sektörlerinde çok paydaşlı bir ekosistem içerisinde fayda yaratmak için çalı"
+      },
+      {
+        "company": "BorusanHolding",
+        "year": 2021,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8767,
+        "text_preview": "• Kurduğu tüm sistemleri ve gerçekleştirmekte olduğu faaliyetleri sürekli olarak denetler, ilgili tarafların erişimine ve denetlemesine açık tutar.\n• İş Sağlığı ve Güvenliği’nin tüm süreçlerine kendi sorumluluk alanlarında tüm çalışanları aktif olarak dahil ederek, onları hak, görev ve sorumlulukları konusunda doğru şekilde bilinçlendirerek, İSG kültürünün gelişimine katkı sunmalarını bekler.\n• Tüm lider ve yöneticilerin sorumlu oldukları alanlarda İş Sağlığı ve Güvenliği’nin iş yapış şekli haline getirerek, sürecin sahiplenilmesini sağlar.\nKaza sıklık oranları ve İSG komiteleri ile ilgili ver"
+      },
+      {
+        "company": "BorusanHolding",
+        "year": 2023,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.8757,
+        "text_preview": "Şeffaflık, hesap verebilirlik ve sürekli iyileştirme yönündeki yaklaşımımız iç denetim fonksiyonlarımızın işleyişinde önemli bir paya sahip. Yönetişim çerçevemizin ayrılmaz bir parçası olan iç denetim anlayışı, bağımsız ve tarafsız bir güvence sağlamak için kritik bir görev üstleniyor. İç denetim fonksiyonu, iç kontrollerimizin, risk yönetimi süreçlerimizin ve politika ve yönetmeliklere uyumun yeterliliğini değerlendirerek, geliştirilmesi gereken alanları tespit etmemize ve potansiyel riskleri azaltılmamıza katkıda bulunuyor.\nBorusan olarak, Türkiye’de kurumsal risk yönetimi anlayışını benimse"
+      },
+      {
+        "company": "BorusanHolding",
+        "year": 2023,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.8741,
+        "text_preview": "e eğitimler yoluyla etik ve uyum risklerini en etkin şekilde yönetiyoruz. Grup Şirketlerin yönetim birimleri de rol ve sorumluluklarını üstlenerek riskleri tespit etmek için çalışmalarını sürdürüyor.\nAyrıca, İç Denetim ve İç Kontrol gibi birimlerimiz de etkin risk yönetimi kapsamında Grup Şirketler bünyesinde gelişim alanlarıyla ilgili önerilerini paylaşıyor. Borusan risk yönetimi perspektifi, şirketin stratejik hedeflerine ulaşmasının önünde risk oluşturması muhtemel görülen olayları tanımlamamızı, analiz etmemizi ve ilgili departmana yönlendirmemizi sağlıyor. Bu anlayış, riskleri tutarlı, ka"
+      },
+      {
+        "company": "BorusanHolding",
+        "year": 2023,
+        "section_type": "strateji",
+        "reliability": 0.4,
+        "score": 0.8739,
+        "text_preview": "2021 yılında oluşturduğumuz, Borusan Holding ve Grup şirketlerinde Genel Müdürlere bağlı İç Kontrol fonksiyonları kurulduğu günden bugüne faaliyetlerine etkin şekilde devam ediyor. $\\mathsf { i } _ { \\mathsf { \\mathsf { S } } }$ Kontrol fonksiyonlarımız, 2022 yılında riskleri bütünleşik bir şekilde takip etmek için Entegre Risk Yönetim sistemine geçiş çalışmalarına başladı. Bu kapsamda 2023 dönemi boyunca çalışmalar Borusan Holding, Borusan Boru, Borçelik, Borusan Otomotiv Grubu, Borusan Cat ve Borusan Lojistik şirketlerinde bulunan İç Kontrol liderlerince sürdürüldü. Borusan Holding olarak ri"
+      },
+      {
+        "company": "BorusanHolding",
+        "year": 2024,
+        "section_type": "yonetim",
+        "reliability": 0.7,
+        "score": 0.873,
+        "text_preview": "Sahip olduğumuz tecrübe, uzun yıllardır gururla taşıdığımız kurumsal değerlerimiz ve profesyonel iş yapış biçimimiz, yolsuzlukla mücadele ve rekabete aykırı davranışları önleme konusundaki duyarlılığımızı kurum kültürümüzün ayrılmaz bir parçası olarak şekillendirmiştir. Dürüstlük, şeffaflık ve adil rekabeti sağlamak ve güçlendirmek, sadece etik iş yapış biçimimizin merkezi değil, aynı zamanda güven inşa etmenin ve uzun vadeli başarımızı korumanın da esaslarından biridir. Şirketimizin güçlü temelleri, bu etik değerlerin sürekliliğini sağlayarak iş dünyasında etkili ve güvenilir bir duruş sergil"
+      },
+      {
+        "company": "BorusanHolding",
+        "year": 2023,
+        "section_type": "sosyal",
+        "reliability": 0.5,
+        "score": 0.8723,
+        "text_preview": "İş sağlığı ve güvenliği konusunda şirketimizin sahip olduğu kültür sayesinde Borusan Limanı’nda çalışırken kendimi değerli ve   \ngüvende hissediyorum. Yasalara uygun bir şekilde güvenliğimiz   \niçin önlemler alınmakta, gerekli ekipmanlar sağlanmaktadır. Buna   \nek olarak, çalışanların ve İSG ekiplerinin tüm geri bildirimlerimi ve tespitleri dikkate alınarak kısa sürede çözüm üretilmekte. İSG kurallarına aykırı bir çalışma gerçekleşiyorsa önce sözlü   \nuyarı gerçekleşmekte, uygunsuzluk devam ediyorsa yönetmeliği   \nmaddelerine göre uyarı verilmektedir. Limanda, kişisel koruyucu ekipmanlar olmad"
+      },
+      {
+        "company": "BorusanHolding",
+        "year": 2023,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8715,
+        "text_preview": "risk değerlendirme, planlama ve aksiyon alma adımları ile dayanıklılığımızı artırmayı amaçlıyoruz. İklim odaklı risk bağlamlarını ve potansiyel operasyonel etkilerini en aza indirmeye odaklanıyoruz.\nGrubumuzda sürdürülebilirlik faaliyetleri ve iklim değişikliği çerçevesinde hayata geçirilen süreçler Yönetim Kurulu tarafından gözetilmekte olup Grup CEO’muz tüm sürdürülebilirlik çalışmalarına liderlik etmektedir. Borusan olarak sürdürülebilirlik performansını, kurumsal yönetim stratejisinin temel bir parçası olarak benimsiyoruz. Bu doğrultuda, şirket faaliyetlerinin çevresel ve sosyal etkilerini"
+      },
+      {
+        "company": "BorusanHolding",
+        "year": 2024,
+        "section_type": "cevre",
+        "reliability": 0.6,
+        "score": 0.8711,
+        "text_preview": "leştirdik. Risk yönetimi ve iç kontrol çerçevesinde, iş faaliyetlerimizi, finansal performansımızı ve itibarımızı etkileme potansiyeli olan geniş yelpazedeki riskleri tespit ederek değerlendiriyoruz.\nBorusan Holding olarak takip ettiğimiz öncelikli sürdürülebilirlik konularındaki gelişmeleri etki, risk ve fırsat odaklı 3 boyutlu yaklaşımla ele alıyor ve gündemimize alıyoruz. 2024 yılında hayatımıza giren yeni ulusal ve uluslararası standartlar ile iklim risklerinin yönetimi süreçlerini geliştiriyoruz. Türkiye Sürdürülebilirlik Raporlama Standartları S1 ve S2 (TSRS) kapsamında iklim odaklı risk"
+      }
+    ],
+    "computed_at": "2026-05-30T23:47:14",
+    "wall_seconds": 22.07
   }
 ]
