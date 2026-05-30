@@ -1,46 +1,50 @@
 {
   "summary": {
-    "total_tests": 19,
-    "mwis_correct": 12,
-    "gat_correct": 12,
-    "mwis_run_seconds": 2.69,
-    "gat_run_seconds": 1.33
+    "total_tests": 30,
+    "mwis_correct": 15,
+    "gat_correct": 15,
+    "mwis_run_seconds": 1.0,
+    "gat_run_seconds": 0.56
   },
   "metrics_mwis": {
-    "filtering_success": 63.1578947368421,
+    "filtering_success": 50.0,
     "temporal_accuracy": 33.33333333333333,
-    "clean_preservation": 88.46153846153845,
-    "avg_latency": 0.1416657849362022,
-    "max_latency": 0.8273792266845703,
-    "overall_accuracy": 63.1578947368421,
+    "clean_preservation": 64.0,
+    "avg_latency": 0.03334368069966634,
+    "max_latency": 0.28992772102355957,
+    "overall_accuracy": 50.0,
     "by_dimension": {
       "temporal": 33.33333333333333,
       "scope": 100.0,
       "interdepartmental": 100.0,
-      "gat_discriminating": 40.0,
+      "gat_discriminating": 30.0,
       "cross_company": 66.66666666666666,
-      "zero_claim": 50.0
+      "zero_claim": 50.0,
+      "dense_graph": 0.0,
+      "numerical_edge": 66.66666666666666
     }
   },
   "metrics_gat": {
-    "filtering_success": 63.1578947368421,
+    "filtering_success": 50.0,
     "temporal_accuracy": 33.33333333333333,
-    "clean_preservation": 88.46153846153845,
-    "avg_latency": 0.07021157365096242,
-    "max_latency": 0.3023107051849365,
-    "overall_accuracy": 63.1578947368421,
+    "clean_preservation": 66.0,
+    "avg_latency": 0.01869486172993978,
+    "max_latency": 0.09314823150634766,
+    "overall_accuracy": 50.0,
     "by_dimension": {
       "temporal": 33.33333333333333,
       "scope": 100.0,
       "interdepartmental": 100.0,
-      "gat_discriminating": 40.0,
+      "gat_discriminating": 30.0,
       "cross_company": 66.66666666666666,
-      "zero_claim": 50.0
+      "zero_claim": 50.0,
+      "dense_graph": 0.0,
+      "numerical_edge": 66.66666666666666
     }
   },
   "per_test": [
     {
-      "test_id": "b817fed3-5e39-4246-94c1-32d25c4bd421",
+      "test_id": "46e35c4a-0d97-46e8-b5e0-77901c2250fd",
       "dimension": "temporal",
       "question": "Şirketin karbon emisyon azaltma hedefi nedir?",
       "expected_kept": [
@@ -60,11 +64,11 @@
       "mwis_correct": false,
       "gat_correct": false,
       "verdict": "both_failed",
-      "mwis_latency": 0.827,
-      "gat_latency": 0.048
+      "mwis_latency": 0.29,
+      "gat_latency": 0.013
     },
     {
-      "test_id": "2ce88c2d-2c6c-4fac-b5a9-d70bffe503ef",
+      "test_id": "4285d852-0383-4902-ae1c-386ea14662bd",
       "dimension": "temporal",
       "question": "Şirketin toplam çalışan sayısı kaçtır?",
       "expected_kept": [
@@ -82,11 +86,11 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.304,
-      "gat_latency": 0.302
+      "mwis_latency": 0.088,
+      "gat_latency": 0.093
     },
     {
-      "test_id": "9a40dfa1-ff18-42d8-9cd3-9a3954fe62b1",
+      "test_id": "d298a1d4-7cbc-430a-b973-695348a71f35",
       "dimension": "temporal",
       "question": "Şirketin gelir büyüme hedefi nedir?",
       "expected_kept": [
@@ -103,11 +107,11 @@
       "mwis_correct": false,
       "gat_correct": false,
       "verdict": "both_failed",
-      "mwis_latency": 0.236,
-      "gat_latency": 0.051
+      "mwis_latency": 0.083,
+      "gat_latency": 0.014
     },
     {
-      "test_id": "43c40e27-3fb4-4388-b07d-69c704376077",
+      "test_id": "f2bacecd-4d87-481e-bdc2-9b9cee60a279",
       "dimension": "scope",
       "question": "Şirketin toplam sera gazı emisyonu ne kadardır?",
       "expected_kept": [
@@ -125,11 +129,11 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.524,
-      "gat_latency": 0.066
+      "mwis_latency": 0.174,
+      "gat_latency": 0.019
     },
     {
-      "test_id": "99c10c5d-0c0a-4581-8824-2252491367ce",
+      "test_id": "d5c8f12e-2639-4065-9ca0-955714dfe4db",
       "dimension": "scope",
       "question": "Şirketin atık yönetimi performansı nasıl?",
       "expected_kept": [
@@ -147,11 +151,11 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.052,
-      "gat_latency": 0.059
+      "mwis_latency": 0.013,
+      "gat_latency": 0.016
     },
     {
-      "test_id": "1a4950b7-8322-45d6-b1ce-4735a8b4b31e",
+      "test_id": "4a738886-ada8-448e-82f4-84747c2ee2cb",
       "dimension": "scope",
       "question": "Şirketin su tüketimi ne kadar azaldı?",
       "expected_kept": [
@@ -166,11 +170,11 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.05,
-      "gat_latency": 0.057
+      "mwis_latency": 0.013,
+      "gat_latency": 0.017
     },
     {
-      "test_id": "8aa18d37-3cde-42f9-84db-3ea4392a0ec2",
+      "test_id": "52ffcce1-2466-49aa-8c11-e2470805cf44",
       "dimension": "interdepartmental",
       "question": "Şirketin 2023 yılı karlılık durumu nasıl?",
       "expected_kept": [
@@ -188,11 +192,11 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.049,
-      "gat_latency": 0.058
+      "mwis_latency": 0.013,
+      "gat_latency": 0.017
     },
     {
-      "test_id": "35ef896e-ae1d-4d34-b254-a36671de053f",
+      "test_id": "43ab3db0-48b0-4bc4-9314-0285704fd821",
       "dimension": "interdepartmental",
       "question": "Şirketin yenilenebilir enerji yatırımı ne kadar?",
       "expected_kept": [
@@ -207,11 +211,11 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.052,
-      "gat_latency": 0.057
+      "mwis_latency": 0.013,
+      "gat_latency": 0.016
     },
     {
-      "test_id": "59da6e68-5f1d-4ccc-baf7-58520d7a36b2",
+      "test_id": "a655c1de-dccc-4c93-a057-8922ce0eedcb",
       "dimension": "interdepartmental",
       "question": "Çalışan memnuniyeti durumu nedir?",
       "expected_kept": [
@@ -226,11 +230,11 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.067,
-      "gat_latency": 0.067
+      "mwis_latency": 0.013,
+      "gat_latency": 0.016
     },
     {
-      "test_id": "fc75f7a1-6b55-4c67-81f4-3f271bc01952",
+      "test_id": "1e4b348d-8c2d-4640-bc8d-57f211c42214",
       "dimension": "gat_discriminating",
       "question": "Şirketin 2030 yenilenebilir enerji oranı hedefi nedir?",
       "expected_kept": [
@@ -245,11 +249,11 @@
       "mwis_correct": false,
       "gat_correct": false,
       "verdict": "both_failed",
-      "mwis_latency": 0.063,
-      "gat_latency": 0.068
+      "mwis_latency": 0.013,
+      "gat_latency": 0.016
     },
     {
-      "test_id": "edf9e6e7-6acf-41df-bd9a-1deee8b4e5a4",
+      "test_id": "3552f9ae-81b8-4179-b4aa-0efab05a2ba6",
       "dimension": "gat_discriminating",
       "question": "Şirketin biyoçeşitlilik koruma politikası nedir?",
       "expected_kept": [
@@ -264,11 +268,11 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.059,
-      "gat_latency": 0.062
+      "mwis_latency": 0.013,
+      "gat_latency": 0.016
     },
     {
-      "test_id": "4c79b3fb-714a-4674-8c31-3e21f297fe8f",
+      "test_id": "aa5717db-7997-496f-8a4d-37549c0929f2",
       "dimension": "gat_discriminating",
       "question": "Şirketin 2024 yılı net karı ne kadardır?",
       "expected_kept": [
@@ -285,11 +289,11 @@
       "mwis_correct": false,
       "gat_correct": false,
       "verdict": "both_failed",
-      "mwis_latency": 0.051,
-      "gat_latency": 0.047
+      "mwis_latency": 0.013,
+      "gat_latency": 0.014
     },
     {
-      "test_id": "580d9417-4d45-491d-aac5-13420a634617",
+      "test_id": "b841d4b5-d95c-44cd-b7bb-850ffe3b90f1",
       "dimension": "gat_discriminating",
       "question": "Şirketin atık geri dönüşüm oranı nedir?",
       "expected_kept": [
@@ -304,11 +308,11 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.048,
-      "gat_latency": 0.055
+      "mwis_latency": 0.013,
+      "gat_latency": 0.016
     },
     {
-      "test_id": "dd43e012-1067-45b5-9065-80fc4e67fcfc",
+      "test_id": "79153ba5-3fcc-4fbb-9228-e83b34799c40",
       "dimension": "gat_discriminating",
       "question": "Şirketin yıllık enerji tüketimi ne kadar?",
       "expected_kept": [
@@ -326,11 +330,108 @@
       "mwis_correct": false,
       "gat_correct": false,
       "verdict": "both_failed",
-      "mwis_latency": 0.053,
-      "gat_latency": 0.059
+      "mwis_latency": 0.013,
+      "gat_latency": 0.016
     },
     {
-      "test_id": "0d76a210-c310-426e-83bb-5dab40a7db06",
+      "test_id": "d80774c9-80d4-4d48-a99b-8344f4393e54",
+      "dimension": "gat_discriminating",
+      "question": "Şirketin kadın çalışan oranı nedir?",
+      "expected_kept": [
+        1
+      ],
+      "mwis_kept": [
+        0
+      ],
+      "gat_kept": [
+        0
+      ],
+      "mwis_correct": false,
+      "gat_correct": false,
+      "verdict": "both_failed",
+      "mwis_latency": 0.013,
+      "gat_latency": 0.016
+    },
+    {
+      "test_id": "5f85e05c-9951-4e64-97d6-54b72782a41c",
+      "dimension": "gat_discriminating",
+      "question": "Şirketin dijital dönüşüm yatırımı ne kadar?",
+      "expected_kept": [
+        1
+      ],
+      "mwis_kept": [
+        0
+      ],
+      "gat_kept": [
+        0
+      ],
+      "mwis_correct": false,
+      "gat_correct": false,
+      "verdict": "both_failed",
+      "mwis_latency": 0.013,
+      "gat_latency": 0.016
+    },
+    {
+      "test_id": "a8a7c02d-b02e-49a0-9851-ed4c15fd33fa",
+      "dimension": "gat_discriminating",
+      "question": "Şirketin birim üretim başına karbon emisyon yoğunluğu nedir?",
+      "expected_kept": [
+        1
+      ],
+      "mwis_kept": [
+        0
+      ],
+      "gat_kept": [
+        0
+      ],
+      "mwis_correct": false,
+      "gat_correct": false,
+      "verdict": "both_failed",
+      "mwis_latency": 0.013,
+      "gat_latency": 0.016
+    },
+    {
+      "test_id": "77c22770-1f29-4364-8bde-116d275796b2",
+      "dimension": "gat_discriminating",
+      "question": "Şirketin güncel yenilenebilir enerji oranı nedir?",
+      "expected_kept": [
+        2,
+        3
+      ],
+      "mwis_kept": [
+        0
+      ],
+      "gat_kept": [
+        2,
+        3
+      ],
+      "mwis_correct": false,
+      "gat_correct": true,
+      "verdict": "gat_only_ok",
+      "mwis_latency": 0.013,
+      "gat_latency": 0.017
+    },
+    {
+      "test_id": "b896b4ed-f8a9-4b9d-8230-fee86b11ccca",
+      "dimension": "gat_discriminating",
+      "question": "Şirketin son denetimli net karı ne kadar?",
+      "expected_kept": [
+        1
+      ],
+      "mwis_kept": [
+        1
+      ],
+      "gat_kept": [
+        0
+      ],
+      "mwis_correct": true,
+      "gat_correct": false,
+      "verdict": "mwis_only_ok",
+      "mwis_latency": 0.013,
+      "gat_latency": 0.016
+    },
+    {
+      "test_id": "735a8375-2439-4613-8749-188deb152664",
       "dimension": "cross_company",
       "question": "2023 yılı bankacılık sektörü karbon yoğunluğu hangi düzeyde?",
       "expected_kept": [
@@ -345,11 +446,11 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.055,
-      "gat_latency": 0.057
+      "mwis_latency": 0.013,
+      "gat_latency": 0.015
     },
     {
-      "test_id": "f1f46265-d2ba-464e-894c-a86a732709ed",
+      "test_id": "6c9239f3-a5dc-47ba-a344-e8f7b6ba44c7",
       "dimension": "cross_company",
       "question": "Çimento sektöründe alternatif yakıt kullanım oranı nedir?",
       "expected_kept": [
@@ -364,11 +465,11 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.055,
-      "gat_latency": 0.058
+      "mwis_latency": 0.013,
+      "gat_latency": 0.016
     },
     {
-      "test_id": "f4c21151-a45b-4d24-8d63-6d10df97d0ba",
+      "test_id": "25d56b91-356e-48a1-a7c2-71e8b4a2ec95",
       "dimension": "cross_company",
       "question": "2024 perakende sektörü kadın yönetici oranı?",
       "expected_kept": [
@@ -386,11 +487,11 @@
       "mwis_correct": false,
       "gat_correct": false,
       "verdict": "both_failed",
-      "mwis_latency": 0.05,
-      "gat_latency": 0.055
+      "mwis_latency": 0.013,
+      "gat_latency": 0.017
     },
     {
-      "test_id": "5327749a-9c9c-44b7-9031-5a2ca9afaebe",
+      "test_id": "a0b1c9b8-a361-48a9-8121-666b57568f4b",
       "dimension": "zero_claim",
       "question": "Tesislerimizdeki tehlikeli atık miktarı?",
       "expected_kept": [
@@ -405,11 +506,11 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.049,
-      "gat_latency": 0.059
+      "mwis_latency": 0.012,
+      "gat_latency": 0.015
     },
     {
-      "test_id": "b5ccac42-43c2-42ba-bbc2-75a41fe04fd0",
+      "test_id": "542aa383-360b-472a-9396-54fd1640497a",
       "dimension": "zero_claim",
       "question": "Enerji ihtiyacının yenilenebilir karşılanma oranı?",
       "expected_kept": [
@@ -426,8 +527,154 @@
       "mwis_correct": false,
       "gat_correct": false,
       "verdict": "both_failed",
-      "mwis_latency": 0.047,
-      "gat_latency": 0.047
+      "mwis_latency": 0.013,
+      "gat_latency": 0.013
+    },
+    {
+      "test_id": "b6192348-6914-4a38-a087-2a1884216dfc",
+      "dimension": "dense_graph",
+      "question": "Çimento sektöründe karbon emisyon yoğunluğu (ton CO2e/ton ür",
+      "expected_kept": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "mwis_kept": [
+        0,
+        1
+      ],
+      "gat_kept": [
+        0,
+        1
+      ],
+      "mwis_correct": false,
+      "gat_correct": false,
+      "verdict": "both_failed",
+      "mwis_latency": 0.017,
+      "gat_latency": 0.021
+    },
+    {
+      "test_id": "76aca12c-0ad5-4f46-b0bf-74b817c20d77",
+      "dimension": "dense_graph",
+      "question": "Şirketin güncel çalışan sayısı nedir?",
+      "expected_kept": [
+        5,
+        6
+      ],
+      "mwis_kept": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "gat_kept": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "mwis_correct": false,
+      "gat_correct": false,
+      "verdict": "both_failed",
+      "mwis_latency": 0.016,
+      "gat_latency": 0.02
+    },
+    {
+      "test_id": "d1ce9ec6-dc53-476a-af42-259b57633238",
+      "dimension": "dense_graph",
+      "question": "Şirketlerin 2024 yılı sürdürülebilirlik yatırımı ne kadar?",
+      "expected_kept": [
+        0,
+        2,
+        4,
+        6,
+        7
+      ],
+      "mwis_kept": [
+        0,
+        1,
+        5
+      ],
+      "gat_kept": [
+        0,
+        1,
+        5
+      ],
+      "mwis_correct": false,
+      "gat_correct": false,
+      "verdict": "both_failed",
+      "mwis_latency": 0.017,
+      "gat_latency": 0.02
+    },
+    {
+      "test_id": "a0688a2a-d130-4edd-aabd-aaac9654e711",
+      "dimension": "numerical_edge",
+      "question": "Şirketin yıllık enerji tüketimi ne kadar?",
+      "expected_kept": [
+        0,
+        1
+      ],
+      "mwis_kept": [
+        0,
+        1
+      ],
+      "gat_kept": [
+        0,
+        1
+      ],
+      "mwis_correct": true,
+      "gat_correct": true,
+      "verdict": "both_ok",
+      "mwis_latency": 0.013,
+      "gat_latency": 0.013
+    },
+    {
+      "test_id": "43547f40-6faa-4627-9db1-8c6e6a2603d6",
+      "dimension": "numerical_edge",
+      "question": "Şirketin 2024 yılı toplam yatırım miktarı?",
+      "expected_kept": [
+        0,
+        1
+      ],
+      "mwis_kept": [
+        0,
+        1
+      ],
+      "gat_kept": [
+        0,
+        1
+      ],
+      "mwis_correct": true,
+      "gat_correct": true,
+      "verdict": "both_ok",
+      "mwis_latency": 0.027,
+      "gat_latency": 0.013
+    },
+    {
+      "test_id": "1ce727aa-12f1-4168-9631-f7cb2f1492f2",
+      "dimension": "numerical_edge",
+      "question": "Şirketin sera gazı emisyonu ne kadardır?",
+      "expected_kept": [
+        0,
+        1,
+        2
+      ],
+      "mwis_kept": [
+        2
+      ],
+      "gat_kept": [
+        2
+      ],
+      "mwis_correct": false,
+      "gat_correct": false,
+      "verdict": "both_failed",
+      "mwis_latency": 0.014,
+      "gat_latency": 0.017
     }
   ]
 }
