@@ -200,6 +200,10 @@ def build_figure(
         ),
         hovermode="closest",
         margin=dict(t=80, l=60, r=20, b=80),
+        # Gradio gr.Plot container'ına fit etmesi için. Hardcoded height olmadan
+        # bazı Gradio 6.x sürümleri Plotly figure'u silently gizli yükseklikte
+        # render ediyor — autosize bu sorunu çözer.
+        autosize=True,
     )
 
     stats = {

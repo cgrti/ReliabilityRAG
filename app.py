@@ -353,6 +353,17 @@ with gr.Blocks(title="ReliabilityRAG") as app:
 
         # ────────────────────────────────────────────────────────────────
         with gr.Tab("📈 Söylem Timeline"):
+            # Plot rendering fix (2026-05-31): Gradio 6.11 + Plotly 5.24 bazen
+            # gr.Plot container'ı 0px yükseklikle render ediyor — CSS ile
+            # min-height forcing + autosize (discourse_graph.py'de) çözer.
+            gr.HTML(
+                '<style>'
+                '#discourse-plot { min-height: 560px !important; }'
+                '#discourse-plot .js-plotly-plot, '
+                '#discourse-plot .plot-container, '
+                '#discourse-plot .plotly { min-height: 560px !important; width: 100% !important; }'
+                '</style>'
+            )
             gr.Markdown(
                 "### Şirketin yıllar içindeki söylem değişimi\n"
                 "Bir şirket seç + bir konu yaz → o konudaki chunk'ları yıllar boyunca "
@@ -374,17 +385,25 @@ with gr.Blocks(title="ReliabilityRAG") as app:
                     )
                     disc_k = gr.Slider(10, 60, value=30, step=5, label="Top-K (chunk sayısı)")
                     disc_btn = gr.Button("📈 Çizgeyi Üret", variant="primary", size="lg")
+                    # Examples defansif filter: Dataset.svelte:228 hatası
+                    # company string'i _companies içinde yoksa Dropdown
+                    # validation fail eder → tüm Examples render hatası.
+                    _disc_example_pool = [
+                        ["Akbank",       "karbon emisyon azaltma hedefi",    30],
+                        ["GarantiBBVA",  "kadın çalışan oranı",              30],
+                        ["NuhCimento",   "yenilenebilir enerji yatırımı",    30],
+                        ["Akbank",       "iş sağlığı güvenliği kaza",        25],
+                        ["AdanaCimento", "karbon emisyonu",                  20],
+                    ]
+                    _disc_examples_safe = [
+                        ex for ex in _disc_example_pool if ex[0] in _companies
+                    ] or [["", "karbon emisyon", 30]]  # fallback if no match
                     gr.Examples(
-                        examples=[
-                            ["Akbank", "karbon emisyon azaltma hedefi", 30],
-                            ["GarantiBBVA", "kadın çalışan oranı", 30],
-                            ["NuhCimento", "yenilenebilir enerji yatırımı", 30],
-                            ["Akbank", "iş sağlığı güvenliği kaza", 25],
-                        ],
+                        examples=_disc_examples_safe,
                         inputs=[disc_company, disc_topic, disc_k],
                     )
                 with gr.Column(scale=3):
-                    disc_plot = gr.Plot(label="Söylem Timeline")
+                    disc_plot = gr.Plot(label="Söylem Timeline", elem_id="discourse-plot")
                     disc_info = gr.Markdown()
 
             with gr.Accordion("⚡ En Çelişkili Çiftler (NLI tabanlı, top 15)", open=True):
