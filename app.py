@@ -20,6 +20,7 @@ except Exception:
 
 import gradio as gr
 
+from config import PROJECT_ROOT
 from rag_pipeline import ReliabilityRAG
 from llm_engine import get_engine
 from discourse_graph import build_figure as build_discourse_figure
@@ -252,24 +253,54 @@ EXAMPLES = [
 ]
 
 
-def _plot_to_html(fig, height: int = 600) -> str:
+def _build_chart_link_card(fig, company_sel: str, topic: str, stats: dict) -> str:
     """
-    Convert Plotly figure to embeddable HTML string. Bypasses gr.Plot widget
-    which has rendering issues on Gradio 6.11 + Plotly 5.24 (2026-05-31 bug:
-    Plot container renders at 0px even with autosize/CSS fixes; standalone
-    HTML from fig.to_html() works perfectly). gr.HTML is the bulletproof path.
+    Save Plotly figure to disk and return an HTML 'open in new tab' card.
+
+    Rationale (2026-05-31): Gradio 6.11 + Plotly 5.24 has multiple rendering
+    bugs that we exhausted: gr.Plot widget renders 0px height (autosize/CSS/
+    elem_id fixes failed); gr.HTML inline embed strips Plotly's <script> tags
+    for XSS protection so plotly.js never loads. The standalone HTML from
+    fig.to_html(include_plotlyjs='cdn') works perfectly in a real browser tab.
+    Pragmatic workaround: save to disk, link user to open in new tab.
     """
-    return fig.to_html(
-        include_plotlyjs="cdn",
-        full_html=False,
-        default_height=height,
-        default_width="100%",
-    )
+    from discourse_graph import _slugify
+    slug = _slugify(f"{company_sel}_{topic}")[:60] or "discourse"
+    html_path = PROJECT_ROOT / "data" / f"discourse_live_{slug}.html"
+    fig.write_html(str(html_path), include_plotlyjs="cdn")
+    # Absolute file:// URL works for user-initiated clicks even from http://localhost
+    abs_url = "file:///" + str(html_path.resolve()).replace("\\", "/")
+    return f"""
+<div style='padding:32px;text-align:center;background:#1a1a1a;border-radius:8px;
+            min-height:240px;display:flex;flex-direction:column;justify-content:center;
+            border:1px solid #333'>
+  <div style='font-size:42px;margin-bottom:8px'>📊</div>
+  <h3 style='color:#eee;margin:0 0 8px 0'>Çizge Hazır — {company_sel}</h3>
+  <p style='color:#aaa;margin:0 0 20px 0;font-size:14px'>
+    {stats['retrieved']} chunk · <b style='color:#ff6b6b'>{stats['edges']} çelişki edge'i</b>
+    · yıl aralığı {stats.get('year_range', '?')}
+  </p>
+  <p style='margin:0 0 20px 0'>
+    <a href='{abs_url}' target='_blank'
+       style='display:inline-block;background:#5C42E5;color:white;
+              padding:14px 32px;text-decoration:none;border-radius:6px;
+              font-size:15px;font-weight:600;
+              box-shadow:0 2px 8px rgba(92,66,229,0.4)'>
+      🚀 Interaktif Timeline'ı Yeni Sekmede Aç
+    </a>
+  </p>
+  <p style='color:#666;font-size:11px;margin:0'>
+    Inline embed Gradio 6.11 + Plotly 5.24 uyumsuzluğu nedeniyle devre dışı;
+    standalone HTML tam interaktivite ile yeni sekmede açılır.
+    <br>Dosya: <code style='color:#888'>data/discourse_live_{slug}.html</code>
+  </p>
+</div>
+"""
 
 
 def run_discourse(company_sel, topic, k):
-    """Wraps build_discourse_figure for Gradio — reuses already-loaded NLI+searcher.
-    Returns HTML string (not Plot figure) due to Gradio 6.11 gr.Plot bug."""
+    """Wraps build_discourse_figure for Gradio. Saves chart to disk + returns
+    'open in new tab' link card (gr.HTML inline embed broken on Gradio 6.11)."""
     if not company_sel or company_sel == ALL:
         return (
             "<div style='padding:40px;text-align:center;color:#888'>"
@@ -293,7 +324,7 @@ def run_discourse(company_sel, topic, k):
             ", ".join(f"`{s}`={n}" for s, n in stats.get("sections", {}).items()) +
             f"\n\n_En çelişkili 15 çift aşağıda; tam liste {stats['edges']} edge._"
         )
-        return _plot_to_html(fig), info, stats.get("edge_rows", [])
+        return _build_chart_link_card(fig, company_sel, topic, stats), info, stats.get("edge_rows", [])
     except Exception as e:
         return (
             f"<div style='padding:40px;text-align:center;color:#c00'>"
