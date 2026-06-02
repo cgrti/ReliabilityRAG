@@ -282,7 +282,6 @@ eden RAG sistemi.
 > sorunun yanında gösteriliyor). Aynı sorgu live `app.py` ile de koşturulabilir;
 > bu cache demo süresinde GPU dalgalanmalarına karşı yedektir.
 
-_CSE496 Bitirme Projesi — Danışman: Prof. Yusuf Sinan Akgül_
 """
 
 

@@ -1,9 +1,8 @@
 """
 Söylem Değişimi Görselleştirmesi — Discourse Timeline Graph
 
-Saliha Hoca'nın 2026-05-10 isteği:
-> "Şirketlerin yıllar içindeki (2015-2024) söylem değişikliklerini
->  kronolojik bir çizge (graph) üzerinde görmek"
+Şirketlerin yıllar içindeki (2015-2024) söylem değişikliklerini kronolojik
+bir çizge üzerinde görselleştirir.
 
 Bu modül, bir şirket × topic için NLI çelişki grafiğini interaktif Plotly
 timeline olarak çizer:

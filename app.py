@@ -240,7 +240,6 @@ eden RAG sistemi.
 **6 aşamalı pipeline:** Retrieval → (Isolated Answering) → NLI Contradiction Graph
 → MWIS Filtering → GAT Dynamic Filtering → Final Generation
 
-_CSE496 Bitirme Projesi — Danışman: Prof. Yusuf Sinan Akgül_
 """
 
 EXAMPLES = [
@@ -264,7 +263,7 @@ def _build_chart_link_card(fig, company_sel: str, topic: str, stats: dict) -> st
       Round 2 (gr.HTML inline embed):  Gradio strips <script> tags — failed
       Round 3 (gr.HTML file:// link):  Chrome blocks file:// from http:// — failed
       Round 4 (webbrowser.open):       server-side opens local browser — WORKS
-        ✓ Works because Akvaryum runs Gradio + Chrome on same machine
+        ✓ Works because local runs Gradio + Chrome on same machine
         ✓ Default browser auto-opens the saved HTML file directly
         ✓ Standalone HTML proven to render perfectly in a real tab
 
@@ -277,7 +276,7 @@ def _build_chart_link_card(fig, company_sel: str, topic: str, stats: dict) -> st
     fig.write_html(str(html_path), include_plotlyjs="cdn")
 
     # Server-side: open default browser to the saved HTML (works on local
-    # Gradio deployments like Akvaryum where server == user's machine).
+    # Gradio deployments like local where server == user's machine).
     auto_opened = False
     try:
         import webbrowser
@@ -417,8 +416,7 @@ with gr.Blocks(title="ReliabilityRAG") as app:
                 "### Şirketin yıllar içindeki söylem değişimi\n"
                 "Bir şirket seç + bir konu yaz → o konudaki chunk'ları yıllar boyunca "
                 "**benzerlik × yıl** ekseninde göster. Kırmızı kesik çizgi = NLI'nin "
-                "tespit ettiği çelişki edge'i (yıllar arası tutarsız iddialar). "
-                "_(Saliha Hoca, 2026-05-10)_\n\n"
+                "tespit ettiği çelişki edge'i (yıllar arası tutarsız iddialar).\n\n"
                 "**Hızlı örnekler:** `Akbank` + *karbon emisyon azaltma hedefi* · "
                 "`GarantiBBVA` + *kadın çalışan oranı* · "
                 "`NuhCimento` + *yenilenebilir enerji yatırımı* · "
