@@ -92,7 +92,7 @@ def _sources_md(clean_chunks):
     return "\n---\n\n".join(parts)
 
 
-def run_query_stream(question, company, year, top_k, use_nli_filter, use_isolated):
+def run_query_stream(question, company, year, top_k, use_nli_filter):
     """
     Generator: streams pipeline progress through 5 phases into the UI.
 
@@ -380,10 +380,6 @@ with gr.Blocks(title="ReliabilityRAG") as app:
                             value=True,
                             label="NLI + MWIS + GAT çelişki filtresi (ÖNERİLİR)",
                         )
-                        use_isolated = gr.Checkbox(
-                            value=False,
-                            label="Isolated answering (her chunk için ayrı LLM cevabı — ÇOK YAVAŞ)",
-                        )
 
                     submit_btn = gr.Button("🔍 Sorgula", variant="primary", size="lg")
 
@@ -475,7 +471,7 @@ with gr.Blocks(title="ReliabilityRAG") as app:
 
     submit_btn.click(
         run_query_stream,
-        inputs=[question, company, year, top_k, use_nli_filter, use_isolated],
+        inputs=[question, company, year, top_k, use_nli_filter],
         outputs=[answer_out, metrics_out, timings_out, sources_out],
     )
 
