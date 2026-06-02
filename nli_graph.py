@@ -137,6 +137,26 @@ class NLIContradictionGraph:
 
         return numbers
 
+    # Turkish temporal revision markers — explicit signals NLI misses.
+    # Added 2026-05-31 to address filter recall 67%→ gap. These tokens
+    # ("revize edildi", "güncellendi" etc.) are strong signals that an
+    # earlier statement is being SUPERSEDED. When paired with numerical
+    # difference, it's a clear temporal contradiction even if mDeBERTa
+    # NLI scores it as 'entailment' or 'neutral' (common failure mode
+    # in Turkish revision sentences).
+    _REVISION_MARKERS = (
+        "revize edil", "revize et", "güncellendi", "güncellen",
+        "değiştirildi", "değişti", "düzeltildi", "yenilendi",
+        "düşürüldü", "yükseltildi", "azaltıldı", "artırıldı",
+        "yeniden belirlen", "üst düzeltildi", "aşağı çek",
+    )
+
+    @staticmethod
+    def has_revision_marker(text: str) -> bool:
+        """Detect Turkish temporal revision marker in lowercased text."""
+        t = text.lower()
+        return any(m in t for m in NLIContradictionGraph._REVISION_MARKERS)
+
     @staticmethod
     def numerical_conflict_score(text_a: str, text_b: str) -> float:
         """
@@ -215,6 +235,26 @@ class NLIContradictionGraph:
             # Numerical conflict bonus
             num_conflict = self.numerical_conflict_score(texts[i], texts[j])
 
+            # 2026-05-31: Turkish revision-marker signal. If either chunk
+            # contains "revize edildi", "güncellendi", "düşürüldü" etc.,
+            # AND there's a numerical difference (even small), boost the
+            # combined score. Catches the temporal-revision failure mode
+            # where NLI scores entailment/neutral despite explicit linguistic
+            # marker of supersession. Lifts filter recall on temporal tests
+            # that previously had 0 NLI edges (target: temporal 1/3 → 3/3).
+            revision_boost = 0.0
+            if (self.has_revision_marker(texts[i])
+                    or self.has_revision_marker(texts[j])):
+                # Year difference (if any) amplifies — same-year revision
+                # is rarer than cross-year.
+                year_a, year_b = years[i], years[j]
+                year_gap_factor = min(abs(year_a - year_b) / 5.0, 1.0)
+                # Need at least some numerical signal to avoid pure-prose
+                # false positives (e.g. "politika revize edildi" without
+                # any numbers should not auto-trigger).
+                if num_conflict > 0 or year_gap_factor > 0:
+                    revision_boost = 0.45 + 0.25 * year_gap_factor
+
             # Hybrid: take the STRONGER signal between semantic NLI and
             # numerical mismatch (instead of weak additive 0.3 weighting).
             # Synthetic-test calibration 2026-05-06: many "scope" /
@@ -222,7 +262,7 @@ class NLIContradictionGraph:
             # vague) but obvious numerical disagreement (150K vs 580K ton,
             # %92 satisfaction vs %38 turnover). max() lets either path
             # trigger an edge.
-            combined = max(nli_contradiction, num_conflict)
+            combined = max(nli_contradiction, num_conflict, revision_boost)
             combined = min(combined, 1.0)
 
             if combined >= threshold:

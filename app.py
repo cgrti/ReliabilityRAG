@@ -47,8 +47,14 @@ _rag = ReliabilityRAG(top_k=20, llm=_llm)
 
 print("[warming up searcher + NLI...]")
 t0 = time.time()
-_ = _rag.searcher     # loads embeddings + chunks
+_ = _rag.searcher     # loads embeddings + chunks + eager-loads SentenceTransformer to GPU
 _ = _rag.nli          # loads mDeBERTa
+# Trigger first encode + search to fully warm the embedding pipeline.
+# Without this, the first user query pays the cold model-encode cost (~5s).
+try:
+    _ = _rag.searcher.search("warmup query", top_k=1)
+except Exception:
+    pass
 print(f"[warmed in {time.time()-t0:.1f}s]")
 
 # Unique company + year lists for dropdowns (exact strings from metadata).

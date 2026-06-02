@@ -74,9 +74,17 @@ def compute_and_save_embeddings(chunks: list[dict]):
 # ── Phase 2: Fast Numpy Search ──────────────────────────────────────────
 
 class NumpyVectorSearch:
-    """Fast cosine similarity search using numpy. No external DB needed."""
+    """Fast cosine similarity search using numpy. No external DB needed.
 
-    def __init__(self):
+    Performance optimizations (2026-05-31, latency target ≤5s):
+      1. Metadata arrays pre-computed at init → vectorized boolean filter
+         instead of 182K-iteration Python loop (was ~3-5s per filtered query).
+      2. SentenceTransformer model eagerly loaded + moved to GPU if available
+         → eliminates 5s cold-load on first search() call.
+      3. argpartition instead of argsort for top-k → O(N) vs O(N log N).
+    """
+
+    def __init__(self, eager_load_model: bool = True):
         print("Loading embeddings from disk...")
         self.embeddings = np.load(str(EMBEDDINGS_NPY))
         with open(CHUNK_IDS_JSON, "r") as f:
@@ -84,40 +92,63 @@ class NumpyVectorSearch:
         self.chunks = load_chunks()
         self.chunk_map = {c["chunk_id"]: c for c in self.chunks}
 
+        # Pre-compute metadata arrays for vectorized filtering (huge win:
+        # replaces 182K-element Python for-loop with NumPy boolean indexing,
+        # ~50-100x speedup on filtered queries).
+        self._companies_arr = np.array([c["company"] for c in self.chunks])
+        self._years_arr = np.array([c["year"] for c in self.chunks])
+
         self._model = None
         print(f"Ready: {self.embeddings.shape[0]} vectors, dim={self.embeddings.shape[1]}")
+
+        # Eager model load — moves the 5s cold-start cost from first search()
+        # to startup, where it's expected. Critical for ≤5s latency target.
+        if eager_load_model:
+            _ = self.model
 
     @property
     def model(self):
         if self._model is None:
             self._model = SentenceTransformer(EMBEDDING_MODEL)
+            # Try to move to GPU if available (encoding 1 query is fast on
+            # CPU too, but GPU is consistent and avoids cold-cache jitter).
+            try:
+                import torch
+                if torch.cuda.is_available():
+                    self._model = self._model.to("cuda")
+            except Exception:
+                pass
         return self._model
 
     def search(self, query: str, top_k: int = 20, company: str = None, year: int = None) -> list[dict]:
-        """Search for most similar chunks."""
-        # Encode query
+        """Search for most similar chunks. Vectorized filtering."""
+        # Encode query (model already warm + on GPU if available)
         query_emb = self.model.encode(
             [f"query: {query}"],
             normalize_embeddings=True,
+            show_progress_bar=False,
         )
 
         # Cosine similarity (embeddings are already normalized)
         scores = (self.embeddings @ query_emb.T).flatten()
 
-        # Apply filters by zeroing out non-matching indices
-        if company or year:
-            for i, chunk in enumerate(self.chunks):
-                if company and chunk["company"] != company:
-                    scores[i] = -1
-                if year and chunk["year"] != year:
-                    scores[i] = -1
+        # Vectorized metadata filter (was: Python for-loop over 182K)
+        if company:
+            scores[self._companies_arr != company] = -np.inf
+        if year:
+            scores[self._years_arr != year] = -np.inf
 
-        # Top-k
-        top_indices = np.argsort(scores)[-top_k:][::-1]
+        # argpartition is O(N) vs argsort O(N log N); for 182K vectors this
+        # saves a few hundred ms on hot calls.
+        if top_k >= len(scores):
+            top_indices = np.argsort(scores)[::-1]
+        else:
+            part = np.argpartition(scores, -top_k)[-top_k:]
+            top_indices = part[np.argsort(scores[part])[::-1]]
 
         results = []
         for idx in top_indices:
-            if scores[idx] <= 0:
+            if scores[idx] <= 0 or scores[idx] == -np.inf:
                 break
             chunk = self.chunks[idx]
             results.append({
