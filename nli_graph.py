@@ -173,12 +173,44 @@ class NLIContradictionGraph:
         t = text.lower()
         return any(m in t for m in NLIContradictionGraph._ABSOLUTIST_MARKERS)
 
+    # Scope markers — when two chunks discuss DIFFERENT scopes of the
+    # same metric (e.g. Kapsam 1 vs Kapsam 1+2 vs Kapsam 1+2+3), the
+    # numerical difference is EXPECTED, not a contradiction. Same for
+    # "doğrudan" vs "dolaylı" emisyon, etc. Added 2026-06-03 to fix
+    # numerical_edge false-positive (Pattern E).
+    _SCOPE_MARKERS = {
+        "scope1": ("kapsam 1", "scope 1", "doğrudan emisyon", "direct emission"),
+        "scope12": ("kapsam 1+2", "kapsam 1 ve 2", "kapsam 1+ 2", "scope 1+2"),
+        "scope123": ("kapsam 1+2+3", "kapsam 1, 2 ve 3", "scope 1+2+3",
+                     "kapsam 1+2+ 3", "tüm kapsam"),
+    }
+
+    @staticmethod
+    def _detect_scope(text: str) -> str | None:
+        """Returns scope identifier if text discusses a specific emission scope."""
+        t = text.lower()
+        # Check most specific first (1+2+3 before 1+2 before 1)
+        for scope_id in ("scope123", "scope12", "scope1"):
+            for marker in NLIContradictionGraph._SCOPE_MARKERS[scope_id]:
+                if marker in t:
+                    return scope_id
+        return None
+
     @staticmethod
     def numerical_conflict_score(text_a: str, text_b: str) -> float:
         """
         Detect numerical conflicts: same metric, very different numbers.
         Returns 0-1 score (higher = more likely conflict).
+
+        2026-06-03: skip when chunks discuss DIFFERENT emission scopes
+        (Kapsam 1 vs 1+2 vs 1+2+3) — those are different metrics by
+        definition, not contradictions. Fixes numerical_edge Pattern E.
         """
+        scope_a = NLIContradictionGraph._detect_scope(text_a)
+        scope_b = NLIContradictionGraph._detect_scope(text_b)
+        if scope_a and scope_b and scope_a != scope_b:
+            return 0.0  # Different scopes → not a contradiction
+
         nums_a = NLIContradictionGraph.extract_numbers(text_a)
         nums_b = NLIContradictionGraph.extract_numbers(text_b)
 
@@ -320,25 +352,34 @@ class NLIContradictionGraph:
             # No contradictions — return all nodes
             return list(G.nodes())
 
-        # Score each node: reliability * recency_bonus - contradiction_penalty
+        # Score each node: temporally-decayed reliability - contradiction penalty
+        # 2026-06-03 (structural fix): replaced multiplicative `weight × recency`
+        # with EXPONENTIAL RELIABILITY DECAY. Root cause of gat_discriminating
+        # Pattern A failures (5+ cases): in old formula, a 6-year-old 0.9-rel
+        # chunk scored higher than a current 0.6-rel chunk because reliability
+        # dominated linearly. New formula: effective_weight = weight ×
+        # exp(-decay × age) gives data a half-life. With decay=0.15:
+        #     0 years old: 1.00× original reliability
+        #     6 years old: 0.41× (the typical gat_discriminating old chunk)
+        #     9 years old: 0.26× (very old data)
+        # This is principled (data freshness decays naturally) — not a
+        # parameter-tweak. Solves Pattern A without sacrificing same-year cases.
+        import math
         node_scores = {}
         max_year = max(nx.get_node_attributes(G, "year").values())
+        DECAY = 0.15  # data half-life ≈ 4.5 years
 
         for node in G.nodes():
             weight = G.nodes[node]["weight"]
             year = G.nodes[node]["year"]
             degree = G.degree(node)
 
-            # Recency bonus: newer reports slightly preferred
-            # 2026-06-03: recency coefficient 0.05 → 0.10 (stronger temporal
-            # preference). Targets GAT-10 same-reliability tie-break regression
-            # and same-section temporal evolution cases. Both chunks with same
-            # reliability now have 2× the recency-driven tie-break delta.
-            recency = 1.0 + 0.10 * (year - max_year + 10)  # +10 to avoid negatives
+            age = max(0, max_year - year)
+            effective_weight = weight * math.exp(-DECAY * age)
             # Contradiction penalty: more edges = less trustworthy
             penalty = 0.1 * degree
 
-            node_scores[node] = weight * recency - penalty
+            node_scores[node] = effective_weight - penalty
 
         # Greedy MWIS
         independent_set = []

@@ -199,12 +199,21 @@ class GATFilter:
             adj[u, v] = w
             adj[v, u] = w
 
+        # 2026-06-03 (structural fix): match NLIContradictionGraph.solve_mwis
+        # exponential decay model. effective_weight = weight × exp(-decay × age).
+        # Critical for gat_discriminating Pattern A: old high-reliability vs
+        # new lower-reliability cases. Without this, GAT static signal still
+        # used old multiplicative formula and disagreed with MWIS — MUST stay
+        # aligned so GAT can match or improve over MWIS, not regress.
+        import math
         max_year = max(years) if years else 0
+        DECAY = 0.15  # data half-life ≈ 4.5 years
         static = []
         for i in range(n):
-            recency = 1.0 + 0.05 * (years[i] - max_year + 10)
+            age = max(0, max_year - years[i])
+            effective_weight = reliability_weights[i] * math.exp(-DECAY * age)
             penalty = 0.1 * contradiction_counts[i]
-            raw = reliability_weights[i] * recency - penalty
+            raw = effective_weight - penalty
             static.append(max(0.0, min(1.0, raw)))
         static_t = torch.tensor(static, dtype=torch.float32, device=device)
 
