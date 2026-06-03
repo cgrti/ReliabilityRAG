@@ -171,6 +171,32 @@ def run_query_stream(question, company, year, top_k, use_nli_filter):
         sources_md,
     )
 
+    # ── Stage 5.5: Empty-result guard ───────────────────────────────
+    # If retrieval/filter left us with 0 chunks (overly strict filter or no
+    # corpus match), skip LLM and show friendly message instead of letting
+    # the LLM hallucinate on an empty prompt.
+    if len(clean_chunks) == 0:
+        total = retrieval_time + nli_time
+        empty_msg = (
+            "ℹ️ **Bu sorgu için kaynak bulunamadı.**\n\n"
+            "Olası nedenler:\n"
+            "- Filtre çok dar (şirket/yıl kombinasyonu hiçbir chunk eşleştirmiyor)\n"
+            "- Konu corpus'ta yok\n"
+            "- Tüm chunk'lar NLI filter'ı tarafından çelişkili işaretlendi\n\n"
+            "Öneri: filtreleri (Hepsi)'ye al ve tekrar dene."
+        )
+        yield (
+            empty_msg,
+            _metrics_md(
+                len(chunks), 0,
+                len(chunks),
+                len(contradiction_edges), total=total,
+            ),
+            timings_partial + [["TOTAL", f"{total:.2f}"]],
+            "_(kaynak yok)_",
+        )
+        return
+
     # ── Stage 6: Final Generation ───────────────────────────────────
     if _llm is None:
         # Stub mode — raw sources
@@ -258,7 +284,8 @@ EXAMPLES = [
 ]
 
 
-def _build_chart_link_card(fig, company_sel: str, topic: str, stats: dict) -> str:
+def _build_chart_link_card(fig, company_sel: str, topic: str, stats: dict,
+                            cached: bool = False) -> str:
     """
     Save Plotly figure to disk, AUTO-OPEN in new browser tab via webbrowser
     module (server-side trigger), and return an HTML status card.
@@ -277,7 +304,10 @@ def _build_chart_link_card(fig, company_sel: str, topic: str, stats: dict) -> st
     showing the file path so user can transfer/serve separately.
     """
     from discourse_graph import _slugify
-    slug = _slugify(f"{company_sel}_{topic}")[:60] or "discourse"
+    # Slug includes top_k so different k values get different cache files,
+    # enabling cache reuse logic in run_discourse() to work correctly.
+    top_k_marker = stats.get("retrieved", "k")
+    slug = _slugify(f"{company_sel}_{topic}_k{top_k_marker}")[:60] or "discourse"
     html_path = PROJECT_ROOT / "data" / f"discourse_live_{slug}.html"
     fig.write_html(str(html_path), include_plotlyjs="cdn")
 
@@ -320,7 +350,11 @@ def _build_chart_link_card(fig, company_sel: str, topic: str, stats: dict) -> st
 
 def run_discourse(company_sel, topic, k):
     """Wraps build_discourse_figure for Gradio. Saves chart to disk + returns
-    'open in new tab' link card (gr.HTML inline embed broken on Gradio 6.11)."""
+    'open in new tab' link card (gr.HTML inline embed broken on Gradio 6.11).
+
+    Cache reuse: if data/discourse_live_<slug>.html exists and is fresh (<1h),
+    reuse it (open browser tab without re-running NLI). Saves ~8s per repeated
+    query during demo provası."""
     if not company_sel or company_sel == ALL:
         return (
             "<div style='padding:40px;text-align:center;color:#888'>"
@@ -330,6 +364,38 @@ def run_discourse(company_sel, topic, k):
         )
     if not topic or not topic.strip():
         topic = "sürdürülebilirlik performansı"
+
+    # Cache reuse check — same company+topic+k → existing HTML, <1h old
+    from discourse_graph import _slugify
+    cache_slug = _slugify(f"{company_sel}_{topic}_k{k}")[:60] or "discourse"
+    cache_path = PROJECT_ROOT / "data" / f"discourse_live_{cache_slug}.html"
+    if cache_path.exists():
+        import time as _t
+        age_s = _t.time() - cache_path.stat().st_mtime
+        if age_s < 3600:  # <1h old
+            try:
+                import webbrowser
+                webbrowser.open_new_tab(str(cache_path))
+            except Exception:
+                pass
+            return (
+                f"<div style='padding:32px;text-align:center;background:#1a1a1a;"
+                f"border-radius:8px;min-height:160px;border:1px solid #333'>"
+                f"<div style='font-size:36px;margin-bottom:8px'>♻️</div>"
+                f"<h3 style='color:#eee;margin:0 0 8px 0'>Cache'ten Açıldı</h3>"
+                f"<p style='color:#aaa;margin:0 0 12px 0;font-size:13px'>"
+                f"<b>{company_sel}</b> · <i>{topic}</i> · top-{k} · "
+                f"yaş: {int(age_s)}s</p>"
+                f"<p style='color:#5C42E5;margin:0;font-weight:600'>"
+                f"✓ Chart yeni sekmede açıldı (yeniden hesaplama yapılmadı)</p>"
+                f"<p style='color:#666;font-size:11px;margin-top:12px'>"
+                f"1 saatten eski cache otomatik yenilenir. "
+                f"Hemen yeniden hesaplamak için: cache dosyasını sil.</p>"
+                f"</div>",
+                f"♻️ Cache'ten: **{company_sel}** · *{topic}* · top-{k} · yaş {int(age_s)}s",
+                [],
+            )
+
     try:
         fig, stats = build_discourse_figure(
             company_sel, topic, top_k=int(k),
