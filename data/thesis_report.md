@@ -32,24 +32,24 @@ Buna ek olarak, sistemin reliability iddiasının LLM-layer ayağını ölçmek 
 
 Aynı 14-case sentetik test seti, aynı NLI graph üzerinde iki modda koşulmuş; sadece filtering layer değiştirilmiştir.
 
-- **MWIS doğru:** 16/30
-- **MWIS+GAT doğru:** 16/30
+- **MWIS doğru:** 18/30
+- **MWIS+GAT doğru:** 17/30
 
 | Metrik | MWIS-only | MWIS+GAT | Δ |
 |--------|----------:|---------:|--:|
-| Filtreleme Başarısı (recall) | 52.63% | 52.63% | +0.00 |
+| Filtreleme Başarısı (recall) | 57.89% | 55.26% | -2.63 |
 | Temporal Doğruluk | 66.67% | 66.67% | +0.00 |
-| Temiz Chunk Korunması | 62.00% | 64.00% | +2.00 |
-| Genel Doğruluk | 53.33% | 53.33% | +0.00 |
+| Temiz Chunk Korunması | 66.00% | 64.00% | -2.00 |
+| Genel Doğruluk | 60.00% | 56.67% | -3.33 |
 | Ortalama Gecikme | 0.03s | 0.02s | -0.01 |
 | Maks Gecikme | 0.29s | 0.09s | -0.20 |
 
 **Verdikt dağılımı:**
 
-- `both_ok`: 15 (her ikisi doğru)
-- `gat_only_ok`: 1 (GAT katkısı)
+- `both_ok`: 17 (her ikisi doğru)
+- `gat_only_ok`: 0 (GAT katkısı)
 - `mwis_only_ok`: 1 (GAT regresyon)
-- `both_failed`: 13 (ikisi de yanlış)
+- `both_failed`: 12 (ikisi de yanlış)
 
 **Yorum:** İki mod aynı sonucu üretiyor. GAT regresyon yapmıyor (`mwis_only_ok=0`), ancak MWIS'tan ayrışan bir karar da vermiyor (`gat_only_ok=0`). Mevcut sentetik dataset'in çeşitliliği, GAT'ın learning capacity'sini doyuracak kadar geniş değildir; daha geniş etiketli korpus ile re-training planlanmaktadır.
 
@@ -74,13 +74,13 @@ Aynı 14-case sentetik test seti, aynı NLI graph üzerinde iki modda koşulmuş
 | 15 | gat_discriminating | Şirketin kadın çalışan oranı nedir?... | — | [1] | [0] | [0] | `both_failed` |
 | 16 | gat_discriminating | Şirketin dijital dönüşüm yatırımı ne kadar?... | — | [1] | [0] | [0] | `both_failed` |
 | 17 | gat_discriminating | Şirketin birim üretim başına karbon emisyon yoğunl... | — | [1] | [0] | [0] | `both_failed` |
-| 18 | gat_discriminating | Şirketin güncel yenilenebilir enerji oranı nedir?... | — | [2, 3] | [0] | [2, 3] | `gat_only_ok` |
+| 18 | gat_discriminating | Şirketin güncel yenilenebilir enerji oranı nedir?... | — | [2, 3] | [2, 3] | [2, 3] | `both_ok` |
 | 19 | gat_discriminating | Şirketin son denetimli net karı ne kadar?... | — | [1] | [1] | [0] | `mwis_only_ok` |
 | 20 | cross_company | 2023 yılı bankacılık sektörü karbon yoğunluğu hang... | — | [0] | [0] | [0] | `both_ok` |
 | 21 | cross_company | Çimento sektöründe alternatif yakıt kullanım oranı... | — | [0] | [0] | [0] | `both_ok` |
 | 22 | cross_company | 2024 perakende sektörü kadın yönetici oranı?... | — | [0, 1] | [1, 2] | [1, 2] | `both_failed` |
 | 23 | zero_claim | Tesislerimizdeki tehlikeli atık miktarı?... | — | [1] | [1] | [1] | `both_ok` |
-| 24 | zero_claim | Enerji ihtiyacının yenilenebilir karşılanma oranı?... | — | [1] | [0, 1] | [0, 1] | `both_failed` |
+| 24 | zero_claim | Enerji ihtiyacının yenilenebilir karşılanma oranı?... | — | [1] | [1] | [1] | `both_ok` |
 | 25 | dense_graph | Çimento sektöründe karbon emisyon yoğunluğu (ton C... | — | [1, 3, 4, 6] | [0, 1] | [0, 1] | `both_failed` |
 | 26 | dense_graph | Şirketin güncel çalışan sayısı nedir?... | — | [5, 6] | [0, 1, 2, 3, 4, 6] | [0, 1, 2, 3, 4, 6] | `both_failed` |
 | 27 | dense_graph | Şirketlerin 2024 yılı sürdürülebilirlik yatırımı n... | — | [0, 2, 4, 6, 7] | [0, 1, 5] | [0, 1, 5] | `both_failed` |
