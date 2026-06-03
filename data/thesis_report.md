@@ -32,24 +32,24 @@ Buna ek olarak, sistemin reliability iddiasının LLM-layer ayağını ölçmek 
 
 Aynı 14-case sentetik test seti, aynı NLI graph üzerinde iki modda koşulmuş; sadece filtering layer değiştirilmiştir.
 
-- **MWIS doğru:** 15/30
-- **MWIS+GAT doğru:** 15/30
+- **MWIS doğru:** 16/30
+- **MWIS+GAT doğru:** 16/30
 
 | Metrik | MWIS-only | MWIS+GAT | Δ |
 |--------|----------:|---------:|--:|
-| Filtreleme Başarısı (recall) | 50.00% | 50.00% | +0.00 |
-| Temporal Doğruluk | 33.33% | 33.33% | +0.00 |
-| Temiz Chunk Korunması | 64.00% | 66.00% | +2.00 |
-| Genel Doğruluk | 50.00% | 50.00% | +0.00 |
+| Filtreleme Başarısı (recall) | 52.63% | 52.63% | +0.00 |
+| Temporal Doğruluk | 66.67% | 66.67% | +0.00 |
+| Temiz Chunk Korunması | 62.00% | 64.00% | +2.00 |
+| Genel Doğruluk | 53.33% | 53.33% | +0.00 |
 | Ortalama Gecikme | 0.03s | 0.02s | -0.01 |
 | Maks Gecikme | 0.29s | 0.09s | -0.20 |
 
 **Verdikt dağılımı:**
 
-- `both_ok`: 14 (her ikisi doğru)
+- `both_ok`: 15 (her ikisi doğru)
 - `gat_only_ok`: 1 (GAT katkısı)
 - `mwis_only_ok`: 1 (GAT regresyon)
-- `both_failed`: 14 (ikisi de yanlış)
+- `both_failed`: 13 (ikisi de yanlış)
 
 **Yorum:** İki mod aynı sonucu üretiyor. GAT regresyon yapmıyor (`mwis_only_ok=0`), ancak MWIS'tan ayrışan bir karar da vermiyor (`gat_only_ok=0`). Mevcut sentetik dataset'in çeşitliliği, GAT'ın learning capacity'sini doyuracak kadar geniş değildir; daha geniş etiketli korpus ile re-training planlanmaktadır.
 
@@ -57,9 +57,9 @@ Aynı 14-case sentetik test seti, aynı NLI graph üzerinde iki modda koşulmuş
 
 | # | Boyut | Soru (kısaltılmış) | Edges | Expected | MWIS | GAT | Verdikt |
 |---|-------|--------------------|------:|----------|------|-----|---------|
-| 1 | temporal | Şirketin karbon emisyon azaltma hedefi nedir?... | — | [1, 2] | [0, 1, 2] | [0, 1, 2] | `both_failed` |
+| 1 | temporal | Şirketin karbon emisyon azaltma hedefi nedir?... | — | [1, 2] | [0, 2] | [0, 2] | `both_failed` |
 | 2 | temporal | Şirketin toplam çalışan sayısı kaçtır?... | — | [1, 2] | [1, 2] | [1, 2] | `both_ok` |
-| 3 | temporal | Şirketin gelir büyüme hedefi nedir?... | — | [1] | [0, 1] | [0, 1] | `both_failed` |
+| 3 | temporal | Şirketin gelir büyüme hedefi nedir?... | — | [1] | [1] | [1] | `both_ok` |
 | 4 | scope | Şirketin toplam sera gazı emisyonu ne kadardır?... | — | [1, 2] | [1, 2] | [1, 2] | `both_ok` |
 | 5 | scope | Şirketin atık yönetimi performansı nasıl?... | — | [1, 2] | [1, 2] | [1, 2] | `both_ok` |
 | 6 | scope | Şirketin su tüketimi ne kadar azaldı?... | — | [1] | [1] | [1] | `both_ok` |
