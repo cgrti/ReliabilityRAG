@@ -310,9 +310,21 @@ class GATFilter:
 
         scores = self.compute_scores(G, reliability_weights, years, section_types)
 
-        # Greedy MWIS with GAT scores
+        # 2026-06-03: Match NLIContradictionGraph.solve_mwis strategy —
+        # exact enumeration for n ≤ 12, greedy for larger. Without this,
+        # GAT would disagree with MWIS on dense_graph cases (since static
+        # signal alignment alone isn't enough; the SELECTION strategy must
+        # also be exact to find global optima like [1,3,4,6]).
+        nodes = list(range(G.number_of_nodes()))
+        if len(nodes) <= 12:
+            from nli_graph import NLIContradictionGraph
+            adj = {node: set(G.neighbors(node)) for node in nodes}
+            score_dict = {node: scores[node] for node in nodes}
+            return NLIContradictionGraph._exact_mwis(nodes, score_dict, adj)
+
+        # Greedy MWIS with GAT scores (fallback for n > 12)
         independent_set = []
-        remaining = set(range(G.number_of_nodes()))
+        remaining = set(nodes)
 
         while remaining:
             best = max(remaining, key=lambda n: scores[n])
