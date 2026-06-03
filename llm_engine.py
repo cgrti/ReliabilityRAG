@@ -2,9 +2,12 @@
 LLM Engine for ReliabilityRAG
 
 Supports multiple backends:
-1. Transformers (local, default) - Phi-3-mini or Gemma-2 2B for 6GB VRAM
-2. Ollama (local, optional) - if installed
-3. API (remote, optional) - OpenAI-compatible endpoints
+1. Transformers (local, default) — model selected by GPU profile in config.py
+     small  (≤8 GB VRAM):  microsoft/Phi-3.5-mini-instruct (4-bit)
+     large  (16 GB VRAM):  ytu-ce-cosmos/Turkish-Llama-8b-Instruct-v0.1 (4-bit)
+     xlarge (≥20 GB):       Qwen/Qwen2.5-14B-Instruct (fp16)
+2. Ollama (local, optional) — if installed
+3. API (remote, optional) — OpenAI-compatible endpoints
 
 All backends implement the same interface: generate(prompt) -> str
 """

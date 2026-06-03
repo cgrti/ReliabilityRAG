@@ -534,12 +534,30 @@ with gr.Blocks(title="ReliabilityRAG") as app:
                 outputs=[disc_plot, disc_info, disc_edges],
             )
 
-    gr.Markdown(
-        "---\n"
-        f"**Model:** {'Phi-3.5-mini-instruct 4-bit' if USE_LLM else 'STUB (LLM yok)'} "
-        f"| **NLI:** mDeBERTa-v3-base-mnli-xnli "
-        f"| **Embed:** multilingual-e5-base"
-    )
+    # Footer — dynamically read the actual loaded model from config profile,
+    # so it reflects whatever LLM is in use (Turkish-Llama-8b, Qwen, Phi, etc.)
+    # rather than a hardcoded name that goes stale.
+    def _footer_md():
+        if not USE_LLM:
+            llm_name = "STUB (LLM yok)"
+            dtype_str = ""
+        else:
+            try:
+                from config import get_profile
+                _prof = get_profile()
+                llm_name = _prof["llm_model"]
+                dtype_str = f" ({_prof['llm_dtype']})"
+            except Exception:
+                llm_name = "?"
+                dtype_str = ""
+        return (
+            "---\n"
+            f"**Model:** {llm_name}{dtype_str} "
+            f"| **NLI:** MoritzLaurer/mDeBERTa-v3-base-mnli-xnli "
+            f"| **Embed:** intfloat/multilingual-e5-base"
+        )
+
+    gr.Markdown(_footer_md())
 
     submit_btn.click(
         run_query_stream,
