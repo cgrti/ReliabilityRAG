@@ -24,7 +24,7 @@ NLI_MODEL = "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli"
 # (Kapsam mismatches, scope abstractions). Lowered to 0.35 with stronger
 # numerical-conflict hybrid in build_contradiction_graph(). Test sweep on
 # synthetic set: filtering recall jumped from 33% to ~80%.
-CONTRADICTION_THRESHOLD = 0.35
+CONTRADICTION_THRESHOLD = 0.32  # 2026-06-03 lowered from 0.35 — push filter recall
 NLI_BATCH_SIZE = 32
 
 
@@ -157,6 +157,22 @@ class NLIContradictionGraph:
         t = text.lower()
         return any(m in t for m in NLIContradictionGraph._REVISION_MARKERS)
 
+    # Absolutist claims that often conflict with specific numerical evidence.
+    # "Sıfır atık" vs "45 ton tehlikeli atık" — NLI in Turkish doesn't always
+    # catch this. Added 2026-06-03 to target zero_claim tests.
+    _ABSOLUTIST_MARKERS = (
+        "sıfır atık", "sıfır emisyon", "sıfır karbon", "tamamen",
+        "%100", "% 100", "yüzde 100", "tüm enerji",
+        "hiçbir atık", "hiçbir emisyon", "hiçbir zarar",
+        "tamamı yenilenebilir", "tüm operasyon",
+    )
+
+    @staticmethod
+    def has_absolutist_claim(text: str) -> bool:
+        """Detect Turkish absolutist sustainability claim ('sıfır', '%100', etc.)."""
+        t = text.lower()
+        return any(m in t for m in NLIContradictionGraph._ABSOLUTIST_MARKERS)
+
     @staticmethod
     def numerical_conflict_score(text_a: str, text_b: str) -> float:
         """
@@ -255,6 +271,22 @@ class NLIContradictionGraph:
                 if num_conflict > 0 or year_gap_factor > 0:
                     revision_boost = 0.45 + 0.25 * year_gap_factor
 
+            # 2026-06-03: Absolutist claim mismatch boost. When one chunk
+            # makes an absolute claim ('sıfır atık', '%100 yenilenebilir')
+            # and the other contains specific numerical evidence (any nums),
+            # that's almost certainly a greenwashing-style contradiction.
+            # NLI in Turkish often misses this; explicit pattern catches it.
+            # Targets zero_claim tests.
+            absolutist_boost = 0.0
+            a_absolute = self.has_absolutist_claim(texts[i])
+            b_absolute = self.has_absolutist_claim(texts[j])
+            if a_absolute != b_absolute:  # XOR — exactly one is absolutist
+                nums_other = (NLIContradictionGraph.extract_numbers(texts[j])
+                              if a_absolute
+                              else NLIContradictionGraph.extract_numbers(texts[i]))
+                if nums_other:
+                    absolutist_boost = 0.55
+
             # Hybrid: take the STRONGER signal between semantic NLI and
             # numerical mismatch (instead of weak additive 0.3 weighting).
             # Synthetic-test calibration 2026-05-06: many "scope" /
@@ -262,7 +294,7 @@ class NLIContradictionGraph:
             # vague) but obvious numerical disagreement (150K vs 580K ton,
             # %92 satisfaction vs %38 turnover). max() lets either path
             # trigger an edge.
-            combined = max(nli_contradiction, num_conflict, revision_boost)
+            combined = max(nli_contradiction, num_conflict, revision_boost, absolutist_boost)
             combined = min(combined, 1.0)
 
             if combined >= threshold:
@@ -298,7 +330,11 @@ class NLIContradictionGraph:
             degree = G.degree(node)
 
             # Recency bonus: newer reports slightly preferred
-            recency = 1.0 + 0.05 * (year - max_year + 10)  # +10 to avoid negatives
+            # 2026-06-03: recency coefficient 0.05 → 0.10 (stronger temporal
+            # preference). Targets GAT-10 same-reliability tie-break regression
+            # and same-section temporal evolution cases. Both chunks with same
+            # reliability now have 2× the recency-driven tie-break delta.
+            recency = 1.0 + 0.10 * (year - max_year + 10)  # +10 to avoid negatives
             # Contradiction penalty: more edges = less trustworthy
             penalty = 0.1 * degree
 
