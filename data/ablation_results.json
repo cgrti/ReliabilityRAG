@@ -1,45 +1,45 @@
 {
   "summary": {
     "total_tests": 30,
-    "mwis_correct": 18,
-    "gat_correct": 17,
-    "mwis_run_seconds": 1.0,
+    "mwis_correct": 24,
+    "gat_correct": 23,
+    "mwis_run_seconds": 1.01,
     "gat_run_seconds": 0.56
   },
   "metrics_mwis": {
-    "filtering_success": 57.89473684210527,
+    "filtering_success": 76.31578947368422,
     "temporal_accuracy": 66.66666666666666,
-    "clean_preservation": 66.0,
-    "avg_latency": 0.03343617121378581,
-    "max_latency": 0.2924938201904297,
-    "overall_accuracy": 60.0,
+    "clean_preservation": 80.0,
+    "avg_latency": 0.033554728825887045,
+    "max_latency": 0.2938544750213623,
+    "overall_accuracy": 80.0,
     "by_dimension": {
       "temporal": 66.66666666666666,
       "scope": 100.0,
       "interdepartmental": 100.0,
-      "gat_discriminating": 40.0,
+      "gat_discriminating": 90.0,
       "cross_company": 66.66666666666666,
       "zero_claim": 100.0,
       "dense_graph": 0.0,
-      "numerical_edge": 66.66666666666666
+      "numerical_edge": 100.0
     }
   },
   "metrics_gat": {
-    "filtering_success": 55.26315789473685,
+    "filtering_success": 76.31578947368422,
     "temporal_accuracy": 66.66666666666666,
-    "clean_preservation": 64.0,
-    "avg_latency": 0.018698930740356445,
-    "max_latency": 0.09254240989685059,
-    "overall_accuracy": 56.666666666666664,
+    "clean_preservation": 80.0,
+    "avg_latency": 0.018576677640279135,
+    "max_latency": 0.09340620040893555,
+    "overall_accuracy": 76.66666666666667,
     "by_dimension": {
       "temporal": 66.66666666666666,
       "scope": 100.0,
       "interdepartmental": 100.0,
-      "gat_discriminating": 30.0,
+      "gat_discriminating": 80.0,
       "cross_company": 66.66666666666666,
       "zero_claim": 100.0,
       "dense_graph": 0.0,
-      "numerical_edge": 66.66666666666666
+      "numerical_edge": 100.0
     }
   },
   "per_test": [
@@ -62,7 +62,7 @@
       "mwis_correct": false,
       "gat_correct": false,
       "verdict": "both_failed",
-      "mwis_latency": 0.292,
+      "mwis_latency": 0.294,
       "gat_latency": 0.093
     },
     {
@@ -85,7 +85,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.09,
-      "gat_latency": 0.018
+      "gat_latency": 0.017
     },
     {
       "test_id": "d298a1d4-7cbc-430a-b973-695348a71f35",
@@ -103,8 +103,8 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.083,
-      "gat_latency": 0.017
+      "mwis_latency": 0.085,
+      "gat_latency": 0.016
     },
     {
       "test_id": "f2bacecd-4d87-481e-bdc2-9b9cee60a279",
@@ -167,7 +167,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.013,
-      "gat_latency": 0.017
+      "gat_latency": 0.016
     },
     {
       "test_id": "52ffcce1-2466-49aa-8c11-e2470805cf44",
@@ -208,7 +208,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.013,
-      "gat_latency": 0.017
+      "gat_latency": 0.016
     },
     {
       "test_id": "a655c1de-dccc-4c93-a057-8922ce0eedcb",
@@ -227,7 +227,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.013,
-      "gat_latency": 0.017
+      "gat_latency": 0.016
     },
     {
       "test_id": "1e4b348d-8c2d-4640-bc8d-57f211c42214",
@@ -237,15 +237,15 @@
         1
       ],
       "mwis_kept": [
-        0
+        1
       ],
       "gat_kept": [
-        0
+        1
       ],
-      "mwis_correct": false,
-      "gat_correct": false,
-      "verdict": "both_failed",
-      "mwis_latency": 0.014,
+      "mwis_correct": true,
+      "gat_correct": true,
+      "verdict": "both_ok",
+      "mwis_latency": 0.013,
       "gat_latency": 0.016
     },
     {
@@ -265,7 +265,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.013,
-      "gat_latency": 0.015
+      "gat_latency": 0.016
     },
     {
       "test_id": "aa5717db-7997-496f-8a4d-37549c0929f2",
@@ -316,16 +316,16 @@
         2
       ],
       "mwis_kept": [
-        0,
-        1
+        1,
+        2
       ],
       "gat_kept": [
         0,
         1
       ],
-      "mwis_correct": false,
+      "mwis_correct": true,
       "gat_correct": false,
-      "verdict": "both_failed",
+      "verdict": "mwis_only_ok",
       "mwis_latency": 0.013,
       "gat_latency": 0.016
     },
@@ -337,16 +337,16 @@
         1
       ],
       "mwis_kept": [
-        0
+        1
       ],
       "gat_kept": [
-        0
+        1
       ],
-      "mwis_correct": false,
-      "gat_correct": false,
-      "verdict": "both_failed",
+      "mwis_correct": true,
+      "gat_correct": true,
+      "verdict": "both_ok",
       "mwis_latency": 0.013,
-      "gat_latency": 0.016
+      "gat_latency": 0.015
     },
     {
       "test_id": "5f85e05c-9951-4e64-97d6-54b72782a41c",
@@ -356,14 +356,14 @@
         1
       ],
       "mwis_kept": [
-        0
+        1
       ],
       "gat_kept": [
-        0
+        1
       ],
-      "mwis_correct": false,
-      "gat_correct": false,
-      "verdict": "both_failed",
+      "mwis_correct": true,
+      "gat_correct": true,
+      "verdict": "both_ok",
       "mwis_latency": 0.013,
       "gat_latency": 0.016
     },
@@ -375,14 +375,14 @@
         1
       ],
       "mwis_kept": [
-        0
+        1
       ],
       "gat_kept": [
-        0
+        1
       ],
-      "mwis_correct": false,
-      "gat_correct": false,
-      "verdict": "both_failed",
+      "mwis_correct": true,
+      "gat_correct": true,
+      "verdict": "both_ok",
       "mwis_latency": 0.013,
       "gat_latency": 0.015
     },
@@ -405,7 +405,7 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.014,
+      "mwis_latency": 0.013,
       "gat_latency": 0.017
     },
     {
@@ -419,13 +419,13 @@
         1
       ],
       "gat_kept": [
-        0
+        1
       ],
       "mwis_correct": true,
-      "gat_correct": false,
-      "verdict": "mwis_only_ok",
+      "gat_correct": true,
+      "verdict": "both_ok",
       "mwis_latency": 0.013,
-      "gat_latency": 0.015
+      "gat_latency": 0.016
     },
     {
       "test_id": "735a8375-2439-4613-8749-188deb152664",
@@ -444,7 +444,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.013,
-      "gat_latency": 0.015
+      "gat_latency": 0.016
     },
     {
       "test_id": "6c9239f3-a5dc-47ba-a344-e8f7b6ba44c7",
@@ -463,7 +463,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.013,
-      "gat_latency": 0.016
+      "gat_latency": 0.015
     },
     {
       "test_id": "25d56b91-356e-48a1-a7c2-71e8b4a2ec95",
@@ -484,7 +484,7 @@
       "mwis_correct": false,
       "gat_correct": false,
       "verdict": "both_failed",
-      "mwis_latency": 0.013,
+      "mwis_latency": 0.014,
       "gat_latency": 0.016
     },
     {
@@ -523,7 +523,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.013,
-      "gat_latency": 0.017
+      "gat_latency": 0.016
     },
     {
       "test_id": "b6192348-6914-4a38-a087-2a1884216dfc",
@@ -540,14 +540,14 @@
         1
       ],
       "gat_kept": [
-        0,
-        1
+        3,
+        6
       ],
       "mwis_correct": false,
       "gat_correct": false,
       "verdict": "both_failed",
-      "mwis_latency": 0.018,
-      "gat_latency": 0.02
+      "mwis_latency": 0.019,
+      "gat_latency": 0.021
     },
     {
       "test_id": "76aca12c-0ad5-4f46-b0bf-74b817c20d77",
@@ -558,25 +558,21 @@
         6
       ],
       "mwis_kept": [
-        0,
         1,
         2,
-        3,
         4,
-        6
+        5
       ],
       "gat_kept": [
-        0,
         1,
         2,
-        3,
         4,
-        6
+        5
       ],
       "mwis_correct": false,
       "gat_correct": false,
       "verdict": "both_failed",
-      "mwis_latency": 0.016,
+      "mwis_latency": 0.017,
       "gat_latency": 0.019
     },
     {
@@ -604,7 +600,7 @@
       "gat_correct": false,
       "verdict": "both_failed",
       "mwis_latency": 0.016,
-      "gat_latency": 0.019
+      "gat_latency": 0.02
     },
     {
       "test_id": "a0688a2a-d130-4edd-aabd-aaac9654e711",
@@ -626,7 +622,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.013,
-      "gat_latency": 0.012
+      "gat_latency": 0.013
     },
     {
       "test_id": "43547f40-6faa-4627-9db1-8c6e6a2603d6",
@@ -647,8 +643,8 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.026,
-      "gat_latency": 0.013
+      "mwis_latency": 0.027,
+      "gat_latency": 0.012
     },
     {
       "test_id": "1ce727aa-12f1-4168-9631-f7cb2f1492f2",
@@ -660,16 +656,20 @@
         2
       ],
       "mwis_kept": [
+        0,
+        1,
         2
       ],
       "gat_kept": [
+        0,
+        1,
         2
       ],
-      "mwis_correct": false,
-      "gat_correct": false,
-      "verdict": "both_failed",
+      "mwis_correct": true,
+      "gat_correct": true,
+      "verdict": "both_ok",
       "mwis_latency": 0.014,
-      "gat_latency": 0.016
+      "gat_latency": 0.013
     }
   ]
 }
