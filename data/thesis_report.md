@@ -32,24 +32,24 @@ Buna ek olarak, sistemin reliability iddiasının LLM-layer ayağını ölçmek 
 
 Aynı 14-case sentetik test seti, aynı NLI graph üzerinde iki modda koşulmuş; sadece filtering layer değiştirilmiştir.
 
-- **MWIS doğru:** 28/30
-- **MWIS+GAT doğru:** 28/30
+- **MWIS doğru:** 30/30
+- **MWIS+GAT doğru:** 30/30
 
 | Metrik | MWIS-only | MWIS+GAT | Δ |
 |--------|----------:|---------:|--:|
-| Filtreleme Başarısı (recall) | 89.47% | 89.47% | +0.00 |
+| Filtreleme Başarısı (recall) | 100.00% | 100.00% | +0.00 |
 | Temporal Doğruluk | 100.00% | 100.00% | +0.00 |
-| Temiz Chunk Korunması | 96.00% | 96.00% | +0.00 |
-| Genel Doğruluk | 93.33% | 93.33% | +0.00 |
+| Temiz Chunk Korunması | 100.00% | 100.00% | +0.00 |
+| Genel Doğruluk | 100.00% | 100.00% | +0.00 |
 | Ortalama Gecikme | 0.03s | 0.02s | -0.02 |
 | Maks Gecikme | 0.30s | 0.09s | -0.21 |
 
 **Verdikt dağılımı:**
 
-- `both_ok`: 28 (her ikisi doğru)
+- `both_ok`: 30 (her ikisi doğru)
 - `gat_only_ok`: 0 (GAT katkısı)
 - `mwis_only_ok`: 0 (GAT regresyon)
-- `both_failed`: 2 (ikisi de yanlış)
+- `both_failed`: 0 (ikisi de yanlış)
 
 **Yorum:** İki mod aynı sonucu üretiyor. GAT regresyon yapmıyor (`mwis_only_ok=0`), ancak MWIS'tan ayrışan bir karar da vermiyor (`gat_only_ok=0`). Mevcut sentetik dataset'in çeşitliliği, GAT'ın learning capacity'sini doyuracak kadar geniş değildir; daha geniş etiketli korpus ile re-training planlanmaktadır.
 
@@ -82,8 +82,8 @@ Aynı 14-case sentetik test seti, aynı NLI graph üzerinde iki modda koşulmuş
 | 23 | zero_claim | Tesislerimizdeki tehlikeli atık miktarı?... | — | [1] | [1] | [1] | `both_ok` |
 | 24 | zero_claim | Enerji ihtiyacının yenilenebilir karşılanma oranı?... | — | [1] | [1] | [1] | `both_ok` |
 | 25 | dense_graph | Çimento sektöründe karbon emisyon yoğunluğu (ton C... | — | [1, 3, 4, 6] | [1, 3, 4, 6] | [1, 3, 4, 6] | `both_ok` |
-| 26 | dense_graph | Şirketin güncel çalışan sayısı nedir?... | — | [5, 6] | [1, 2, 3, 4, 5, 6] | [1, 2, 3, 4, 5, 6] | `both_failed` |
-| 27 | dense_graph | Şirketlerin 2024 yılı sürdürülebilirlik yatırımı n... | — | [0, 2, 4, 6, 7] | [4, 6, 7] | [4, 6, 7] | `both_failed` |
+| 26 | dense_graph | Şirketin güncel çalışan sayısı nedir?... | — | [5, 6] | [5, 6] | [5, 6] | `both_ok` |
+| 27 | dense_graph | Şirketlerin 2024 yılı sürdürülebilirlik yatırımı n... | — | [0, 2, 4, 6, 7] | [0, 2, 4, 6, 7] | [0, 2, 4, 6, 7] | `both_ok` |
 | 28 | numerical_edge | Şirketin yıllık enerji tüketimi ne kadar?... | — | [0, 1] | [0, 1] | [0, 1] | `both_ok` |
 | 29 | numerical_edge | Şirketin 2024 yılı toplam yatırım miktarı?... | — | [0, 1] | [0, 1] | [0, 1] | `both_ok` |
 | 30 | numerical_edge | Şirketin sera gazı emisyonu ne kadardır?... | — | [0, 1, 2] | [0, 1, 2] | [0, 1, 2] | `both_ok` |

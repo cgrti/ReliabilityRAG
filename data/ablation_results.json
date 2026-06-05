@@ -1,18 +1,18 @@
 {
   "summary": {
     "total_tests": 30,
-    "mwis_correct": 28,
-    "gat_correct": 28,
-    "mwis_run_seconds": 1.05,
+    "mwis_correct": 30,
+    "gat_correct": 30,
+    "mwis_run_seconds": 1.04,
     "gat_run_seconds": 0.56
   },
   "metrics_mwis": {
-    "filtering_success": 89.47368421052632,
+    "filtering_success": 100.0,
     "temporal_accuracy": 100.0,
-    "clean_preservation": 96.0,
-    "avg_latency": 0.03498472372690837,
-    "max_latency": 0.3030095100402832,
-    "overall_accuracy": 93.33333333333333,
+    "clean_preservation": 100.0,
+    "avg_latency": 0.0345536470413208,
+    "max_latency": 0.30271077156066895,
+    "overall_accuracy": 100.0,
     "by_dimension": {
       "temporal": 100.0,
       "scope": 100.0,
@@ -20,17 +20,17 @@
       "gat_discriminating": 100.0,
       "cross_company": 100.0,
       "zero_claim": 100.0,
-      "dense_graph": 33.33333333333333,
+      "dense_graph": 100.0,
       "numerical_edge": 100.0
     }
   },
   "metrics_gat": {
-    "filtering_success": 89.47368421052632,
+    "filtering_success": 100.0,
     "temporal_accuracy": 100.0,
-    "clean_preservation": 96.0,
-    "avg_latency": 0.018612265586853027,
-    "max_latency": 0.09163141250610352,
-    "overall_accuracy": 93.33333333333333,
+    "clean_preservation": 100.0,
+    "avg_latency": 0.018804494539896646,
+    "max_latency": 0.09163546562194824,
+    "overall_accuracy": 100.0,
     "by_dimension": {
       "temporal": 100.0,
       "scope": 100.0,
@@ -38,7 +38,7 @@
       "gat_discriminating": 100.0,
       "cross_company": 100.0,
       "zero_claim": 100.0,
-      "dense_graph": 33.33333333333333,
+      "dense_graph": 100.0,
       "numerical_edge": 100.0
     }
   },
@@ -84,7 +84,7 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.097,
+      "mwis_latency": 0.091,
       "gat_latency": 0.017
     },
     {
@@ -103,7 +103,7 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.091,
+      "mwis_latency": 0.084,
       "gat_latency": 0.015
     },
     {
@@ -126,7 +126,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.178,
-      "gat_latency": 0.016
+      "gat_latency": 0.015
     },
     {
       "test_id": "d5c8f12e-2639-4065-9ca0-955714dfe4db",
@@ -147,8 +147,8 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.014,
-      "gat_latency": 0.017
+      "mwis_latency": 0.015,
+      "gat_latency": 0.016
     },
     {
       "test_id": "4a738886-ada8-448e-82f4-84747c2ee2cb",
@@ -166,8 +166,8 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.014,
-      "gat_latency": 0.015
+      "mwis_latency": 0.015,
+      "gat_latency": 0.016
     },
     {
       "test_id": "52ffcce1-2466-49aa-8c11-e2470805cf44",
@@ -188,8 +188,8 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.014,
-      "gat_latency": 0.016
+      "mwis_latency": 0.015,
+      "gat_latency": 0.017
     },
     {
       "test_id": "43ab3db0-48b0-4bc4-9314-0285704fd821",
@@ -245,8 +245,8 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.014,
-      "gat_latency": 0.015
+      "mwis_latency": 0.013,
+      "gat_latency": 0.017
     },
     {
       "test_id": "3552f9ae-81b8-4179-b4aa-0efab05a2ba6",
@@ -264,7 +264,7 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.014,
+      "mwis_latency": 0.013,
       "gat_latency": 0.016
     },
     {
@@ -303,7 +303,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.014,
-      "gat_latency": 0.015
+      "gat_latency": 0.016
     },
     {
       "test_id": "79153ba5-3fcc-4fbb-9228-e83b34799c40",
@@ -324,8 +324,8 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.014,
-      "gat_latency": 0.017
+      "mwis_latency": 0.013,
+      "gat_latency": 0.016
     },
     {
       "test_id": "d80774c9-80d4-4d48-a99b-8344f4393e54",
@@ -343,7 +343,7 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.013,
+      "mwis_latency": 0.014,
       "gat_latency": 0.015
     },
     {
@@ -363,7 +363,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.013,
-      "gat_latency": 0.015
+      "gat_latency": 0.016
     },
     {
       "test_id": "a8a7c02d-b02e-49a0-9851-ed4c15fd33fa",
@@ -381,7 +381,7 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.013,
+      "mwis_latency": 0.014,
       "gat_latency": 0.016
     },
     {
@@ -404,7 +404,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.014,
-      "gat_latency": 0.016
+      "gat_latency": 0.017
     },
     {
       "test_id": "b896b4ed-f8a9-4b9d-8230-fee86b11ccca",
@@ -423,7 +423,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.013,
-      "gat_latency": 0.015
+      "gat_latency": 0.016
     },
     {
       "test_id": "735a8375-2439-4613-8749-188deb152664",
@@ -442,7 +442,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.013,
-      "gat_latency": 0.016
+      "gat_latency": 0.015
     },
     {
       "test_id": "6c9239f3-a5dc-47ba-a344-e8f7b6ba44c7",
@@ -461,7 +461,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.013,
-      "gat_latency": 0.015
+      "gat_latency": 0.016
     },
     {
       "test_id": "25d56b91-356e-48a1-a7c2-71e8b4a2ec95",
@@ -483,7 +483,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.014,
-      "gat_latency": 0.015
+      "gat_latency": 0.016
     },
     {
       "test_id": "a0b1c9b8-a361-48a9-8121-666b57568f4b",
@@ -502,7 +502,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.013,
-      "gat_latency": 0.017
+      "gat_latency": 0.016
     },
     {
       "test_id": "542aa383-360b-472a-9396-54fd1640497a",
@@ -521,7 +521,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.013,
-      "gat_latency": 0.015
+      "gat_latency": 0.016
     },
     {
       "test_id": "b6192348-6914-4a38-a087-2a1884216dfc",
@@ -549,7 +549,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.019,
-      "gat_latency": 0.023
+      "gat_latency": 0.021
     },
     {
       "test_id": "76aca12c-0ad5-4f46-b0bf-74b817c20d77",
@@ -560,26 +560,18 @@
         6
       ],
       "mwis_kept": [
-        1,
-        2,
-        3,
-        4,
         5,
         6
       ],
       "gat_kept": [
-        1,
-        2,
-        3,
-        4,
         5,
         6
       ],
-      "mwis_correct": false,
-      "gat_correct": false,
-      "verdict": "both_failed",
-      "mwis_latency": 0.019,
-      "gat_latency": 0.021
+      "mwis_correct": true,
+      "gat_correct": true,
+      "verdict": "both_ok",
+      "mwis_latency": 0.017,
+      "gat_latency": 0.022
     },
     {
       "test_id": "d1ce9ec6-dc53-476a-af42-259b57633238",
@@ -593,18 +585,22 @@
         7
       ],
       "mwis_kept": [
+        0,
+        2,
         4,
         6,
         7
       ],
       "gat_kept": [
+        0,
+        2,
         4,
         6,
         7
       ],
-      "mwis_correct": false,
-      "gat_correct": false,
-      "verdict": "both_failed",
+      "mwis_correct": true,
+      "gat_correct": true,
+      "verdict": "both_ok",
       "mwis_latency": 0.018,
       "gat_latency": 0.022
     },
@@ -649,7 +645,7 @@
       "mwis_correct": true,
       "gat_correct": true,
       "verdict": "both_ok",
-      "mwis_latency": 0.028,
+      "mwis_latency": 0.026,
       "gat_latency": 0.013
     },
     {
@@ -675,7 +671,7 @@
       "gat_correct": true,
       "verdict": "both_ok",
       "mwis_latency": 0.014,
-      "gat_latency": 0.013
+      "gat_latency": 0.014
     }
   ]
 }
