@@ -70,8 +70,12 @@ def build_dataset(nli: NLIContradictionGraph, tests: list[dict], device: str):
         weights = [c["reliability_weight"] for c in chunks]
         years = [c["year"] for c in chunks]
         sections = [c["section_type"] for c in chunks]
+        companies = [c["company"] for c in chunks]  # v5: pass to NLI builder
 
-        G, edges = nli.build_contradiction_graph(texts, weights, years)
+        G, edges = nli.build_contradiction_graph(
+            texts, weights, years,
+            companies=companies, section_types=sections,
+        )
         features, adj, static_t = GATFilter.build_tensors(
             G, weights, years, sections, device=device,
         )

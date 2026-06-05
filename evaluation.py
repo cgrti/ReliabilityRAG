@@ -69,6 +69,7 @@ def evaluate_filtering(
         weights = [c["reliability_weight"] for c in chunks]
         years = [c["year"] for c in chunks]
         section_types = [c["section_type"] for c in chunks]
+        companies = [c["company"] for c in chunks]  # v5: cross-co + supersession
 
         expected_kept = set(test["expected_kept"])
         expected_removed = set(test["expected_removed"])
@@ -78,6 +79,7 @@ def evaluate_filtering(
         actual_kept, edges = nli.filter_chunks(
             texts, weights, years,
             section_types=section_types,
+            companies=companies,
             use_gat=use_gat,
             gat_weights_path=gat_weights_path,
             gat_blend=gat_blend,

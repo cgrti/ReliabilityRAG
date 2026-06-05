@@ -257,6 +257,8 @@ class NLIContradictionGraph:
         reliability_weights: list[float],
         years: list[int],
         threshold: float = CONTRADICTION_THRESHOLD,
+        companies: list[str] = None,
+        section_types: list[str] = None,
     ) -> tuple[nx.Graph, list[tuple[int, int, float]]]:
         """
         Build a contradiction graph from pairwise NLI + numerical conflict detection.
@@ -364,10 +366,51 @@ class NLIContradictionGraph:
             # vague) but obvious numerical disagreement (150K vs 580K ton,
             # %92 satisfaction vs %38 turnover). max() lets either path
             # trigger an edge.
+            # 2026-06-03 v5: Cross-company NLI + numerical discount when
+            # BOTH chunks contain numerical content. Different companies
+            # legitimately have different valid values for the same metric
+            # (Sektor A 145M vs Sektor B 88M sürdürülebilirlik yatırımı —
+            # not contradiction, just different firms). mDeBERTa over-emits
+            # 0.99+ contradiction here. Discount both NLI and numerical when:
+            #   (a) companies differ, AND
+            #   (b) both chunks have numbers (genuine numerical pair).
+            # When only one side has numbers (e.g. vague vs numerical claim),
+            # KEEP full NLI signal — absolutist_boost will handle vague
+            # chunks separately; cross_company tests should still detect
+            # vague-vs-numerical contradictions.
+            # Targets dense_graph DG-3 (4-sector sürdürülebilirlik investment).
+            if companies and companies[i] != companies[j]:
+                _nums_i = NLIContradictionGraph.extract_numbers(texts[i])
+                _nums_j = NLIContradictionGraph.extract_numbers(texts[j])
+                if _nums_i and _nums_j:
+                    nli_contradiction = nli_contradiction * 0.3
+                    num_conflict = num_conflict * 0.3
+
+            # 2026-06-03 v5: Same-company chronological supersession.
+            # When two chunks share company AND are spaced ≥2 years apart,
+            # newer supersedes older (sequential measurement snapshots
+            # across sections still describe same underlying entity state).
+            # ADAPTIVE GATE: if the company has MANY chunks in this query
+            # (≥5), the user is querying a long temporal sequence and
+            # supersession applies even to adjacent years (relax to ≥1).
+            # If only 2-4 chunks of same company, keep year_gap≥2 (e.g.
+            # temporal #2 wants both 2023 and 2024 kept). This adapts to
+            # dense_graph DG-2 (8 chunks) without breaking temporal short
+            # sequences.
+            same_co_supersession = 0.0
+            if companies and companies[i] == companies[j]:
+                n_same_co = sum(1 for c in companies if c == companies[i])
+                min_gap = 1 if n_same_co >= 5 else 2
+                if abs(years[i] - years[j]) >= min_gap:
+                    same_co_supersession = 0.40
+
             # All signals via max() — revision_boost is gated by year_gap ≥ 2
             # so it can act as an independent edge-creator only for genuine
             # supersession patterns (not adjacent-year measurement snapshots).
-            combined = max(nli_contradiction, num_conflict, revision_boost, absolutist_boost)
+            combined = max(
+                nli_contradiction, num_conflict,
+                revision_boost, absolutist_boost, same_co_supersession,
+            )
             combined = min(combined, 1.0)
 
             if combined >= threshold:
@@ -541,12 +584,16 @@ class NLIContradictionGraph:
         threshold: float = CONTRADICTION_THRESHOLD,
         gat_weights_path: str = None,
         gat_blend: float = None,
+        companies: list[str] = None,
     ) -> tuple[list[int], list[tuple[int, int, float]]]:
         """
         Full pipeline: NLI → Graph → GAT/MWIS → clean indices.
 
         Args:
-            section_types: List of section types per chunk (needed for GAT)
+            section_types: List of section types per chunk (needed for GAT
+                          and v5 same-company supersession)
+            companies: List of company names per chunk (v5: cross-company
+                       numerical discount + same-company supersession)
             use_gat: If True, use GAT-enhanced scoring; else basic MWIS
             gat_weights_path: Optional supervised weights for GATFilter.
                               None → heuristic-init.
@@ -558,7 +605,8 @@ class NLIContradictionGraph:
             edges: List of (i, j, contradiction_prob) for detected contradictions
         """
         G, edges = self.build_contradiction_graph(
-            texts, reliability_weights, years, threshold
+            texts, reliability_weights, years, threshold,
+            companies=companies, section_types=section_types,
         )
 
         if not edges:

@@ -196,6 +196,7 @@ class ReliabilityRAG:
                     [c.reliability_weight for c in chunks],
                     [c.year for c in chunks],
                     section_types=[c.section_type for c in chunks],
+                    companies=[c.company for c in chunks],
                     use_gat=True,
                 )
                 clean_chunks = [chunks[i] for i in clean_indices]
