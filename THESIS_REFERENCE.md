@@ -772,7 +772,7 @@ python build_meeting3.py
 | `slides_outline.md` | 25+6 slide full defense outline |
 | `THESIS_REFERENCE.md` | **BU DOSYA** — master tez referansı |
 
-### Memory dosyaları (laptop: `C:\Users\Çağrı Tirelioğlu\.claude\projects\D--er-mineru-dosyalar-\memory\`)
+### Notlar (lokal arşiv: `~/notes/reliabilityrag-memory/`)
 
 | Dosya | İçerik |
 |---|---|
